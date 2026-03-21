@@ -389,52 +389,117 @@ zmc_pop_growth_percentage = {
 		}
 		else_if = {
 			limit = {
-				zmc_pop_growth_percentage <= 5 #500%, so way over cap
-				zmc_pop_growth_percentage >= 1 #1 #100%
+				zmc_pop_growth_percentage >= 5 #5% and above
+			}
+			value = rgb { 255 0 255 } #purple
+		}
+		else_if = {
+			limit = {
+				zmc_pop_growth_percentage >= 3 #3% to 5%
+				zmc_pop_growth_percentage < 5
 			}
 			lerp = {
-				max_color = rgb { 0 0 0 } #black
-				min_color = rgb { 255 0 255 } #purple
+				max_color = rgb { 255 0 255 } #purple
+				min_color = rgb { 0 0 200 } #dark blue
 				factor = {
 					value = zmc_pop_growth_percentage
-					divide = 5
+					subtract = 3
+					divide = 2
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_pop_growth_percentage < 1 #100%
-				zmc_pop_growth_percentage >= 0.5 #50%
+				zmc_pop_growth_percentage >= 2 #2% to 3%
+				zmc_pop_growth_percentage < 3
 			}
 			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 0 200 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_pop_growth_percentage
+					subtract = 2
+					divide = 1
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_pop_growth_percentage < 0.5 #50%
-				zmc_pop_growth_percentage >= 0 #0%
+				zmc_pop_growth_percentage >= 1 #1% to 2%
+				zmc_pop_growth_percentage < 2
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 135 206 250 } #light blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_pop_growth_percentage
+					subtract = 1
+					divide = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_pop_growth_percentage >= 0.5 #0.5% to 1%
+				zmc_pop_growth_percentage < 1
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_pop_growth_percentage
+					subtract = 0.5
+					divide = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_pop_growth_percentage >= 0 #0% to 0.5%
+				zmc_pop_growth_percentage < 0.5
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_pop_growth_percentage
+					divide = 0.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_pop_growth_percentage >= -1 #-1% to 0%
+				zmc_pop_growth_percentage < 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 139 0 0 } #dark red
+				factor = {
+					value = zmc_pop_growth_percentage
+					multiply = -1
+					divide = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_pop_growth_percentage >= -2 #-2% to -1%
+				zmc_pop_growth_percentage < -1
+			}
+			lerp = {
+				max_color = rgb { 139 0 0 } #dark red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_pop_growth_percentage
+					add = 2
+					divide = 1
 				}
 			}
 		}
 		else = {
-			value = rgb { 0 0 0 } #fallback and for values above 500% over cap
+			value = rgb { 0 0 0 } #black for values below -2%
 		}
-	}
-
-	legend_key = {
-		desc = "zmc_pop_growth_percentage_black_legend_key"
-		color = rgb { 0 0 0 }
 	}
 
 	legend_key = {
@@ -443,8 +508,18 @@ zmc_pop_growth_percentage = {
 	}
 
 	legend_key = {
-		desc = "zmc_pop_growth_percentage_red_legend_key"
-		color = rgb { 255 0 0 }
+		desc = "zmc_pop_growth_percentage_dark_blue_legend_key"
+		color = rgb { 0 0 200 }
+	}
+
+	legend_key = {
+		desc = "zmc_pop_growth_percentage_light_blue_legend_key"
+		color = rgb { 135 206 250 }
+	}
+
+	legend_key = {
+		desc = "zmc_pop_growth_percentage_green_legend_key"
+		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
@@ -453,8 +528,18 @@ zmc_pop_growth_percentage = {
 	}
 
 	legend_key = {
-		desc = "zmc_pop_growth_percentage_green_legend_key"
-		color = rgb { 0 255 0 }
+		desc = "zmc_pop_growth_percentage_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_pop_growth_percentage_dark_red_legend_key"
+		color = rgb { 139 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_pop_growth_percentage_black_legend_key"
+		color = rgb { 0 0 0 }
 	}
 
 	tooltip_key = {
