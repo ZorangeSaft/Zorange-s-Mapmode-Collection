@@ -1,0 +1,5 @@
+﻿#####zmc
+
+mdm_urbanisation_suitability = {
+	texture = "gfx/interface/icons/modifiers/_default.dds"
+}

@@ -1,0 +1,54 @@
+﻿l_english:
+ #zmc
+ #urbanisation suitability mapmode/urbanisation mapmode
+
+ mapmode_mdm_urbanisation_suitability_name: "Urbanisation Suitability"
+ MAPMODE_MDM_URBANISATION_SUITABILITY: "#T $mapmode_mdm_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [mdm_urbanisation_suitability|e] in the [location|e]."
+ MAPMODE_MDM_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [mdm_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('mdm_local_urbanisation_suitability').GetValue|Y]."
+ MAPMODE_MDM_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have an [mdm_urbanisation_suitability|e] assigned."
+
+ game_concept_mdm_urbanisation_suitability: "Urbanisation Suitability"
+ game_concept_mdm_urbanisation_suitability_desc: "[mdm_urbanisation_suitability|e] is a measure of how suitable a [location|e] is for creating an [town_and_city|e] based on [geography|e]. \n\nIt is takes into account [topography|e], [vegetation|e], [climate|e], [natural_harbor_suitability|e], and if it has a [river|e] or is adjacent to a [lake|e].\n\nIt is however important to keep in mind factors other than geography, like the local [rgo|e] and [proximity|e].\n\nThe colors are only a representation of how relatively good a [location|e] is for [town_and_city|e] placement, so orange [locations|e] in a [province|e] otherwise full of red would still be a good place for an [town_and_city|e], to have at least 1 in every [province|e]."
+
+ mdm_urbanisation_suitability_green_legend_key: "High suitability"
+ mdm_urbanisation_suitability_yellow_legend_key: "Medium suitability"
+ mdm_urbanisation_suitability_red_legend_key: "Low suitability"
+
+
+#building cap mapmode
+
+ #mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
+ #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
+ #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, accounting for [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] ([ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y]/[ROOT.GetLocation.GetModifierValue('free_building_levels')|Y]) of possible buildings before it hits the cap.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
+ #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [supported_building_levels|e]."
+
+#building cap mapmode
+
+ mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, meaning [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] are used up out of the cap of [ROOT.GetLocation.GetModifierValue('free_building_levels')|Y].\n\nLocation uses [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] of its supported building levels.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [supported_building_levels|e]."
+
+ zmc_building_cap_percentage_black_legend_key: "Over 500% above cap"
+ zmc_building_cap_percentage_purple_legend_key: "100% of cap used and over"
+ zmc_building_cap_percentage_red_legend_key: "99% of cap used"
+ zmc_building_cap_percentage_yellow_legend_key: "50% of cap used"
+ zmc_building_cap_percentage_green_legend_key: "0% of cap used"
+
+
+
+ #pop growth mapmode
+
+ mapmode_zmc_pop_growth_percentage_name: "Population Growth"
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\naaaaaa."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_growth_percentage')|Y]."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [population_growth|e]."
+
+ zmc_pop_growth_percentage_purple_legend_key: "Over 5% growth"
+ zmc_pop_growth_percentage_dark_blue_legend_key: "3% growth and over"
+ zmc_pop_growth_percentage_light_blue_legend_key: "2% growth"
+ zmc_pop_growth_percentage_green_legend_key: "1% growth"
+ zmc_pop_growth_percentage_yellow_legend_key: "0.5% growth"
+ zmc_pop_growth_percentage_red_legend_key: "0% growth"
+ zmc_pop_growth_percentage_dark_red_legend_key: "-1% growth"
+ zmc_pop_growth_percentage_black_legend_key: "-2% growth"

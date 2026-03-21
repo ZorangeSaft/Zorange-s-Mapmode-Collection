@@ -1,0 +1,35 @@
+﻿#####zmc
+
+zmc_used_building_slots_percentage = {
+  value = 1
+  subtract = {
+    value = modifier:free_building_levels
+    subtract = total_building_levels
+    divide = {
+      value = modifier:free_building_levels
+      min = 1
+    }
+  }
+}
+
+zmc_free_building_slots = {
+	value = 0
+	value = modifier:free_building_levels
+    subtract = total_building_levels
+}
+
+zmc_used_building_slots_percentage_big = {
+	value = zmc_used_building_slots_percentage
+	multiply = 100
+}
+
+zmc_total_building_levels = {
+	value = total_building_levels
+}
+
+
+
+zmc_pop_growth_percentage = {
+  value = modifier:local_population_growth
+  multiply = 100
+}
