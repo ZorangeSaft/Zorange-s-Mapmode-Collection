@@ -29,7 +29,7 @@ zmc_total_building_levels = {
 
 
 
-zmc_pop_growth_percentage = {
+zmc_pop_growth_percentage = { #pop growth mapmode
   value = modifier:local_population_growth
   multiply = 100
 }
