@@ -41,7 +41,7 @@
 
  mapmode_zmc_pop_growth_percentage_name: "Population Growth"
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\naaaaaa."
- MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|%]."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|+%]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised and therefore has a [population_growth|e] of 0%."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [population_growth|e]."
 
@@ -54,3 +54,27 @@
  zmc_pop_growth_percentage_dark_red_legend_key: "Below 0% growth"
  zmc_pop_growth_percentage_black_legend_key: "Below -3% growth"
  zmc_pop_growth_percentage_gray_legend_key: "Uncolonised"
+
+
+
+ #development growth mapmode
+
+ mapmode_zmc_local_monthly_development_name: "Development Growth"
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\\nThis colors [locations|e] by the local [zmc_local_monthly_development|e].\\n\\nColors represent the monthly development growth rate."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a [zmc_local_monthly_development|e] of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')] test test [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_monthly_development')|Y]."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [zmc_local_monthly_development|e]."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised."
+
+ zmc_local_monthly_development_purple_legend_key: "Over 5% growth"
+ zmc_local_monthly_development_dark_blue_legend_key: "3% growth and over"
+ zmc_local_monthly_development_light_blue_legend_key: "2% growth"
+ zmc_local_monthly_development_green_legend_key: "1% growth"
+ zmc_local_monthly_development_yellow_legend_key: "0.5% growth"
+ zmc_local_monthly_development_red_legend_key: "0% growth"
+ zmc_local_monthly_development_dark_red_legend_key: "Below 0% growth"
+ zmc_local_monthly_development_black_legend_key: "Below -3% growth"
+ zmc_local_monthly_development_gray_legend_key: "Uncolonised"
+
+
+ game_concept_zmc_local_monthly_development: "Local Monthly Development"
+ game_concept_zmc_local_monthly_development_desc: "[zmc_local_monthly_development|e] is a."

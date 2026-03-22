@@ -3,3 +3,7 @@
 mdm_urbanisation_suitability = {
 	texture = "gfx/interface/icons/modifiers/_default.dds"
 }
+
+zmc_local_monthly_development = {
+	texture = "gfx/interface/icons/modifiers/_default.dds"
+}
