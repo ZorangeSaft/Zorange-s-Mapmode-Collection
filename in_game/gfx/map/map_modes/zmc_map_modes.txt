@@ -470,44 +470,15 @@ zmc_pop_growth_percentage = {
 		else_if = {
 			limit = {
 				zmc_pop_growth_percentage < 0
-				zmc_pop_growth_percentage >= -1 #-1% to 0%
+				zmc_pop_growth_percentage >= -3 #-1% to 0%
 			}
-			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 139 0 0 } #dark red
+			lerp = { #colors have to be reversed for negative numbers
+				max_color = rgb { 0 0 0 } #black
+				min_color = rgb { 150 0 0 } #dark red
 				factor = {
 					value = zmc_pop_growth_percentage
 					multiply = -1
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_pop_growth_percentage < -1
-				zmc_pop_growth_percentage >= -2 #-2% to -1%
-			}
-			lerp = {
-				max_color = rgb { 139 0 0 } #dark red
-				min_color = rgb { 50 0 0 } #very dark red
-				factor = {
-					value = zmc_pop_growth_percentage
-					add = 1
-					multiply = -1
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_pop_growth_percentage < -2
-				zmc_pop_growth_percentage >= -3 #-3% to -2%
-			}
-			lerp = {
-				max_color = rgb { 50 0 0 } #very dark red
-				min_color = rgb { 0 0 0 } #black
-				factor = {
-					value = zmc_pop_growth_percentage
-					add = 2
-					multiply = -1
+					divide = 3
 				}
 			}
 		}
