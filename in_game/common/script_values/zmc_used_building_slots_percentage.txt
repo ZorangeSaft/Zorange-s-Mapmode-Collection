@@ -35,12 +35,31 @@ zmc_pop_growth_percentage = { #pop growth mapmode
 }
 
 
-zmc_local_monthly_development = {
+
+zmc_local_monthly_development = { #dev growth mapmode
   value = modifier:local_monthly_development
   add = owner.modifier:global_monthly_development
   multiply = {
     value = 1
     add = modifier:local_monthly_development_modifier
   multiply = 100
+  }
+}
+
+
+
+zmc_time_until_100_development = { #time until 100 dev mapmode
+  value = 100 #100 development
+  subtract = development #subtract current development
+  divide = zmc_time_until_100_development_sub_value
+  divide = 12 #convert from months to years
+}
+
+zmc_time_until_100_development_sub_value = {
+  value = modifier:local_monthly_development
+  add = owner.modifier:global_monthly_development
+  multiply = {
+    value = 1
+    add = modifier:local_monthly_development_modifier
   }
 }

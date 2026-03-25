@@ -76,3 +76,22 @@
  zmc_local_monthly_development_dark_red_legend_key: "Below 0 growth"
  zmc_local_monthly_development_black_legend_key: "Below -0.03 growth"
  zmc_local_monthly_development_gray_legend_key: "Uncolonised"
+
+
+
+ #time until 100 development mapmode
+
+ mapmode_zmc_time_until_100_development_name: "Years Until 100 Development"
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT: "#T $mapmode_zmc_time_until_100_development_name$#!\nThis colors [locations|e] by how long it takes to reach 100 [development|e] at current growth."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] will reach 100 [development|e] in [ROOT.GetLocation.MakeScope.ScriptValue('zmc_time_until_100_development_years')|Y] years."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [development|e]."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised so it does not have [development|e] growth."
+
+ zmc_time_until_100_development_light_blue_legend_key: "0 years"
+ zmc_time_until_100_development_green_legend_key: "50 years"
+ zmc_time_until_100_development_yellow_legend_key: "100 years"
+ zmc_time_until_100_development_orange_legend_key: "200 years"
+ zmc_time_until_100_development_red_legend_key: "300 years"
+ zmc_time_until_100_development_dark_red_legend_key: "400 years"
+ zmc_time_until_100_development_black_legend_key: "500+ years"
+ zmc_time_until_100_development_gray_legend_key: "Uncolonised"
