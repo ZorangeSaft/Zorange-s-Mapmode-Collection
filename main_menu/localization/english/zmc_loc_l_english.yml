@@ -63,7 +63,7 @@
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@warning_icon! #color_red This mapmode is laggy to click on #! @warning_icon!"
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have monthly [development|e] growth."
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised so it does not have monthly [development|e] growth."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have monthly [development|e] growth."
 
  #[ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_monthly_development')|Y]
 
@@ -82,10 +82,10 @@
  #time until 100 development mapmode
 
  mapmode_zmc_time_until_100_development_name: "Years Until 100 Development"
- MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT: "#T $mapmode_zmc_time_until_100_development_name$#!\nThis colors [locations|e] by how long it takes to reach 100 [development|e] at current growth."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT: "#T $mapmode_zmc_time_until_100_development_name$#!\nThis colors [locations|e] by how long it takes to reach 100 [development|e] at current growth.\n\n@warning_icon! #color_yellow This mapmode is somewhat laggy to click on #! @warning_icon!"
  MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] will reach 100 [development|e] in [ROOT.GetLocation.MakeScope.ScriptValue('zmc_time_until_100_development_years')|Y] years."
  MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [development|e]."
- MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised so it does not have [development|e] growth."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [development|e] growth."
 
  zmc_time_until_100_development_pink_legend_key: "0 years"
  zmc_time_until_100_development_dark_blue_legend_key: "50 years"
@@ -97,3 +97,34 @@
  zmc_time_until_100_development_dark_red_legend_key: "5000 years"
  zmc_time_until_100_development_black_legend_key: "10000+ years"
  zmc_time_until_100_development_gray_legend_key: "Uncolonised"
+
+
+
+#pop cap mapmode
+
+ mapmode_zmc_pop_cap_name: "Population Capacity"
+ MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local population capacity."
+ MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]."
+ MAPMODE_ZMC_POP_CAP_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a [population_capacity|e]."
+
+ zmc_pop_cap_pink_legend_key: "2M pop cap"
+ zmc_pop_cap_dark_blue_legend_key: "1M pop cap"
+ zmc_pop_cap_light_blue_legend_key: "500K pop cap"
+ zmc_pop_cap_green_legend_key: "250K pop cap"
+ zmc_pop_cap_yellow_legend_key: "100K pop cap"
+ zmc_pop_cap_red_legend_key: "50K pop cap"
+ zmc_pop_cap_black_legend_key: "0 pop cap"
+
+
+
+#pop cap percentage mapmode
+
+ mapmode_zmc_pop_cap_percentage_name: "Pop Cap Percentage"
+ MAPMODE_ZMC_POP_CAP_PERCENTAGE: "#T $mapmode_zmc_pop_cap_percentage_name$#!\nThis colors [locations|e] by how much of their [population_capacity|e] is used up."
+ MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] is using [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap_percentage')|Y%] of its [population_capacity|e].\n\n[population|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|Y]\n[population_capacity|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]."
+ MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a [population|e]."
+
+ zmc_pop_cap_percentage_black_legend_key: "200% of cap"
+ zmc_pop_cap_percentage_red_legend_key: "100% of cap"
+ zmc_pop_cap_percentage_yellow_legend_key: "50% of cap"
+ zmc_pop_cap_percentage_green_legend_key: "0% of cap"

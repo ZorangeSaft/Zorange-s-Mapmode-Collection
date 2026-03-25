@@ -1,6 +1,6 @@
 ﻿#####zmc
 
-zmc_used_building_slots_percentage = {
+zmc_used_building_slots_percentage = { #building cap mapmode
   value = 1
   subtract = {
     value = modifier:free_building_levels
@@ -12,20 +12,22 @@ zmc_used_building_slots_percentage = {
   }
 }
 
-zmc_free_building_slots = {
+zmc_free_building_slots = { #building cap mapmode
 	value = 0
 	value = modifier:free_building_levels
     subtract = total_building_levels
 }
 
-zmc_used_building_slots_percentage_big = {
+zmc_used_building_slots_percentage_big = { #building cap mapmode
 	value = zmc_used_building_slots_percentage
 	multiply = 100
 }
 
-zmc_total_building_levels = {
+zmc_total_building_levels = { #building cap mapmode
 	value = total_building_levels
 }
+
+
 
 
 
@@ -33,6 +35,8 @@ zmc_pop_growth_percentage = { #pop growth mapmode
   value = modifier:local_population_growth
   multiply = 100
 }
+
+
 
 
 
@@ -45,6 +49,8 @@ zmc_local_monthly_development = { #dev growth mapmode
   multiply = 100
   }
 }
+
+
 
 
 
@@ -62,4 +68,30 @@ zmc_time_until_100_development_sub_value = {
     value = 1
     add = modifier:local_monthly_development_modifier
   }
+}
+
+
+
+
+
+zmc_pop_cap_percentage = { #pop cap percentage mapmode
+  value = population
+  multiply = 1000 #so it matches the multiplied pop cap
+  divide = zmc_pop_cap
+}
+
+zmc_pop_cap = {
+  value = modifier:local_population_capacity
+  multiply = 1000 #1000 #for 1 pop being 1000 people
+  multiply = zmc_pop_cap_temp_value
+}
+
+zmc_pop_cap_temp_value = {
+  value = modifier:local_population_capacity_modifier
+  add = 1 #because in game these modifiers are defined as 0.1 meaning 110%
+}
+
+zmc_population = {
+  value = population
+  multiply = 1000 #for 1 pop being 1000 people
 }
