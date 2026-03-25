@@ -343,7 +343,7 @@ zmc_building_cap_percentage = {
 	use_fow = no
 	
 	category = economy
-	index = 1
+	index = 0
 
 	map_markers = {
 		all = no
@@ -577,7 +577,7 @@ zmc_pop_growth_percentage = {
 	use_fow = no
 	
 	category = economy
-	index = 1
+	index = 0
 
 	map_markers = {
 		all = no
@@ -718,7 +718,7 @@ zmc_production_efficiency_percentage = {
 	use_fow = no
 	
 	category = economy
-	index = 1
+	index = 0
 
 	map_markers = {
 		all = no
@@ -950,7 +950,7 @@ zmc_local_monthly_development = {
 	use_fow = no
 	
 	category = economy
-	index = 2
+	index = 0
 
 	map_markers = {
 		all = no

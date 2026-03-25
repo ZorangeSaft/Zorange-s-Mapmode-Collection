@@ -25,8 +25,8 @@
 #building cap mapmode
 
  mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
- MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
- MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, meaning [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] are used up out of the cap of [ROOT.GetLocation.GetModifierValue('free_building_levels')|Y].\n\nLocation uses [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] of its supported building levels.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode."
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, meaning [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] are used up out of the cap of [ROOT.GetLocation.GetModifierValue('free_building_levels')|Y].\n\nLocation uses [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] of its supported building levels.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode."
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [supported_building_levels|e]."
 
  zmc_building_cap_percentage_black_legend_key: "Over 500% above cap"
@@ -40,7 +40,7 @@
  #pop growth mapmode
 
  mapmode_zmc_pop_growth_percentage_name: "Population Growth"
- MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\naaaaaa."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|+%]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised and therefore has a [population_growth|e] of 0%."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [population_growth|e]."
@@ -60,10 +60,10 @@
  #development growth mapmode
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\\nThis colors [locations|e] by the local [zmc_local_monthly_development|e].\\n\\nColors represent the monthly development growth rate."
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a [zmc_local_monthly_development|e] of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [zmc_local_monthly_development|e]."
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@warning_icon! #color_red This mapmode is laggy to click on #! @warning_icon!"
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have monthly [development|e] growth."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is not colonised so it does not have monthly [development|e] growth."
 
  #[ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_monthly_development')|Y]
 
@@ -76,7 +76,3 @@
  zmc_local_monthly_development_dark_red_legend_key: "Below 0 growth"
  zmc_local_monthly_development_black_legend_key: "Below -0.03 growth"
  zmc_local_monthly_development_gray_legend_key: "Uncolonised"
-
-
- game_concept_zmc_local_monthly_development: "Local Monthly Development"
- game_concept_zmc_local_monthly_development_desc: "[zmc_local_monthly_development|e] is a."
