@@ -101,6 +101,6 @@ zmc_population = {
 
 
 zmc_control_times_market_access = { #control times market access mapmode
-  value = modifier:local_control
-  multiply = modifier:local_market_access
+  value = local_control
+  multiply = market_access # modifier:market_access
 }
