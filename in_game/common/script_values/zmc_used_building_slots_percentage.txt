@@ -37,7 +37,10 @@ zmc_pop_growth_percentage = { #pop growth mapmode
 
 zmc_local_monthly_development = {
   value = modifier:local_monthly_development
-  multiply = modifier:local_monthly_development_modifier
   add = owner.modifier:global_monthly_development
-  multiply = 500
+  multiply = {
+    value = 1
+    add = modifier:local_monthly_development_modifier
+  multiply = 100
+  }
 }

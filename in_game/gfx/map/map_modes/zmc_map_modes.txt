@@ -764,14 +764,14 @@ zmc_local_monthly_development = {
 		}
 		else_if = {
 			limit = {
-				zmc_local_monthly_development >= 5 #5% and above
+				zmc_local_monthly_development >= 5
 			}
 			value = rgb { 255 0 255 } #purple
 		}
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 5
-				zmc_local_monthly_development >= 3 #3% to 5%
+				zmc_local_monthly_development >= 3
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #purple
@@ -786,7 +786,7 @@ zmc_local_monthly_development = {
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 3
-				zmc_local_monthly_development >= 2 #2% to 3%
+				zmc_local_monthly_development >= 2
 			}
 			lerp = {
 				max_color = rgb { 0 0 200 } #dark blue
@@ -800,7 +800,7 @@ zmc_local_monthly_development = {
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 2
-				zmc_local_monthly_development >= 1 #1% to 2%
+				zmc_local_monthly_development >= 1
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
@@ -814,7 +814,7 @@ zmc_local_monthly_development = {
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 1
-				zmc_local_monthly_development >= 0.5 #0.5% to 1%
+				zmc_local_monthly_development >= 0.5
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
@@ -829,7 +829,7 @@ zmc_local_monthly_development = {
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 0.5
-				zmc_local_monthly_development >= 0 #0% to 0.5%
+				zmc_local_monthly_development >= 0
 				exists = owner #to make it so uncolonised land doesnt show up red
 			}
 			lerp = {
@@ -844,7 +844,7 @@ zmc_local_monthly_development = {
 		else_if = {
 			limit = {
 				zmc_local_monthly_development < 0
-				zmc_local_monthly_development >= -3 #-3% to 0%
+				zmc_local_monthly_development >= -3
 			}
 			lerp = {
 				max_color = rgb { 0 0 0 } #black
@@ -865,7 +865,7 @@ zmc_local_monthly_development = {
 			value = rgb { 50 50 50 } #gray for uncolonised land
 		}
 		else = {
-			value = rgb { 0 0 0 } #black for values below -3%
+			value = rgb { 0 0 0 } #black as fallback and out of bounds
 		}
 	}
 
