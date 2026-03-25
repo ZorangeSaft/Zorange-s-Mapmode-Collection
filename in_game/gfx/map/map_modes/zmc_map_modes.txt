@@ -990,8 +990,8 @@ zmc_time_until_100_development = {
 				zmc_time_until_100_development >= 0
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 135 206 250 } #light blue
+				max_color = rgb { 0 0 200 } #dark blue
+				min_color = rgb { 255 0 255 } #pink
 				factor = {
 					value = zmc_time_until_100_development
 					divide = 50
@@ -1004,8 +1004,8 @@ zmc_time_until_100_development = {
 				zmc_time_until_100_development >= 50
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 0 200 } #dark blue
 				factor = {
 					value = zmc_time_until_100_development
 					subtract = 50
@@ -1019,8 +1019,8 @@ zmc_time_until_100_development = {
 				zmc_time_until_100_development >= 100
 			}
 			lerp = {
-				max_color = rgb { 255 165 0 } #orange
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_time_until_100_development
 					subtract = 100
@@ -1030,58 +1030,98 @@ zmc_time_until_100_development = {
 		}
 		else_if = {
 			limit = {
-				zmc_time_until_100_development < 300
+				zmc_time_until_100_development < 500
 				zmc_time_until_100_development >= 200
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_time_until_100_development
+					subtract = 200
+					divide = 300
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_time_until_100_development < 1000
+				zmc_time_until_100_development >= 500
+			}
+			lerp = {
+				max_color = rgb { 255 165 0 } #orange
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_time_until_100_development
+					subtract = 500
+					divide = 500
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_time_until_100_development < 2000
+				zmc_time_until_100_development >= 1000
 			}
 			lerp = {
 				max_color = rgb { 255 0 0 } #red
 				min_color = rgb { 255 165 0 } #orange
 				factor = {
 					value = zmc_time_until_100_development
-					subtract = 200
-					divide = 100
+					subtract = 1000
+					divide = 1000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_time_until_100_development < 400
-				zmc_time_until_100_development >= 300
+				zmc_time_until_100_development < 5000
+				zmc_time_until_100_development >= 2000
 			}
 			lerp = {
 				max_color = rgb { 139 0 0 } #dark red
 				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_time_until_100_development
-					subtract = 300
-					divide = 100
+					subtract = 2000
+					divide = 3000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_time_until_100_development < 500
-				zmc_time_until_100_development >= 400
+				zmc_time_until_100_development < 10000
+				zmc_time_until_100_development >= 5000
 			}
 			lerp = {
 				max_color = rgb { 0 0 0 } #black
 				min_color = rgb { 139 0 0 } #dark red
 				factor = {
 					value = zmc_time_until_100_development
-					subtract = 400
-					divide = 100
+					subtract = 5000
+					divide = 5000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_time_until_100_development >= 500
+				zmc_time_until_100_development >= 10000
 			}
-			value = rgb { 0 0 0 } #black for 500 years and higher
+			value = rgb { 0 0 0 } #black for 10000 years and higher
 		}
 		else = {
 			value = rgb { 0 0 0 } #black as fallback and out of bounds
 		}
+	}
+
+	legend_key = {
+		desc = "zmc_time_until_100_development_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_time_until_100_development_dark_blue_legend_key"
+		color = rgb { 0 0 200 }
 	}
 
 	legend_key = {
