@@ -100,7 +100,7 @@
 
 
 
-#pop cap mapmode
+ #pop cap mapmode
 
  mapmode_zmc_pop_cap_name: "Population Capacity"
  MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local population capacity."
@@ -117,7 +117,7 @@
 
 
 
-#pop cap percentage mapmode
+ #pop cap percentage mapmode
 
  mapmode_zmc_pop_cap_percentage_name: "Pop Cap Percentage"
  MAPMODE_ZMC_POP_CAP_PERCENTAGE: "#T $mapmode_zmc_pop_cap_percentage_name$#!\nThis colors [locations|e] by how much of their [population_capacity|e] is used up."
@@ -128,3 +128,16 @@
  zmc_pop_cap_percentage_red_legend_key: "100% of cap"
  zmc_pop_cap_percentage_yellow_legend_key: "50% of cap"
  zmc_pop_cap_percentage_green_legend_key: "0% of cap"
+
+
+
+ #control times market access mapmode
+
+ mapmode_zmc_control_times_market_access_name: "Control times Market Access"
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS: "#T $mapmode_zmc_control_times_market_access_name$#!\nThis colors [locations|e] by local [control|e] multiplied by [market_access|e]."
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_LAND: "[ROOT.GetLocation.GetName] has [control|e] times [market_access|e] = [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_times_market_access')|Y]."
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have local [control|e] times [market_access|e]."
+
+ zmc_control_times_market_access_green_legend_key: "1"
+ zmc_control_times_market_access_yellow_legend_key: "0.5"
+ zmc_control_times_market_access_red_legend_key: "0"

@@ -95,3 +95,12 @@ zmc_population = {
   value = population
   multiply = 1000 #for 1 pop being 1000 people
 }
+
+
+
+
+
+zmc_control_times_market_access = { #control times market access mapmode
+  value = modifier:local_control
+  multiply = modifier:local_market_access
+}
