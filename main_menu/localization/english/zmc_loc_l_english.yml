@@ -7,7 +7,7 @@
  #urbanisation suitability mapmode/urbanisation mapmode
 
  mapmode_mdm_urbanisation_suitability_name: "Urbanisation Suitability"
- MAPMODE_MDM_URBANISATION_SUITABILITY: "#T $mapmode_mdm_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [mdm_urbanisation_suitability|e] in the [location|e]."
+ MAPMODE_MDM_URBANISATION_SUITABILITY: "#T $mapmode_mdm_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [mdm_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\n"
  MAPMODE_MDM_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [mdm_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('mdm_local_urbanisation_suitability').GetValue|Y]."
  MAPMODE_MDM_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have an [mdm_urbanisation_suitability|e] assigned."
 
@@ -29,7 +29,7 @@
 #building cap mapmode
 
  mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
- MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode."
+ MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode.\n\n@adm! #color_yellow Strategy#! @adm!\n"
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, meaning [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] are used up out of the cap of [ROOT.GetLocation.GetModifierValue('free_building_levels')|Y].\n\nLocation uses [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] of its supported building levels.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode."
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [supported_building_levels|e]."
 
@@ -44,7 +44,7 @@
  #development growth mapmode
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@adm! #color_yellow Strategy#! @adm!\n"
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have monthly [development|e] growth."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have monthly [development|e] growth."
@@ -66,7 +66,7 @@
  #time until 100 development mapmode
 
  mapmode_zmc_time_until_100_development_name: "Years Until 100 Development"
- MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT: "#T $mapmode_zmc_time_until_100_development_name$#!\nThis colors [locations|e] by how long it takes to reach 100 [development|e] at current growth."
+ MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT: "#T $mapmode_zmc_time_until_100_development_name$#!\nThis colors [locations|e] by how long it takes to reach 100 [development|e] at current growth.\n\n@adm! #color_yellow Strategy#! @adm!\n"
  MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] will reach 100 [development|e] in [ROOT.GetLocation.MakeScope.ScriptValue('zmc_time_until_100_development_years')|Y] years."
  MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [development|e]."
  MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [development|e] growth."
@@ -87,7 +87,7 @@
  #pop growth mapmode
 
  mapmode_zmc_pop_growth_percentage_name: "Population Growth"
- MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\n@adm! #color_yellow Strategy#! @adm!\nLocations with lower [population_growth|e] growth are likely near their [population_capacity|e], so consider upgrading their location rank."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\n@adm! #color_yellow Strategy#! @adm!\n[locations|e] with lower [population_growth|e] are likely near their [population_capacity|e], so consider upgrading their [location_rank|e].\n\n[towns_and_cities|e] have higher [population_capacity|e] and thus also higher [population_growth|e], but only as long as their increased capacity can overcome the lost #color_white +0.1%#! [population_growth|e] they loose compared to [rural_locations|e]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|+%]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised and therefore has a [population_growth|e] of 0%."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [population_growth|e]."
@@ -107,7 +107,7 @@
  #pop cap mapmode
 
  mapmode_zmc_pop_cap_name: "Population Capacity"
- MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local [population_capacity|e]."
+ MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local [population_capacity|e].\n\n@adm! #color_yellow Strategy#! @adm!\nIt would be wise to create [towns_and_cities|e] in places with higher [population_capacity|e] to maximise [population_growth|e]."
  MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]."
  MAPMODE_ZMC_POP_CAP_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a [population_capacity|e]."
 
@@ -124,7 +124,7 @@
  #pop cap percentage mapmode
 
  mapmode_zmc_pop_cap_percentage_name: "Pop Cap Percentage"
- MAPMODE_ZMC_POP_CAP_PERCENTAGE: "#T $mapmode_zmc_pop_cap_percentage_name$#!\nThis colors [locations|e] by how much of their [population_capacity|e] is used up.\n\n@adm! #color_yellow Strategy#! @adm!\n#color_red Strongly#! consider upgrading locations #zmc_color_orange close#! #zmc_color_orange_red_1 to#! #zmc_color_orange_red_2 the#! #zmc_color_dark_red cap#! so they can have more population growth. Even if they have a valuable RGO the extra population should more than make up for it in the long run."
+ MAPMODE_ZMC_POP_CAP_PERCENTAGE: "#T $mapmode_zmc_pop_cap_percentage_name$#!\nThis colors [locations|e] by how much of their [population_capacity|e] is used up.\n\n@adm! #color_yellow Strategy#! @adm!\n#color_red Strongly#! consider upgrading locations #zmc_color_orange close#! #zmc_color_orange_red_1 to#! #zmc_color_orange_red_2 the#! #zmc_color_dark_red cap#! so they can have more [population_growth|e]. Even if they have a valuable [rgo|e] the extra [population|e] should more than make up for it in the long run."
  MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] is using [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap_percentage')|Y%] of its [population_capacity|e].\n\n[population|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|Y]\n[population_capacity|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]."
  MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a [population|e]."
 
