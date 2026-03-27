@@ -102,5 +102,14 @@ zmc_population = {
 
 zmc_control_times_market_access = { #control times market access mapmode
   value = local_control
-  multiply = market_access # modifier:market_access
+  multiply = market_access
+}
+
+
+
+
+
+zmc_tax_base_per_population = { #wealth per population mapmode, basically gdp/capity
+  value = location_tax_base #wealth, but modified by control (tried to undo it by dividing by control, but if control is 0 this doesnt work)
+  divide = population
 }
