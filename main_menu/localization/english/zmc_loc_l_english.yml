@@ -210,3 +210,21 @@
  zmc_local_max_literacy_red_legend_key: "25%"
  zmc_local_max_literacy_black_legend_key: "0%"
  zmc_local_max_literacy_gray_legend_key: "Uncolonised"
+
+
+
+ #missing control mapmode
+
+ mapmode_zmc_missing_control_name: "Missing Control"
+ MAPMODE_ZMC_MISSING_CONTROL: "#T $mapmode_zmc_missing_control_name$#!\nThis colors [locations|e] by the missing [control|e].\n\n@adm! #color_yellow Strategy#! @adm!\n"
+ MAPMODE_ZMC_MISSING_CONTROL_TT_LAND: "[ROOT.GetLocation.GetName] is missing [ROOT.GetLocation.MakeScope.ScriptValue('zmc_missing_control')|Y] [control|e]."
+ MAPMODE_ZMC_MISSING_CONTROL_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [control|e]."
+ MAPMODE_ZMC_MISSING_CONTROL_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [control|e]."
+
+ zmc_missing_control_black_legend_key: "100"
+ zmc_missing_control_red_legend_key: "75"
+ zmc_missing_control_orange_legend_key: "50"
+ zmc_missing_control_yellow_legend_key: "25"
+ zmc_missing_control_green_legend_key: "1"
+ zmc_missing_control_light_blue_legend_key: "0"
+ zmc_missing_control_gray_legend_key: "Uncolonised"
