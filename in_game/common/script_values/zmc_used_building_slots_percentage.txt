@@ -122,3 +122,17 @@ zmc_local_production_efficiency = { #production efficiency mapmode
   #add = modifier:global_production_efficiency
   multiply = 100
 }
+
+
+
+zmc_local_max_literacy = { #maximum literacy mapmode
+  value = modifier:local_max_literacy
+  multiply = 100
+}
+
+
+
+zmc_missing_control = { #missing control mapmode
+  value = local_max_control
+  subtract = local_control
+}
