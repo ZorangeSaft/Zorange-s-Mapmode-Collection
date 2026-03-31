@@ -2196,30 +2196,15 @@ zmc_missing_control = {
 		else_if = {
 			limit = {
 				zmc_missing_control < 100
-				zmc_missing_control >= 75
+				zmc_missing_control >= 50
 			}
 			lerp = {
 				max_color = rgb { 0 0 0 } #black
 				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_missing_control
-					subtract = 75
-					divide = 25
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_missing_control < 75
-				zmc_missing_control >= 50
-			}
-			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 165 0 } #orange
-				factor = {
-					value = zmc_missing_control
 					subtract = 50
-					divide = 25
+					divide = 50
 				}
 			}
 		}
@@ -2229,7 +2214,7 @@ zmc_missing_control = {
 				zmc_missing_control >= 25
 			}
 			lerp = {
-				max_color = rgb { 255 165 0 } #orange
+				max_color = rgb { 255 0 0 } #red
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_missing_control
@@ -2267,8 +2252,37 @@ zmc_missing_control = {
 				}
 			}
 		}
+		else_if = {
+			limit = {
+				zmc_missing_control < 0
+				zmc_missing_control >= -1
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_missing_control
+					add = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_missing_control < -1
+				zmc_missing_control >= -100
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 255 105 180 } #pink
+				factor = {
+					value = zmc_missing_control
+					add = 100
+					divide = 99
+				}
+			}
+		}
 		else = {
-			value = rgb { 50 50 50 } #{ 135 206 250 } #fallback light blue
+			value = rgb { 255 105 180 } #pink fallback for values < -100
 		}
 	}
 
@@ -2284,7 +2298,7 @@ zmc_missing_control = {
 
 	legend_key = {
 		desc = "zmc_missing_control_orange_legend_key"
-		color = rgb { 255 165 0 }
+		color = rgb { 0 0 139 }
 	}
 
 	legend_key = {
@@ -2304,7 +2318,7 @@ zmc_missing_control = {
 
 	legend_key = {
 		desc = "zmc_missing_control_gray_legend_key"
-		color = rgb { 50 50 50 }
+		color = rgb { 255 105 180 }
 	}
 
 	tooltip_key = {

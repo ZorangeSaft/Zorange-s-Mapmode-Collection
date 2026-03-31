@@ -222,9 +222,10 @@
  MAPMODE_ZMC_MISSING_CONTROL_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [control|e]."
 
  zmc_missing_control_black_legend_key: "100"
- zmc_missing_control_red_legend_key: "75"
- zmc_missing_control_orange_legend_key: "50"
+ zmc_missing_control_red_legend_key: "50"
  zmc_missing_control_yellow_legend_key: "25"
  zmc_missing_control_green_legend_key: "1"
  zmc_missing_control_light_blue_legend_key: "0"
+ zmc_missing_control_dark_blue_legend_key: "-1"
+ zmc_missing_control_pink_legend_key: "-100"
  zmc_missing_control_gray_legend_key: "Uncolonised"
