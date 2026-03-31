@@ -119,5 +119,6 @@ zmc_tax_base_per_population = { #wealth per population mapmode, basically gdp/ca
 
 zmc_local_production_efficiency = { #production efficiency mapmode
   value = modifier:local_production_efficiency
+  #add = modifier:global_production_efficiency
   multiply = 100
 }
