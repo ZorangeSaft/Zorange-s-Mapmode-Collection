@@ -19,14 +19,14 @@
  mdm_urbanisation_suitability_red_legend_key: "Low suitability"
 
 
-#building cap mapmode
+ #building cap mapmode
 
  #mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
  #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
  #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, accounting for [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] ([ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y]/[ROOT.GetLocation.GetModifierValue('free_building_levels')|Y]) of possible buildings before it hits the cap.\n\nKeep in mind that closed buildings do not count towards the used cap, which is not taken into consideration on the mapmode."
  #MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [supported_building_levels|e]."
 
-#building cap mapmode
+ #building cap mapmode
 
  mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode.\n\n@adm! #color_yellow Strategy#! @adm!\n"
@@ -174,3 +174,22 @@
 
  game_concept_zmc_gdp_per_capita: "GDP Per Capita"
  game_concept_zmc_gdp_per_capita_desc: "[zmc_gdp|e] [zmc_per_capita|e] is calculated by dividing [zmc_gdp|e] by the population of a place or country, referred to as [zmc_per_capita|e].\n\nThis does not mean the average person is that wealthy, it just shows the average economic output per person."
+
+
+
+#production efficiency mapmode
+
+ mapmode_zmc_local_production_efficiency_name: "Local Production Efficiency"
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY: "#T $mapmode_zmc_local_production_efficiency_name$#!\nThis colors [locations|e] by local production efficiency.\n\n@adm! #color_yellow Strategy#! @adm!\nBuild [buildings|e] in locations with high [production_efficiency|e] to increase their output and profit.\n\nKeep in mind that this mapmode only shows the flat local [production_efficiency|e] for all buildings, and multiple different extra bonuses should usually apply based on the specific building, like from local [rgo|e]."
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_LAND: "[ROOT.GetLocation.GetName] has a local [production_efficiency|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_production_efficiency')|Y]."
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a local production efficiency."
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a local production efficiency."
+
+ zmc_local_production_efficiency_pink_legend_key: "5"
+ zmc_local_production_efficiency_dark_blue_legend_key: "4"
+ zmc_local_production_efficiency_light_blue_legend_key: "3"
+ zmc_local_production_efficiency_green_legend_key: "2"
+ zmc_local_production_efficiency_yellow_legend_key: "1"
+ zmc_local_production_efficiency_red_legend_key: "0"
+ zmc_local_production_efficiency_black_legend_key: "-10"
+ zmc_local_production_efficiency_gray_legend_key: "Uncolonised"

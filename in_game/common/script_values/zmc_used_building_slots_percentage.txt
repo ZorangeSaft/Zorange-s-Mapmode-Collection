@@ -113,3 +113,11 @@ zmc_tax_base_per_population = { #wealth per population mapmode, basically gdp/ca
   value = location_tax_base #wealth, but modified by control (tried to undo it by dividing by control, but if control is 0 this doesnt work)
   divide = population
 }
+
+
+
+
+zmc_local_production_efficiency = { #production efficiency mapmode
+  value = modifier:local_production_efficiency
+  multiply = 100
+}
