@@ -2191,7 +2191,7 @@ zmc_control_difference = {
 			limit = {
 				zmc_control_difference >= 100
 			}
-			value = rgb { 0 0 0 } #black
+			value = rgb { 255 0 255 } #pink
 		}
 		else_if = {
 			limit = {
@@ -2199,8 +2199,8 @@ zmc_control_difference = {
 				zmc_control_difference >= 50
 			}
 			lerp = {
-				max_color = rgb { 0 0 0 } #black
-				min_color = rgb { 255 0 0 } #red
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_control_difference
 					subtract = 50
@@ -2214,8 +2214,8 @@ zmc_control_difference = {
 				zmc_control_difference >= 1
 			}
 			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_control_difference
 					subtract = 1
@@ -2236,8 +2236,8 @@ zmc_control_difference = {
 				zmc_control_difference >= -50
 			}
 			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 0 139 } #dark blue
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_control_difference
 					add = 50
@@ -2251,8 +2251,8 @@ zmc_control_difference = {
 				zmc_control_difference >= -100
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 255 0 255 } #pink
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_control_difference
 					add = 100
@@ -2267,7 +2267,7 @@ zmc_control_difference = {
 
 	legend_key = {
 		desc = "zmc_control_difference_pink_legend_key"
-		color = rgb { 255 105 180 }
+		color = rgb { 255 0 255 }
 	}
 
 	legend_key = {
@@ -2281,8 +2281,8 @@ zmc_control_difference = {
 	}
 
 	legend_key = {
-		desc = "zmc_control_difference_green_legend_key"
-		color = rgb { 0 255 0 }
+		desc = "zmc_control_difference_light_gray_legend_key"
+		color = rgb { 100 100 100 }
 	}
 
 	legend_key = {
@@ -2305,14 +2305,35 @@ zmc_control_difference = {
 			limit = {
 				is_land = yes
 				exists = owner
+				zmc_control_difference <= 100
+				zmc_control_difference >= 1
 			}
-			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_ABOVE
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				exists = owner
+				zmc_control_difference < 1 #between +1% and -1% away from 0, so the mapmode doesnt show tiny differences
+				zmc_control_difference > -1
+			}
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_MIDDLE
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				exists = owner
+				zmc_control_difference <= -1
+				zmc_control_difference >= -100
+			}
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_BELOW
 		}
 		else_if = {
 			limit = {
 				NOT = {
 					exists = owner
 				}
+				is_land = yes
 			}
 			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_UNCOLONISED
 		}

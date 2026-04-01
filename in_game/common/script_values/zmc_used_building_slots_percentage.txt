@@ -140,5 +140,5 @@ zmc_local_max_literacy = { #maximum literacy mapmode
 zmc_control_difference = {
   value = max_control
   subtract = local_control
-  multiply = 100
+  multiply = -100
 }
