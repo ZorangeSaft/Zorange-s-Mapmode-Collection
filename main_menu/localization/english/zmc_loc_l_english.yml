@@ -136,12 +136,14 @@
  mapmode_zmc_control_times_market_access_name: "Control times Market Access"
  MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS: "#T $mapmode_zmc_control_times_market_access_name$#!\nThis colors [locations|e] by local [control|e] multiplied by [market_access|e].\n\n@adm! #color_yellow Strategy#! @adm!\nA [buildings|e] profit depends on both [control|e] and [market_access|e], so it would be wise to build them in places with higher values on this mapmode.\n\nThis mapmode can also inform you about where the heartland of your enemy is, as usually their wealth should come from the locations with the highest [control|e] and [market_access|e].\n\nBeware that the same applies to you, so it would be wise to protect your own high value locations and not give them away in a peace deal."
  MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_LAND: "[ROOT.GetLocation.GetName] has [control|e] times [market_access|e] = [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_times_market_access')|Y]."
- MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have local [control|e] times [market_access|e]."
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [control|e] or [market_access|e]."
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [control|e] or [market_access|e]."
 
  zmc_control_times_market_access_light_blue_legend_key: "1"
  zmc_control_times_market_access_green_legend_key: "below 1"
  zmc_control_times_market_access_yellow_legend_key: "0.5"
  zmc_control_times_market_access_red_legend_key: "0"
+ zmc_control_times_market_access_gray_legend_key: "Uncolonised"
 
 
 

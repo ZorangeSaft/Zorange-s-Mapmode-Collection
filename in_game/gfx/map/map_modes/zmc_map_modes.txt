@@ -242,6 +242,14 @@ zmc_control_times_market_access = {
 		}
 		else_if = {
 			limit = {
+				NOT = {
+					exists = owner
+				}
+			}
+			value = rgb { 50 50 50 } #gray for uncolonised land
+		}
+		else_if = {
+			limit = {
 				zmc_control_times_market_access >= 1
 			}
 			value = rgb { 135 206 250 } #light blue
@@ -300,12 +308,27 @@ zmc_control_times_market_access = {
 		color = rgb { 255 0 0 }
 	}
 
+	legend_key = {
+		desc = "zmc_control_times_market_access_gray_legend_key"
+		color = rgb { 50 50 50 }
+	}
+
 	tooltip_key = {
 		if = {
 			limit = {
 				is_land = yes
+				exists = owner
 			}
 			value = MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_LAND
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				NOT = {
+					exists = owner
+				}
+			}
+			value = MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_UNCOLONISED
 		}
 		else = {
 			value = MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_WATER
@@ -522,6 +545,7 @@ zmc_tax_base_per_population = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -1222,6 +1246,7 @@ zmc_pop_growth_percentage = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -1449,6 +1474,7 @@ zmc_local_monthly_development = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -1732,6 +1758,7 @@ zmc_time_until_100_development = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -1953,6 +1980,7 @@ zmc_local_production_efficiency = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -2134,6 +2162,7 @@ zmc_local_max_literacy = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
@@ -2348,10 +2377,10 @@ zmc_control_difference = {
 		}
 		else_if = {
 			limit = {
+				is_land = yes
 				NOT = {
 					exists = owner
 				}
-				is_land = yes
 			}
 			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_UNCOLONISED
 		}
