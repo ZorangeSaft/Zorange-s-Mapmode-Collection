@@ -130,60 +130,63 @@ zmc_local_production_efficiency = { #production efficiency mapmode
 
 zmc_local_max_literacy = { #max literacy mapmode
 	every_pop = {
-		if = {
-			limit = { pop_type = pop_type:nobles }
-			add = prev.modifier:local_nobles_max_literacy
-			add = owner.modifier:global_nobles_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:clergy }
-			add = prev.modifier:local_clergy_max_literacy
-			add = owner.modifier:global_clergy_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:burghers }
-			add = prev.modifier:local_burghers_max_literacy
-			add = owner.modifier:global_burghers_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:burghers }
-			add = prev.modifier:local_burghers_max_literacy
-			add = owner.modifier:global_burghers_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:laborers }
-			add = prev.modifier:local_laborers_max_literacy
-			add = owner.modifier:global_laborers_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:soldiers }
-			add = prev.modifier:local_soldiers_max_literacy
-			add = owner.modifier:global_soldiers_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:peasants }
-			add = prev.modifier:local_laborers_max_literacy
-			add = owner.modifier:global_peasants_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:tribesmen }
-			add = prev.modifier:local_tribesmen_max_literacy
-			add = owner.modifier:global_tribesmen_max_literacy
-		}
-		else_if = {
-			limit = { pop_type = pop_type:slaves }
-			add = prev.modifier:local_slaves_max_literacy
-			add = owner.modifier:global_slaves_max_literacy
-		}
-		add = prev.modifier:local_max_literacy
-		add = owner.modifier:global_max_literacy
-		multiply = {
-			add = pop_size
-			divide = prev.population
+		limit = { pop_size > 0 }
+		add = {
+			if = {
+				limit = { pop_type = pop_type:nobles }
+				add = prev.modifier:local_nobles_max_literacy
+				add = owner.modifier:global_nobles_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:clergy }
+				add = prev.modifier:local_clergy_max_literacy
+				add = owner.modifier:global_clergy_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:burghers }
+				add = prev.modifier:local_burghers_max_literacy
+				add = owner.modifier:global_burghers_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:burghers }
+				add = prev.modifier:local_burghers_max_literacy
+				add = owner.modifier:global_burghers_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:laborers }
+				add = prev.modifier:local_laborers_max_literacy
+				add = owner.modifier:global_laborers_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:soldiers }
+				add = prev.modifier:local_soldiers_max_literacy
+				add = owner.modifier:global_soldiers_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:peasants }
+				add = prev.modifier:local_laborers_max_literacy
+				add = owner.modifier:global_peasants_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:tribesmen }
+				add = prev.modifier:local_tribesmen_max_literacy
+				add = owner.modifier:global_tribesmen_max_literacy
+			}
+			else_if = {
+				limit = { pop_type = pop_type:slaves }
+				add = prev.modifier:local_slaves_max_literacy
+				add = owner.modifier:global_slaves_max_literacy
+			}
+			add = prev.modifier:local_max_literacy
+			add = owner.modifier:global_max_literacy
+			multiply = {
+				add = pop_size
+				multiply = 1000
+				divide = prev.population
+			}
+			divide = 1000
 		}
 	}
-	#multiply = 100
-  min = 0
 }
 
 
