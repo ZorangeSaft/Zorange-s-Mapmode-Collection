@@ -2196,63 +2196,43 @@ zmc_missing_control = {
 		else_if = {
 			limit = {
 				zmc_missing_control < 100
-				zmc_missing_control >= 1
+				zmc_missing_control >= 50
 			}
 			lerp = {
 				max_color = rgb { 255 105 180 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_missing_control
-					subtract = 1
-					divide = 99
+					subtract = 50
+					divide = 50
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < 1
-				zmc_missing_control >= 0
+				zmc_missing_control < 50
+				zmc_missing_control >= 1
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_missing_control
+					subtract = 1
+					divide = 49
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < 0
-				zmc_missing_control >= -1
+				zmc_missing_control < 1
+				zmc_missing_control > -1
 			}
-			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 255 0 } #green
-				factor = {
-					value = zmc_missing_control
-					add = 1
-				}
-			}
+			value = rgb { 0 0 0 } #green
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < -1
-				zmc_missing_control >= -25
-			}
-			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
-				factor = {
-					value = zmc_missing_control
-					add = 25
-					divide = 24
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_missing_control < -25
+				zmc_missing_control <= -1
 				zmc_missing_control >= -50
 			}
 			lerp = {
@@ -2261,7 +2241,7 @@ zmc_missing_control = {
 				factor = {
 					value = zmc_missing_control
 					add = 50
-					divide = 25
+					divide = 49
 				}
 			}
 		}
