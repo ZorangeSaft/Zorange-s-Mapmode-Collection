@@ -2171,7 +2171,7 @@ zmc_local_max_literacy = {
 
 #missing control mapmode
 
-zmc_missing_control = {
+zmc_control_difference = {
 	map_color = {
 		if = {
 			limit = {
@@ -2189,20 +2189,20 @@ zmc_missing_control = {
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control >= 100
+				zmc_control_difference >= 100
 			}
-			value = rgb { 255 105 180 } #pink
+			value = rgb { 0 0 0 } #black
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < 100
-				zmc_missing_control >= 50
+				zmc_control_difference < 100
+				zmc_control_difference >= 50
 			}
 			lerp = {
-				max_color = rgb { 255 105 180 } #pink
-				min_color = rgb { 0 0 139 } #dark blue
+				max_color = rgb { 0 0 0 } #black
+				min_color = rgb { 255 0 0 } #red
 				factor = {
-					value = zmc_missing_control
+					value = zmc_control_difference
 					subtract = 50
 					divide = 50
 				}
@@ -2210,14 +2210,14 @@ zmc_missing_control = {
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < 50
-				zmc_missing_control >= 1
+				zmc_control_difference < 50
+				zmc_control_difference >= 1
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 135 206 250 } #light blue
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
-					value = zmc_missing_control
+					value = zmc_control_difference
 					subtract = 1
 					divide = 49
 				}
@@ -2225,21 +2225,21 @@ zmc_missing_control = {
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < 1
-				zmc_missing_control > -1
+				zmc_control_difference < 1
+				zmc_control_difference > -1
 			}
-			value = rgb { 0 0 0 } #green
+			value = rgb { 100 100 100 } #green
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control <= -1
-				zmc_missing_control >= -50
+				zmc_control_difference <= -1
+				zmc_control_difference >= -50
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
-					value = zmc_missing_control
+					value = zmc_control_difference
 					add = 50
 					divide = 49
 				}
@@ -2247,14 +2247,14 @@ zmc_missing_control = {
 		}
 		else_if = {
 			limit = {
-				zmc_missing_control < -50
-				zmc_missing_control >= -100
+				zmc_control_difference < -50
+				zmc_control_difference >= -100
 			}
 			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 0 0 0 } #black
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 255 0 255 } #pink
 				factor = {
-					value = zmc_missing_control
+					value = zmc_control_difference
 					add = 100
 					divide = 50
 				}
@@ -2266,37 +2266,37 @@ zmc_missing_control = {
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_pink_legend_key"
+		desc = "zmc_control_difference_pink_legend_key"
 		color = rgb { 255 105 180 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_dark_blue_legend_key"
+		desc = "zmc_control_difference_dark_blue_legend_key"
 		color = rgb { 0 0 139 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_light_blue_legend_key"
+		desc = "zmc_control_difference_light_blue_legend_key"
 		color = rgb { 135 206 250 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_green_legend_key"
+		desc = "zmc_control_difference_green_legend_key"
 		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_yellow_legend_key"
+		desc = "zmc_control_difference_yellow_legend_key"
 		color = rgb { 255 255 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_red_legend_key"
+		desc = "zmc_control_difference_red_legend_key"
 		color = rgb { 255 0 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_black_legend_key"
+		desc = "zmc_control_difference_black_legend_key"
 		color = rgb { 0 0 0 }
 	}
 
@@ -2306,7 +2306,7 @@ zmc_missing_control = {
 				is_land = yes
 				exists = owner
 			}
-			value = MAPMODE_ZMC_MISSING_CONTROL_TT_LAND
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND
 		}
 		else_if = {
 			limit = {
@@ -2314,10 +2314,10 @@ zmc_missing_control = {
 					exists = owner
 				}
 			}
-			value = MAPMODE_ZMC_MISSING_CONTROL_TT_UNCOLONISED
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_UNCOLONISED
 		}
 		else = {
-			value = MAPMODE_ZMC_MISSING_CONTROL_TT_WATER
+			value = MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_WATER
 		}
 	}
 

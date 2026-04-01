@@ -117,11 +117,14 @@ zmc_tax_base_per_population = { #wealth per population mapmode, basically gdp/ca
 
 
 
+
 zmc_local_production_efficiency = { #production efficiency mapmode
   value = modifier:local_production_efficiency
   #add = modifier:global_production_efficiency
   multiply = 100
 }
+
+
 
 
 
@@ -132,34 +135,9 @@ zmc_local_max_literacy = { #maximum literacy mapmode
 
 
 
-#zmc_missing_control = { #missing control mapmode
-#  if = {
-#    limit = { modifier:local_max_control >= 1 }
-#    value = 1 #all the modifiers that contribute to local_max_control just get added up, so if they reach above 100%, you still get out 120% for example
-#  }
-#  else = {
-#    value = modifier:local_max_control
-#  }
-#  subtract = local_control
-#  multiply = 100
-#}
 
-zmc_missing_control = {
-  #value = modifier:local_max_control
-  #add = modifier:owner.global_max_control
-  #if = {
-  #  limit = {
-  #    location_rank = location_rank:rural_settlement
-  #  }
-  #  add = modifier:local_max_rural_control
-  #  add = modifier:owner.global_max_rural_control
-  #}
-  #else = {
-  #  add = modifier:local_max_urban_control
-  #  add = modifier:owner.global_max_urban_control
-  #}
-  #max = 1 #This limits all of the above to 1
-  #subtract = local_control
+
+zmc_control_difference = {
   value = max_control
   subtract = local_control
   multiply = 100
