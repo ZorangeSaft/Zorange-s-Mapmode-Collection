@@ -1787,73 +1787,73 @@ zmc_local_production_efficiency = {
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency >= 5
+				zmc_local_production_efficiency >= 100
 			}
 			value = rgb { 255 0 255 } #pink
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency < 5
-				zmc_local_production_efficiency >= 4
+				zmc_local_production_efficiency < 100
+				zmc_local_production_efficiency >= 50
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
-				min_color = rgb { 0 0 200 } #dark blue
+				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_local_production_efficiency
-					subtract = 4
-					divide = 1
+					subtract = 50
+					divide = 50
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency < 4
-				zmc_local_production_efficiency >= 3
+				zmc_local_production_efficiency < 50
+				zmc_local_production_efficiency >= 30
 			}
 			lerp = {
-				max_color = rgb { 0 0 200 } #dark blue
+				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_local_production_efficiency
-					subtract = 3
-					divide = 1
+					subtract = 30
+					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency < 3
-				zmc_local_production_efficiency >= 2
+				zmc_local_production_efficiency < 30
+				zmc_local_production_efficiency >= 20
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_local_production_efficiency
-					subtract = 2
-					divide = 1
+					subtract = 20
+					divide = 10
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency < 2
-				zmc_local_production_efficiency >= 1
+				zmc_local_production_efficiency < 20
+				zmc_local_production_efficiency >= 10
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_local_production_efficiency
-					subtract = 1
-					divide = 1
+					subtract = 10
+					divide = 10
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_local_production_efficiency < 1
+				zmc_local_production_efficiency < 10
 				zmc_local_production_efficiency >= 0
 			}
 			lerp = {
@@ -1861,22 +1861,22 @@ zmc_local_production_efficiency = {
 				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_local_production_efficiency
-					divide = 1
+					divide = 10
 				}
 			}
 		}
 		else_if = {
 			limit = {
 				zmc_local_production_efficiency < 0
-				zmc_local_production_efficiency >= -10
+				zmc_local_production_efficiency >= -100
 			}
 			lerp = {
 				max_color = rgb { 255 0 0 } #red
 				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_local_production_efficiency
-					subtract = -10
-					divide = 10
+					add = 100
+					divide = 100
 				}
 			}
 		}
@@ -1892,7 +1892,7 @@ zmc_local_production_efficiency = {
 
 	legend_key = {
 		desc = "zmc_local_production_efficiency_dark_blue_legend_key"
-		color = rgb { 0 0 200 }
+		color = rgb { 0 0 139 }
 	}
 
 	legend_key = {

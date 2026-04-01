@@ -179,9 +179,10 @@
 
  #production efficiency mapmode
  #not sure if i should include global production efficiency per country as well in this mapmode
+ #[ROOT.GetLocation.GetModifierValue('local_production_efficiency')|Y]
  mapmode_zmc_local_production_efficiency_name: "Local Production Efficiency"
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY: "#T $mapmode_zmc_local_production_efficiency_name$#!\nThis colors [locations|e] by local production efficiency.\n\n@adm! #color_yellow Strategy#! @adm!\nBuild [buildings|e] in locations with high [production_efficiency|e] to increase their output and profit.\n\nOccupation in war creates negative [prosperity|e] which can heavily reduce [production_efficiency|e].\n\nKeep in mind that this mapmode only shows the flat local [production_efficiency|e] for all buildings, and multiple different extra bonuses should usually apply based on the specific building, like from local [rgo|e]"
- MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_LAND: "[ROOT.GetLocation.GetName] has a local [production_efficiency|e] of [ROOT.GetLocation.GetModifierValue('local_production_efficiency')|Y]."
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_LAND: "[ROOT.GetLocation.GetName] has a local [production_efficiency|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_production_efficiency')|Y+]%."
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have a local [production_efficiency|e]."
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a local [production_efficiency|e]."
 
@@ -198,9 +199,9 @@
 
  #maximum literacy mapmode
 
- mapmode_zmc_local_max_literacy_name: "Maximum Literacy"
- MAPMODE_ZMC_LOCAL_MAX_LITERACY: "#T $mapmode_zmc_local_max_literacy_name$#!\nThis colors [locations|e] by local maximum [literacy|e].\n\n@adm! #color_yellow Strategy#! @adm!\n."
- MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_LAND: "[ROOT.GetLocation.GetName] has a local maximum [literacy|e] of [ROOT.GetLocation.GetModifierValue('local_max_literacy')|Y]."
+ mapmode_zmc_local_max_literacy_name: "Average Maximum Literacy"
+ MAPMODE_ZMC_LOCAL_MAX_LITERACY: "#T $mapmode_zmc_local_max_literacy_name$#!\nThis colors [locations|e] by average local maximum [literacy|e].\n\n@adm! #color_yellow Strategy#! @adm!\n."
+ MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_LAND: "[ROOT.GetLocation.GetName] has an average local maximum [literacy|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_max_literacy')|Y]."
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_WATER: "[ROOT.GetLocation.GetName] is not a land [location|e] so it does not have [literacy|e]."
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [literacy|e]."
 
@@ -216,7 +217,7 @@
  #control difference mapmode
 
  mapmode_zmc_control_difference_name: "Control Difference"
- MAPMODE_ZMC_CONTROL_DIFFERENCE: "#T $mapmode_zmc_control_difference_name$#!\nThis colors [locations|e] by their difference in [control|e] to the [max_control|e].\n\n@adm! #color_yellow Strategy#! @adm!\n"
+ MAPMODE_ZMC_CONTROL_DIFFERENCE: "#T $mapmode_zmc_control_difference_name$#!\nThis colors [locations|e] by their difference in [control|e] to the [max_control|e].\n\nPositive values represent a [locations|e] having more [control|e] than its [max_control|e], meaning it will tick down over time, while negative values represent a [locations|e] having less [control|e] than its [max_control|e], meaning it will tick up over time.\n\n@adm! #color_yellow Strategy#! @adm!\nNewly conquered territories will often have a different [max_control|e] after they are taken, usually going down."
  MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_ABOVE: "[ROOT.GetLocation.GetName] is [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_difference')|Y] [control|e] above the [max_control|e] and will tick down over time."
  MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_MIDDLE: "[ROOT.GetLocation.GetName] is already within 1% of its [max_control|e]."
  MAPMODE_ZMC_CONTROL_DIFFERENCE_TT_LAND_BELOW: "[ROOT.GetLocation.GetName] is [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_difference')|Y] [control|e] below the [max_control|e] and will tick up over time."
