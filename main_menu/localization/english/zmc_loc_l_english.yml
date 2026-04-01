@@ -38,7 +38,7 @@
  #development growth mapmode
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@adm! #color_yellow Strategy#! @adm!\nCountries with higher [development|e] growth are more likely to outpace you in the future.\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@adm! #color_yellow Strategy#! @adm!\nCountries with higher [development|e] growth are more likely to outpace you in the future."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have monthly [development|e] growth."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have monthly [development|e] growth."
