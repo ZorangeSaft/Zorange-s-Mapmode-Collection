@@ -7,7 +7,7 @@
  #urbanisation suitability mapmode/urbanisation mapmode
 
  mapmode_zmc_urbanisation_suitability_name: "Urbanisation Suitability"
- MAPMODE_ZMC_URBANISATION_SUITABILITY: "#T $mapmode_zmc_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [zmc_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase local pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [zmc_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY: "#T $mapmode_zmc_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [zmc_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase province wide pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [zmc_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
  MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [zmc_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability').GetValue|Y]."
  MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have an [zmc_urbanisation_suitability|e]."
 
