@@ -105,39 +105,39 @@
 
 ###urbanisation suitability mapmode
 
-mdm_urbanisation_suitability = {
+zmc_urbanisation_suitability = {
 	#color_mode = no_color
 
 	map_color = {
 		if = {
 			limit = {
-				#mdm_local_urbanisation_suitability_level < 1
-				NOT = { has_variable = mdm_local_urbanisation_suitability } #comment this out if you wanna use the above thing
+				#zmc_local_urbanisation_suitability_level < 1
+				NOT = { has_variable = zmc_local_urbanisation_suitability } #comment this out if you wanna use the above thing
 			}
 			value = hsv { 0.58 0.50 0.52 } #figured out via trail and error from the color the basegame tells you, matches basegame color for water, altough water for some reason falls under fallback
 		}
 		else_if = {
 			limit = {
-				var:mdm_local_urbanisation_suitability < 12
+				var:zmc_local_urbanisation_suitability < 12
 			}
 			lerp = {
 				max_color = rgb { 255 255 0 }
 				min_color = rgb { 255 0 0 }
 				factor = {
-					value = var:mdm_local_urbanisation_suitability #mdm_local_urbanisation_suitability_level #var:mdm_local_urbanisation_suitability
+					value = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level #var:zmc_local_urbanisation_suitability
 					divide = 10
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				var:mdm_local_urbanisation_suitability < 25
+				var:zmc_local_urbanisation_suitability < 25
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 }
 				min_color = rgb { 255 255 0 }
 				factor = {
-					value = var:mdm_local_urbanisation_suitability
+					value = var:zmc_local_urbanisation_suitability
 					subtract = 10
 					divide = 10
 				}
@@ -148,24 +148,24 @@ mdm_urbanisation_suitability = {
 				max_color = rgb { 255 255 255 }
 				min_color = rgb { 0 0 0 }
 				factor = {
-					value = var:mdm_local_urbanisation_suitability
+					value = var:zmc_local_urbanisation_suitability
 				}
 			}
 		}
 	}
 
 	legend_key = {
-		desc = "mdm_urbanisation_suitability_green_legend_key"
+		desc = "zmc_urbanisation_suitability_green_legend_key"
 		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
-		desc = "mdm_urbanisation_suitability_yellow_legend_key"
+		desc = "zmc_urbanisation_suitability_yellow_legend_key"
 		color = rgb { 255 255 0 }
 	}
 
 	legend_key = {
-		desc = "mdm_urbanisation_suitability_red_legend_key"
+		desc = "zmc_urbanisation_suitability_red_legend_key"
 		color = rgb { 255 0 0 }
 	}
 
@@ -174,10 +174,10 @@ mdm_urbanisation_suitability = {
 			limit = {
 				is_land = yes 
 			}
-			value = MAPMODE_MDM_URBANISATION_SUITABILITY_TT_LAND
+			value = MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_LAND
 		}
 		else = {
-			value = MAPMODE_MDM_URBANISATION_SUITABILITY_TT_WATER
+			value = MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_WATER
 		}
 	}
 

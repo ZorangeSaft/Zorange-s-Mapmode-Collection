@@ -1,6 +1,6 @@
 ﻿#####zmc
 
-mdm_local_urbanisation_suitability_level = {
+zmc_local_urbanisation_suitability_level = {
 	value = 0
 	#topography checks
 	#if mountains

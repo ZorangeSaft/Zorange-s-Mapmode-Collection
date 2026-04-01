@@ -2,27 +2,27 @@
 
 on_game_start = { #for new saves
   on_actions = {
-    mdm_on_game_start
+    zmc_on_game_start
   }
 }
 
 monthly_country_pulse = { #for adding to existing saves
   on_actions = {
-    mdm_on_game_start
+    zmc_on_game_start
   }
 }
 
-mdm_on_game_start = {
+zmc_on_game_start = {
   trigger = {
-    NOT = { has_global_variable = mdm_urbanization_setup_done }
+    NOT = { has_global_variable = zmc_urbanization_setup_done }
   }
   effect = {
-    set_global_variable = mdm_urbanization_setup_done 
+    set_global_variable = zmc_urbanization_setup_done 
     every_location_in_the_world = {
       limit = { is_land = yes }
       set_variable = {
-			name = mdm_local_urbanisation_suitability
-			value = mdm_local_urbanisation_suitability_level
+			name = zmc_local_urbanisation_suitability
+			value = zmc_local_urbanisation_suitability_level
 			}
     }
   }

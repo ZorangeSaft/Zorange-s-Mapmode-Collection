@@ -6,17 +6,17 @@
 
  #urbanisation suitability mapmode/urbanisation mapmode
 
- mapmode_mdm_urbanisation_suitability_name: "Urbanisation Suitability"
- MAPMODE_MDM_URBANISATION_SUITABILITY: "#T $mapmode_mdm_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [mdm_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase local pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [mdm_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
- MAPMODE_MDM_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [mdm_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('mdm_local_urbanisation_suitability').GetValue|Y]."
- MAPMODE_MDM_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have an [mdm_urbanisation_suitability|e]."
+ mapmode_zmc_urbanisation_suitability_name: "Urbanisation Suitability"
+ MAPMODE_ZMC_URBANISATION_SUITABILITY: "#T $mapmode_zmc_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [zmc_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase local pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [zmc_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [zmc_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability').GetValue|Y]."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have an [zmc_urbanisation_suitability|e]."
 
- game_concept_mdm_urbanisation_suitability: "Urbanisation Suitability"
- game_concept_mdm_urbanisation_suitability_desc: "[mdm_urbanisation_suitability|e] is a measure of how suitable a [location|e] is for creating an [town_and_city|e] based on [geography|e]. \n\nIt is takes into account [topography|e], [vegetation|e], [climate|e], [natural_harbor_suitability|e], and if it has a [river|e] or is adjacent to a [lake|e].\n\nIt is however important to keep in mind factors other than geography, like the local [rgo|e] and [proximity|e].\n\nThe colors are only a representation of how relatively good a [location|e] is for [town_and_city|e] placement, so orange [locations|e] in a [province|e] otherwise full of red would still be a good place for an [town_and_city|e], to have at least 1 in every [province|e]."
+ game_concept_zmc_urbanisation_suitability: "Urbanisation Suitability"
+ game_concept_zmc_urbanisation_suitability_desc: "[zmc_urbanisation_suitability|e] is a measure of how suitable a [location|e] is for creating an [town_and_city|e] based on [geography|e]. \n\nIt is takes into account [topography|e], [vegetation|e], [climate|e], [natural_harbor_suitability|e], and if it has a [river|e] or is adjacent to a [lake|e].\n\nIt is however important to keep in mind factors other than geography, like the local [rgo|e] and [proximity|e].\n\nThe colors are only a representation of how relatively good a [location|e] is for [town_and_city|e] placement, so orange [locations|e] in a [province|e] otherwise full of red would still be a good place for an [town_and_city|e], to have at least 1 in every [province|e]."
 
- mdm_urbanisation_suitability_green_legend_key: "High suitability"
- mdm_urbanisation_suitability_yellow_legend_key: "Medium suitability"
- mdm_urbanisation_suitability_red_legend_key: "Low suitability"
+ zmc_urbanisation_suitability_green_legend_key: "High suitability"
+ zmc_urbanisation_suitability_yellow_legend_key: "Medium suitability"
+ zmc_urbanisation_suitability_red_legend_key: "Low suitability"
 
 
 
