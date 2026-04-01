@@ -145,20 +145,22 @@ zmc_local_max_literacy = { #maximum literacy mapmode
 #}
 
 zmc_missing_control = {
-  value = modifier:local_max_control
-  add = modifier:owner.global_max_control
-  if = {
-    limit = {
-      location_rank = location_rank:rural_settlement
-    }
-    add = modifier:local_max_rural_control
-    add = modifier:owner.global_max_rural_control
-  }
-  else = {
-    add = modifier:local_max_urban_control
-    add = modifier:owner.global_max_urban_control
-  }
-  max = 1 #This limits all of the above to 1
+  #value = modifier:local_max_control
+  #add = modifier:owner.global_max_control
+  #if = {
+  #  limit = {
+  #    location_rank = location_rank:rural_settlement
+  #  }
+  #  add = modifier:local_max_rural_control
+  #  add = modifier:owner.global_max_rural_control
+  #}
+  #else = {
+  #  add = modifier:local_max_urban_control
+  #  add = modifier:owner.global_max_urban_control
+  #}
+  #max = 1 #This limits all of the above to 1
+  #subtract = local_control
+  value = max_control
   subtract = local_control
   multiply = 100
 }

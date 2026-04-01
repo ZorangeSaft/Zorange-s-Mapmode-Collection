@@ -2191,50 +2191,20 @@ zmc_missing_control = {
 			limit = {
 				zmc_missing_control >= 100
 			}
-			value = rgb { 0 0 0 } #black
+			value = rgb { 255 105 180 } #pink
 		}
 		else_if = {
 			limit = {
 				zmc_missing_control < 100
-				zmc_missing_control >= 50
-			}
-			lerp = {
-				max_color = rgb { 0 0 0 } #black
-				min_color = rgb { 255 0 0 } #red
-				factor = {
-					value = zmc_missing_control
-					subtract = 50
-					divide = 50
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_missing_control < 50
-				zmc_missing_control >= 25
-			}
-			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 255 0 } #yellow
-				factor = {
-					value = zmc_missing_control
-					subtract = 25
-					divide = 25
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_missing_control < 25
 				zmc_missing_control >= 1
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 255 105 180 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_missing_control
 					subtract = 1
-					divide = 24
+					divide = 99
 				}
 			}
 		}
@@ -2243,9 +2213,8 @@ zmc_missing_control = {
 				zmc_missing_control < 1
 				zmc_missing_control >= 0
 			}
-			#value = rgb { 50 50 50 }
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
+				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_missing_control
@@ -2259,7 +2228,7 @@ zmc_missing_control = {
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_missing_control
 					add = 1
@@ -2269,46 +2238,61 @@ zmc_missing_control = {
 		else_if = {
 			limit = {
 				zmc_missing_control < -1
+				zmc_missing_control >= -25
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_missing_control
+					add = 25
+					divide = 24
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_missing_control < -25
+				zmc_missing_control >= -50
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_missing_control
+					add = 50
+					divide = 25
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_missing_control < -50
 				zmc_missing_control >= -100
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 255 105 180 } #pink
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_missing_control
 					add = 100
-					divide = 99
+					divide = 50
 				}
 			}
 		}
 		else = {
-			value = rgb { 255 105 180 } #pink fallback for values < -100
+			value = rgb { 0 0 0 } #black fallback for values < -100
 		}
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_black_legend_key"
-		color = rgb { 0 0 0 }
+		desc = "zmc_missing_control_pink_legend_key"
+		color = rgb { 255 105 180 }
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_red_legend_key"
-		color = rgb { 255 0 0 }
-	}
-
-	legend_key = {
-		desc = "zmc_missing_control_orange_legend_key"
+		desc = "zmc_missing_control_dark_blue_legend_key"
 		color = rgb { 0 0 139 }
-	}
-
-	legend_key = {
-		desc = "zmc_missing_control_yellow_legend_key"
-		color = rgb { 255 255 0 }
-	}
-
-	legend_key = {
-		desc = "zmc_missing_control_green_legend_key"
-		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
@@ -2317,8 +2301,23 @@ zmc_missing_control = {
 	}
 
 	legend_key = {
-		desc = "zmc_missing_control_gray_legend_key"
-		color = rgb { 255 105 180 }
+		desc = "zmc_missing_control_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_missing_control_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_missing_control_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_missing_control_black_legend_key"
+		color = rgb { 0 0 0 }
 	}
 
 	tooltip_key = {
