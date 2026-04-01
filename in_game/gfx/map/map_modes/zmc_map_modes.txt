@@ -1709,8 +1709,26 @@ zmc_time_until_100_development = {
 			limit = {
 				is_land = yes
 				exists = owner
+				zmc_time_until_100_development < 10000
+				development < 100
 			}
 			value = MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				exists = owner
+				zmc_time_until_100_development >= 10000
+			}
+			value = MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND_TIME_INFINITY
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				exists = owner
+				development = 100
+			}
+			value = MAPMODE_ZMC_TIME_UNTIL_100_DEVELOPMENT_TT_LAND_100_DEV
 		}
 		else_if = {
 			limit = {
