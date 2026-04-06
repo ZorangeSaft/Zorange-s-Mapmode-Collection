@@ -2443,88 +2443,88 @@ zmc_location_size = {
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact >= 130
+				zmc_location_size_impact >= 120
 			}
 			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 130
-				zmc_location_size_impact >= 110
+				zmc_location_size_impact < 120
+				zmc_location_size_impact >= 100
 			}
 			lerp = {
 				max_color = rgb { 255 255 255 } #white
 				min_color = rgb { 255 0 255 } #pink
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 110
-					divide = 20
+					subtract = 100
+					divide = 25
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 110
-				zmc_location_size_impact >= 90
+				zmc_location_size_impact < 100
+				zmc_location_size_impact >= 80
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 90
+					subtract = 80
 					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 90
-				zmc_location_size_impact >= 70
+				zmc_location_size_impact < 80
+				zmc_location_size_impact >= 60
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 70
+					subtract = 60
 					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 70
-				zmc_location_size_impact >= 50
+				zmc_location_size_impact < 60
+				zmc_location_size_impact >= 40
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 50
+					subtract = 40
 					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 50
-				zmc_location_size_impact >= 30
+				zmc_location_size_impact < 40
+				zmc_location_size_impact >= 20
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 30
+					subtract = 20
 					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 30
+				zmc_location_size_impact < 20
 				zmc_location_size_impact >= 10
 			}
 			lerp = {
@@ -2533,7 +2533,7 @@ zmc_location_size = {
 				factor = {
 					value = zmc_location_size_impact
 					subtract = 10
-					divide = 20
+					divide = 10
 				}
 			}
 		}
