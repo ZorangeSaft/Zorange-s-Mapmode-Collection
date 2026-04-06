@@ -599,6 +599,188 @@ zmc_tax_base_per_population = {
 
 
 
+#province tax base mapmode
+
+zmc_province_tax_base = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					exists = owner
+				}
+			}
+			value = rgb { 50 50 50 } #gray for uncolonised land
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base >= 10000
+			}
+			value = rgb { 135 206 250 } #light blue
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base < 10000
+				zmc_province_tax_base >= 1000
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_province_tax_base
+					subtract = 1000
+					divide = 9000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base < 1000
+				zmc_province_tax_base >= 100
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_province_tax_base
+					subtract = 100
+					divide = 900
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base < 100
+				zmc_province_tax_base >= 10
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_province_tax_base
+					subtract = 10
+					divide = 90
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base < 10
+				zmc_province_tax_base >= 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_province_tax_base
+					divide = 10
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 0 0 } #fallback
+		}
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_light_blue_legend_key"
+		color = rgb { 135 206 250 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_black_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_tax_base_gray_legend_key"
+		color = rgb { 50 50 50 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes
+				exists = owner
+			}
+			value = MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_LAND
+		}
+		else_if = {
+			limit = {
+				is_land = yes
+				NOT = {
+					exists = owner
+				}
+			}
+			value = MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_UNCOLONISED
+		}
+		else = {
+			value = MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+	
+	flatmap_behaviour = always
+	use_fow = no
+	
+	category = economy
+	index = 0
+
+	map_markers = {
+		all = no
+	}
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
+}
+
+
+
 #building cap mapmode
 #color on the map is a percentage of how much of the building cap is used
 #0% is green and 100% is red, with a gradient
@@ -2622,8 +2804,8 @@ zmc_location_size = {
 	flatmap_behaviour = always
 	use_fow = no
 
-	category = geography
-	index = 1
+	category = debug
+	index = 0
 
 	map_markers = {
 		all = no

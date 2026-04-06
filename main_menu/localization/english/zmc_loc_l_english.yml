@@ -175,6 +175,23 @@
 
 
 
+ #province tax base mapmode
+
+ mapmode_zmc_province_tax_base_name: "Province Tax Base"
+ MAPMODE_ZMC_PROVINCE_TAX_BASE: "#T $mapmode_zmc_province_tax_base_name$#!\nThis colors [locations|e] by their [province|e] [tax_base|e].\n\n@adm! #color_yellow Strategy#! @adm!\n[locations|e] in provinces with high [tax_base|e] are generally more economically valuable."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [province|e] [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base')|Y]."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e]."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
+
+ zmc_province_tax_base_light_blue_legend_key: "10000"
+ zmc_province_tax_base_green_legend_key: "1000"
+ zmc_province_tax_base_yellow_legend_key: "100"
+ zmc_province_tax_base_red_legend_key: "10"
+ zmc_province_tax_base_black_legend_key: "0"
+ zmc_province_tax_base_gray_legend_key: "Uncolonised"
+
+
+
  #production efficiency mapmode
  #[ROOT.GetLocation.GetModifierValue('local_production_efficiency')|Y]
  mapmode_zmc_local_production_efficiency_name: "Local Production Efficiency"
