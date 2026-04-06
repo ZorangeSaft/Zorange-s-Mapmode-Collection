@@ -178,13 +178,15 @@
  #province tax base mapmode
 
  mapmode_zmc_province_tax_base_name: "Province Tax Base"
- MAPMODE_ZMC_PROVINCE_TAX_BASE: "#T $mapmode_zmc_province_tax_base_name$#!\nThis colors [locations|e] by their [province|e] [tax_base|e].\n\n@adm! #color_yellow Strategy#! @adm!\n[locations|e] in provinces with high [tax_base|e] are generally more economically valuable."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE: "#T $mapmode_zmc_province_tax_base_name$#!\nThis colors [locations|e] by the [tax_base|e] of their entire [province|e] added together.\n\nKeep in mind that if multiple different countries own part of the same [province|e], [locations|e] in their respective parts will have a different [province|e] [tax_base|e] compared to [locations|e] in the other country's parts."
  MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [province|e] [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base')|Y]."
  MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e]."
  MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
- zmc_province_tax_base_light_blue_legend_key: "10000"
- zmc_province_tax_base_green_legend_key: "1000"
+ zmc_province_tax_base_pink_legend_key: "10000"
+ zmc_province_tax_base_dark_blue_legend_key: "2000"
+ zmc_province_tax_base_light_blue_legend_key: "1000"
+ zmc_province_tax_base_green_legend_key: "500"
  zmc_province_tax_base_yellow_legend_key: "100"
  zmc_province_tax_base_red_legend_key: "10"
  zmc_province_tax_base_black_legend_key: "0"
