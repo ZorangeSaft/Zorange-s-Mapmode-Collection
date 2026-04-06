@@ -2443,43 +2443,58 @@ zmc_location_size = {
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact >= 125
+				zmc_location_size_impact >= 130
 			}
-			value = rgb { 255 0 255 } #pink
+			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 125
-				zmc_location_size_impact >= 100
+				zmc_location_size_impact < 130
+				zmc_location_size_impact >= 110
+			}
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_location_size_impact
+					subtract = 110
+					divide = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_location_size_impact < 110
+				zmc_location_size_impact >= 90
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 100
-					divide = 25
+					subtract = 90
+					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 100
-				zmc_location_size_impact >= 75
+				zmc_location_size_impact < 90
+				zmc_location_size_impact >= 70
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 75
-					divide = 25
+					subtract = 70
+					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 75
+				zmc_location_size_impact < 70
 				zmc_location_size_impact >= 50
 			}
 			lerp = {
@@ -2488,28 +2503,28 @@ zmc_location_size = {
 				factor = {
 					value = zmc_location_size_impact
 					subtract = 50
-					divide = 25
+					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
 				zmc_location_size_impact < 50
-				zmc_location_size_impact >= 25
+				zmc_location_size_impact >= 30
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_location_size_impact
-					subtract = 25
-					divide = 25
+					subtract = 30
+					divide = 20
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_location_size_impact < 25
+				zmc_location_size_impact < 30
 				zmc_location_size_impact >= 10
 			}
 			lerp = {
@@ -2518,7 +2533,7 @@ zmc_location_size = {
 				factor = {
 					value = zmc_location_size_impact
 					subtract = 10
-					divide = 15
+					divide = 20
 				}
 			}
 		}
@@ -2539,6 +2554,11 @@ zmc_location_size = {
 		else = {
 			value = rgb { 0 0 0 } #black fallback
 		}
+	}
+
+	legend_key = {
+		desc = "zmc_location_size_white_legend_key"
+		color = rgb { 255 255 255 }
 	}
 
 	legend_key = {
