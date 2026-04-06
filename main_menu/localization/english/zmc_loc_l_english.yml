@@ -232,17 +232,17 @@
 
 
 
- #location size impact mapmode
+ #location size mapmode
 
- mapmode_zmc_location_size_impact_name: "Location Size Impact"
- MAPMODE_ZMC_LOCATION_SIZE_IMPACT: "#T $mapmode_zmc_location_size_impact_name$#!\nThis colors [locations|e] by their location size impact value.\n\n@adm! #color_yellow Strategy#! @adm!\nHigher values generally indicate larger or more favorable locations for geography-based comparisons."
- MAPMODE_ZMC_LOCATION_SIZE_IMPACT_TT_LAND: "[ROOT.GetLocation.GetName] has a location size impact of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_size_impact')|Y]."
- MAPMODE_ZMC_LOCATION_SIZE_IMPACT_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a location size impact."
+ mapmode_zmc_location_size_name: "Relative Location Size"
+ MAPMODE_ZMC_LOCATION_SIZE: "#T $mapmode_zmc_location_size_name$#!\nThis colors [locations|e] by their relative location size.\n\n@warning_icon! #color_red Important#! @warning_icon!\nThe values on this mapmode do not exactly match the actual pixel sizes of the locations, so this mapmode should be used for qualitative comparisons instead of exact ones."
+ MAPMODE_ZMC_LOCATION_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has a relative location size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_size_impact')|Y0]"
+ MAPMODE_ZMC_LOCATION_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a relative location size."
 
- zmc_location_size_impact_pink_legend_key: "10000"
- zmc_location_size_impact_dark_blue_legend_key: "5000"
- zmc_location_size_impact_light_blue_legend_key: "1000"
- zmc_location_size_impact_green_legend_key: "500"
- zmc_location_size_impact_yellow_legend_key: "100"
- zmc_location_size_impact_red_legend_key: "10"
- zmc_location_size_impact_black_legend_key: "0"
+ zmc_location_size_pink_legend_key: "125"
+ zmc_location_size_dark_blue_legend_key: "100"
+ zmc_location_size_light_blue_legend_key: "75"
+ zmc_location_size_green_legend_key: "50"
+ zmc_location_size_yellow_legend_key: "25"
+ zmc_location_size_red_legend_key: "10"
+ zmc_location_size_black_legend_key: "0"
