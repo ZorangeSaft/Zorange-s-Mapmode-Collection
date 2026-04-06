@@ -205,3 +205,18 @@ zmc_control_difference = {
   subtract = local_control
   multiply = -100
 }
+
+
+
+
+
+zmc_location_size_impact = {
+	value = location_size #occupation_time #modifier:occupation_time
+}
+
+
+
+
+zmc_closeness_to_equator_impact = {
+	value = modifier:closeness_to_equator_impact
+}

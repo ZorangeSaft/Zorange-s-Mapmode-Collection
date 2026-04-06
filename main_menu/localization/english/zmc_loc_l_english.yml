@@ -229,3 +229,20 @@
  zmc_control_difference_dark_blue_legend_key: "50 above max"
  zmc_control_difference_pink_legend_key: "100 above max"
  zmc_control_difference_gray_legend_key: "Uncolonised"
+
+
+
+ #location size impact mapmode
+
+ mapmode_zmc_location_size_impact_name: "Location Size Impact"
+ MAPMODE_ZMC_LOCATION_SIZE_IMPACT: "#T $mapmode_zmc_location_size_impact_name$#!\nThis colors [locations|e] by their location size impact value.\n\n@adm! #color_yellow Strategy#! @adm!\nHigher values generally indicate larger or more favorable locations for geography-based comparisons."
+ MAPMODE_ZMC_LOCATION_SIZE_IMPACT_TT_LAND: "[ROOT.GetLocation.GetName] has a location size impact of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_size_impact')|Y]."
+ MAPMODE_ZMC_LOCATION_SIZE_IMPACT_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a location size impact."
+
+ zmc_location_size_impact_pink_legend_key: "10000"
+ zmc_location_size_impact_dark_blue_legend_key: "5000"
+ zmc_location_size_impact_light_blue_legend_key: "1000"
+ zmc_location_size_impact_green_legend_key: "500"
+ zmc_location_size_impact_yellow_legend_key: "100"
+ zmc_location_size_impact_red_legend_key: "10"
+ zmc_location_size_impact_black_legend_key: "0"
