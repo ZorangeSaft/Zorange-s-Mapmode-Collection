@@ -5,6 +5,7 @@ zmc_used_building_slots_percentage = { #building cap mapmode
   subtract = {
     value = modifier:free_building_levels
     subtract = total_building_levels
+	subtract = num_civil_constructions
     divide = {
       value = modifier:free_building_levels
       min = 1
@@ -16,6 +17,7 @@ zmc_free_building_slots = { #building cap mapmode
 	value = 0
 	value = modifier:free_building_levels
     subtract = total_building_levels
+	subtract = num_civil_constructions
 }
 
 zmc_used_building_slots_percentage_big = { #building cap mapmode
@@ -25,6 +27,7 @@ zmc_used_building_slots_percentage_big = { #building cap mapmode
 
 zmc_total_building_levels = { #building cap mapmode
 	value = total_building_levels
+	add = num_civil_constructions
 }
 
 
