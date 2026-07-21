@@ -234,25 +234,58 @@ zmc_province_tax_base = {
 
 
 
+#couldnt make this one work, something for later
+
 #y = 0.6702x² - 11.066x + 89.295   for converting in game location_size to irl hectares, which are 1/100 of a km²
 
 #max value on actual map 1221382.17
 #min value on actual map 4566.50
 
-zmc_real_world_size = {
-	value = 89.295
-	add = zmc_real_world_size_sub_value_1
-	subtract = zmc_real_world_size_sub_value_2
-	divide = 100 #to convert from hectares to km²
-}
+#zmc_real_world_size_old = {
+#	value = 89.295
+#	add = zmc_real_world_size_sub_value_1
+#	subtract = zmc_real_world_size_sub_value_2
+#	divide = 100 #to convert from hectares to km²
+#}
 
-zmc_real_world_size_sub_value_1 = {
-	value = 0.6702
-	multiply = location_size
-	multiply = location_size
-}
+#zmc_real_world_size_sub_value_1_old = {
+#	value = 0.6702
+#	multiply = location_size
+#	multiply = location_size
+#}
 
-zmc_real_world_size_sub_value_2 = {
-	value = 11.066
-	multiply = location_size
-}
+#zmc_real_world_size_sub_value_2_old = {
+#	value = 11.066
+#	multiply = location_size
+#}
+
+
+
+
+#location_closeness_to_equator_impact for closeness to equator ? #this does not work as of 21.7.2026 since the trigger version of this modifier does not exist
+
+#zmc_real_world_size = {
+	#value = location_size
+	#multiply = location_size
+	#multiply = location_closeness_to_equator_impact #distance to equator does not exist right now so this approach does not work
+	#multiply = 1000 #tune this scale constant to calibrate to real-world km²
+#}
+
+#zmc_real_world_size = {
+#	# Approximation in square kilometers from location_size only.
+#	# Tuned from island samples (including Socotra as 18+20 = 38 total).
+#	value = -25
+#	add = zmc_real_world_size_linear_part
+#	add = zmc_real_world_size_quadratic_part
+#}
+
+#zmc_real_world_size_linear_part = {
+#	value = 7
+#	multiply = location_size
+#}
+
+#zmc_real_world_size_quadratic_part = {
+#	value = 2
+#	multiply = location_size
+#	multiply = location_size
+#}
