@@ -229,3 +229,30 @@ zmc_closeness_to_equator_impact = {
 zmc_province_tax_base = {
 	value = province.province_tax_base #province_tax_base
 }
+
+
+
+
+
+#y = 0.6702x² - 11.066x + 89.295   for converting in game location_size to irl hectares, which are 1/100 of a km²
+
+#max value on actual map 1221382.17
+#min value on actual map 4566.50
+
+zmc_real_world_size = {
+	value = 89.295
+	add = zmc_real_world_size_sub_value_1
+	subtract = zmc_real_world_size_sub_value_2
+	divide = 100 #to convert from hectares to km²
+}
+
+zmc_real_world_size_sub_value_1 = {
+	value = 0.6702
+	multiply = location_size
+	multiply = location_size
+}
+
+zmc_real_world_size_sub_value_2 = {
+	value = 11.066
+	multiply = location_size
+}

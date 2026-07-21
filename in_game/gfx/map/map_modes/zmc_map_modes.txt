@@ -3156,3 +3156,222 @@ anb_locations_in_province = {
 
 	color_and_names_refresh_counters = {} #Static Value
 }
+
+
+
+#real world size mapmode
+
+zmc_real_world_size = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size >= 120
+			}
+			value = rgb { 255 255 255 } #white
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 120
+				zmc_real_world_size >= 100
+			}
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_real_world_size
+					subtract = 100
+					divide = 25
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 100
+				zmc_real_world_size >= 80
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_real_world_size
+					subtract = 80
+					divide = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 80
+				zmc_real_world_size >= 60
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
+				factor = {
+					value = zmc_real_world_size
+					subtract = 60
+					divide = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 60
+				zmc_real_world_size >= 40
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_real_world_size
+					subtract = 40
+					divide = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 40
+				zmc_real_world_size >= 20
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_real_world_size
+					subtract = 20
+					divide = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 20
+				zmc_real_world_size >= 10
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_real_world_size
+					subtract = 10
+					divide = 10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 10
+				zmc_real_world_size >= 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_real_world_size
+					divide = 10
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 0 0 } #black fallback
+		}
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_white_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_dark_blue_legend_key"
+		color = rgb { 0 0 139 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_light_blue_legend_key"
+		color = rgb { 135 206 250 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_real_world_size_black_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes
+			}
+			value = MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = debug
+	index = 1
+
+	map_markers = {
+		all = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
