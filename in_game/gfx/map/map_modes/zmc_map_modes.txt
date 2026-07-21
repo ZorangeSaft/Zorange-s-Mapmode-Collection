@@ -99,6 +99,33 @@
 @data_before_lighting_blend = 			@flatmap_far_before_lighting_blend
 @data_after_lighting_blend = 			@flatmap_far_after_lighting_blend
 
+# color_mode = <mode> color mode (if not using a custom mode)
+# map_color = <script color> map color for location (root = location, scope:actor/recipient etc)
+# secondary_map_color = <script color> striped map color for location (root = location, scope:actor/recipient etc)
+# tooltip_key = <script string key> scripted key for the tooltip localization (root = location, scope:actor/recipient etc)
+# small_map_names = what to text to show on the map
+# medium_map_names = what to text to show on the map
+# large_map_names = what to text to show on the map
+# small_tooltip_context = tooltip context for small map
+# medium_tooltip_context = tooltip context for medium map
+# large_tooltip_context = tooltip context for large map
+# color_and_names_refresh_counters = list of counters that will cause a refresh of the map colors and names
+# color_refresh_counters = list of counters that will cause a refresh of the map colors only
+# refresh_colors_on_selection_change = yes/no whether or not colors will be refreshed when selection changes
+# fill_in_impassable = yes/no whether or not to fill impassable terrain in
+# enable_snow = yes/no show snow or not
+# enable_water_names = yes/no show names of seas and oceans
+# enable_rivers = yes/no whether or not to show rivers
+# use_highlight = yes/no whether or not to show highlights
+# use_fow = yes/no whether or not to show fog of war
+# allow_allocate_hotkey = yes/no whether or not to allow allocating a hot key to this map mode
+# quick_action_slot = <integer> slot used for this map mode in quick actions
+# map_lines_mode = what type of map lines to show (hard coded)
+# override_border_rendering = overrides of border rendering
+# map_markers = map markers to allow or disallow
+# flatmap_behaviour = how to show flat map
+# flatmap_gradient_parameters = custom handling of flat map colors
+
 #####zmc
 
 
@@ -2868,4 +2895,264 @@ zmc_province_tax_base = {
 
 	color_refresh_counters = { Month }
 	color_and_names_refresh_counters = { Month }
+}
+
+
+
+#location size away from 25 (average set by paradox) by Cyrob for Anbennar, used with permission
+
+anb_location_size = {
+	map_color = {
+		if = {
+			limit = { is_land = no }
+			value = define:NMapColors|OCEAN_MAP_COLOR
+		}
+		#Over		
+		else_if = {
+			limit = { location_size > 200 }
+			value = define:NMapColors|MAP_COLOR_MIN
+		}
+		else_if = {
+			limit = { location_size > 100 } #175
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_MIN
+				min_color = define:NMapColors|MAP_COLOR_LOW
+				factor = { value = location_size subtract = 100 divide = 100 }
+			}
+		}
+		else_if = {
+			limit = { location_size > 55 } #75
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_LOW
+				min_color = define:NMapColors|MAP_COLOR_MID
+				factor = { value = location_size subtract = 55 divide = 45 }
+			}
+		}
+		else_if = {
+			limit = { location_size > 40 } #30
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_MID
+				min_color = define:NMapColors|MAP_COLOR_HIGH
+				factor = { value = location_size subtract = 40 divide = 15 }
+			}
+		}
+		else_if = {
+			limit = { location_size > 30 } #15
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_HIGH
+				min_color = define:NMapColors|MAP_COLOR_MAX
+				factor = { value = location_size subtract = 30 divide = 10 }
+			}
+		}
+		else_if = {
+			limit = { location_size > 25 } #5
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_MAX
+				min_color = define:NMapColors|MAP_COLOR_TOP
+				factor = { value = location_size subtract = 25 divide = 5 }
+			}
+		}
+		
+		#Perfect
+		else_if = {
+			limit = { location_size = 25 }
+			value = define:NMapColors|MAP_COLOR_TOP #light blue
+		}
+
+		#Under		
+		else_if = {
+			limit = { location_size >= 22 } #3
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_TOP
+				min_color = define:NMapColors|MAP_COLOR_MAX_CB_RG
+				factor = { value = location_size subtract = 22 divide = 3 }
+			}
+		}
+		else_if = {
+			limit = { location_size >= 18 } #7
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_MAX_CB_RG
+				min_color = define:NMapColors|MAP_COLOR_HIGH_CB_RG
+				factor = { value = location_size subtract = 18 divide = 4 }
+			}
+		}
+		else_if = {
+			limit = { location_size >= 14 } #11
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_HIGH_CB_RG
+				min_color = define:NMapColors|MAP_COLOR_MID_CB_RG
+				factor = { value = location_size subtract = 14 divide = 4 }
+			}
+		}
+		else_if = {
+			limit = { location_size >= 10 } #15
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_MID_CB_RG
+				min_color = define:NMapColors|MAP_COLOR_LOW_CB_RG
+				factor = { value = location_size subtract = 10 divide = 4 }
+			}
+		}
+		else_if = {
+			limit = { location_size >= 0 } #25
+			lerp = {
+				max_color = define:NMapColors|MAP_COLOR_LOW_CB_RG
+				min_color = define:NMapColors|MAP_COLOR_MIN
+				factor = { value = location_size divide = 10 }
+			}
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_OVER175" color = define:NMapColors|MAP_COLOR_MIN }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_OVER75" color = define:NMapColors|MAP_COLOR_LOW }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_OVER30" color = define:NMapColors|MAP_COLOR_MID }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_OVER15" color = define:NMapColors|MAP_COLOR_HIGH }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_OVER05" color = define:NMapColors|MAP_COLOR_MAX }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_NORMAL" color = define:NMapColors|MAP_COLOR_TOP }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_UNDER03" color = define:NMapColors|MAP_COLOR_MAX_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_UNDER07" color = define:NMapColors|MAP_COLOR_HIGH_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_UNDER11" color = define:NMapColors|MAP_COLOR_MID_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_UNDER15" color = define:NMapColors|MAP_COLOR_LOW_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATION_SIZE_UNDER25" color = define:NMapColors|MAP_COLOR_MIN }
+
+	tooltip_key = { value = ANB_LOCATION_SIZE_MAPMODE_TT }
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = debug
+	index = 0
+
+	map_markers = { all = no }
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width 
+		gradient_color_mult =		@flatmap_far_gradient_color_mult 
+		edge_width = 				@flatmap_far_edge_width 		
+		edge_sharpness = 			@flatmap_far_edge_sharpness 	
+		edge_alpha = 				@flatmap_far_edge_alpha 	
+		edge_color_mult = 			@flatmap_far_edge_color_mult 
+		before_lighting_blend =		@flatmap_far_before_lighting_blend 
+		after_lighting_blend =		@flatmap_far_after_lighting_blend 
+	}
+
+	color_and_names_refresh_counters = {} #Static Value
+}
+
+
+
+#locations in province by Cyrob for Anbennar, used with permission
+
+anb_locations_in_province = {
+	map_color = {
+		if = {
+			limit = { is_land = no }
+			value = define:NMapColors|OCEAN_MAP_COLOR
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 8 }}}
+			value = define:NMapColors|MAP_COLOR_LOW
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 7 }}}
+			value = define:NMapColors|MAP_COLOR_LOW_CB_RG
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 6 }}}
+			value = define:NMapColors|MAP_COLOR_MID_CB_RG
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 5 }}}
+			value = define:NMapColors|MAP_COLOR_MAX
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 4 }}}
+			value = define:NMapColors|MAP_COLOR_HIGH
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 3 }}}
+			value = define:NMapColors|MAP_COLOR_MID
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 2 }}}
+			value = define:NMapColors|MAP_COLOR_MID
+		}
+		else_if = {
+			limit = { province_definition = { any_ownable_location_in_province_definition = { count = 1 }}}
+			value = define:NMapColors|MAP_COLOR_MIN
+		}
+		else = {
+			value = define:NMapColors|DEFAULT_COLOR
+		}
+	}
+	override_border_rendering = {
+		PROVINCE_DEFINITION = COUNTRY
+		COUNTRY = PROVINCE
+		AREA = PROVINCE_DEFINITION
+	}
+
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_9" color = define:NMapColors|DEFAULT_COLOR }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_8" color = define:NMapColors|MAP_COLOR_LOW }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_7" color = define:NMapColors|MAP_COLOR_LOW_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_6" color = define:NMapColors|MAP_COLOR_MID_CB_RG }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_5" color = define:NMapColors|MAP_COLOR_MAX }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_4" color = define:NMapColors|MAP_COLOR_HIGH }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_3" color = define:NMapColors|MAP_COLOR_MID }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_2" color = define:NMapColors|MAP_COLOR_MID }
+	legend_key = { desc = "LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_1" color = define:NMapColors|MAP_COLOR_MIN }
+
+	tooltip_key = { value = ANB_LOCATIONS_IN_PROVINCE_MAPMODE_TT }
+
+	small_map_names = location
+	medium_map_names = province
+	large_map_names = province
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = debug
+	index = 0
+
+	map_markers = { all = no }
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		
+		gradient_alpha_inside = 	@flatmap_far_gradient_alpha_inside
+		gradient_alpha_outside = 	@flatmap_far_gradient_alpha_outside
+		gradient_width = 			@flatmap_far_gradient_width 
+		gradient_color_mult =		@flatmap_far_gradient_color_mult 
+		edge_width = 				@flatmap_far_edge_width 		
+		edge_sharpness = 			@flatmap_far_edge_sharpness 	
+		edge_alpha = 				@flatmap_far_edge_alpha 	
+		edge_color_mult = 			@flatmap_far_edge_color_mult 
+		before_lighting_blend =		@flatmap_far_before_lighting_blend 
+		after_lighting_blend =		@flatmap_far_after_lighting_blend 
+	}
+
+	color_and_names_refresh_counters = {} #Static Value
 }

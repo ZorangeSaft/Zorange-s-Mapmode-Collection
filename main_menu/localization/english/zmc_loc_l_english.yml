@@ -266,3 +266,41 @@
  zmc_location_size_yellow_legend_key: "20"
  zmc_location_size_red_legend_key: "10"
  zmc_location_size_black_legend_key: "0"
+
+
+
+ #location size away from 25 (average set by paradox) by Cyrob for Anbennar, used with permission
+
+ mapmode_anb_location_size_name: "Location Size"
+ MAPMODE_ANB_LOCATION_SIZE: "#T $mapmode_anb_location_size_name$#!\nDisplays the location size colours indicate how close a location is to the normal (25).\nThis is not to be confused with pixel size, location size is adjusted for latitude and the game multiplies this modifier by the location size:\n\n[GetModifier('location_size_impact').GetDesc]\nLocations do not have to be the normal size or even close to it, just be aware of the modifier they will get." 
+ ANB_LOCATION_SIZE_MAPMODE_TT: "[ROOT.GetLocation.GetName] has a location size of [ROOT.GetLocation.GetLocationSize|Y]\nThe location gets this modifier multiplied by [ROOT.GetLocation.GetLocationSize|Y]:\n[GetModifier('location_size_impact').GetDesc]."
+ LEGEND_KEY_ANB_LOCATION_SIZE_OVER175: "100-199"
+ LEGEND_KEY_ANB_LOCATION_SIZE_OVER75: "55-99"
+ LEGEND_KEY_ANB_LOCATION_SIZE_OVER30: "40-54"
+ LEGEND_KEY_ANB_LOCATION_SIZE_OVER15: "30-39"
+ LEGEND_KEY_ANB_LOCATION_SIZE_OVER05: "26-29"
+ LEGEND_KEY_ANB_LOCATION_SIZE_NORMAL: "25 (Normal)"
+ LEGEND_KEY_ANB_LOCATION_SIZE_UNDER03: "22-24"
+ LEGEND_KEY_ANB_LOCATION_SIZE_UNDER07: "18-21"
+ LEGEND_KEY_ANB_LOCATION_SIZE_UNDER11: "14-17"
+ LEGEND_KEY_ANB_LOCATION_SIZE_UNDER15: "10-13"
+ LEGEND_KEY_ANB_LOCATION_SIZE_UNDER25: "0-9"
+
+
+
+ #locations in province by Cyrob for Anbennar, used with permission
+
+ LEGEND_KEY_LOCATION_SIZE_UNDER25: "0-9"
+
+ mapmode_anb_locations_in_province_name: "Locations Per Province"
+ MAPMODE_ANB_LOCATIONS_IN_PROVINCE: "#T $mapmode_anb_locations_in_province_name$#!\nColours provinces by how many locations it contains\nThis has major balance considerations as many aspects scale with it; Food, RGO & Building production synergies." 
+ ANB_LOCATIONS_IN_PROVINCE_MAPMODE_TT: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetProvinceDefinition.GetName] which has [GetDataModelSize(ROOT.GetLocation.GetProvinceDefinition.GetLocations)|L] location(s)."
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_9: "9+"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_8: "8"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_7: "7"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_6: "6"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_5: "5"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_4: "4"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_3: "3"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_2: "2"
+ LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_1: "1"
