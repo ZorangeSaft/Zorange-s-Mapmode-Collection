@@ -333,14 +333,14 @@
  mapmode_zmc_unhidden_hemisphere_name: "Hemisphere"
  MAPMODE_ZMC_UNHIDDEN_HEMISPHERE: "#T $mapmode_zmc_unhidden_hemisphere_name$#!\nThis colors [locations|e] by which [hemisphere|e] it belongs to.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
- zmc_unhidden_winter_power_name: "Winter Power"
+ mapmode_zmc_unhidden_winter_power_name: "Winter Power"
  MAPMODE_ZMC_UNHIDDEN_WINTER_POWER: "#T $mapmode_zmc_unhidden_winter_power_name$#!\nThis colors [locations|e] by their Winter Power, which affects their maximum [winter|e] level and average duration.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
- zmc_unhidden_culture_data: "Blank Culture"
- MAPMODE_ZMC_UNHIDDEN_CULTURE_DATA: "#T $mapmode_zmc_unhidden_culture_data$#!\nThis colors [locations|e] by their [culture|e] but without any words.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+ mapmode_zmc_unhidden_culture_data_name: "Blank Culture"
+ MAPMODE_ZMC_UNHIDDEN_CULTURE_DATA: "#T $mapmode_zmc_unhidden_culture_data$#!\nThis colors [locations|e] by their [culture|e] but without any text. If you zoom out far enough, borders also dissapear, for a very clean look.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
- zmc_unhidden_religion_data: "Blank Religion"
- MAPMODE_ZMC_UNHIDDEN_RELIGION_DATA: "#T $mapmode_zmc_unhidden_religion_data$#!\nThis colors [locations|e] by their [religion|e] but without any words.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+ mapmode_zmc_unhidden_religion_data_name: "Blank Religion"
+ MAPMODE_ZMC_UNHIDDEN_RELIGION_DATA: "#T $mapmode_zmc_unhidden_religion_data$#!\nThis colors [locations|e] by their [religion|e] but without any text. If you zoom out far enough, borders also dissapear, for a very clean look.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
 
  mapmode_zmc_unhidden_topography_screenshot_name: "Topography Screenshot"
@@ -365,6 +365,6 @@
  mapmode_zmc_unhidden_reactive_trade_good_name: "Reactive Trade Good"
  MAPMODE_ZMC_UNHIDDEN_REACTIVE_TRADE_GOOD: "#T $mapmode_reactive_trade_good_name$#!\n''Market information about [goods|e]'' is the vanilla description.\n\nI am not exactly sure what it shows, but it does provide some information when having a good previously selected (like through the [location|e] gui).\nThis includes [rgo|e] [output|e] and current workers for an [rgo|e] when you hover over a [location|e], and it also shows you [rgo|e] level and where it is produced in #color_red red#!.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
  
- mapmode_zmc_unhidden_market_good_prices: "Market Good Prices"
+ mapmode_zmc_unhidden_market_good_prices_name: "Market Good Prices"
  MAPMODE_ZMC_UNHIDDEN_MARKET_GOOD_PRICES: "#T $mapmode_market_good_prices$#!\nShows the selected [goods|e] price in each [market|e] compared to the default price.\n\nSelect a [good|e] by clicking on its icon in for example the [location|e] gui and closing the menu.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
  #end of unhidden vanilla mapmodes

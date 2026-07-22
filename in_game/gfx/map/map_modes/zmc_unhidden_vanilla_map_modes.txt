@@ -696,7 +696,8 @@ zmc_unhidden_reactive_trade_good = { #reactive trade goods ?
 	flatmap_behaviour = Always
 	use_fow = no
 	
-	category = debug #hidden
+	category = economy #hidden
+	index = 1
 
 	map_markers = {
 		all = no
