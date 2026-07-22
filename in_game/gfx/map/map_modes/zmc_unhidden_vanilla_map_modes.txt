@@ -822,7 +822,7 @@ zmc_unhidden_market_good_prices = { #market good prices
 	color_and_names_refresh_counters = { Month MarketReach }
 }
 
-assimilation = {
+zmc_unhidden_assimilation = {
 	color_mode = assimilation
 	small_map_names = assimilation_value
 	medium_map_names = assimilation_culture
@@ -837,8 +837,8 @@ assimilation = {
 	force_brown_in_flatmap = only_in_rg_colorblind_mode
 	use_fow = no
 	
-	category = debug
-	index = 3
+	category = population
+	index = 0
 	#allow_allocate_hotkey = no
 
 	map_markers = {

@@ -367,4 +367,7 @@
  
  mapmode_zmc_unhidden_market_good_prices_name: "Market Good Prices"
  MAPMODE_ZMC_UNHIDDEN_MARKET_GOOD_PRICES: "#T $mapmode_market_good_prices$#!\nShows the selected [goods|e] price in each [market|e] compared to the default price.\n\nSelect a [good|e] by clicking on its icon in for example the [location|e] gui and closing the menu.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ mapmode_zmc_unhidden_assimilation_name: "Assimilation"
+ MAPMODE_ZMC_UNHIDDEN_ASSIMILATION: "#T $mapmode_assimilation_name$#!\nThis mapmode is intended to color [locations|e] based on how much monthly [assimilation|e] they are having.\n\nHowever, the numbers do not seem to match in most cases.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
  #end of unhidden vanilla mapmodes
