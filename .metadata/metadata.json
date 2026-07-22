@@ -1,9 +1,9 @@
 ﻿{
 	"name":	"Zorange's Mapmode Collection",
 	"id":	"zoranges.mapmode.collection",
-	"version":	"1.0",
-	"supported_game_version":	"1.1.10",
-	"short_description":	"A Collection of Mapmodes I thought might be useful",
+	"version":	"1.1",
+	"supported_game_version":	"1.3.*",
+	"short_description":	"A Collection of Mapmodes I thought might be useful, please note that the mod is extremely likely to still work, even if it says it is for a previous version of the game",
 	"tags":	["User Interface", "Utilities"],
 	"relationships":	[],
 	"game_custom_data":	{
