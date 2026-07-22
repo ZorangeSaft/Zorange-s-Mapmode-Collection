@@ -327,11 +327,20 @@
 
 
  #unhidden vanilla mapmodes
+ mapmode_zmc_unhidden_country_own_religion_name: "Country Own Religion"
+ MAPMODE_ZMC_UNHIDDEN_COUNTRY_OWN_RELIGION: "#T $mapmode_country_own_religion_name$#!\nThis colors [locations|e] depending on which [locations|e] belong to countries that share your [religion|e] as their primary.\n\nAlso shows [holy_sites|e] of your [religion|e].\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
  mapmode_zmc_unhidden_hemisphere_name: "Hemisphere"
  MAPMODE_ZMC_UNHIDDEN_HEMISPHERE: "#T $mapmode_zmc_unhidden_hemisphere_name$#!\nThis colors [locations|e] by which [hemisphere|e] it belongs to.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
  zmc_unhidden_winter_power_name: "Winter Power"
  MAPMODE_ZMC_UNHIDDEN_WINTER_POWER: "#T $mapmode_zmc_unhidden_winter_power_name$#!\nThis colors [locations|e] by their Winter Power, which affects their maximum [winter|e] level and average duration.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ zmc_unhidden_culture_data: "Blank Culture"
+ MAPMODE_ZMC_UNHIDDEN_CULTURE_DATA: "#T $mapmode_zmc_unhidden_culture_data$#!\nThis colors [locations|e] by their [culture|e] but without any words.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ zmc_unhidden_religion_data: "Blank Religion"
+ MAPMODE_ZMC_UNHIDDEN_RELIGION_DATA: "#T $mapmode_zmc_unhidden_religion_data$#!\nThis colors [locations|e] by their [religion|e] but without any words.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
 
 
  mapmode_zmc_unhidden_topography_screenshot_name: "Topography Screenshot"
@@ -342,3 +351,20 @@
 
  mapmode_zmc_unhidden_climate_screenshot_name: "Climate Screenshot"
  MAPMODE_ZMC_UNHIDDEN_CLIMATE_SCREENSHOT: "#T $mapmode_zmc_unhidden_climate_screenshot_name$#!\nThis colors [locations|e] by their [climate|e] according to their defined #color_red debug_color#! in #color_white eu5/game/in_game/common/climate#!#color_red s#!#color_white /00_default.txt#!\n\nUseful for taking clearer screenshots of what [climate|e] is where, as it also includes map names and colored in wastelands.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+
+ mapmode_zmc_unhidden_climate_v_coords_name: "Climate v coords"
+ MAPMODE_ZMC_UNHIDDEN_CLIMATE_V_COORDS: "#T $mapmode_zmc_unhidden_climate_v_coords_name$#!\nMap Editor Climate v coords.\n\nTo be honest, i am not sure what this one is meant to show or what it could be useful for, looks cool tho.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ mapmode_zmc_unhidden_sea_currents_name: "Sea Currents"
+ MAPMODE_ZMC_UNHIDDEN_SEA_CURRENTS: "#T $mapmode_zmc_unhidden_sea_currents_name$#!\nThis colors [locations|e] depending on strength of sea currents and shows the direction via an arrow.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+ 
+ mapmode_zmc_unhidden_selected_goods_name: "Selected Goods"
+ MAPMODE_ZMC_UNHIDDEN_SELECTED_GOODS: "#T $mapmode_selected_goods_name$#!\n[locations|e] in your [country|e] are colored green if they produce the selected [goods|e] in an [rgo|e], and purple if produced via [buildings|e]; outside your country, yellow means the selected good is produced and there is a surplus that you can [trade|e] for, whereas red means there is currently no surplus.\n\nTo use the mapmode, click on a [location|e] so you can see the information for that specific [good|e].\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ mapmode_zmc_unhidden_reactive_trade_good_name: "Reactive Trade Good"
+ MAPMODE_ZMC_UNHIDDEN_REACTIVE_TRADE_GOOD: "#T $mapmode_reactive_trade_good_name$#!\n''Market information about [goods|e]'' is the vanilla description.\n\nI am not exactly sure what it shows, but it does provide some information when having a good previously selected (like through the [location|e] gui).\nThis includes [rgo|e] [output|e] and current workers for an [rgo|e] when you hover over a [location|e], and it also shows you [rgo|e] level and where it is produced in #color_red red#!.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+ 
+ mapmode_zmc_unhidden_market_good_prices: "Market Good Prices"
+ MAPMODE_ZMC_UNHIDDEN_MARKET_GOOD_PRICES: "#T $mapmode_market_good_prices$#!\nShows the selected [goods|e] price in each [market|e] compared to the default price.\n\nSelect a [good|e] by clicking on its icon in for example the [location|e] gui and closing the menu.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+ #end of unhidden vanilla mapmodes

@@ -128,6 +128,47 @@
 
 #####zmc
 
+zmc_unhidden_country_own_religion = {
+	color_mode = country_own_religion
+	small_map_names = country
+	medium_map_names = country
+	large_map_names = religion
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = country
+
+	fill_in_impassable = no
+	flatmap_behaviour = Always
+	use_fow = no
+	category = demography #hidden
+	index = 2
+	#allow_allocate_hotkey = no
+
+	map_markers = {
+		all = no
+		holy_site_marker = yes
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	@data_gradient_alpha_inside
+		gradient_alpha_outside = 	@data_gradient_alpha_outside
+		gradient_width = 			@data_gradient_width
+		gradient_color_mult =		@data_gradient_color_mult
+		edge_width = 				@data_edge_width
+		edge_sharpness = 			@data_edge_sharpness
+		edge_alpha = 				@data_edge_alpha
+		edge_color_mult = 			@data_edge_color_mult
+		before_lighting_blend =		@data_before_lighting_blend
+		after_lighting_blend =		@data_after_lighting_blend
+	}
+
+	refresh_colors_on_selection_change = yes
+	color_and_names_refresh_counters = { LocationOwnerChanged ReligionChanged }
+}
+
 zmc_unhidden_hemisphere = { #hemisphere
 	color_mode = hemisphere
 	small_map_names = hemisphere
@@ -262,7 +303,7 @@ zmc_unhidden_winter_power = { #winter severity
 	color_refresh_counters = { Month }
 }
 
-culture_data = { #cultures (locations) ?
+zmc_unhidden_culture_data = { #cultures (locations) no map names, more clear
 	color_mode = culture
 	small_map_names = culture_data
 	medium_map_names = culture_data
@@ -278,6 +319,7 @@ culture_data = { #cultures (locations) ?
 	use_fow = no
 	
 	category = demography #hidden
+	index = 0
 
 	map_markers = {
 		market_marker = no
@@ -304,7 +346,7 @@ culture_data = { #cultures (locations) ?
 	color_and_names_refresh_counters = { LocationOwnerChanged LocationCultureChanged LocationMovementChanged }
 }
 
-religion_data = { #religion (locations) ?
+zmc_unhidden_religion_data = { #religion (locations) no map names, more clear
 	color_mode = location_religion
 	small_map_names = religion_data
 	medium_map_names = religion_data
@@ -320,6 +362,7 @@ religion_data = { #religion (locations) ?
 	use_fow = no
 
 	category = demography #hidden
+	index = 2
 
 	map_markers = {
 		market_marker = no
@@ -472,7 +515,7 @@ zmc_unhidden_climate_screenshot = {
 	color_and_names_refresh_counters = {}
 }
 
-climate_v_coords = {
+zmc_unhidden_climate_v_coords = {
 	color_mode = climate_v_coords
 	small_map_names = climate_v_coords
 	medium_map_names = climate_v_coords
@@ -487,6 +530,7 @@ climate_v_coords = {
 	use_fow = no
 
 	category = debug #hidden
+	index = 1
 
 	map_markers = {
 		market_marker = no
@@ -512,7 +556,7 @@ climate_v_coords = {
 
 }
 
-sea_currents = {
+zmc_unhidden_sea_currents = {
 	color_mode = sea_currents
 	small_map_names = location
 	medium_map_names = location
@@ -526,7 +570,8 @@ sea_currents = {
 	use_fow = no
 	enable_rivers = yes
 
-	category = debug #hidden
+	category = geography #hidden
+	index = 0
 	#allow_allocate_hotkey = no
 
 	map_markers = {
@@ -553,7 +598,7 @@ sea_currents = {
 	color_and_names_refresh_counters = {}
 }
 
-selected_goods = { #selected goods ?
+zmc_unhidden_selected_goods = { #selected goods ?
 	color_mode = selected_goods
 	small_map_names = selected_goods
 	medium_map_names = selected_goods
@@ -566,8 +611,9 @@ selected_goods = { #selected goods ?
 	flatmap_behaviour = Always
 	use_fow = no
 
-	category = debug #hidden
+	category = economy #hidden
 	#allow_allocate_hotkey = no
+	index = 1
 
 	map_markers = {
 		market_marker = no
@@ -593,49 +639,49 @@ selected_goods = { #selected goods ?
 	color_and_names_refresh_counters = { LocationOwnerChanged LocationConstructionUnitChanged ProductionList Month }
 }
 
-country_market = { #country market
-	color_mode = country_market
-	small_map_names = province
-	medium_map_names = market
-	large_map_names = market
+#country_market = { #country market #i couldnt figure out what this is meant to show
+#	color_mode = country_market
+#	small_map_names = province
+#	medium_map_names = market
+#	large_map_names = market
+#
+#	small_tooltip_context = location
+#	medium_tooltip_context = market
+#	large_tooltip_context = market
+#
+#	fill_in_impassable = no
+#	flatmap_behaviour = Always
+#	use_fow = no
+#	category = debug #hidden
+#	#allow_allocate_hotkey = no
+#
+#	map_markers = {
+#		all = no
+#		market_marker = yes
+#		toll_marker = yes
+#	}
+#	
+#	gradient_parameters = {
+#		zoom_step = @zoom_step_near
+#
+#		gradient_alpha_inside = 	@data_gradient_alpha_inside
+#		gradient_alpha_outside = 	@data_gradient_alpha_outside
+#		gradient_width = 			@data_gradient_width
+#		gradient_color_mult =		@data_gradient_color_mult
+#		edge_width = 				@data_edge_width
+#		edge_sharpness = 			@data_edge_sharpness
+#		edge_alpha = 				@data_edge_alpha
+#		edge_color_mult = 			@data_edge_color_mult
+#		before_lighting_blend =		@data_before_lighting_blend
+#		after_lighting_blend =		@data_after_lighting_blend
+#	}
+#
+#	refresh_colors_on_selection_change = yes
+#	color_and_names_refresh_counters = { MarketReach LocationOwnerChanged }
+#	map_lines_mode = ToMarketCenter
+#}
 
-	small_tooltip_context = location
-	medium_tooltip_context = market
-	large_tooltip_context = market
-
-	fill_in_impassable = no
-	flatmap_behaviour = Always
-	use_fow = no
-	category = debug #hidden
-	#allow_allocate_hotkey = no
-
-	map_markers = {
-		all = no
-		market_marker = yes
-		toll_marker = yes
-	}
-	
-	gradient_parameters = {
-		zoom_step = @zoom_step_near
-
-		gradient_alpha_inside = 	@data_gradient_alpha_inside
-		gradient_alpha_outside = 	@data_gradient_alpha_outside
-		gradient_width = 			@data_gradient_width
-		gradient_color_mult =		@data_gradient_color_mult
-		edge_width = 				@data_edge_width
-		edge_sharpness = 			@data_edge_sharpness
-		edge_alpha = 				@data_edge_alpha
-		edge_color_mult = 			@data_edge_color_mult
-		before_lighting_blend =		@data_before_lighting_blend
-		after_lighting_blend =		@data_after_lighting_blend
-	}
-
-	refresh_colors_on_selection_change = yes
-	color_and_names_refresh_counters = { MarketReach LocationOwnerChanged }
-	map_lines_mode = ToMarketCenter
-}
-
-reactive_trade_good = { #reactive trade goods ?
+zmc_unhidden_reactive_trade_good = { #reactive trade goods ?
 	color_mode = reactive_trade_good
 	small_map_names = selected_goods
 	medium_map_names = selected_goods
@@ -676,7 +722,7 @@ reactive_trade_good = { #reactive trade goods ?
 	color_and_names_refresh_counters = { MarketReach LocationOwnerChanged }
 }
 
-market_good_prices = { #market good prices
+zmc_unhidden_market_good_prices = { #market good prices
 	color_mode = market_good_prices
 	small_map_names = market
 	medium_map_names = market
@@ -691,7 +737,8 @@ market_good_prices = { #market good prices
 	flatmap_behaviour = Always
 	use_fow = no
 
-	category = debug #hidden
+	category = economy #hidden
+	index = 1
 
 	legend_key = {
 		desc = "LEGEND_KEY_GOODS_PRICE_DIFFERENCE_COPPER"
