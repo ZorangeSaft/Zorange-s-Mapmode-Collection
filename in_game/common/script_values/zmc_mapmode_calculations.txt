@@ -261,7 +261,6 @@ zmc_province_tax_base = {
 
 
 
-
 #location_closeness_to_equator_impact for closeness to equator ? #this does not work as of 21.7.2026 since the trigger version of this modifier does not exist
 
 #zmc_real_world_size = {

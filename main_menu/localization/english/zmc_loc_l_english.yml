@@ -3,6 +3,7 @@
 
  #\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!
  #\n\n@adm! #color_yellow Strategy#! @adm!\n
+ #\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, in which case you should report it on the mods steam page @warning_icon!"
 
  #urbanisation suitability mapmode/urbanisation mapmode
 
@@ -216,7 +217,7 @@
  #maximum literacy mapmode
 
  mapmode_zmc_local_max_literacy_name: "Average Maximum Literacy"
- MAPMODE_ZMC_LOCAL_MAX_LITERACY: "#T $mapmode_zmc_local_max_literacy_name$#!\nThis colors [locations|e] by average local average maximum [literacy|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on #! @warning_icon!."
+ MAPMODE_ZMC_LOCAL_MAX_LITERACY: "#T $mapmode_zmc_local_max_literacy_name$#!\nThis colors [locations|e] by average local average maximum [literacy|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_LAND: "[ROOT.GetLocation.GetName] has an average local maximum [literacy|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_max_literacy')|Y]."
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [literacy|e]."
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [literacy|e]."
@@ -272,7 +273,7 @@
  #location size away from 25 (average set by paradox) by Cyrob for Anbennar, used with permission
 
  mapmode_anb_location_size_name: "Location Size"
- MAPMODE_ANB_LOCATION_SIZE: "#T $mapmode_anb_location_size_name$#!\nDisplays the location size colours indicate how close a location is to the normal (25).\nThis is not to be confused with pixel size, location size is adjusted for latitude and the game multiplies this modifier by the location size:\n\n[GetModifier('location_size_impact').GetDesc]\nLocations do not have to be the normal size or even close to it, just be aware of the modifier they will get." 
+ MAPMODE_ANB_LOCATION_SIZE: "#T $mapmode_anb_location_size_name$#!\nDisplays the location size colours indicate how close a location is to the normal (25).\nThis is not to be confused with pixel size, location size is adjusted for latitude and the game multiplies this modifier by the location size:\n\n[GetModifier('location_size_impact').GetDesc]\nLocations do not have to be the normal size or even close to it, just be aware of the modifier they will get.\n\n\nThis mapmode was originally created by Cyrob for Anbennar and is used with permission." 
  ANB_LOCATION_SIZE_MAPMODE_TT: "[ROOT.GetLocation.GetName] has a location size of [ROOT.GetLocation.GetLocationSize|Y]\nThe location gets this modifier multiplied by [ROOT.GetLocation.GetLocationSize|Y]:\n[GetModifier('location_size_impact').GetDesc]."
  LEGEND_KEY_ANB_LOCATION_SIZE_OVER175: "100-199"
  LEGEND_KEY_ANB_LOCATION_SIZE_OVER75: "55-99"
@@ -293,7 +294,7 @@
  LEGEND_KEY_LOCATION_SIZE_UNDER25: "0-9"
 
  mapmode_anb_locations_in_province_name: "Locations Per Province"
- MAPMODE_ANB_LOCATIONS_IN_PROVINCE: "#T $mapmode_anb_locations_in_province_name$#!\nColours provinces by how many locations it contains\nThis has major balance considerations as many aspects scale with it; Food, RGO & Building production synergies." 
+ MAPMODE_ANB_LOCATIONS_IN_PROVINCE: "#T $mapmode_anb_locations_in_province_name$#!\nColours provinces by how many locations it contains\nThis has major balance considerations as many aspects scale with it; Food, RGO & Building production synergies.\n\n\nThis mapmode was originally created by Cyrob for Anbennar and is used with permission." 
  ANB_LOCATIONS_IN_PROVINCE_MAPMODE_TT: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetProvinceDefinition.GetName] which has [GetDataModelSize(ROOT.GetLocation.GetProvinceDefinition.GetLocations)|L] location(s)."
  LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_9: "9+"
  LEGEND_KEY_ANB_LOCATIONS_IN_PROVINCE_8: "8"
@@ -322,3 +323,22 @@
  #zmc_real_world_size_yellow_legend_key: "20"
  #zmc_real_world_size_red_legend_key: "10"
  #zmc_real_world_size_black_legend_key: "0"
+
+
+
+ #unhidden vanilla mapmodes
+ mapmode_zmc_unhidden_hemisphere_name: "Hemisphere"
+ MAPMODE_ZMC_UNHIDDEN_HEMISPHERE: "#T $mapmode_zmc_unhidden_hemisphere_name$#!\nThis colors [locations|e] by which [hemisphere|e] it belongs to.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ zmc_unhidden_winter_power_name: "Winter Power"
+ MAPMODE_ZMC_UNHIDDEN_WINTER_POWER: "#T $mapmode_zmc_unhidden_winter_power_name$#!\nThis colors [locations|e] by their Winter Power, which affects their maximum [winter|e] level and average duration.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+
+ mapmode_zmc_unhidden_topography_screenshot_name: "Topography Screenshot"
+ MAPMODE_ZMC_UNHIDDEN_TOPOGRAPHY_SCREENSHOT: "#T $mapmode_zmc_unhidden_topography_screenshot_name$#!\nThis colors [locations|e] by their [topography|e] according to their defined #color_red debug_color#! in #color_white eu5/game/in_game/common/topography/00_default.txt#!\n\nUseful for taking clearer screenshots of what [topography|e] is where, as it also includes map names, more distinct colors, and colored in wastelands.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ mapmode_zmc_unhidden_vegetation_screenshot_name: "Vegetation Screenshot"
+ MAPMODE_ZMC_UNHIDDEN_VEGETATION_SCREENSHOT: "#T $mapmode_zmc_unhidden_vegetation_screenshot_name$#!\nThis colors [locations|e] by their [vegetation|e] according to their defined #color_red debug_color#! in #color_white eu5/game/in_game/common/vegetation/00_default.txt#!\n\nUseful for taking clearer screenshots of what [vegetation|e] is where, as it also includes map names and colored in wastelands, altough the water is #color_debug pink#!.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
+
+ mapmode_zmc_unhidden_climate_screenshot_name: "Climate Screenshot"
+ MAPMODE_ZMC_UNHIDDEN_CLIMATE_SCREENSHOT: "#T $mapmode_zmc_unhidden_climate_screenshot_name$#!\nThis colors [locations|e] by their [climate|e] according to their defined #color_red debug_color#! in #color_white eu5/game/in_game/common/climate#!#color_red s#!#color_white /00_default.txt#!\n\nUseful for taking clearer screenshots of what [climate|e] is where, as it also includes map names and colored in wastelands.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
