@@ -3375,3 +3375,222 @@ zmc_real_world_size = {
 	color_refresh_counters = { }
 	color_and_names_refresh_counters = { }
 }
+
+
+
+#closeness to equator mapmode
+
+zmc_closeness_to_equator_impact = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact >= 1000
+			}
+			value = rgb { 255 255 255 } #white
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 1000
+				zmc_closeness_to_equator_impact >= 800
+			}
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 800
+					divide = 200
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 800
+				zmc_closeness_to_equator_impact >= 600
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 600
+					divide = 200
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 600
+				zmc_closeness_to_equator_impact >= 400
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 400
+					divide = 200
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 400
+				zmc_closeness_to_equator_impact >= 200
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 200
+					divide = 200
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 200
+				zmc_closeness_to_equator_impact >= 100
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 100
+					divide = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 100
+				zmc_closeness_to_equator_impact >= 50
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					subtract = 50
+					divide = 50
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_closeness_to_equator_impact < 50
+				zmc_closeness_to_equator_impact >= 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_closeness_to_equator_impact
+					divide = 50
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 0 0 } #black fallback
+		}
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_white_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_dark_blue_legend_key"
+		color = rgb { 0 0 139 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_light_blue_legend_key"
+		color = rgb { 135 206 250 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_closeness_to_equator_impact_black_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes
+			}
+			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = debug
+	index = 1
+
+	map_markers = {
+		all = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { TopographyVegetationDatabaseUpdate }
+	color_and_names_refresh_counters = { TopographyVegetationDatabaseUpdate }
+}

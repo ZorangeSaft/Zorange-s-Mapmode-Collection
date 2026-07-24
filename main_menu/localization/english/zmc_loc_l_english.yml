@@ -371,3 +371,21 @@
  mapmode_zmc_unhidden_assimilation_name: "Assimilation"
  MAPMODE_ZMC_UNHIDDEN_ASSIMILATION: "#T $mapmode_assimilation_name$#!\nThis mapmode is intended to color [locations|e] based on how much monthly [assimilation|e] they are having.\n\nHowever, the numbers do not seem to match in most cases.\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, or become a normally visible mapmode, in either case you should report it on the mods steam page @warning_icon!"
  #end of unhidden vanilla mapmodes
+
+
+
+ #closeness to equator mapmode
+
+ mapmode_zmc_closeness_to_equator_impact_name: "Closeness To Equator"
+ MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT: "#T $mapmode_zmc_closeness_to_equator_impact_name$#!\nThis colors [locations|e] by how close they are to the equator.\n\nThis is a provisional 0-1000 scale and will be tuned later."
+ MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_LAND: "[ROOT.GetLocation.GetName] has a closeness to equator value of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_closeness_to_equator_impact')|Y]."
+ MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a closeness to equator value."
+
+ zmc_closeness_to_equator_impact_white_legend_key: "1000"
+ zmc_closeness_to_equator_impact_pink_legend_key: "800"
+ zmc_closeness_to_equator_impact_dark_blue_legend_key: "600"
+ zmc_closeness_to_equator_impact_light_blue_legend_key: "400"
+ zmc_closeness_to_equator_impact_green_legend_key: "200"
+ zmc_closeness_to_equator_impact_yellow_legend_key: "100"
+ zmc_closeness_to_equator_impact_red_legend_key: "50"
+ zmc_closeness_to_equator_impact_black_legend_key: "0"
