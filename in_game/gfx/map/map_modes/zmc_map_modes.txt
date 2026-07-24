@@ -3390,116 +3390,116 @@ zmc_closeness_to_equator = {
 		}
 		else_if = {
 			limit = {
-				zmc_equator_measurer_script_value >= 1000
+				zmc_equator_measurer_script_value >= 1
 			}
-			value = rgb { 255 255 255 } #white
+			value = rgb { 0 0 0 } #black at equator
 		}
 		else_if = {
 			limit = {
-				zmc_equator_measurer_script_value < 1000
-				zmc_equator_measurer_script_value >= 800
+				zmc_equator_measurer_script_value < 1
+				zmc_equator_measurer_script_value >= 0.8
 			}
 			lerp = {
-				max_color = rgb { 255 255 255 } #white
-				min_color = rgb { 255 0 255 } #pink
-				factor = {
-					value = zmc_equator_measurer_script_value
-					subtract = 800
-					divide = 200
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_equator_measurer_script_value < 800
-				zmc_equator_measurer_script_value >= 600
-			}
-			lerp = {
-				max_color = rgb { 255 0 255 } #pink
-				min_color = rgb { 0 0 139 } #dark blue
-				factor = {
-					value = zmc_equator_measurer_script_value
-					subtract = 600
-					divide = 200
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_equator_measurer_script_value < 600
-				zmc_equator_measurer_script_value >= 400
-			}
-			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 135 206 250 } #light blue
-				factor = {
-					value = zmc_equator_measurer_script_value
-					subtract = 400
-					divide = 200
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_equator_measurer_script_value < 400
-				zmc_equator_measurer_script_value >= 200
-			}
-			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 255 0 } #green
-				factor = {
-					value = zmc_equator_measurer_script_value
-					subtract = 200
-					divide = 200
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_equator_measurer_script_value < 200
-				zmc_equator_measurer_script_value >= 100
-			}
-			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
-				factor = {
-					value = zmc_equator_measurer_script_value
-					subtract = 100
-					divide = 100
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_equator_measurer_script_value < 100
-				zmc_equator_measurer_script_value >= 50
-			}
-			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 0 0 } #black
 				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_equator_measurer_script_value
-					subtract = 50
-					divide = 50
+					subtract = 0.8
+					divide = 0.2
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zmc_equator_measurer_script_value < 50
-				zmc_equator_measurer_script_value >= 0
+				zmc_equator_measurer_script_value < 0.8
+				zmc_equator_measurer_script_value >= 0.6
 			}
 			lerp = {
 				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 0 0 0 } #black
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_equator_measurer_script_value
-					divide = 50
+					subtract = 0.6
+					divide = 0.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_equator_measurer_script_value < 0.6
+				zmc_equator_measurer_script_value >= 0.4
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_equator_measurer_script_value
+					subtract = 0.4
+					divide = 0.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_equator_measurer_script_value < 0.4
+				zmc_equator_measurer_script_value >= 0.2
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 135 206 250 } #light blue
+				factor = {
+					value = zmc_equator_measurer_script_value
+					subtract = 0.2
+					divide = 0.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_equator_measurer_script_value < 0.2
+				zmc_equator_measurer_script_value >= 0
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_equator_measurer_script_value
+					divide = 0.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_equator_measurer_script_value < 0
+				zmc_equator_measurer_script_value >= -0.2
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_equator_measurer_script_value
+					add = 0.2
+					divide = 0.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_equator_measurer_script_value < -0.2
+				zmc_equator_measurer_script_value >= -0.4
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 255 255 255 } #white
+				factor = {
+					value = zmc_equator_measurer_script_value
+					add = 0.4
+					divide = 0.2
 				}
 			}
 		}
 		else = {
-			value = rgb { 0 0 0 } #black fallback
+			value = rgb { 255 255 255 } #white fallback for out-of-range poles
 		}
 	}
 
