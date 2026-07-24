@@ -3380,7 +3380,7 @@ zmc_real_world_size = {
 
 #closeness to equator mapmode
 
-zmc_closeness_to_equator_impact = {
+zmc_closeness_to_equator = {
 	map_color = {
 		if = {
 			limit = {
@@ -3390,20 +3390,20 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact >= 1000
+				zmc_equator_measurer_script_value >= 1000
 			}
 			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 1000
-				zmc_closeness_to_equator_impact >= 800
+				zmc_equator_measurer_script_value < 1000
+				zmc_equator_measurer_script_value >= 800
 			}
 			lerp = {
 				max_color = rgb { 255 255 255 } #white
 				min_color = rgb { 255 0 255 } #pink
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 800
 					divide = 200
 				}
@@ -3411,14 +3411,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 800
-				zmc_closeness_to_equator_impact >= 600
+				zmc_equator_measurer_script_value < 800
+				zmc_equator_measurer_script_value >= 600
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 600
 					divide = 200
 				}
@@ -3426,14 +3426,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 600
-				zmc_closeness_to_equator_impact >= 400
+				zmc_equator_measurer_script_value < 600
+				zmc_equator_measurer_script_value >= 400
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 400
 					divide = 200
 				}
@@ -3441,14 +3441,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 400
-				zmc_closeness_to_equator_impact >= 200
+				zmc_equator_measurer_script_value < 400
+				zmc_equator_measurer_script_value >= 200
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 200
 					divide = 200
 				}
@@ -3456,14 +3456,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 200
-				zmc_closeness_to_equator_impact >= 100
+				zmc_equator_measurer_script_value < 200
+				zmc_equator_measurer_script_value >= 100
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 100
 					divide = 100
 				}
@@ -3471,14 +3471,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 100
-				zmc_closeness_to_equator_impact >= 50
+				zmc_equator_measurer_script_value < 100
+				zmc_equator_measurer_script_value >= 50
 			}
 			lerp = {
 				max_color = rgb { 255 255 0 } #yellow
 				min_color = rgb { 255 0 0 } #red
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					subtract = 50
 					divide = 50
 				}
@@ -3486,14 +3486,14 @@ zmc_closeness_to_equator_impact = {
 		}
 		else_if = {
 			limit = {
-				zmc_closeness_to_equator_impact < 50
-				zmc_closeness_to_equator_impact >= 0
+				zmc_equator_measurer_script_value < 50
+				zmc_equator_measurer_script_value >= 0
 			}
 			lerp = {
 				max_color = rgb { 255 0 0 } #red
 				min_color = rgb { 0 0 0 } #black
 				factor = {
-					value = zmc_closeness_to_equator_impact
+					value = zmc_equator_measurer_script_value
 					divide = 50
 				}
 			}
@@ -3504,42 +3504,42 @@ zmc_closeness_to_equator_impact = {
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_white_legend_key"
+		desc = "zmc_closeness_to_equator_white_legend_key"
 		color = rgb { 255 255 255 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_pink_legend_key"
+		desc = "zmc_closeness_to_equator_pink_legend_key"
 		color = rgb { 255 0 255 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_dark_blue_legend_key"
+		desc = "zmc_closeness_to_equator_dark_blue_legend_key"
 		color = rgb { 0 0 139 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_light_blue_legend_key"
+		desc = "zmc_closeness_to_equator_light_blue_legend_key"
 		color = rgb { 135 206 250 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_green_legend_key"
+		desc = "zmc_closeness_to_equator_green_legend_key"
 		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_yellow_legend_key"
+		desc = "zmc_closeness_to_equator_yellow_legend_key"
 		color = rgb { 255 255 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_red_legend_key"
+		desc = "zmc_closeness_to_equator_red_legend_key"
 		color = rgb { 255 0 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_closeness_to_equator_impact_black_legend_key"
+		desc = "zmc_closeness_to_equator_black_legend_key"
 		color = rgb { 0 0 0 }
 	}
 
@@ -3548,10 +3548,10 @@ zmc_closeness_to_equator_impact = {
 			limit = {
 				is_land = yes
 			}
-			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_LAND
+			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT_LAND
 		}
 		else = {
-			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_IMPACT_TT_WATER
+			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT_WATER
 		}
 	}
 

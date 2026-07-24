@@ -306,3 +306,9 @@ zmc_real_world_size_quadratic_part = {
 	multiply = location_size
 	multiply = location_size
 }
+
+
+
+zmc_equator_measurer_script_value = {
+	value = modifier:zmc_equator_measurer_modifier
+}
