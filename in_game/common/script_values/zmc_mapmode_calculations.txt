@@ -288,3 +288,21 @@ zmc_province_tax_base = {
 #	multiply = location_size
 #	multiply = location_size
 #}
+
+
+zmc_real_world_size = {
+	value = -694.65
+	add = zmc_real_world_size_linear_part
+	add = zmc_real_world_size_quadratic_part
+}
+
+zmc_real_world_size_linear_part = {
+	value = 70.253
+	multiply = location_size
+}
+
+zmc_real_world_size_quadratic_part = {
+	value = 2.2549
+	multiply = location_size
+	multiply = location_size
+}

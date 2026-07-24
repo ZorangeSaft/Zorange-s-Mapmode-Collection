@@ -1,0 +1,5 @@
+﻿zmc_equator_measurer_modifier={
+	game_data={
+		category=location
+	}
+}

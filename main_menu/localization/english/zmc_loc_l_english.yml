@@ -310,19 +310,19 @@
 
  #real world size mapmode #couldnt make this work, something for later
 
- #mapmode_zmc_real_world_size_name: "Real World Size"
- #MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their real world size.\n\nValues will be adjusted later."
- #MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has a real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
- #MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a real world size."
+ mapmode_zmc_real_world_size_name: "Real World Size"
+ MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their real world size.\n\nValues will be adjusted later."
+ MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has a real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
+ MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a real world size."
 
- #zmc_real_world_size_white_legend_key: "150"
- #zmc_real_world_size_pink_legend_key: "100"
- #zmc_real_world_size_dark_blue_legend_key: "80"
- #zmc_real_world_size_light_blue_legend_key: "60"
- #zmc_real_world_size_green_legend_key: "40"
- #zmc_real_world_size_yellow_legend_key: "20"
- #zmc_real_world_size_red_legend_key: "10"
- #zmc_real_world_size_black_legend_key: "0"
+ zmc_real_world_size_white_legend_key: "50000"
+ zmc_real_world_size_pink_legend_key: "40000"
+ zmc_real_world_size_dark_blue_legend_key: "30000"
+ zmc_real_world_size_light_blue_legend_key: "20000"
+ zmc_real_world_size_green_legend_key: "10000"
+ zmc_real_world_size_yellow_legend_key: "5000"
+ zmc_real_world_size_red_legend_key: "2500"
+ zmc_real_world_size_black_legend_key: "0"
 
 
 
