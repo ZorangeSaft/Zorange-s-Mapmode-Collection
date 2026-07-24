@@ -3382,13 +3382,8 @@ zmc_real_world_size = {
 
 zmc_closeness_to_equator = {
 	map_color = {
+		#this mapmode also colors water
 		if = {
-			limit = {
-				is_land = no
-			}
-			value = hsv { 0.58 0.50 0.52 }
-		}
-		else_if = {
 			limit = {
 				zmc_equator_measurer_script_value >= 1
 			}
@@ -3499,7 +3494,7 @@ zmc_closeness_to_equator = {
 			}
 		}
 		else = {
-			value = rgb { 255 255 255 } #white fallback for out-of-range poles
+			value = rgb { 255 255 255 } #white fallback
 		}
 	}
 
@@ -3544,15 +3539,7 @@ zmc_closeness_to_equator = {
 	}
 
 	tooltip_key = {
-		if = {
-			limit = {
-				is_land = yes
-			}
-			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT_LAND
-		}
-		else = {
-			value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT_WATER
-		}
+		value = MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT
 	}
 
 	small_map_names = location
@@ -3569,7 +3556,7 @@ zmc_closeness_to_equator = {
 	flatmap_behaviour = always
 	use_fow = no
 
-	category = debug
+	category = geography
 	index = 1
 
 	map_markers = {
