@@ -312,17 +312,16 @@
 
  mapmode_zmc_real_world_size_name: "Real World Size"
  MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their approximate real world size.\n\nIt uses the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance."
- MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
- MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a real world size."
+ MAPMODE_ZMC_REAL_WORLD_SIZE_TT: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y] km²"
 
- zmc_real_world_size_white_legend_key: "50000"
- zmc_real_world_size_pink_legend_key: "40000"
- zmc_real_world_size_dark_blue_legend_key: "30000"
- zmc_real_world_size_light_blue_legend_key: "20000"
- zmc_real_world_size_green_legend_key: "10000"
- zmc_real_world_size_yellow_legend_key: "5000"
- zmc_real_world_size_red_legend_key: "2500"
- zmc_real_world_size_black_legend_key: "0"
+ zmc_real_world_size_white_legend_key: "50000 km²"
+ zmc_real_world_size_pink_legend_key: "40000 km²"
+ zmc_real_world_size_dark_blue_legend_key: "30000 km²"
+ zmc_real_world_size_light_blue_legend_key: "20000 km²"
+ zmc_real_world_size_green_legend_key: "10000 km²"
+ zmc_real_world_size_yellow_legend_key: "5000 km²"
+ zmc_real_world_size_red_legend_key: "2500 km²"
+ zmc_real_world_size_black_legend_key: "0 km²"
 
 
 

@@ -3325,15 +3325,7 @@ zmc_real_world_size = {
 	}
 
 	tooltip_key = {
-		if = {
-			limit = {
-				is_land = yes
-			}
-			value = MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND
-		}
-		else = {
-			value = MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER
-		}
+		value = MAPMODE_ZMC_REAL_WORLD_SIZE_TT
 	}
 
 	small_map_names = location
