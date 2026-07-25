@@ -270,7 +270,8 @@ zmc_province_tax_base = {
 #}
 
 
-zmc_real_world_size = {
+
+zmc_real_world_size = { #sligthly more complicated formula, also from table and such
 	value = 2.6565
 	multiply = zmc_real_world_size_location_component
 	multiply = zmc_real_world_size_equator_component
@@ -305,6 +306,18 @@ zmc_real_world_size_z_squared = {
 	value = zmc_equator_measurer_script_value
 	multiply = zmc_equator_measurer_script_value
 }
+
+#margin of error according to gpt5.3 codex of the above complicated formula
+#Mean absolute percent error (MAPE): 2.8784%
+#Median absolute percent error: 1.6712%
+#90th percentile absolute percent error: 3.9979%
+#95th percentile absolute percent error: 5.1193%
+#99th percentile absolute percent error: 14.8097%
+#Mean signed percent bias: +0.5902% (slight overprediction on average)
+#Median signed percent bias: -0.1328%
+#MAE: 113.67 km²
+#RMSE: 649.91 km²
+#R²: 0.982199
 
 
 

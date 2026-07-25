@@ -46,7 +46,7 @@ zmc_debug_refresh_mapmodes.2 = { #this is for getting location_size to be export
 			#	value = location_size
 			#}
 			#error_log = "[THIS.GetLocation.GetNameWithNoTooltip],[SCOPE.GetLocalVariable('size_i_just_measured').GetValue]"
-			#set_local_variable = { #for exporting distance to equator
+			#set_local_variable = { #for exporting distance to equator #equator_distance, distance to equator
 			#	name = equator_i_just_measured
 			#	value = zmc_equator_measurer_script_value
 			#}

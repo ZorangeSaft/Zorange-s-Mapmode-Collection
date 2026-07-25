@@ -311,7 +311,7 @@
  #real world size mapmode
 
  mapmode_zmc_real_world_size_name: "Real World Size"
- MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their approximate real world size.\n\nIt uses the following equation:\n\n#color_white real_world_size = 3.10 x location_size^1.912 x 2.617^equator_distance#!\n\nThis equation has a 5%-20% margin of error, depending "
+ MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their approximate real world size.\n\nIt uses the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance."
  MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
  MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a real world size."
 
