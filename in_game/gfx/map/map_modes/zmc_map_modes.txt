@@ -3178,30 +3178,15 @@ zmc_real_world_size = {
 		else_if = {
 			limit = {
 				zmc_real_world_size < 50000
-				zmc_real_world_size >= 40000
+				zmc_real_world_size >= 30000
 			}
 			lerp = {
 				max_color = rgb { 255 255 255 } #white
 				min_color = rgb { 255 0 255 } #pink
 				factor = {
 					value = zmc_real_world_size
-					subtract = 40000
-					divide = 10000
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_real_world_size < 40000
-				zmc_real_world_size >= 30000
-			}
-			lerp = {
-				max_color = rgb { 255 0 255 } #pink
-				min_color = rgb { 0 0 139 } #dark blue
-				factor = {
-					value = zmc_real_world_size
 					subtract = 30000
-					divide = 10000
+					divide = 20000
 				}
 			}
 		}
@@ -3211,8 +3196,8 @@ zmc_real_world_size = {
 				zmc_real_world_size >= 20000
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 135 206 250 } #light blue
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zmc_real_world_size
 					subtract = 20000
@@ -3226,8 +3211,8 @@ zmc_real_world_size = {
 				zmc_real_world_size >= 10000
 			}
 			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_real_world_size
 					subtract = 10000
@@ -3241,8 +3226,8 @@ zmc_real_world_size = {
 				zmc_real_world_size >= 5000
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_real_world_size
 					subtract = 5000
@@ -3256,8 +3241,8 @@ zmc_real_world_size = {
 				zmc_real_world_size >= 2500
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_real_world_size
 					subtract = 2500
@@ -3268,6 +3253,21 @@ zmc_real_world_size = {
 		else_if = {
 			limit = {
 				zmc_real_world_size < 2500
+				zmc_real_world_size >= 1000
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_real_world_size
+					subtract = 1000
+					divide = 1500
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_real_world_size < 1000
 				zmc_real_world_size >= 0
 			}
 			lerp = {
@@ -3275,7 +3275,7 @@ zmc_real_world_size = {
 				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_real_world_size
-					divide = 2500
+					divide = 1000
 				}
 			}
 		}
