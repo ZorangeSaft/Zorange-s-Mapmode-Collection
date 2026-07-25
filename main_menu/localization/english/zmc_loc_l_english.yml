@@ -315,12 +315,12 @@
  MAPMODE_ZMC_REAL_WORLD_SIZE_TT: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y] km²"
 
  zmc_real_world_size_white_legend_key: "50000 km²"
- zmc_real_world_size_pink_legend_key: "30000 km²"
- zmc_real_world_size_dark_blue_legend_key: "20000 km²"
- zmc_real_world_size_light_blue_legend_key: "10000 km²"
- zmc_real_world_size_green_legend_key: "5000 km²"
- zmc_real_world_size_yellow_legend_key: "2500 km²"
- zmc_real_world_size_red_legend_key: "1000 km²"
+ zmc_real_world_size_pink_legend_key: "25000 km²"
+ zmc_real_world_size_dark_blue_legend_key: "10000 km²"
+ zmc_real_world_size_light_blue_legend_key: "5000 km²"
+ zmc_real_world_size_green_legend_key: "2500 km²"
+ zmc_real_world_size_yellow_legend_key: "1000 km²"
+ zmc_real_world_size_red_legend_key: "500 km²"
  zmc_real_world_size_black_legend_key: "0 km²"
 
 
