@@ -308,11 +308,11 @@
 
 
 
- #real world size mapmode #couldnt make this work, something for later
+ #real world size mapmode
 
  mapmode_zmc_real_world_size_name: "Real World Size"
- MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their real world size.\n\nValues will be adjusted later."
- MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has a real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
+ MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their approximate real world size.\n\nIt uses the following equation:\n\n#color_white real_world_size = 3.10 x location_size^1.912 x 2.617^equator_distance#!\n\nThis equation has a 5%-20% margin of error, depending "
+ MAPMODE_ZMC_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y]"
  MAPMODE_ZMC_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a real world size."
 
  zmc_real_world_size_white_legend_key: "50000"
@@ -377,7 +377,7 @@
  #closeness to equator mapmode
 
  mapmode_zmc_closeness_to_equator_name: "Closeness To Equator"
- MAPMODE_ZMC_CLOSENESS_TO_EQUATOR: "#T $mapmode_zmc_closeness_to_equator_name$#!\nThis colors [locations|e] by their #color_white location_closeness_to_equator_impact#! value.\n\nValues decrease away from the equator and even go into the negatives far north, not far south however, on the #color_white vanilla#! map.\n\n@adm! #color_yellow Strategy#! @adm!\n\nBeing further away from the equator decreases a [locations|e] [population_capacity|e]."
+ MAPMODE_ZMC_CLOSENESS_TO_EQUATOR: "#T $mapmode_zmc_closeness_to_equator_name$#!\nThis colors [locations|e] by their #color_white location_closeness_to_equator_impact#! value.\n\nValues decrease away from the equator and even go into the negatives far north, not far south however, on the #color_white vanilla#! map.\n\n@adm! #color_yellow Strategy#! @adm!\nBeing further away from the equator decreases a [locations|e] [population_capacity|e]."
  MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT: "[ROOT.GetLocation.GetName] has a closeness to equator value of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_equator_measurer_script_value')|Y]."
  #this location also colors water
 
