@@ -388,3 +388,18 @@
  zmc_closeness_to_equator_yellow_legend_key: "0.6"
  zmc_closeness_to_equator_red_legend_key: "0.8"
  zmc_closeness_to_equator_black_legend_key: "1.0"
+
+
+
+ #real world population density mapmode
+
+ mapmode_zmc_population_density_real_world_name: "Real World Population Density"
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density."
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y]."
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
+
+ zmc_population_density_real_world_white_legend_key: "0"
+ zmc_population_density_real_world_green_legend_key: "100"
+ zmc_population_density_real_world_yellow_legend_key: "1000"
+ zmc_population_density_real_world_red_legend_key: "2500"
+ zmc_population_density_real_world_black_legend_key: "10000"

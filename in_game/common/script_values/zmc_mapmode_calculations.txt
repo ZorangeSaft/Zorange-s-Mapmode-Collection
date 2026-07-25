@@ -326,3 +326,12 @@ zmc_real_world_size_z_squared = {
 zmc_equator_measurer_script_value = {
 	value = modifier:zmc_equator_measurer_modifier
 }
+
+
+
+
+
+zmc_population_density_real_world = {
+	value = zmc_population
+	divide = zmc_real_world_size
+}
