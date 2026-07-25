@@ -290,22 +290,112 @@ zmc_province_tax_base = {
 #}
 
 
-zmc_real_world_size = {
-	value = -694.65
-	add = zmc_real_world_size_linear_part
-	add = zmc_real_world_size_quadratic_part
+#zmc_real_world_size = { #captjazz formula https://discord.com/channels/1221948891704856757/1221948893689020498/1529584975886680065
+#	value = -694.65
+#	add = zmc_real_world_size_linear_part
+#	add = zmc_real_world_size_quadratic_part
+#}
+
+#zmc_real_world_size_linear_part = {
+#	value = 70.253
+#	multiply = location_size
+#}
+
+#zmc_real_world_size_quadratic_part = {
+#	value = 2.2549
+#	multiply = location_size
+#	multiply = location_size
+#}
+
+#zmc_real_world_size = { #formula based on table with relevant values, that i gave to gpt5.3 codex in vscode
+#	value = zmc_real_world_size_location_component
+#	multiply = zmc_real_world_size_equator_component
+#}
+#
+#zmc_real_world_size_location_component = {
+#	value = location_size
+#	pow = 1.912
+#	multiply = 3.19
+#}
+#
+#zmc_real_world_size_equator_component = {
+#	value = 2.617
+#	pow = zmc_equator_measurer_script_value
+#}
+
+
+zmc_real_world_size = { #formula based on table with relevant values
+	value = 2.6075516257
+	multiply = zmc_real_world_size_location_term
+	multiply = zmc_real_world_size_e_term
 }
 
-zmc_real_world_size_linear_part = {
-	value = 70.253
-	multiply = location_size
+zmc_real_world_size_location_term = {
+	value = location_size
+	pow = zmc_real_world_size_location_exponent
 }
 
-zmc_real_world_size_quadratic_part = {
-	value = 2.2549
-	multiply = location_size
-	multiply = location_size
+zmc_real_world_size_location_exponent = {
+	value = 1.9592747774
+	add = zmc_real_world_size_location_exponent_linear
+	add = zmc_real_world_size_location_exponent_quadratic
+	add = zmc_real_world_size_location_exponent_cubic
 }
+
+zmc_real_world_size_location_exponent_linear = {
+	value = zmc_equator_measurer_script_value
+	multiply = -0.0303168745
+}
+
+zmc_real_world_size_location_exponent_quadratic = {
+	value = zmc_real_world_size_z_squared
+	multiply = -0.0372442674
+}
+
+zmc_real_world_size_location_exponent_cubic = {
+	value = zmc_real_world_size_z_cubed
+	multiply = 0.0886455675
+}
+
+zmc_real_world_size_e_term = {
+	value = 2.7182818285
+	pow = zmc_real_world_size_e_exponent
+}
+
+zmc_real_world_size_e_exponent = {
+	value = zmc_real_world_size_e_exponent_linear
+	add = zmc_real_world_size_e_exponent_quadratic
+	add = zmc_real_world_size_e_exponent_cubic
+}
+
+zmc_real_world_size_e_exponent_linear = {
+	value = zmc_equator_measurer_script_value
+	multiply = 1.7619659446
+}
+
+zmc_real_world_size_e_exponent_quadratic = {
+	value = zmc_real_world_size_z_squared
+	multiply = -0.8285199784
+}
+
+zmc_real_world_size_e_exponent_cubic = {
+	value = zmc_real_world_size_z_cubed
+	multiply = -0.1936948098
+}
+
+zmc_real_world_size_z_squared = {
+	value = zmc_equator_measurer_script_value
+	multiply = zmc_equator_measurer_script_value
+}
+
+zmc_real_world_size_z_cubed = {
+	value = zmc_real_world_size_z_squared
+	multiply = zmc_equator_measurer_script_value
+}
+
+
+
+
 
 
 
