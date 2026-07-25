@@ -333,5 +333,5 @@ zmc_equator_measurer_script_value = {
 
 zmc_population_density_real_world = {
 	value = zmc_population
-	divide = zmc_real_world_size
+	divide = zmc_real_world_size #zmc_location_size_impact
 }
