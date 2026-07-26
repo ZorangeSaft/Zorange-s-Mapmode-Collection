@@ -3342,7 +3342,7 @@ zmc_real_world_size = {
 	flatmap_behaviour = always
 	use_fow = no
 
-	category = debug
+	category = geography
 	index = 1
 
 	map_markers = {
