@@ -204,7 +204,7 @@
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a local [production_efficiency|e]."
 
  zmc_local_production_efficiency_pink_legend_key: "100%"
- zmc_local_production_efficiency_dark_blue_legend_key: "5%"
+ zmc_local_production_efficiency_dark_blue_legend_key: "50%"
  zmc_local_production_efficiency_light_blue_legend_key: "30%"
  zmc_local_production_efficiency_green_legend_key: "20%"
  zmc_local_production_efficiency_yellow_legend_key: "10%"
