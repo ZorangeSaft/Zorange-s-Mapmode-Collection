@@ -409,9 +409,9 @@
  #province population mapmode
 
  mapmode_zmc_province_population_name: "Province Population"
- MAPMODE_ZMC_PROVINCE_POPULATION: "#T $mapmode_zmc_province_population_name$#!\nThis colors [locations|e] by [province|e] [population|e]."
+ MAPMODE_ZMC_PROVINCE_POPULATION: "#T $mapmode_zmc_province_population_name$#!\nThis colors [locations|e] by [province_definition|e] [population|e]."
  MAPMODE_ZMC_PROVINCE_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is in [ROOT.GetLocation.GetProvinceDefinition.GetName], which has a [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_population')|Y]."
- MAPMODE_ZMC_PROVINCE_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [province|e] [population|e]."
+ MAPMODE_ZMC_PROVINCE_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [province_definition|e] [population|e]."
 
  zmc_province_population_white_legend_key: "0"
  zmc_province_population_green_legend_key: "10"

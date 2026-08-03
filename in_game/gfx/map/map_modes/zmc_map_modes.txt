@@ -3502,7 +3502,7 @@ zmc_province_population = {
 	use_fow = no
 
 	category = population
-	index = 1
+	index = 0
 
 	map_markers = {
 		all = no

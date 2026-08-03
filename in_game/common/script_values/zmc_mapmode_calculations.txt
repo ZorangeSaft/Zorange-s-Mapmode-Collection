@@ -104,7 +104,7 @@ zmc_population = {
 }
 
 zmc_province_population = {
-  value = province.population
+  value = province_definition.population
   multiply = 1000 #for 1 pop being 1000 people
 }
 
