@@ -129,9 +129,15 @@ zmc_continent_population = {
 }
 
 zmc_world_population = {
-	#todo: fill this scope value later
-	value = world.population
-	multiply = 1000 #for 1 pop being 1000 people
+	value = zmc_world_population
+	#{
+		#add = zmc_world_population
+		#every_location_in_the_world = {
+		#	limit = { any_ownable_location = yes }
+		#	add = location.population
+		#}
+	#}
+	#multiply = 1000 #for 1 pop being 1000 people
 }
 
 

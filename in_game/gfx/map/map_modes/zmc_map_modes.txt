@@ -4047,14 +4047,14 @@ zmc_continent_population = {
 zmc_world_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
-		else_if = { limit = { zmc_world_population >= 1000000000 } value = rgb { 255 255 255 } }
-		else_if = { limit = { zmc_world_population < 1000000000 zmc_world_population >= 100000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_world_population subtract = 100000000 divide = 900000000 } } }
-		else_if = { limit = { zmc_world_population < 100000000 zmc_world_population >= 10000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_world_population subtract = 10000000 divide = 90000000 } } }
-		else_if = { limit = { zmc_world_population < 10000000 zmc_world_population >= 1000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_population subtract = 1000000 divide = 9000000 } } }
-		else_if = { limit = { zmc_world_population < 1000000 zmc_world_population >= 100000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_population subtract = 100000 divide = 900000 } } }
-		else_if = { limit = { zmc_world_population < 100000 zmc_world_population >= 10000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_population subtract = 10000 divide = 90000 } } }
-		else_if = { limit = { zmc_world_population < 10000 zmc_world_population >= 1000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_population subtract = 1000 divide = 9000 } } }
-		else_if = { limit = { zmc_world_population < 1000 zmc_world_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_population divide = 1000 } } }
+		else_if = { limit = { zmc_world_population >= 1000000000000 } value = rgb { 255 255 255 } }
+		else_if = { limit = { zmc_world_population < 1000000000000 zmc_world_population >= 100000000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_world_population subtract = 100000000000 divide = 900000000000 } } }
+		else_if = { limit = { zmc_world_population < 100000000000 zmc_world_population >= 10000000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_world_population subtract = 10000000000 divide = 90000000000 } } }
+		else_if = { limit = { zmc_world_population < 10000000000 zmc_world_population >= 1000000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_population subtract = 1000000000 divide = 9000000000 } } }
+		else_if = { limit = { zmc_world_population < 1000000000 zmc_world_population >= 100000000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_population subtract = 100000000 divide = 900000000 } } }
+		else_if = { limit = { zmc_world_population < 100000000 zmc_world_population >= 10000000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_population subtract = 10000000 divide = 90000000 } } }
+		else_if = { limit = { zmc_world_population < 10000000 zmc_world_population >= 1000000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_population subtract = 1000000 divide = 9000000 } } }
+		else_if = { limit = { zmc_world_population < 1000000 zmc_world_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_population divide = 1000000 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
