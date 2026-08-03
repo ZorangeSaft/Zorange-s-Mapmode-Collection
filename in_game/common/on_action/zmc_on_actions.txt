@@ -36,7 +36,7 @@ zmc_on_game_start = {
       value = {
         every_location_in_the_world = {
           limit = { is_land = yes }
-          add = location.population
+          add = population
         }
         multiply = 1000
       }
@@ -59,7 +59,7 @@ zmc_yearly = {
       value = {
         every_location_in_the_world = {
           limit = { is_land = yes }
-          add = location.population
+          add = population
         }
         multiply = 1000
       }

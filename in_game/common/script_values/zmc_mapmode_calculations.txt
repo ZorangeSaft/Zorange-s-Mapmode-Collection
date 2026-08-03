@@ -129,7 +129,7 @@ zmc_continent_population = {
 }
 
 zmc_world_population = {
-	value = zmc_world_population
+	value = global_var:zmc_world_population
 	#{
 		#add = zmc_world_population
 		#every_location_in_the_world = {
