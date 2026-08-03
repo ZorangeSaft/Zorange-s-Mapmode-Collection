@@ -108,6 +108,32 @@ zmc_province_population = {
   multiply = 1000 #for 1 pop being 1000 people
 }
 
+zmc_area_population = {
+	value = area.population
+	multiply = 1000 #for 1 pop being 1000 people
+}
+
+zmc_region_population = {
+	value = region.population
+	multiply = 1000 #for 1 pop being 1000 people
+}
+
+zmc_sub_continent_population = {
+	value = sub_continent.population
+	multiply = 1000 #for 1 pop being 1000 people
+}
+
+zmc_continent_population = {
+	value = continent.population
+	multiply = 1000 #for 1 pop being 1000 people
+}
+
+zmc_world_population = {
+	#todo: fill this scope value later
+	value = world.population
+	multiply = 1000 #for 1 pop being 1000 people
+}
+
 
 
 

@@ -3370,6 +3370,520 @@ zmc_real_world_size = {
 
 
 
+#location population mapmode
+
+zmc_population = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				zmc_population >= 1000000000
+			}
+			value = rgb { 255 255 255 } #white
+		}
+		else_if = {
+			limit = {
+				zmc_population < 1000000000
+				zmc_population >= 100000000
+			}
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_population
+					subtract = 100000000
+					divide = 900000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 100000000
+				zmc_population >= 10000000
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_population
+					subtract = 10000000
+					divide = 90000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 10000000
+				zmc_population >= 1000000
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
+				factor = {
+					value = zmc_population
+					subtract = 1000000
+					divide = 9000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 1000000
+				zmc_population >= 100000
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_population
+					subtract = 100000
+					divide = 900000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 100000
+				zmc_population >= 10000
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_population
+					subtract = 10000
+					divide = 90000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 10000
+				zmc_population >= 1000
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_population
+					subtract = 1000
+					divide = 9000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population < 1000
+				zmc_population >= 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_population
+					divide = 1000
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 0 0 } #black fallback
+		}
+	}
+
+	legend_key = { desc = "zmc_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = {
+			limit = { is_land = yes }
+			value = MAPMODE_ZMC_POPULATION_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_POPULATION_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = population
+	index = 0
+
+	map_markers = { all = no }
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
+#area population mapmode
+
+zmc_area_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { zmc_area_population >= 1000000000 } value = rgb { 255 255 255 } }
+		else_if = {
+			limit = { zmc_area_population < 1000000000 zmc_area_population >= 100000000 }
+			lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_area_population subtract = 100000000 divide = 900000000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 100000000 zmc_area_population >= 10000000 }
+			lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_area_population subtract = 10000000 divide = 90000000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 10000000 zmc_area_population >= 1000000 }
+			lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_area_population subtract = 1000000 divide = 9000000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 1000000 zmc_area_population >= 100000 }
+			lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_area_population subtract = 100000 divide = 900000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 100000 zmc_area_population >= 10000 }
+			lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_area_population subtract = 10000 divide = 90000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 10000 zmc_area_population >= 1000 }
+			lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_area_population subtract = 1000 divide = 9000 } }
+		}
+		else_if = {
+			limit = { zmc_area_population < 1000 zmc_area_population >= 0 }
+			lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_area_population divide = 1000 } }
+		}
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_area_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_area_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_area_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_area_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_area_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_area_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_area_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_area_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes } value = MAPMODE_ZMC_AREA_POPULATION_TT_LAND }
+		else = { value = MAPMODE_ZMC_AREA_POPULATION_TT_WATER }
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = population
+	index = 0
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
+#region population mapmode
+
+zmc_region_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { zmc_region_population >= 1000000000 } value = rgb { 255 255 255 } }
+		else_if = { limit = { zmc_region_population < 1000000000 zmc_region_population >= 100000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_region_population subtract = 100000000 divide = 900000000 } } }
+		else_if = { limit = { zmc_region_population < 100000000 zmc_region_population >= 10000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_region_population subtract = 10000000 divide = 90000000 } } }
+		else_if = { limit = { zmc_region_population < 10000000 zmc_region_population >= 1000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_region_population subtract = 1000000 divide = 9000000 } } }
+		else_if = { limit = { zmc_region_population < 1000000 zmc_region_population >= 100000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_region_population subtract = 100000 divide = 900000 } } }
+		else_if = { limit = { zmc_region_population < 100000 zmc_region_population >= 10000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_region_population subtract = 10000 divide = 90000 } } }
+		else_if = { limit = { zmc_region_population < 10000 zmc_region_population >= 1000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_region_population subtract = 1000 divide = 9000 } } }
+		else_if = { limit = { zmc_region_population < 1000 zmc_region_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_region_population divide = 1000 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_region_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_region_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_region_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_region_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_region_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_region_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_region_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_region_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes } value = MAPMODE_ZMC_REGION_POPULATION_TT_LAND }
+		else = { value = MAPMODE_ZMC_REGION_POPULATION_TT_WATER }
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = population
+	index = 0
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
+#sub continent population mapmode
+
+zmc_sub_continent_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { zmc_sub_continent_population >= 1000000000 } value = rgb { 255 255 255 } }
+		else_if = { limit = { zmc_sub_continent_population < 1000000000 zmc_sub_continent_population >= 100000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_sub_continent_population subtract = 100000000 divide = 900000000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 100000000 zmc_sub_continent_population >= 10000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_sub_continent_population subtract = 10000000 divide = 90000000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 10000000 zmc_sub_continent_population >= 1000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_sub_continent_population subtract = 1000000 divide = 9000000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 1000000 zmc_sub_continent_population >= 100000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_sub_continent_population subtract = 100000 divide = 900000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 100000 zmc_sub_continent_population >= 10000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_sub_continent_population subtract = 10000 divide = 90000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 10000 zmc_sub_continent_population >= 1000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_sub_continent_population subtract = 1000 divide = 9000 } } }
+		else_if = { limit = { zmc_sub_continent_population < 1000 zmc_sub_continent_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_sub_continent_population divide = 1000 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_sub_continent_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_sub_continent_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_sub_continent_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_sub_continent_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_sub_continent_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_sub_continent_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_sub_continent_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_sub_continent_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes } value = MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_LAND }
+		else = { value = MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_WATER }
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = population
+	index = 0
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
+#continent population mapmode
+
+zmc_continent_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { zmc_continent_population >= 1000000000 } value = rgb { 255 255 255 } }
+		else_if = { limit = { zmc_continent_population < 1000000000 zmc_continent_population >= 100000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_continent_population subtract = 100000000 divide = 900000000 } } }
+		else_if = { limit = { zmc_continent_population < 100000000 zmc_continent_population >= 10000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_continent_population subtract = 10000000 divide = 90000000 } } }
+		else_if = { limit = { zmc_continent_population < 10000000 zmc_continent_population >= 1000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_continent_population subtract = 1000000 divide = 9000000 } } }
+		else_if = { limit = { zmc_continent_population < 1000000 zmc_continent_population >= 100000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_continent_population subtract = 100000 divide = 900000 } } }
+		else_if = { limit = { zmc_continent_population < 100000 zmc_continent_population >= 10000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_continent_population subtract = 10000 divide = 90000 } } }
+		else_if = { limit = { zmc_continent_population < 10000 zmc_continent_population >= 1000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_continent_population subtract = 1000 divide = 9000 } } }
+		else_if = { limit = { zmc_continent_population < 1000 zmc_continent_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_continent_population divide = 1000 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_continent_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_continent_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_continent_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_continent_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_continent_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_continent_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_continent_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_continent_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes } value = MAPMODE_ZMC_CONTINENT_POPULATION_TT_LAND }
+		else = { value = MAPMODE_ZMC_CONTINENT_POPULATION_TT_WATER }
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = population
+	index = 0
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
+#world population mapmode
+
+zmc_world_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { zmc_world_population >= 1000000000 } value = rgb { 255 255 255 } }
+		else_if = { limit = { zmc_world_population < 1000000000 zmc_world_population >= 100000000 } lerp = { max_color = rgb { 255 255 255 } min_color = rgb { 255 0 255 } factor = { value = zmc_world_population subtract = 100000000 divide = 900000000 } } }
+		else_if = { limit = { zmc_world_population < 100000000 zmc_world_population >= 10000000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_world_population subtract = 10000000 divide = 90000000 } } }
+		else_if = { limit = { zmc_world_population < 10000000 zmc_world_population >= 1000000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_population subtract = 1000000 divide = 9000000 } } }
+		else_if = { limit = { zmc_world_population < 1000000 zmc_world_population >= 100000 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_population subtract = 100000 divide = 900000 } } }
+		else_if = { limit = { zmc_world_population < 100000 zmc_world_population >= 10000 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_population subtract = 10000 divide = 90000 } } }
+		else_if = { limit = { zmc_world_population < 10000 zmc_world_population >= 1000 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_population subtract = 1000 divide = 9000 } } }
+		else_if = { limit = { zmc_world_population < 1000 zmc_world_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_population divide = 1000 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_world_population_white_legend_key" color = rgb { 255 255 255 } }
+	legend_key = { desc = "zmc_world_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_world_population_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_world_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_world_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_world_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_world_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_world_population_black_legend_key" color = rgb { 0 0 0 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes } value = MAPMODE_ZMC_WORLD_POPULATION_TT_LAND }
+		else = { value = MAPMODE_ZMC_WORLD_POPULATION_TT_WATER }
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = population
+	index = 0
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
+}
+
+
+
 #province population mapmode
 
 zmc_province_population = {

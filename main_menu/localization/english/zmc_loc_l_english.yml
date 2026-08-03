@@ -411,7 +411,7 @@
  mapmode_zmc_province_population_name: "Province Population"
  MAPMODE_ZMC_PROVINCE_POPULATION: "#T $mapmode_zmc_province_population_name$#!\nThis colors [locations|e] by [province_definition|e] [population|e].\n\n@adm! #color_yellow Strategy#! @adm!\nOccupy high pop [provinces|e] in war to prevent your enemy from raising more [levies|e] or take them in a [peace_treaty|e] to inflict maximum damage."
  MAPMODE_ZMC_PROVINCE_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetProvinceDefinition.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_population')|D]#!."
- MAPMODE_ZMC_PROVINCE_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [province_definition|e] [population|e]."
+ MAPMODE_ZMC_PROVINCE_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_province_population_white_legend_key: "1.000.000.000"
  zmc_province_population_pink_legend_key: "100.000.000"
@@ -421,3 +421,111 @@
  zmc_province_population_yellow_legend_key: "10.000"
  zmc_province_population_red_legend_key: "1.000"
  zmc_province_population_black_legend_key: "0"
+
+
+
+ #location population mapmode
+
+ mapmode_zmc_population_name: "Location Population"
+ MAPMODE_ZMC_POPULATION: "#T $mapmode_zmc_population_name$#!\nThis colors [locations|e] by [population|e]."
+ MAPMODE_ZMC_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!."
+ MAPMODE_ZMC_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
+
+ zmc_population_white_legend_key: "1.000.000.000"
+ zmc_population_pink_legend_key: "100.000.000"
+ zmc_population_dark_blue_legend_key: "10.000.000"
+ zmc_population_light_blue_legend_key: "1.000.000"
+ zmc_population_green_legend_key: "100.000"
+ zmc_population_yellow_legend_key: "10.000"
+ zmc_population_red_legend_key: "1.000"
+ zmc_population_black_legend_key: "0"
+
+
+
+ #area population mapmode
+
+ mapmode_zmc_area_population_name: "Area Population"
+ MAPMODE_ZMC_AREA_POPULATION: "#T $mapmode_zmc_area_population_name$#!\nThis colors [locations|e] by [area|e] [population|e]."
+ MAPMODE_ZMC_AREA_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetArea.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_population')|D]#!."
+ MAPMODE_ZMC_AREA_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [area|e] [population|e]."
+
+ zmc_area_population_white_legend_key: "1.000.000.000"
+ zmc_area_population_pink_legend_key: "100.000.000"
+ zmc_area_population_dark_blue_legend_key: "10.000.000"
+ zmc_area_population_light_blue_legend_key: "1.000.000"
+ zmc_area_population_green_legend_key: "100.000"
+ zmc_area_population_yellow_legend_key: "10.000"
+ zmc_area_population_red_legend_key: "1.000"
+ zmc_area_population_black_legend_key: "0"
+
+
+
+ #region population mapmode
+
+ mapmode_zmc_region_population_name: "Region Population"
+ MAPMODE_ZMC_REGION_POPULATION: "#T $mapmode_zmc_region_population_name$#!\nThis colors [locations|e] by [region|e] [population|e]."
+ MAPMODE_ZMC_REGION_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetArea.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_population')|D]#!."
+ MAPMODE_ZMC_REGION_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [population|e]."
+
+ zmc_region_population_white_legend_key: "1.000.000.000"
+ zmc_region_population_pink_legend_key: "100.000.000"
+ zmc_region_population_dark_blue_legend_key: "10.000.000"
+ zmc_region_population_light_blue_legend_key: "1.000.000"
+ zmc_region_population_green_legend_key: "100.000"
+ zmc_region_population_yellow_legend_key: "10.000"
+ zmc_region_population_red_legend_key: "1.000"
+ zmc_region_population_black_legend_key: "0"
+
+
+
+ #sub continent population mapmode
+
+ mapmode_zmc_sub_continent_population_name: "Sub Continent Population"
+ MAPMODE_ZMC_SUB_CONTINENT_POPULATION: "#T $mapmode_zmc_sub_continent_population_name$#!\nThis colors [locations|e] by [sub_continent|e] [population|e]."
+ MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetSubContinent.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_population')|D]#!."
+ MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [sub_continent|e] [population|e]."
+
+ zmc_sub_continent_population_white_legend_key: "1.000.000.000"
+ zmc_sub_continent_population_pink_legend_key: "100.000.000"
+ zmc_sub_continent_population_dark_blue_legend_key: "10.000.000"
+ zmc_sub_continent_population_light_blue_legend_key: "1.000.000"
+ zmc_sub_continent_population_green_legend_key: "100.000"
+ zmc_sub_continent_population_yellow_legend_key: "10.000"
+ zmc_sub_continent_population_red_legend_key: "1.000"
+ zmc_sub_continent_population_black_legend_key: "0"
+
+
+
+ #continent population mapmode
+
+ mapmode_zmc_continent_population_name: "Continent Population"
+ MAPMODE_ZMC_CONTINENT_POPULATION: "#T $mapmode_zmc_continent_population_name$#!\nThis colors [locations|e] by [continent|e] [population|e]."
+ MAPMODE_ZMC_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetContinent.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_population')|D]#!."
+ MAPMODE_ZMC_CONTINENT_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [continent|e] [population|e]."
+
+ zmc_continent_population_white_legend_key: "1.000.000.000"
+ zmc_continent_population_pink_legend_key: "100.000.000"
+ zmc_continent_population_dark_blue_legend_key: "10.000.000"
+ zmc_continent_population_light_blue_legend_key: "1.000.000"
+ zmc_continent_population_green_legend_key: "100.000"
+ zmc_continent_population_yellow_legend_key: "10.000"
+ zmc_continent_population_red_legend_key: "1.000"
+ zmc_continent_population_black_legend_key: "0"
+
+
+
+ #world population mapmode
+
+ mapmode_zmc_world_population_name: "World Population"
+ MAPMODE_ZMC_WORLD_POPULATION: "#T $mapmode_zmc_world_population_name$#!\nThis colors [locations|e] by [world|e] [population|e]."
+ MAPMODE_ZMC_WORLD_POPULATION_TT_LAND: "The [world|e] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_population')|D]#!."
+ MAPMODE_ZMC_WORLD_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [world|e] [population|e]."
+
+ zmc_world_population_white_legend_key: "1.000.000.000"
+ zmc_world_population_pink_legend_key: "100.000.000"
+ zmc_world_population_dark_blue_legend_key: "10.000.000"
+ zmc_world_population_light_blue_legend_key: "1.000.000"
+ zmc_world_population_green_legend_key: "100.000"
+ zmc_world_population_yellow_legend_key: "10.000"
+ zmc_world_population_red_legend_key: "1.000"
+ zmc_world_population_black_legend_key: "0"
