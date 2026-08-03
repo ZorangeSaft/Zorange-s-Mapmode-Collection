@@ -3382,77 +3382,117 @@ zmc_province_population = {
 		}
 		else_if = {
 			limit = {
-				zmc_province_population >= 2000
+				zmc_province_population >= 100000000
 			}
-			value = rgb { 0 0 0 } #black
+			value = rgb { 255 0 255 } #pink
 		}
 		else_if = {
 			limit = {
-				zmc_province_population < 2000
+				zmc_province_population < 100000000
+				zmc_province_population >= 10000000
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zmc_province_population
+					subtract = 10000000
+					divide = 90000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_population < 10000000
+				zmc_province_population >= 1000000
+			}
+			lerp = {
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
+				factor = {
+					value = zmc_province_population
+					subtract = 1000000
+					divide = 9000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_population < 1000000
+				zmc_province_population >= 100000
+			}
+			lerp = {
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_province_population
+					subtract = 100000
+					divide = 900000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_population < 100000
+				zmc_province_population >= 10000
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_province_population
+					subtract = 10000
+					divide = 90000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_population < 10000
 				zmc_province_population >= 1000
 			}
 			lerp = {
-				max_color = rgb { 0 0 0 } #black
+				max_color = rgb { 255 255 0 } #yellow
 				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_province_population
 					subtract = 1000
-					divide = 1000
+					divide = 9000
 				}
 			}
 		}
 		else_if = {
 			limit = {
 				zmc_province_population < 1000
-				zmc_province_population >= 100
-			}
-			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 255 0 } #yellow
-				factor = {
-					value = zmc_province_population
-					subtract = 1000
-					divide = 900
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_province_population < 100
-				zmc_province_population >= 10
-			}
-			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 0 255 0 } #green
-				factor = {
-					value = zmc_province_population
-					subtract = 10
-					divide = 90
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_province_population < 10
 				zmc_province_population >= 0
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 255 } #white
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_province_population
-					divide = 10
+					divide = 1000
 				}
 			}
 		}
 		else = {
-			value = rgb { 255 255 255 } #white fallback
+			value = rgb { 0 0 0 } #black fallback
 		}
 	}
 
 	legend_key = {
-		desc = "zmc_province_population_white_legend_key"
-		color = rgb { 255 255 255 }
+		desc = "zmc_province_population_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_population_dark_blue_legend_key"
+		color = rgb { 0 0 139 }
+	}
+
+	legend_key = {
+		desc = "zmc_province_population_light_blue_legend_key"
+		color = rgb { 135 206 250 }
 	}
 
 	legend_key = {
