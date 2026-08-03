@@ -3382,9 +3382,25 @@ zmc_province_population = {
 		}
 		else_if = {
 			limit = {
+				zmc_province_population >= 1000000000
+			}
+			value = rgb { 255 255 255 } #white
+		}
+		else_if = {
+			limit = {
+				zmc_province_population < 1000000000
 				zmc_province_population >= 100000000
 			}
 			value = rgb { 255 0 255 } #pink
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_province_population
+					subtract = 100000000
+					divide = 900000000
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -3478,6 +3494,11 @@ zmc_province_population = {
 		else = {
 			value = rgb { 0 0 0 } #black fallback
 		}
+	}
+
+	legend_key = {
+		desc = "zmc_province_population_white_legend_key"
+		color = rgb { 255 255 255 }
 	}
 
 	legend_key = {
