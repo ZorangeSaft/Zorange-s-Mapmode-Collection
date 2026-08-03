@@ -4068,8 +4068,7 @@ zmc_world_population = {
 	legend_key = { desc = "zmc_world_population_black_legend_key" color = rgb { 0 0 0 } }
 
 	tooltip_key = {
-		if = { limit = { is_land = yes } value = MAPMODE_ZMC_WORLD_POPULATION_TT_LAND }
-		else = { value = MAPMODE_ZMC_WORLD_POPULATION_TT_WATER }
+		value = MAPMODE_ZMC_WORLD_POPULATION_TT
 	}
 
 	small_map_names = location
