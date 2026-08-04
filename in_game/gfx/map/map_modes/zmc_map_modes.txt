@@ -138,21 +138,48 @@ zmc_urbanisation_suitability = {
 	map_color = {
 		if = {
 			limit = {
-				#zmc_local_urbanisation_suitability_level < 1
-				NOT = { has_variable = zmc_local_urbanisation_suitability } #comment this out if you wanna use the above thing
+				NOT = { has_variable = zmc_local_urbanisation_suitability }
 			}
-			value = hsv { 0.58 0.50 0.52 } #figured out via trail and error from the color the basegame tells you, matches basegame color for water, altough water for some reason falls under fallback
+			value = hsv { 0.58 0.50 0.52 }
 		}
 		else_if = {
 			limit = {
-				var:zmc_local_urbanisation_suitability < 12
+				var:zmc_local_urbanisation_suitability < 5
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 }
-				min_color = rgb { 255 0 0 }
+				min_color = rgb { 0 0 0 }       # Black
+				max_color = rgb { 255 0 0 }     # Red
 				factor = {
-					value = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level #var:zmc_local_urbanisation_suitability
-					divide = 12
+					value = var:zmc_local_urbanisation_suitability
+					divide = 5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:zmc_local_urbanisation_suitability < 10
+			}
+			lerp = {
+				min_color = rgb { 255 0 0 }     # Red
+				max_color = rgb { 255 255 0 }   # Yellow
+				factor = {
+					value = var:zmc_local_urbanisation_suitability
+					subtract = 5
+					divide = 5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:zmc_local_urbanisation_suitability < 20
+			}
+			lerp = {
+				min_color = rgb { 255 255 0 }   # Yellow
+				max_color = rgb { 0 255 0 }     # Green
+				factor = {
+					value = var:zmc_local_urbanisation_suitability
+					subtract = 10
+					divide = 10
 				}
 			}
 		}
@@ -161,23 +188,17 @@ zmc_urbanisation_suitability = {
 				var:zmc_local_urbanisation_suitability < 25
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 }
-				min_color = rgb { 255 255 0 }
+				min_color = rgb { 0 255 0 }     # Green
+				max_color = rgb { 128 192 255 } # Light blue
 				factor = {
 					value = var:zmc_local_urbanisation_suitability
-					subtract = 12
-					divide = 13
+					subtract = 20
+					divide = 5
 				}
 			}
 		}
 		else = {
-			lerp = {
-				max_color = rgb { 255 255 255 }
-				min_color = rgb { 0 0 0 }
-				factor = {
-					value = var:zmc_local_urbanisation_suitability
-				}
-			}
+			value = rgb { 128 192 255 } # Light blue
 		}
 	}
 
