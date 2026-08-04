@@ -104,10 +104,6 @@ zmc_local_urbanisation_suitability_level = {
 
 	#water checks
 	if = {
-		limit = { has_river = yes }
-		add = 1
-	}
-	if = {
 		limit = { is_adjacent_to_lake = yes }
 		add = 1
 	}
@@ -116,6 +112,29 @@ zmc_local_urbanisation_suitability_level = {
 		add = {
  			value = modifier:natural_harbor_suitability
   			multiply = 5
+		}
+	}
+	if = {
+		limit = { has_river = yes }
+		if = {
+			limit = { has_location_modifier = river_flowing_through_1}
+			add = 0.5
+		}
+		else_if = {
+			limit = { has_location_modifier = river_flowing_through_2}
+			add = 1
+		}
+		else_if = {
+			limit = { has_location_modifier = river_flowing_through_3}
+			add = 1.5
+		}
+		else_if = {
+			limit = { has_location_modifier = river_flowing_through_4}
+			add = 2
+		}
+		else_if = {
+			limit = { has_location_modifier = river_flowing_through_5}
+			add = 2.5
 		}
 	}
 }
