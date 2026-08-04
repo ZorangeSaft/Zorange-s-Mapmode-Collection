@@ -273,19 +273,39 @@ zmc_province_tax_base = {
 }
 
 zmc_area_tax_base = {
-	value = area.area_tax_base
+	area = {
+		every_location_in_area = {
+			value = 0
+			add = location_tax_base
+		}
+	}
 }
 
 zmc_region_tax_base = {
-	value = region.location_tax_base
+	region = {
+		every_location_in_region = {
+			value = 0
+			add = location_tax_base
+		}
+	}
 }
 
 zmc_sub_continent_tax_base = {
-	value = sub_continent.tax_base
+	sub_continent = {
+		every_location_in_sub_continent = {
+			value = 0
+			add = location_tax_base
+		}
+	}
 }
 
 zmc_continent_tax_base = {
-	value = continent.tax_base
+	continent = {
+		every_location_in_continent = {
+			value = 0
+			add = location_tax_base
+		}
+	}
 }
 
 zmc_world_tax_base = {
