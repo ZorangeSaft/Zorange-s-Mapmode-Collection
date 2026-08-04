@@ -29,11 +29,12 @@ zmc_on_game_start = {
 			}
     }
 
+
     every_province_definition = { #for urbanisation suitability mapmode to work from the start
-      set_variable = {
-			name = zmc_counting_helper
-			value = 0
-			}
+      set_local_variable = {
+      name = zmc_counting_helper
+      value = 0
+      }
       ordered_location_in_province = {
         limit = { is_ownable = yes }
         order_by = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level
@@ -43,18 +44,16 @@ zmc_on_game_start = {
         }
         change_variable = { 
           name = zmc_local_urbanisation_suitability_sorted 
-          add = zmc_counting_helper
+          add = local_var:zmc_counting_helper
         }
         province_definition = {
-          change_variable = { 
+          change_local_variable = { 
             name = zmc_counting_helper 
             add = 1
           }
         }
       }
-      #remove_variable = zmc_counting_helper
     }
-
 
 
     set_global_variable = { #for world population mapmode to work from the start

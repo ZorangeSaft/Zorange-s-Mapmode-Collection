@@ -14,11 +14,70 @@ zmc_debug_refresh_mapmodes.1 = {
 
 	immediate = {
 		error_log = "test message"
-		every_location_in_the_world = {
-			limit = { is_land = yes }
+
+		every_location_in_the_world = { #for urbanisation suitability mapmode to work from the start
+			limit = { is_ownable = yes }
 			set_variable = {
 				name = zmc_local_urbanisation_suitability
 				value = zmc_local_urbanisation_suitability_level
+				}
+   		}
+
+
+
+		every_province_definition = { #for urbanisation suitability mapmode to work from the start
+			set_local_variable = {
+			name = zmc_counting_helper
+			value = 0
+			}
+			ordered_location_in_province = {
+				limit = { is_ownable = yes }
+				order_by = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level
+				set_variable = {
+				name = zmc_local_urbanisation_suitability_sorted
+				value = 1
+				}
+				change_variable = { 
+				name = zmc_local_urbanisation_suitability_sorted 
+				add = zmc_counting_helper
+				}
+				province_definition = {
+					change_local_variable = { 
+						name = zmc_counting_helper 
+						add = 1
+					}
+				}
+			}
+		}
+
+
+
+		set_global_variable = { #for world population mapmode to work from the start
+			name = zmc_world_population
+			value = {
+				every_location_in_the_world = {
+				limit = { is_ownable = yes }
+				add = population
+				}
+				multiply = 1000
+			}
+		} 
+		
+		set_global_variable = { #for world tax base mapmode to work from the start
+			name = zmc_world_tax_base
+			value = {
+				every_location_in_the_world = {
+				limit = { is_ownable = yes }
+				add = location_tax_base
+				}
+			}
+		}
+
+		set_global_variable = { #calculating world tax base per population every year to save on performance
+			name = zmc_world_tax_base_per_population_var
+			value = {
+				value = global_var:zmc_world_tax_base
+				divide = global_var:zmc_world_population
 			}
 		}
 	}
