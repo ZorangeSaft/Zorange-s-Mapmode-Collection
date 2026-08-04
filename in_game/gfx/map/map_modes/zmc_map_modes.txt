@@ -345,7 +345,7 @@ zmc_urbanisation_suitability_sorted = {
 				is_ownable = yes
 				NOT = { location_rank = location_rank:rural_settlement }
 			}
-			value = hsv { 0 0 0 }
+			value = rgb { 0 0 0 }
 		}
 		if = { #important mining: goods_gold silver iron gems
 			limit = {
@@ -358,7 +358,7 @@ zmc_urbanisation_suitability_sorted = {
 		}
 		#less important mining: tin lead copper alum saltpeter
 		#other mining rgos are ignored: salt stone marble clay
-		
+
 		#important none mining: amber pearls silk saffron cloves
 	}
 
