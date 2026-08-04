@@ -28,6 +28,24 @@
 
 
 
+ #sorted urbanisation suitability mapmode
+
+ mapmode_zmc_urbanisation_suitability_sorted_name: "Sorted Urbanisation Suitability"
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED: "#T $mapmode_zmc_urbanisation_suitability_sorted_name$#!\nThis colors [locations|e] by their rank in a [province|e] for [zmc_urbanisation_suitability|e].\n\nThe best [location|e] in a [province|e] is white, the second best is pink, and so on down to black for the lowest ranked [location|e]."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_LAND: "[ROOT.GetLocation.GetName] is ranked #color_white [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability_sorted').GetValue]#! in its [province|e] for [zmc_urbanisation_suitability|e]."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [zmc_urbanisation_suitability|e] rank."
+
+ zmc_urbanisation_suitability_sorted_white_legend_key: "Best"
+ zmc_urbanisation_suitability_sorted_pink_legend_key: "2nd best"
+ zmc_urbanisation_suitability_sorted_dark_blue_legend_key: "3rd best"
+ zmc_urbanisation_suitability_sorted_light_blue_legend_key: "4th best"
+ zmc_urbanisation_suitability_sorted_green_legend_key: "5th best"
+ zmc_urbanisation_suitability_sorted_yellow_legend_key: "6th best"
+ zmc_urbanisation_suitability_sorted_red_legend_key: "7th best"
+ zmc_urbanisation_suitability_sorted_black_legend_key: "8th best"
+
+
+
  #building cap mapmode
 
  mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
