@@ -340,22 +340,49 @@ zmc_urbanisation_suitability_sorted = {
 		}
 	}
 	secondary_map_color = {
-		if = {
-			limit = {
-				is_ownable = yes
-				NOT = { location_rank = location_rank:rural_settlement }
-			}
-			value = rgb { 0 0 0 }
+	if = {
+		limit = {
+			is_ownable = yes
+			NOT = { location_rank = location_rank:rural_settlement }
 		}
-		if = { #important mining: goods_gold silver iron gems
-			limit = {
-				OR = {
-					raw_material ?= goods:goods_gold
-					raw_material ?= goods:silver
-				}
+		value = rgb { 0 0 0 } # Black
+	}
+	else_if = {
+		limit = {
+			OR = {
+				raw_material ?= goods:goods_gold
+				raw_material ?= goods:silver
+				raw_material ?= goods:iron
+				raw_material ?= goods:gems
 			}
-			value = rgb { 70 70 255 }
 		}
+		value = rgb { 50 50 255 } # Blue
+	}
+	else_if = {
+		limit = {
+			OR = {
+				raw_material ?= goods:tin
+				raw_material ?= goods:lead
+				raw_material ?= goods:copper
+				raw_material ?= goods:alum
+				raw_material ?= goods:saltpeter
+			}
+		}
+		value = rgb { 130 130 255 } # Light Blue
+	}
+	else_if = {
+		limit = {
+			OR = {
+				raw_material ?= goods:amber
+				raw_material ?= goods:pearls
+				raw_material ?= goods:silk
+				raw_material ?= goods:saffron
+				raw_material ?= goods:cloves
+			}
+		}
+		value = rgb { 255 165 0 } # Orange
+	}
+		#important mining: goods_gold silver iron gems
 		#less important mining: tin lead copper alum saltpeter
 		#other mining rgos are ignored: salt stone marble clay
 
