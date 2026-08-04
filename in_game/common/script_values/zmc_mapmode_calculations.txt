@@ -202,8 +202,7 @@ zmc_continent_tax_base_per_population = {
 }
 
 zmc_world_tax_base_per_population = {
-	value = global_var:zmc_world_tax_base
-	divide = global_var:zmc_world_population
+	value = global_var:zmc_world_tax_base_per_population_var
 }
 
 

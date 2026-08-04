@@ -50,6 +50,13 @@ zmc_on_game_start = {
         }
       }
     }
+    set_global_variable = { #calculating world tax base per population every year to save on performance
+      name = zmc_world_tax_base_per_population_var
+      value = {
+        value = global_var:zmc_world_tax_base
+        divide = global_var:zmc_world_population
+      }
+    }
   }
 }
 
@@ -80,6 +87,13 @@ zmc_yearly = {
           limit = { is_ownable = yes }
           add = location_tax_base
         }
+      }
+    }
+    set_global_variable = { #calculating world tax base per population every year to save on performance
+      name = zmc_world_tax_base_per_population_var
+      value = {
+        value = global_var:zmc_world_tax_base
+        divide = global_var:zmc_world_population
       }
     }
   }

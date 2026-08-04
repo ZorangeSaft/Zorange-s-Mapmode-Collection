@@ -208,7 +208,7 @@
  #region wealth per population mapmode
 
  mapmode_zmc_region_tax_base_per_population_name: "Region Tax Base Per Population"
- MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_region_tax_base_per_population_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e] per [region|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!\n\n@warning_icon!#color_red It may take several seconds to load#!@warning_icon!"
+ MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_region_tax_base_per_population_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e] per [region|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!\n\n@warning_icon!#color_red It may take several seconds to load#!@warning_icon!\n\n#color_red Tax base mapmodes of higher geographic categories than region are not included as they were too likely to crash your game.\n\nUse debug mode to access them anyway at your own risk.#!"
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_LAND: "This [region|e] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base_per_population')|Y]."
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [tax_base|e] or [population|e]."
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
@@ -265,7 +265,7 @@
  #world wealth per population mapmode
 
  mapmode_zmc_world_tax_base_per_population_name: "World Tax Base Per Population"
- MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_world_tax_base_per_population_name$#!\nThis colors [locations|e] by [world|e] [tax_base|e] per [world|e] [population|e].\n\nTo save on performance, this mapmode updates #color_white every year#!."
+ MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_world_tax_base_per_population_name$#!\nThis colors [locations|e] by world [tax_base|e] per [population|e].\n\nTo save on performance, this mapmode updates #color_white every year#!."
  MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT: "The world has a [tax_base|e] per [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_tax_base_per_population')|Y]#!\n\nTo save on performance, this mapmode updates #color_white every year#!."
 
  zmc_world_tax_base_per_population_pink_legend_key: "50"

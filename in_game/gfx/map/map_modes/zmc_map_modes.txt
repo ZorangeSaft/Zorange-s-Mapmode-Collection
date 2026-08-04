@@ -3609,7 +3609,7 @@ zmc_sub_continent_tax_base_per_population = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = economy
+	category = debug
 	index = 0
 	map_markers = { all = no }
 	gradient_parameters = {
@@ -3675,7 +3675,7 @@ zmc_continent_tax_base_per_population = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = economy
+	category = debug
 	index = 0
 	map_markers = { all = no }
 	gradient_parameters = {
@@ -3702,7 +3702,6 @@ zmc_continent_tax_base_per_population = {
 zmc_world_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
-		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
 		else_if = { limit = { zmc_world_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
 		else_if = { limit = { zmc_world_tax_base_per_population < 50 zmc_world_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_world_tax_base_per_population subtract = 20 divide = 30 } } }
 		else_if = { limit = { zmc_world_tax_base_per_population < 20 zmc_world_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_tax_base_per_population subtract = 5 divide = 15 } } }
@@ -3720,7 +3719,6 @@ zmc_world_tax_base_per_population = {
 	legend_key = { desc = "zmc_world_tax_base_per_population_yellow_legend_key" color = rgb { 255 255 0 } }
 	legend_key = { desc = "zmc_world_tax_base_per_population_red_legend_key" color = rgb { 255 0 0 } }
 	legend_key = { desc = "zmc_world_tax_base_per_population_black_legend_key" color = rgb { 0 0 0 } }
-	legend_key = { desc = "zmc_world_tax_base_per_population_gray_legend_key" color = rgb { 50 50 50 } }
 
 	tooltip_key = {
 		value = MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT
