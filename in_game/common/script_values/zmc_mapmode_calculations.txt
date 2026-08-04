@@ -264,8 +264,32 @@ zmc_closeness_to_equator_impact = {
 
 
 
+zmc_location_tax_base = {
+	value = location_tax_base
+}
+
 zmc_province_tax_base = {
-	value = province.province_tax_base #province_tax_base
+	value = province.province_tax_base #province_tax_base #location_tax_base
+}
+
+zmc_area_tax_base = {
+	value = area.area_tax_base
+}
+
+zmc_region_tax_base = {
+	value = region.location_tax_base
+}
+
+zmc_sub_continent_tax_base = {
+	value = sub_continent.tax_base
+}
+
+zmc_continent_tax_base = {
+	value = continent.tax_base
+}
+
+zmc_world_tax_base = {
+	value = world.tax_base
 }
 
 

@@ -176,6 +176,25 @@
 
 
 
+ #location tax base mapmode
+
+ mapmode_zmc_location_tax_base_name: "Location Tax Base"
+ MAPMODE_ZMC_LOCATION_TAX_BASE: "#T $mapmode_zmc_location_tax_base_name$#!\nThis colors [locations|e] by their local [tax_base|e]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base')|Y]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
+
+ zmc_location_tax_base_pink_legend_key: "10000"
+ zmc_location_tax_base_dark_blue_legend_key: "2000"
+ zmc_location_tax_base_light_blue_legend_key: "1000"
+ zmc_location_tax_base_green_legend_key: "500"
+ zmc_location_tax_base_yellow_legend_key: "100"
+ zmc_location_tax_base_red_legend_key: "10"
+ zmc_location_tax_base_black_legend_key: "0"
+ zmc_location_tax_base_gray_legend_key: "Uncolonised"
+
+
+
  #province tax base mapmode
 
  mapmode_zmc_province_tax_base_name: "Province Tax Base"
@@ -192,6 +211,101 @@
  zmc_province_tax_base_red_legend_key: "10"
  zmc_province_tax_base_black_legend_key: "0"
  zmc_province_tax_base_gray_legend_key: "Uncolonised"
+
+
+
+ #area tax base mapmode
+
+ mapmode_zmc_area_tax_base_name: "Area Tax Base"
+ MAPMODE_ZMC_AREA_TAX_BASE: "#T $mapmode_zmc_area_tax_base_name$#!\nThis colors [locations|e] by [area|e] [tax_base|e]."
+ MAPMODE_ZMC_AREA_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_tax_base')|Y]."
+ MAPMODE_ZMC_AREA_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [area|e] [tax_base|e]."
+ MAPMODE_ZMC_AREA_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_area_tax_base_pink_legend_key: "10000"
+ zmc_area_tax_base_dark_blue_legend_key: "2000"
+ zmc_area_tax_base_light_blue_legend_key: "1000"
+ zmc_area_tax_base_green_legend_key: "500"
+ zmc_area_tax_base_yellow_legend_key: "100"
+ zmc_area_tax_base_red_legend_key: "10"
+ zmc_area_tax_base_black_legend_key: "0"
+ zmc_area_tax_base_gray_legend_key: "Uncolonised"
+
+
+
+ #region tax base mapmode
+
+ mapmode_zmc_region_tax_base_name: "Region Tax Base"
+ MAPMODE_ZMC_REGION_TAX_BASE: "#T $mapmode_zmc_region_tax_base_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e]."
+ MAPMODE_ZMC_REGION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base')|Y]."
+ MAPMODE_ZMC_REGION_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [tax_base|e]."
+ MAPMODE_ZMC_REGION_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_region_tax_base_pink_legend_key: "10000"
+ zmc_region_tax_base_dark_blue_legend_key: "2000"
+ zmc_region_tax_base_light_blue_legend_key: "1000"
+ zmc_region_tax_base_green_legend_key: "500"
+ zmc_region_tax_base_yellow_legend_key: "100"
+ zmc_region_tax_base_red_legend_key: "10"
+ zmc_region_tax_base_black_legend_key: "0"
+ zmc_region_tax_base_gray_legend_key: "Uncolonised"
+
+
+
+ #sub continent tax base mapmode
+
+ mapmode_zmc_sub_continent_tax_base_name: "Sub Continent Tax Base"
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE: "#T $mapmode_zmc_sub_continent_tax_base_name$#!\nThis colors [locations|e] by [sub_continent|e] [tax_base|e]."
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_tax_base')|Y]."
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [sub_continent|e] [tax_base|e]."
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_sub_continent_tax_base_pink_legend_key: "10000"
+ zmc_sub_continent_tax_base_dark_blue_legend_key: "2000"
+ zmc_sub_continent_tax_base_light_blue_legend_key: "1000"
+ zmc_sub_continent_tax_base_green_legend_key: "500"
+ zmc_sub_continent_tax_base_yellow_legend_key: "100"
+ zmc_sub_continent_tax_base_red_legend_key: "10"
+ zmc_sub_continent_tax_base_black_legend_key: "0"
+ zmc_sub_continent_tax_base_gray_legend_key: "Uncolonised"
+
+
+
+ #continent tax base mapmode
+
+ mapmode_zmc_continent_tax_base_name: "Continent Tax Base"
+ MAPMODE_ZMC_CONTINENT_TAX_BASE: "#T $mapmode_zmc_continent_tax_base_name$#!\nThis colors [locations|e] by [continent|e] [tax_base|e]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base')|Y]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [continent|e] [tax_base|e]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_continent_tax_base_pink_legend_key: "10000"
+ zmc_continent_tax_base_dark_blue_legend_key: "2000"
+ zmc_continent_tax_base_light_blue_legend_key: "1000"
+ zmc_continent_tax_base_green_legend_key: "500"
+ zmc_continent_tax_base_yellow_legend_key: "100"
+ zmc_continent_tax_base_red_legend_key: "10"
+ zmc_continent_tax_base_black_legend_key: "0"
+ zmc_continent_tax_base_gray_legend_key: "Uncolonised"
+
+
+
+ #world tax base mapmode
+
+ mapmode_zmc_world_tax_base_name: "World Tax Base"
+ MAPMODE_ZMC_WORLD_TAX_BASE: "#T $mapmode_zmc_world_tax_base_name$#!\nThis colors [locations|e] by [world|e] [tax_base|e]."
+ MAPMODE_ZMC_WORLD_TAX_BASE_TT_LAND: "The [world|e] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_tax_base')|Y]."
+ MAPMODE_ZMC_WORLD_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [world|e] [tax_base|e]."
+ MAPMODE_ZMC_WORLD_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_world_tax_base_pink_legend_key: "10000"
+ zmc_world_tax_base_dark_blue_legend_key: "2000"
+ zmc_world_tax_base_light_blue_legend_key: "1000"
+ zmc_world_tax_base_green_legend_key: "500"
+ zmc_world_tax_base_yellow_legend_key: "100"
+ zmc_world_tax_base_red_legend_key: "10"
+ zmc_world_tax_base_black_legend_key: "0"
+ zmc_world_tax_base_gray_legend_key: "Uncolonised"
 
 
 
