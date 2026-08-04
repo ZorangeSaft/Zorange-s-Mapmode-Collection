@@ -35,14 +35,21 @@
  MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_LAND: "[ROOT.GetLocation.GetName] is ranked #color_white [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability_sorted').GetValue]#! in its [province|e] for [zmc_urbanisation_suitability|e]."
  MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [zmc_urbanisation_suitability|e] rank."
 
+ zmc_urbanisation_suitability_sorted_urban_legend_key: "///Urbanised already"
+ zmc_urbanisation_suitability_sorted_important_mining_rgo_legend_key: "///Important Mining RGO"
+ zmc_urbanisation_suitability_sorted_less_important_mining_rgo_legend_key: "///Less Important Mining RGO"
+ zmc_urbanisation_suitability_sorted_other_important_rgo_legend_key: "///Other Important RGO"
+
  zmc_urbanisation_suitability_sorted_white_legend_key: "Best"
- zmc_urbanisation_suitability_sorted_pink_legend_key: "2nd best"
- zmc_urbanisation_suitability_sorted_dark_blue_legend_key: "3rd best"
- zmc_urbanisation_suitability_sorted_light_blue_legend_key: "4th best"
- zmc_urbanisation_suitability_sorted_green_legend_key: "5th best"
- zmc_urbanisation_suitability_sorted_yellow_legend_key: "6th best"
+ zmc_urbanisation_suitability_sorted_green_legend_key: "2nd best"
+ zmc_urbanisation_suitability_sorted_light_green_legend_key: "3rd best"
+ zmc_urbanisation_suitability_sorted_yellow_legend_key: "4th best"
+ zmc_urbanisation_suitability_sorted_orange_legend_key: "5th best"
+ zmc_urbanisation_suitability_sorted_orange_red_legend_key: "6th best"
  zmc_urbanisation_suitability_sorted_red_legend_key: "7th best"
- zmc_urbanisation_suitability_sorted_black_legend_key: "8th and below"
+ zmc_urbanisation_suitability_sorted_dark_red_legend_key: "8th best"
+ zmc_urbanisation_suitability_sorted_darker_red_legend_key: "9th best"
+ zmc_urbanisation_suitability_sorted_black_legend_key: "10th and below"
 
 
 

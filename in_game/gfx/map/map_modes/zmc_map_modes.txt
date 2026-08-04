@@ -381,28 +381,35 @@ zmc_urbanisation_suitability_sorted = {
 					raw_material ?= goods:cloves
 				}
 			}
-			value = rgb { 50 1000 255 }
+			value = rgb { 50 100 255 }
 		}
 	}
 
 	legend_key = {
-		desc = "zmc_urbanisation_suitability_sorted_white_legend_key"
-		color = rgb { 255 255 255 }
+		desc = "zmc_urbanisation_suitability_sorted_urban_legend_key"
+		color = rgb { 0 0 0 }
 	}
 
 	legend_key = {
-		desc = "zmc_urbanisation_suitability_sorted_pink_legend_key"
+		desc = "zmc_urbanisation_suitability_sorted_important_mining_rgo_legend_key"
 		color = rgb { 255 0 255 }
 	}
 
 	legend_key = {
-		desc = "zmc_urbanisation_suitability_sorted_dark_blue_legend_key"
-		color = rgb { 0 0 128 }
+		desc = "zmc_urbanisation_suitability_sorted_less_important_mining_rgo_legend_key"
+		color = rgb { 255 120 255 }
 	}
 
 	legend_key = {
-		desc = "zmc_urbanisation_suitability_sorted_light_blue_legend_key"
-		color = rgb { 128 192 255 }
+		desc = "zmc_urbanisation_suitability_sorted_other_important_rgo_legend_key"
+		color = rgb { 50 100 255 }
+	}
+
+
+
+	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_white_legend_key"
+		color = rgb { 255 255 255 }
 	}
 
 	legend_key = {
@@ -411,13 +418,38 @@ zmc_urbanisation_suitability_sorted = {
 	}
 
 	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_light_green_legend_key"
+		color = rgb { 128 255 0 }
+	}
+
+	legend_key = {
 		desc = "zmc_urbanisation_suitability_sorted_yellow_legend_key"
 		color = rgb { 255 255 0 }
 	}
 
 	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_orange_legend_key"
+		color = rgb { 255 170 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_orange_red_legend_key"
+		color = rgb { 255 85 0 }
+	}
+
+	legend_key = {
 		desc = "zmc_urbanisation_suitability_sorted_red_legend_key"
 		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_dark_red_legend_key"
+		color = rgb { 170 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_urbanisation_suitability_sorted_darker_red_legend_key"
+		color = rgb { 85 0 0 }
 	}
 
 	legend_key = {
