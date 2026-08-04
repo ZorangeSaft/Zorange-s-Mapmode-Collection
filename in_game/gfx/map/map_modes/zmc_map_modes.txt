@@ -152,7 +152,7 @@ zmc_urbanisation_suitability = {
 				min_color = rgb { 255 0 0 }
 				factor = {
 					value = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level #var:zmc_local_urbanisation_suitability
-					divide = 10
+					divide = 12
 				}
 			}
 		}
@@ -165,8 +165,8 @@ zmc_urbanisation_suitability = {
 				min_color = rgb { 255 255 0 }
 				factor = {
 					value = var:zmc_local_urbanisation_suitability
-					subtract = 10
-					divide = 10
+					subtract = 12
+					divide = 13
 				}
 			}
 		}
