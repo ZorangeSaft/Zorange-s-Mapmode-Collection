@@ -559,7 +559,7 @@
  #area population mapmode
 
  mapmode_zmc_area_population_name: "Area Population"
- MAPMODE_ZMC_AREA_POPULATION: "#T $mapmode_zmc_area_population_name$#!\nThis colors [locations|e] by [area|e] [population|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
+ MAPMODE_ZMC_AREA_POPULATION: "#T $mapmode_zmc_area_population_name$#!\nThis colors [locations|e] by [area|e] [population|e]."
  MAPMODE_ZMC_AREA_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_population')|D]#!."
  MAPMODE_ZMC_AREA_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
@@ -595,7 +595,7 @@
  #sub continent population mapmode
 
  mapmode_zmc_sub_continent_population_name: "Sub Continent Population"
- MAPMODE_ZMC_SUB_CONTINENT_POPULATION: "#T $mapmode_zmc_sub_continent_population_name$#!\nThis colors [locations|e] by [sub_continent|e] [population|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
+ MAPMODE_ZMC_SUB_CONTINENT_POPULATION: "#T $mapmode_zmc_sub_continent_population_name$#!\nThis colors [locations|e] by [sub_continent|e] [population|e].\n\n@warning_icon!@warning_icon!#color_red This mapmode is very laggy to click on#!@warning_icon!@warning_icon!"
  MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_population')|D]#!."
  MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]"
 
@@ -613,8 +613,8 @@
  #continent population mapmode
 
  mapmode_zmc_continent_population_name: "Continent Population"
- MAPMODE_ZMC_CONTINENT_POPULATION: "#T $mapmode_zmc_continent_population_name$#!\nThis colors [locations|e] by [continent|e] [population|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
- MAPMODE_ZMC_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName]has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_population')|D]#!"
+ MAPMODE_ZMC_CONTINENT_POPULATION: "#T $mapmode_zmc_continent_population_name$#!\nThis colors [locations|e] by [continent|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!"
+ MAPMODE_ZMC_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_population')|D]#!"
  MAPMODE_ZMC_CONTINENT_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_continent_population_white_legend_key: "1.000.000.000"
