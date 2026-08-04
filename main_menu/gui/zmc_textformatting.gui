@@ -2,6 +2,10 @@ textformatting = {
 	#zmc
 	#colors are in decimal RGB
 	#glow is in decimal RGBA
+	#255 --> 1
+	#120 --> 0.47
+	#100 --> 0.39
+	#50 --> 0.20
 
 	format = {
 		name = zmc_color_orange
@@ -21,5 +25,42 @@ textformatting = {
 	format = {
 		name = zmc_color_dark_red
 		format = "color:{0.55,0,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+
+
+	format = {
+		name = zmc_color_green
+		format = "color:{0,1,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_yellow
+		format = "color:{1,1,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_red
+		format = "color:{1,0,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_black
+		format = "color:{0,0,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_magenta
+		format = "color:{1,0,1};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_light_magenta
+		format = "color:{1,0.47,1};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_blue
+		format = "color:{0.2,0.39,1};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
 	}
 }
