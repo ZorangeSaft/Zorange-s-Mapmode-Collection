@@ -150,20 +150,20 @@
 
  #wealth per population mapmode
 
- mapmode_zmc_tax_base_per_population_name: "Location Tax Base Per Population"
- MAPMODE_ZMC_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_tax_base_per_population_name$#!\nThis colors [locations|e] by local [tax_base|e] per [population|e].\n\nThis means [wealth|e] is multiplied by [control|e] and divided by [population|e], effectively providing the [zmc_gdp_per_capita|e] of the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nOccupy high valued locations from your enemy or take them in a peace deal, to inflict maximum economic damage.\n\nBeware that the same applies to you, so it would be wise to protect your own high value locations and not give them away in a peace deal."
- MAPMODE_ZMC_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_tax_base_per_population')|Y]."
- MAPMODE_ZMC_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e] or [population|e]."
- MAPMODE_ZMC_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
+ mapmode_zmc_location_tax_base_per_population_name: "Location Tax Base Per Population"
+ MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_location_tax_base_per_population_name$#!\nThis colors [locations|e] by local [tax_base|e] per [population|e].\n\nThis means [wealth|e] is multiplied by [control|e] and divided by [population|e], effectively providing the [zmc_gdp_per_capita|e] of the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nOccupy high valued locations from your enemy or take them in a peace deal, to inflict maximum economic damage.\n\nBeware that the same applies to you, so it would be wise to protect your own high value locations and not give them away in a peace deal."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e] or [population|e]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
- zmc_tax_base_per_population_pink_legend_key: "50"
- zmc_tax_base_per_population_dark_blue_legend_key: "20"
- zmc_tax_base_per_population_light_blue_legend_key: "5"
- zmc_tax_base_per_population_green_legend_key: "2"
- zmc_tax_base_per_population_yellow_legend_key: "1"
- zmc_tax_base_per_population_red_legend_key: "0.5"
- zmc_tax_base_per_population_black_legend_key: "0"
- zmc_tax_base_per_population_gray_legend_key: "Uncolonised"
+ zmc_location_tax_base_per_population_pink_legend_key: "50"
+ zmc_location_tax_base_per_population_dark_blue_legend_key: "20"
+ zmc_location_tax_base_per_population_light_blue_legend_key: "5"
+ zmc_location_tax_base_per_population_green_legend_key: "2"
+ zmc_location_tax_base_per_population_yellow_legend_key: "1"
+ zmc_location_tax_base_per_population_red_legend_key: "0.5"
+ zmc_location_tax_base_per_population_black_legend_key: "0"
+ zmc_location_tax_base_per_population_gray_legend_key: "Uncolonised"
 
 
 
@@ -243,13 +243,30 @@
 
 
 
+ #continent wealth per population mapmode
+
+ mapmode_zmc_continent_tax_base_per_population_name: "Continent Tax Base Per Population"
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_continent_tax_base_per_population_name$#!\nThis colors [locations|e] by [continent|e] [tax_base|e] per [continent|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is highly likely to be very laggy or crash the game, so use it at your own risk#!@warning_icon!@warning_icon!@warning_icon!"
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [continent|e] [tax_base|e] or [population|e]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+
+ zmc_continent_tax_base_per_population_pink_legend_key: "50"
+ zmc_continent_tax_base_per_population_dark_blue_legend_key: "20"
+ zmc_continent_tax_base_per_population_light_blue_legend_key: "5"
+ zmc_continent_tax_base_per_population_green_legend_key: "2"
+ zmc_continent_tax_base_per_population_yellow_legend_key: "1"
+ zmc_continent_tax_base_per_population_red_legend_key: "0.5"
+ zmc_continent_tax_base_per_population_black_legend_key: "0"
+ zmc_continent_tax_base_per_population_gray_legend_key: "Uncolonised"
+
+
+
  #world wealth per population mapmode
 
  mapmode_zmc_world_tax_base_per_population_name: "World Tax Base Per Population"
  MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_world_tax_base_per_population_name$#!\nThis colors [locations|e] by [world|e] [tax_base|e] per [world|e] [population|e].\n\nTo save on performance, this mapmode updates #color_white every year#!."
- MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT_LAND: "The world has a [tax_base|e] per [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_tax_base_per_population')|Y]#!\n\nTo save on performance, this mapmode updates #color_white every year#!."
- MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [world|e] [tax_base|e] or [population|e]."
- MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
+ MAPMODE_ZMC_WORLD_TAX_BASE_PER_POPULATION_TT: "The world has a [tax_base|e] per [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_tax_base_per_population')|Y]#!\n\nTo save on performance, this mapmode updates #color_white every year#!."
 
  zmc_world_tax_base_per_population_pink_legend_key: "50"
  zmc_world_tax_base_per_population_dark_blue_legend_key: "20"
