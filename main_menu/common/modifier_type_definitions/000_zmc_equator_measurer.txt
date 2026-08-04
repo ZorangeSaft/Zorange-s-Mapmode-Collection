@@ -3,3 +3,35 @@
 		category=location
 	}
 }
+
+
+
+zmc_river_flowing_through_1_modifier={ #river_flowing_through_1
+	game_data={
+		category=location
+	}
+}
+
+zmc_river_flowing_through_2_modifier={ #river_flowing_through_2
+	game_data={
+		category=location
+	}
+}
+
+zmc_river_flowing_through_3_modifier={ #river_flowing_through_3
+	game_data={
+		category=location
+	}
+}
+
+zmc_river_flowing_through_4_modifier={ #river_flowing_through_4
+	game_data={
+		category=location
+	}
+}
+
+zmc_river_flowing_through_5_modifier={ #river_flowing_through_5
+	game_data={
+		category=location
+	}
+}

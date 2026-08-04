@@ -1,3 +1,25 @@
 ﻿INJECT:location_closeness_to_equator_impact = { #equator_distance, distance to equator
     zmc_equator_measurer_modifier = 1
 }
+
+
+
+INJECT:river_flowing_through_1 = { #river_flowing_through_1
+    zmc_river_flowing_through_1_modifier = 0.5
+}
+
+INJECT:river_flowing_through_2 = { #river_flowing_through_2
+    zmc_river_flowing_through_2_modifier = 1
+}
+
+INJECT:river_flowing_through_3 = { #river_flowing_through_3
+    zmc_river_flowing_through_3_modifier = 1.5
+}
+
+INJECT:river_flowing_through_4 = { #river_flowing_through_4
+    zmc_river_flowing_through_4_modifier = 2
+}
+
+INJECT:river_flowing_through_5 = { #river_flowing_through_5
+    zmc_river_flowing_through_5_modifier = 2.5
+}

@@ -140,4 +140,5 @@ zmc_local_urbanisation_suitability_level = {
 			add = 0 #fallback, should never happen tho, unless the game gets updated in some bad way
 		}
 	}
+	add = modifier:zmc_river_flowing_through_1_modifier
 }
