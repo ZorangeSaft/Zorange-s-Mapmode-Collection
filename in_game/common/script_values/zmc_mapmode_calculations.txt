@@ -151,6 +151,51 @@ zmc_tax_base_per_population = { #wealth per population mapmode, basically gdp/ca
   divide = population
 }
 
+zmc_province_tax_base_per_population = {
+	province = {
+        every_location_in_province = {
+            limit = { is_ownable = yes }
+            add = location_tax_base
+        }
+    }
+    divide = province.population
+}
+
+zmc_area_tax_base_per_population = {
+	area = {
+        every_location_in_area = {
+            limit = { is_ownable = yes }
+            add = location_tax_base
+        }
+    }
+    divide = area.population
+}
+
+zmc_region_tax_base_per_population = {
+	region = {
+        every_location_in_region = {
+            limit = { is_ownable = yes }
+            add = location_tax_base
+        }
+    }
+    divide = region.population
+}
+
+zmc_sub_continent_tax_base_per_population = {
+	sub_continent = {
+        every_location_in_sub_continent = {
+            limit = { is_ownable = yes }
+            add = location_tax_base
+        }
+    }
+    divide = sub_continent.population
+}
+
+zmc_world_tax_base_per_population = {
+	value = global_var:zmc_world_tax_base
+	divide = global_var:zmc_world_population
+}
+
 
 
 
