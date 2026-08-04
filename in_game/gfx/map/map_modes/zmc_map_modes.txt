@@ -279,19 +279,19 @@ else_if = {
 	limit = {
 		var:zmc_local_urbanisation_suitability_sorted = 1
 	}
-	value = rgb { 0 255 0 } # Green
+	value = rgb { 135 206 250 } # Light Blue
 }
 else_if = {
 	limit = {
 		var:zmc_local_urbanisation_suitability_sorted = 2
 	}
-	value = rgb { 85 255 0 }
+	value = rgb { 0 255 0 } # Green
 }
 else_if = {
 	limit = {
 		var:zmc_local_urbanisation_suitability_sorted = 3
 	}
-	value = rgb { 170 255 0 }
+	value = rgb { 128 255 0 }
 }
 else_if = {
 	limit = {
@@ -336,7 +336,7 @@ else_if = {
 	value = rgb { 0 0 0 } # Black
 }
 else = {
-	value = rgb { 0 0 0 } # Black fallback
+	value = rgb { 0 0 0 }
 }
 	}
 
