@@ -279,7 +279,7 @@ else_if = {
 	limit = {
 		var:zmc_local_urbanisation_suitability_sorted = 1
 	}
-	value = rgb { 135 206 250 } # Light Blue
+	value = rgb { 255 255 255 } # Light Blue
 }
 else_if = {
 	limit = {
