@@ -117,24 +117,27 @@ zmc_local_urbanisation_suitability_level = {
 	if = {
 		limit = { has_river = yes }
 		if = {
-			limit = { has_location_modifier = river_flowing_through_1}
+			limit = { has_location_modifier = river_flowing_through_1 }
 			add = 0.5
 		}
 		else_if = {
-			limit = { has_location_modifier = river_flowing_through_2}
+			limit = { has_location_modifier = river_flowing_through_2 }
 			add = 1
 		}
 		else_if = {
-			limit = { has_location_modifier = river_flowing_through_3}
+			limit = { has_location_modifier = river_flowing_through_3 }
 			add = 1.5
 		}
 		else_if = {
-			limit = { has_location_modifier = river_flowing_through_4}
+			limit = { has_location_modifier = river_flowing_through_4 }
 			add = 2
 		}
 		else_if = {
-			limit = { has_location_modifier = river_flowing_through_5}
+			limit = { has_location_modifier = river_flowing_through_5 }
 			add = 2.5
+		}
+		else_if = {
+			add = 0 #fallback, should never happen tho, unless the game gets updated in some bad way
 		}
 	}
 }
