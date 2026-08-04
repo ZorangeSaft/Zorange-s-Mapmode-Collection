@@ -122,7 +122,7 @@
 
  mapmode_zmc_pop_cap_percentage_name: "Pop Cap Percentage"
  MAPMODE_ZMC_POP_CAP_PERCENTAGE: "#T $mapmode_zmc_pop_cap_percentage_name$#!\nThis colors [locations|e] by how much of their [population_capacity|e] is used up.\n\n@adm! #color_yellow Strategy#! @adm!\n#color_red Strongly#! consider upgrading locations #zmc_color_orange close#! #zmc_color_orange_red_1 to#! #zmc_color_orange_red_2 the#! #zmc_color_dark_red cap#! so they can have more [population_growth|e]. Even if they have a valuable [rgo|e] the extra [population|e] should more than make up for it in the long run."
- MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] is using [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap_percentage')|Y%] of its [population_capacity|e].\n\n[population|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|Y]\n[population_capacity|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]"
+ MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] is using [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap_percentage')|Y%] of its [population_capacity|e].\n\n[population_capacity|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|YD]\n[population|e]: [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|YD]"
  MAPMODE_ZMC_POP_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_pop_cap_percentage_black_legend_key: "200% of cap"
