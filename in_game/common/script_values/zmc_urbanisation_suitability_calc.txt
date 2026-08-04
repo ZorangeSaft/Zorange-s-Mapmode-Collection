@@ -116,33 +116,11 @@ zmc_local_urbanisation_suitability_level = {
 	}
 	if = {
 		limit = { has_river = yes }
-		if = {
-			limit = { has_location_modifier = river_flowing_through_1 }
-			add = 1
-		}
-		else_if = {
-			limit = { has_location_modifier = river_flowing_through_2 }
-			add = 1.6
-		}
-		else_if = {
-			limit = { has_location_modifier = river_flowing_through_3 }
-			add = 2
-		}
-		else_if = {
-			limit = { has_location_modifier = river_flowing_through_4 } #doesnt appear in vanilla
-			add = 2.5
-		}
-		else_if = {
-			limit = { has_location_modifier = river_flowing_through_5 } #doesnt appear in vanilla
-			add = 3
-		}
-		else_if = {
-			add = 0 #fallback, should never happen tho, unless the game gets updated in some bad way
-		}
+		add = modifier:zmc_river_flowing_through_1_modifier
+		add = modifier:zmc_river_flowing_through_2_modifier
+		add = modifier:zmc_river_flowing_through_3_modifier
+		add = modifier:zmc_river_flowing_through_4_modifier #doesnt appear in vanilla as of 1.3.10
+		add = modifier:zmc_river_flowing_through_5_modifier #doesnt appear in vanilla as of 1.3.10
+		#only 1 of these will be true at any time anyway so dont need to check individually
 	}
-	add = modifier:zmc_river_flowing_through_1_modifier
-	add = modifier:zmc_river_flowing_through_2_modifier
-	add = modifier:zmc_river_flowing_through_3_modifier
-	add = modifier:zmc_river_flowing_through_4_modifier
-	add = modifier:zmc_river_flowing_through_5_modifier
 }

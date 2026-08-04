@@ -16,10 +16,10 @@ INJECT:river_flowing_through_3 = { #river_flowing_through_3
     zmc_river_flowing_through_3_modifier = 2
 }
 
-INJECT:river_flowing_through_4 = { #river_flowing_through_4 #doesnt appear in vanilla
+INJECT:river_flowing_through_4 = { #river_flowing_through_4 #doesnt appear in vanilla as of 1.3.10
     zmc_river_flowing_through_4_modifier = 2.5
 }
 
-INJECT:river_flowing_through_5 = { #river_flowing_through_5 #doesnt appear in vanilla
+INJECT:river_flowing_through_5 = { #river_flowing_through_5 #doesnt appear in vanilla as of 1.3.10
     zmc_river_flowing_through_5_modifier = 3
 }
