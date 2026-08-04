@@ -38,6 +38,7 @@ zmc_on_game_start = {
       ordered_location_in_province_definition = {
         limit = { is_ownable = yes }
         order_by = var:zmc_local_urbanisation_suitability #zmc_local_urbanisation_suitability_level
+        min = 0
         set_variable = {
           name = zmc_local_urbanisation_suitability_sorted
           value = 1

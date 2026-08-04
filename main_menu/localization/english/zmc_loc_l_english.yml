@@ -42,7 +42,7 @@
  zmc_urbanisation_suitability_sorted_green_legend_key: "5th best"
  zmc_urbanisation_suitability_sorted_yellow_legend_key: "6th best"
  zmc_urbanisation_suitability_sorted_red_legend_key: "7th best"
- zmc_urbanisation_suitability_sorted_black_legend_key: "8th best"
+ zmc_urbanisation_suitability_sorted_black_legend_key: "8th and below"
 
 
 
