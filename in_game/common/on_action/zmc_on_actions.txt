@@ -35,18 +35,27 @@ zmc_on_game_start = {
       name = zmc_world_population
       value = {
         every_location_in_the_world = {
-          limit = { is_land = yes }
+          limit = { is_ownable = yes }
           add = population
         }
         multiply = 1000
       }
     } 
+    set_global_variable = { #for world tax base mapmode to work from the start
+      name = zmc_world_tax_base
+      value = {
+        every_location_in_the_world = {
+          limit = { is_ownable = yes }
+          add = location_tax_base
+        }
+      }
+    }
   }
 }
 
 
 
-yearly_country_pulse = { #calculating world population every year to save on performance
+yearly_country_pulse = {
   on_actions = {
     zmc_yearly
   }
@@ -54,14 +63,23 @@ yearly_country_pulse = { #calculating world population every year to save on per
 
 zmc_yearly = {
   effect = {
-    set_global_variable = {
+    set_global_variable = { #calculating world population every year to save on performance
       name = zmc_world_population
       value = {
         every_location_in_the_world = {
-          limit = { is_land = yes }
+          limit = { is_ownable = yes }
           add = population
         }
         multiply = 1000
+      }
+    }
+    set_global_variable = { #calculating world tax base every year to save on performance
+      name = zmc_world_tax_base
+      value = {
+        every_location_in_the_world = {
+          limit = { is_ownable = yes }
+          add = location_tax_base
+        }
       }
     }
   }

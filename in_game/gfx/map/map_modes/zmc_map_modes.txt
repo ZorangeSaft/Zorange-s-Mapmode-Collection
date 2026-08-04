@@ -3129,8 +3129,8 @@ zmc_sub_continent_tax_base = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = economy
-	index = 0
+	category = debug #too laggy and likely to crash the game to be allowed to be used by normal players
+	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -3192,8 +3192,8 @@ zmc_continent_tax_base = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = economy
-	index = 0
+	category = debug #too laggy and likely to crash the game to be allowed to be used by normal players
+	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near

@@ -130,14 +130,6 @@ zmc_continent_population = {
 
 zmc_world_population = {
 	value = global_var:zmc_world_population
-	#{
-		#add = zmc_world_population
-		#every_location_in_the_world = {
-		#	limit = { any_ownable_location = yes }
-		#	add = location.population
-		#}
-	#}
-	#multiply = 1000 #for 1 pop being 1000 people
 }
 
 
@@ -275,7 +267,7 @@ zmc_province_tax_base = {
 zmc_area_tax_base = {
 	area = {
 		every_location_in_area = {
-			value = 0
+			limit = { is_ownable = yes }
 			add = location_tax_base
 		}
 	}
@@ -284,7 +276,7 @@ zmc_area_tax_base = {
 zmc_region_tax_base = {
 	region = {
 		every_location_in_region = {
-			value = 0
+			limit = { is_ownable = yes }
 			add = location_tax_base
 		}
 	}
@@ -293,23 +285,23 @@ zmc_region_tax_base = {
 zmc_sub_continent_tax_base = {
 	sub_continent = {
 		every_location_in_sub_continent = {
-			value = 0
+			limit = { is_ownable = yes }
 			add = location_tax_base
 		}
 	}
 }
 
-zmc_continent_tax_base = {
-	continent = {
-		every_location_in_continent = {
-			value = 0
-			add = location_tax_base
-		}
-	}
-}
+#zmc_continent_tax_base = { #too laggy, crashes the game every time you try and use it
+#	continent = {
+#		every_location_in_continent = {
+#			limit = { is_ownable = yes }
+#			add = location_tax_base
+#		}
+#	}
+#}
 
 zmc_world_tax_base = {
-	value = world.tax_base
+	value = global_var:zmc_world_tax_base
 }
 
 
