@@ -19,6 +19,12 @@
  zmc_urbanisation_suitability_yellow_legend_key: "Medium suitability"
  zmc_urbanisation_suitability_red_legend_key: "Low suitability"
 
+ zmc_river_flowing_through_1_modifier: "River Size Measurer Helper"
+ zmc_river_flowing_through_2_modifier: "River Size Measurer Helper"
+ zmc_river_flowing_through_3_modifier: "River Size Measurer Helper"
+ zmc_river_flowing_through_4_modifier: "River Size Measurer Helper"
+ zmc_river_flowing_through_5_modifier: "River Size Measurer Helper"
+
 
 
  #building cap mapmode
@@ -105,7 +111,7 @@
 
  mapmode_zmc_pop_cap_name: "Population Capacity"
  MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local [population_capacity|e].\n\n[population_capacity|e] is mostly based on [location_rank|e], [climate|e], [topography|e], [vegetation|e], and if the [location|e] has a [river|e] or is coastal.\n\n@adm! #color_yellow Strategy#! @adm!\nIt would be wise to create [towns_and_cities|e] in places with higher [population_capacity|e] to maximise [population_growth|e]."
- MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|Y]."
+ MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|YD]."
  MAPMODE_ZMC_POP_CAP_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population_capacity|e]."
 
  zmc_pop_cap_pink_legend_key: "2M pop cap"
@@ -614,6 +620,8 @@
  zmc_closeness_to_equator_yellow_legend_key: "0.6"
  zmc_closeness_to_equator_red_legend_key: "0.8"
  zmc_closeness_to_equator_black_legend_key: "1.0"
+
+ zmc_equator_measurer_modifier: "Equator Measurer Helper"
 
 
 
