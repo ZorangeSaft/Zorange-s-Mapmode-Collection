@@ -356,7 +356,7 @@ zmc_urbanisation_suitability_sorted = {
 				raw_material ?= goods:gems
 			}
 		}
-		value = rgb { 50 50 255 } # Blue
+		value = rgb { 255 0 255 } #rgb { 50 50 255 } # Blue
 	}
 	else_if = {
 		limit = {
@@ -368,7 +368,7 @@ zmc_urbanisation_suitability_sorted = {
 				raw_material ?= goods:saltpeter
 			}
 		}
-		value = rgb { 130 130 255 } # Light Blue
+		value = rgb { 255 120 255 } #rgb { 130 130 255 } # Light Blue
 	}
 	else_if = {
 		limit = {
@@ -380,7 +380,7 @@ zmc_urbanisation_suitability_sorted = {
 				raw_material ?= goods:cloves
 			}
 		}
-		value = rgb { 255 165 0 } # Orange
+		value = rgb { 50 1000 255 } #rgb { 255 165 0 } # Orange
 	}
 		#important mining: goods_gold silver iron gems
 		#less important mining: tin lead copper alum saltpeter
