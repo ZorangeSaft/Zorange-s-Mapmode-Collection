@@ -279,43 +279,43 @@ zmc_urbanisation_suitability_sorted = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 1
 			}
-			value = rgb { 255 255 255 } # White
+			value = rgb { 0 255 0 } #rgb { 255 255 255 } # White
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 2
 			}
-			value = rgb { 255 0 255 } # Pink
+			value = rgb { 255 255 0 } #rgb { 255 0 255 } # Pink
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 3
 			}
-			value = rgb { 0 0 128 } # Dark Blue
+			value = rgb { 255 0 0 } #rgb { 0 0 128 } # Dark Blue
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 4
 			}
-			value = rgb { 128 192 255 } # Light Blue
+			value = rgb { 0 0 0 } #rgb { 128 192 255 } # Light Blue
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 5
 			}
-			value = rgb { 0 255 0 } # Green
+			value = rgb { 0 0 0 } #rgb { 0 255 0 } # Green
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 6
 			}
-			value = rgb { 255 255 0 } # Yellow
+			value = rgb { 0 0 0 } #rgb { 255 255 0 } # Yellow
 		}
 		else_if = {
 			limit = {
 				var:zmc_local_urbanisation_suitability_sorted = 7
 			}
-			value = rgb { 255 0 0 } # Red
+			value = rgb { 0 0 0 } #rgb { 255 0 0 } # Red
 		}
 		else = {
 			value = rgb { 0 0 0 } # Black fallback
