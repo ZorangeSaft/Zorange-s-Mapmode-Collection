@@ -15,6 +15,7 @@
  game_concept_zmc_urbanisation_suitability: "Urbanisation Suitability"
  game_concept_zmc_urbanisation_suitability_desc: "[zmc_urbanisation_suitability|e] is a measure of how suitable a [location|e] is for creating an [town_and_city|e] based on [geography|e]. \n\nIt is takes into account [topography|e], [vegetation|e], [climate|e], [natural_harbor_suitability|e], and if it has a [river|e] or is adjacent to a [lake|e].\n\nIt is however important to keep in mind factors other than geography, like the local [rgo|e] and [proximity|e].\n\nThe colors are only a representation of how relatively good a [location|e] is for [town_and_city|e] placement, so orange [locations|e] in a [province|e] otherwise full of red would still be a good place for an [town_and_city|e], to have at least 1 in every [province|e]."
 
+ zmc_urbanisation_suitability_blue_legend_key: "Very High suitability"
  zmc_urbanisation_suitability_green_legend_key: "High suitability"
  zmc_urbanisation_suitability_yellow_legend_key: "Medium suitability"
  zmc_urbanisation_suitability_red_legend_key: "Low suitability"

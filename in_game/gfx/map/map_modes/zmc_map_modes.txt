@@ -140,20 +140,7 @@ zmc_urbanisation_suitability = {
 			limit = {
 				NOT = { has_variable = zmc_local_urbanisation_suitability }
 			}
-			value = hsv { 0.58 0.50 0.52 }
-		}
-		else_if = {
-			limit = {
-				var:zmc_local_urbanisation_suitability < 5
-			}
-			lerp = {
-				min_color = rgb { 0 0 0 }       # Black
-				max_color = rgb { 255 0 0 }     # Red
-				factor = {
-					value = var:zmc_local_urbanisation_suitability
-					divide = 5
-				}
-			}
+			value = hsv { 0.58 0.50 0.52 } # Water
 		}
 		else_if = {
 			limit = {
@@ -164,8 +151,7 @@ zmc_urbanisation_suitability = {
 				max_color = rgb { 255 255 0 }   # Yellow
 				factor = {
 					value = var:zmc_local_urbanisation_suitability
-					subtract = 5
-					divide = 5
+					divide = 10
 				}
 			}
 		}
@@ -188,8 +174,8 @@ zmc_urbanisation_suitability = {
 				var:zmc_local_urbanisation_suitability < 25
 			}
 			lerp = {
-				min_color = rgb { 0 255 0 }     # Green
-				max_color = rgb { 128 192 255 } # Light blue
+				min_color = rgb { 0 255 0 }       # Green
+				max_color = rgb { 0 0 255 }		  # Blue    #{ 128 192 255 }   # Light Blue
 				factor = {
 					value = var:zmc_local_urbanisation_suitability
 					subtract = 20
@@ -198,8 +184,13 @@ zmc_urbanisation_suitability = {
 			}
 		}
 		else = {
-			value = rgb { 128 192 255 } # Light blue
+			value = rgb { 0 0 255 } #blue fallback
 		}
+	}
+
+	legend_key = {
+		desc = "zmc_urbanisation_suitability_blue_legend_key"
+		color = rgb { 0 0 255 }
 	}
 
 	legend_key = {
