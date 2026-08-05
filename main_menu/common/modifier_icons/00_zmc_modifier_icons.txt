@@ -1,0 +1,25 @@
+﻿#zmc
+
+zmc_equator_measurer_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_equator_measurer_modifier.dds"
+}
+
+zmc_river_flowing_through_1_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_river_flowing_through_1_modifier.dds"
+}
+
+zmc_river_flowing_through_2_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_river_flowing_through_2_modifier.dds"
+}
+
+zmc_river_flowing_through_3_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_river_flowing_through_3_modifier.dds"
+}
+
+zmc_river_flowing_through_4_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_river_flowing_through_4_modifier.dds"
+}
+
+zmc_river_flowing_through_5_modifier = {
+	positive = "gfx/interface/icons/modifier_types/zmc_river_flowing_through_5_modifier.dds"
+}

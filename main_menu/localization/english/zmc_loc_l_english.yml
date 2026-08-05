@@ -9,7 +9,7 @@
 
  mapmode_zmc_urbanisation_suitability_name: "Urbanisation Suitability"
  MAPMODE_ZMC_URBANISATION_SUITABILITY: "#T $mapmode_zmc_urbanisation_suitability_name$#!\nThis colors [locations|e] by the [zmc_urbanisation_suitability|e] in the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase province wide pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [zmc_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
- MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [zmc_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability').GetValue|Y]."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_LAND: "[ROOT.GetLocation.GetName] has an [zmc_urbanisation_suitability|e] of [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability').GetValue|Y]"
  MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have an [zmc_urbanisation_suitability|e]."
 
  game_concept_zmc_urbanisation_suitability: "Urbanisation Suitability"
@@ -20,18 +20,28 @@
  zmc_urbanisation_suitability_yellow_legend_key: "Medium suitability"
  zmc_urbanisation_suitability_red_legend_key: "Low suitability"
 
- zmc_river_flowing_through_1_modifier: "River Size Measurer Helper"
- zmc_river_flowing_through_2_modifier: "River Size Measurer Helper"
- zmc_river_flowing_through_3_modifier: "River Size Measurer Helper"
- zmc_river_flowing_through_4_modifier: "River Size Measurer Helper"
- zmc_river_flowing_through_5_modifier: "River Size Measurer Helper"
+
+ MODIFIER_TYPE_NAME_zmc_river_flowing_through_1_modifier: "River Size Measurer"
+ MODIFIER_TYPE_DESC_zmc_river_flowing_through_1_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the size of a [river|e] flowing through a [location|e] for the #color_white Urbanisation Suitability#! mapmode."
+
+ MODIFIER_TYPE_NAME_zmc_river_flowing_through_2_modifier: "River Size Measurer"
+ MODIFIER_TYPE_DESC_zmc_river_flowing_through_2_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the size of a [river|e] flowing through a [location|e] for the #color_white Urbanisation Suitability#! mapmode."
+
+ MODIFIER_TYPE_NAME_zmc_river_flowing_through_3_modifier: "River Size Measurer"
+ MODIFIER_TYPE_DESC_zmc_river_flowing_through_3_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the size of a [river|e] flowing through a [location|e] for the #color_white Urbanisation Suitability#! mapmode."
+
+ MODIFIER_TYPE_NAME_zmc_river_flowing_through_4_modifier: "River Size Measurer"
+ MODIFIER_TYPE_DESC_zmc_river_flowing_through_4_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the size of a [river|e] flowing through a [location|e] for the #color_white Urbanisation Suitability#! mapmode."
+
+ MODIFIER_TYPE_NAME_zmc_river_flowing_through_5_modifier: "River Size Measurer"
+ MODIFIER_TYPE_DESC_zmc_river_flowing_through_5_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the size of a [river|e] flowing through a [location|e] for the #color_white Urbanisation Suitability#! mapmode."
 
 
 
  #sorted urbanisation suitability mapmode
 
  mapmode_zmc_urbanisation_suitability_sorted_name: "Sorted Urbanisation Suitability"
- MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED: "#T $mapmode_zmc_urbanisation_suitability_sorted_name$#!\nThis ranks [locations|e] by their [zmc_urbanisation_suitability|e] within a [province|e].\n\nThe best [location|e] in a [province|e] is #color_white white#!, the second best is #zmc_color_green green#!, then it gradually becomes #zmc_color_yellow yellow#!, #zmc_color_orange orange#!, #zmc_color_red red#! and #zmc_color_black black#!.\n\n#zmc_color_black Black stripes ///#! are for locations which are already an [urban_location|e].\n#zmc_color_magenta Magenta stripes ///#! are locations which are an important mining [rgo|e]\n#zmc_color_light_magenta Light Magenta stripes ///#! are for locations which are a less important mining [rgo|e]\n#zmc_color_blue Light Pink stripes ///#! are for locations which are other important [rgo|e] which includes [ShowGoodsName('amber')]\n\n@adm! #color_yellow Strategy#! @adm!\nBuild at least one [town_and_city|e] in every [province|e] to make use of all your possible [rgo|e] production bonuses and to increase province wide pop growth with [ShowBuildingTypeName('granary')] buildings.\n\nDo this in the [locations|e] with the highest [zmc_urbanisation_suitability|e] to maximise [population_capacity|e] and minimise building cost."
+ MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED: "#T $mapmode_zmc_urbanisation_suitability_sorted_name$#!\nThis ranks [locations|e] by their [zmc_urbanisation_suitability|e] within a [province|e].\n\nThe best [location|e] in a [province|e] is #color_white white#!, the second best is #zmc_color_green green#!, then it gradually becomes #zmc_color_yellow yellow#!, #zmc_color_orange orange#!, #zmc_color_red red#! and #zmc_color_black black#!.\n\n#zmc_color_black Black stripes ///#! indicate locations which are already an [urban_location|e], regardless of [location_rank|e] or [rgo|e].\n#zmc_color_magenta Magenta stripes ///#! indicate locations producing an important mining [rgo|e]: [ShowGoodsName('goods_gold')], [ShowGoodsName('silver')], [ShowGoodsName('iron')] and [ShowGoodsName('gems')].\n#zmc_color_light_magenta Light Magenta stripes ///#! indicate locations producing a less important mining [rgo|e]: [ShowGoodsName('tin')], [ShowGoodsName('lead')], [ShowGoodsName('copper')], [ShowGoodsName('alum')] and [ShowGoodsName('saltpeter')].\n#zmc_color_blue Blue stripes ///#! indicate locations producing an important non-mining [rgo|e]: [ShowGoodsName('amber')], [ShowGoodsName('pearls')], [ShowGoodsName('silk')], [ShowGoodsName('saffron')] and [ShowGoodsName('cloves')].\n\n@adm! #color_yellow Strategy#! @adm!\na"
  MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_LAND: "[ROOT.GetLocation.GetName] is ranked #color_white [ROOT.GetLocation.MakeScope.Var('zmc_local_urbanisation_suitability_sorted').GetValue]#! in its [province|e] for [zmc_urbanisation_suitability|e]."
  MAPMODE_ZMC_URBANISATION_SUITABILITY_SORTED_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [zmc_urbanisation_suitability|e] rank."
 
@@ -72,7 +82,7 @@
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT: "#T $mapmode_zmc_local_monthly_development_name$#!\nThis colors [locations|e] by the local monthly [development|e] growth.\n\n@adm! #color_yellow Strategy#! @adm!\nCountries with higher [development|e] growth are more likely to outpace you in the future."
- MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]."
+ MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_LAND: "[ROOT.GetLocation.GetName] has a local monthly [development|e] growth of [ROOT.GetLocation.GetModifierValueAndPercentWithCountry('local_monthly_development','local_monthly_development_modifier','global_monthly_development')]"
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have monthly [development|e] growth."
  MAPMODE_ZMC_LOCAL_MONTHLY_DEVELOPMENT_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have monthly [development|e] growth."
 
@@ -117,7 +127,7 @@
 
  mapmode_zmc_pop_growth_percentage_name: "Population Growth"
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE: "#T $mapmode_zmc_pop_growth_percentage_name$#!\nThis colors [locations|e] by the local [population_growth|e].\n\n@adm! #color_yellow Strategy#! @adm!\n[locations|e] with lower [population_growth|e] are likely near their [population_capacity|e], so consider upgrading their [location_rank|e].\n\n[towns_and_cities|e] have higher [population_capacity|e] and thus also higher [population_growth|e], but only as long as their increased capacity can overcome the lost #color_white +0.1%#! [population_growth|e] they lose compared to [rural_locations|e]."
- MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|+%]."
+ MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_growth|e] of [ROOT.GetLocation.GetModifierValueFixed('local_population_growth')|+%]"
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [population_growth|e]."
  MAPMODE_ZMC_POP_GROWTH_PERCENTAGE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised and therefore has a [population_growth|e] of 0%."
 
@@ -137,7 +147,7 @@
 
  mapmode_zmc_pop_cap_name: "Population Capacity"
  MAPMODE_ZMC_POP_CAP: "#T $mapmode_zmc_pop_cap_name$#!\nThis colors [locations|e] by their local [population_capacity|e].\n\n[population_capacity|e] is mostly based on [location_rank|e], [climate|e], [topography|e], [vegetation|e], and if the [location|e] has a [river|e] or is coastal.\n\n@adm! #color_yellow Strategy#! @adm!\nIt would be wise to create [towns_and_cities|e] in places with higher [population_capacity|e] to maximise [population_growth|e]."
- MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|YD]."
+ MAPMODE_ZMC_POP_CAP_TT_LAND: "[ROOT.GetLocation.GetName] has a [population_capacity|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_pop_cap')|YD]"
  MAPMODE_ZMC_POP_CAP_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population_capacity|e]."
 
  zmc_pop_cap_pink_legend_key: "2M pop cap"
@@ -168,7 +178,7 @@
 
  mapmode_zmc_control_times_market_access_name: "Control times Market Access"
  MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS: "#T $mapmode_zmc_control_times_market_access_name$#!\nThis colors [locations|e] by local [control|e] multiplied by [market_access|e].\n\n@adm! #color_yellow Strategy#! @adm!\nA [buildings|e] profit depends on both [control|e] and [market_access|e], so it would be wise to build them in places with higher values on this mapmode.\n\nThis mapmode can also inform you about where the heartland of your enemy is, as usually their wealth should come from the locations with the highest [control|e] and [market_access|e].\n\nBeware that the same applies to you, so it would be wise to protect your own high value locations and not give them away in a peace deal."
- MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_LAND: "[ROOT.GetLocation.GetName] has [control|e] times [market_access|e] = [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_times_market_access')|Y]."
+ MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_LAND: "[ROOT.GetLocation.GetName] has [control|e] times [market_access|e] = [ROOT.GetLocation.MakeScope.ScriptValue('zmc_control_times_market_access')|Y]"
  MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [control|e] or [market_access|e]."
  MAPMODE_ZMC_CONTROL_TIMES_MARKET_ACCESS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [control|e] or [market_access|e]."
 
@@ -184,7 +194,7 @@
 
  mapmode_zmc_location_tax_base_per_population_name: "Location Tax Base Per Population"
  MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_location_tax_base_per_population_name$#!\nThis colors [locations|e] by local [tax_base|e] per [population|e].\n\nThis means [wealth|e] is multiplied by [control|e] and divided by [population|e], effectively providing the [zmc_gdp_per_capita|e] of the [location|e].\n\n@adm! #color_yellow Strategy#! @adm!\nOccupy high valued locations from your enemy or take them in a peace deal, to inflict maximum economic damage.\n\nBeware that the same applies to you, so it would be wise to protect your own high value locations and not give them away in a peace deal."
- MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base_per_population')|Y]"
  MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e] or [population|e]."
  MAPMODE_ZMC_LOCATION_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
@@ -203,7 +213,7 @@
 
  mapmode_zmc_province_tax_base_per_population_name: "Province Tax Base Per Population"
  MAPMODE_ZMC_PROVINCE_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_province_tax_base_per_population_name$#!\nThis colors [locations|e] by [province|e] [tax_base|e] per [province|e] [population|e]."
- MAPMODE_ZMC_PROVINCE_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetProvinceDefinition.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetProvinceDefinition.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base_per_population')|Y]"
  MAPMODE_ZMC_PROVINCE_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e] or [population|e]."
  MAPMODE_ZMC_PROVINCE_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
@@ -222,7 +232,7 @@
 
  mapmode_zmc_area_tax_base_per_population_name: "Area Tax Base Per Population"
  MAPMODE_ZMC_AREA_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_area_tax_base_per_population_name$#!\nThis colors [locations|e] by [area|e] [tax_base|e] per [area|e] [population|e].\n\n@warning_icon!@warning_icon!#color_red This mapmode is very laggy to click on#!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_AREA_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_AREA_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_tax_base_per_population')|Y]"
  MAPMODE_ZMC_AREA_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [area|e] [tax_base|e] or [population|e]."
  MAPMODE_ZMC_AREA_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -241,7 +251,7 @@
 
  mapmode_zmc_region_tax_base_per_population_name: "Region Tax Base Per Population"
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_region_tax_base_per_population_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e] per [region|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!\n\n@warning_icon!#color_red It may take several seconds to load#!@warning_icon!\n\n#color_red Tax base mapmodes of higher geographic categories than region are not included as they were too likely to crash your game.\n\nUse debug mode to access them anyway at your own risk.#!"
- MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_LAND: "This [region|e] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_LAND: "This [region|e] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base_per_population')|Y]"
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [tax_base|e] or [population|e]."
  MAPMODE_ZMC_REGION_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -260,7 +270,7 @@
 
  mapmode_zmc_sub_continent_tax_base_per_population_name: "Sub Continent Tax Base Per Population"
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_sub_continent_tax_base_per_population_name$#!\nThis colors [locations|e] by [sub_continent|e] [tax_base|e] per [sub_continent|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on and you should wait several seconds in game before doing anything so your game doesnt crash so you can actually look at it #!@warning_icon!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_tax_base_per_population')|Y]"
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [sub_continent|e] [tax_base|e] or [population|e]."
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -279,7 +289,7 @@
 
  mapmode_zmc_continent_tax_base_per_population_name: "Continent Tax Base Per Population"
  MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION: "#T $mapmode_zmc_continent_tax_base_per_population_name$#!\nThis colors [locations|e] by [continent|e] [tax_base|e] per [continent|e] [population|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is highly likely to be very laggy or crash the game, so use it at your own risk#!@warning_icon!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base_per_population')|Y]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] per [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base_per_population')|Y]"
  MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [continent|e] [tax_base|e] or [population|e]."
  MAPMODE_ZMC_CONTINENT_TAX_BASE_PER_POPULATION_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -324,7 +334,7 @@
 
  mapmode_zmc_location_tax_base_name: "Location Tax Base"
  MAPMODE_ZMC_LOCATION_TAX_BASE: "#T $mapmode_zmc_location_tax_base_name$#!\nThis colors [locations|e] by their local [tax_base|e]."
- MAPMODE_ZMC_LOCATION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base')|Y]."
+ MAPMODE_ZMC_LOCATION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_location_tax_base')|Y]"
  MAPMODE_ZMC_LOCATION_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e]."
  MAPMODE_ZMC_LOCATION_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
@@ -343,7 +353,7 @@
 
  mapmode_zmc_province_tax_base_name: "Province Tax Base"
  MAPMODE_ZMC_PROVINCE_TAX_BASE: "#T $mapmode_zmc_province_tax_base_name$#!\nThis colors [locations|e] by the [tax_base|e] of their entire [province|e] added together.\n\nKeep in mind that if multiple different countries own part of the same [province|e], [locations|e] in their respective parts will have a different [province|e] [tax_base|e] compared to [locations|e] in the other country's parts."
- MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [province|e] [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base')|Y]."
+ MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetName] has a [province|e] [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_tax_base')|Y]"
  MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [tax_base|e]."
  MAPMODE_ZMC_PROVINCE_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a [tax_base|e]."
 
@@ -362,7 +372,7 @@
 
  mapmode_zmc_area_tax_base_name: "Area Tax Base"
  MAPMODE_ZMC_AREA_TAX_BASE: "#T $mapmode_zmc_area_tax_base_name$#!\nThis colors [locations|e] by [area|e] [tax_base|e].\n\n@warning_icon!@warning_icon!#color_red This mapmode is very laggy to click on#!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_AREA_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_tax_base')|Y]."
+ MAPMODE_ZMC_AREA_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_tax_base')|Y]"
  MAPMODE_ZMC_AREA_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [area|e] [tax_base|e]."
  MAPMODE_ZMC_AREA_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -381,7 +391,7 @@
 
  mapmode_zmc_region_tax_base_name: "Region Tax Base"
  MAPMODE_ZMC_REGION_TAX_BASE: "#T $mapmode_zmc_region_tax_base_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!\n\n@warning_icon!#color_red It may take several seconds to load#!@warning_icon!\n\n#color_red Tax base mapmodes of higher geographic categories than region are not included as they were too likely to crash your game.\n\nUse debug mode to access them anyway at your own risk.#!"
- MAPMODE_ZMC_REGION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base')|Y]."
+ MAPMODE_ZMC_REGION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base')|Y]"
  MAPMODE_ZMC_REGION_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [tax_base|e]."
  MAPMODE_ZMC_REGION_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -400,7 +410,7 @@
 
  mapmode_zmc_sub_continent_tax_base_name: "Sub Continent Tax Base"
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE: "#T $mapmode_zmc_sub_continent_tax_base_name$#!\nThis colors [locations|e] by [sub_continent|e] [tax_base|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on and you should wait several seconds in game before doing anything so your game doesnt crash so you can actually look at it #!@warning_icon!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_tax_base')|Y]."
+ MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_tax_base')|Y]"
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [sub_continent|e] [tax_base|e]."
  MAPMODE_ZMC_SUB_CONTINENT_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -419,7 +429,7 @@
 
  mapmode_zmc_continent_tax_base_name: "Continent Tax Base"
  MAPMODE_ZMC_CONTINENT_TAX_BASE: "#T $mapmode_zmc_continent_tax_base_name$#!\nThis colors [locations|e] by [continent|e] [tax_base|e].@warning_icon!@warning_icon!@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is HIGHLY LIKELY to crash your game, use at your own risk, and wait a literal minute to perhaps actually see it in action #!@warning_icon!@warning_icon!@warning_icon!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base')|Y]."
+ MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetContinent.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_continent_tax_base')|Y]"
  MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [continent|e] [tax_base|e]."
  MAPMODE_ZMC_CONTINENT_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -457,7 +467,7 @@
  #[ROOT.GetLocation.GetModifierValue('local_production_efficiency')|Y]
  mapmode_zmc_local_production_efficiency_name: "Local Production Efficiency"
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY: "#T $mapmode_zmc_local_production_efficiency_name$#!\nThis colors [locations|e] by local [production_efficiency|e].\n\n@adm! #color_yellow Strategy#! @adm!\nBuild [buildings|e] in locations with high [production_efficiency|e] to increase their output and profit.\n\nOccupation in war creates negative [prosperity|e] which can heavily reduce [production_efficiency|e].\n\nKeep in mind that this mapmode only shows the flat local [production_efficiency|e] for all buildings, and multiple different extra bonuses should usually apply based on the specific building, like from local [rgo|e]"
- MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_LAND: "[ROOT.GetLocation.GetName] has a local [production_efficiency|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_production_efficiency')|Y+]%."
+ MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_LAND: "[ROOT.GetLocation.GetName] has a local [production_efficiency|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_production_efficiency')|Y+]%"
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a local [production_efficiency|e]."
  MAPMODE_ZMC_LOCAL_PRODUCTION_EFFICIENCY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have a local [production_efficiency|e]."
 
@@ -476,7 +486,7 @@
 
  mapmode_zmc_local_max_literacy_name: "Average Maximum Literacy"
  MAPMODE_ZMC_LOCAL_MAX_LITERACY: "#T $mapmode_zmc_local_max_literacy_name$#!\nThis colors [locations|e] by average local average maximum [literacy|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
- MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_LAND: "[ROOT.GetLocation.GetName] has an average local maximum [literacy|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_max_literacy')|Y]."
+ MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_LAND: "[ROOT.GetLocation.GetName] has an average local maximum [literacy|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_max_literacy')|Y]"
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [literacy|e]."
  MAPMODE_ZMC_LOCAL_MAX_LITERACY_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [literacy|e]."
 
@@ -635,7 +645,7 @@
 
  mapmode_zmc_closeness_to_equator_name: "Closeness To Equator"
  MAPMODE_ZMC_CLOSENESS_TO_EQUATOR: "#T $mapmode_zmc_closeness_to_equator_name$#!\nThis colors [locations|e] by their #color_white location_closeness_to_equator_impact#! value.\n\nValues decrease away from the equator and even go into the negatives far north, not far south however, on the #color_white vanilla#! map.\n\n@adm! #color_yellow Strategy#! @adm!\nBeing further away from the equator decreases a [locations|e] [population_capacity|e]."
- MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT: "[ROOT.GetLocation.GetName] has a closeness to equator value of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_equator_measurer_script_value')|Y]."
+ MAPMODE_ZMC_CLOSENESS_TO_EQUATOR_TT: "[ROOT.GetLocation.GetName] has a closeness to equator value of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_equator_measurer_script_value')|Y]"
  #this location also colors water
 
  zmc_closeness_to_equator_white_legend_key: "-0.4"
@@ -647,7 +657,8 @@
  zmc_closeness_to_equator_red_legend_key: "0.8"
  zmc_closeness_to_equator_black_legend_key: "1.0"
 
- zmc_equator_measurer_modifier: "Equator Measurer Helper"
+ MODIFIER_TYPE_NAME_zmc_equator_measurer_modifier: "Equator Measurer"
+ MODIFIER_TYPE_DESC_zmc_equator_measurer_modifier: "Used by #color_white Zorange's Mapmode Collection#! to measure the #color_white location_closeness_to_equator_impact#! value of a [location|e] for the #color_white Closeness to Equator#! mapmode and others."
 
 
 
@@ -670,7 +681,7 @@
 
  mapmode_zmc_population_name: "Location Population"
  MAPMODE_ZMC_POPULATION: "#T $mapmode_zmc_population_name$#!\nThis colors [locations|e] by [population|e].\n\nWorks the same as the #color_white vanilla#! [population|e] mapmode, but using the colors of the other [population|e] mapmodes of the mod."
- MAPMODE_ZMC_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!."
+ MAPMODE_ZMC_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!"
  MAPMODE_ZMC_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_population_white_legend_key: "1.000.000.000"
@@ -688,7 +699,7 @@
 
  mapmode_zmc_province_population_name: "Province Population"
  MAPMODE_ZMC_PROVINCE_POPULATION: "#T $mapmode_zmc_province_population_name$#!\nThis colors [locations|e] by [province_definition|e] [population|e].\n\n@adm! #color_yellow Strategy#! @adm!\nOccupy high pop [provinces|e] in war to prevent your enemy from raising more [levies|e] or take them in a [peace_treaty|e] to inflict maximum damage."
- MAPMODE_ZMC_PROVINCE_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetProvinceDefinition.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_population')|D]#!."
+ MAPMODE_ZMC_PROVINCE_POPULATION_TT_LAND: "[ROOT.GetLocation.GetName] is part of [ROOT.GetLocation.GetProvinceDefinition.GetName] which has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_province_population')|D]#!"
  MAPMODE_ZMC_PROVINCE_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_province_population_white_legend_key: "1.000.000.000"
@@ -706,7 +717,7 @@
 
  mapmode_zmc_area_population_name: "Area Population"
  MAPMODE_ZMC_AREA_POPULATION: "#T $mapmode_zmc_area_population_name$#!\nThis colors [locations|e] by [area|e] [population|e]."
- MAPMODE_ZMC_AREA_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_population')|D]#!."
+ MAPMODE_ZMC_AREA_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_area_population')|D]#!"
  MAPMODE_ZMC_AREA_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_area_population_white_legend_key: "1.000.000.000"
@@ -724,7 +735,7 @@
 
  mapmode_zmc_region_population_name: "Region Population"
  MAPMODE_ZMC_REGION_POPULATION: "#T $mapmode_zmc_region_population_name$#!\nThis colors [locations|e] by [region|e] [population|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
- MAPMODE_ZMC_REGION_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_population')|D]#!."
+ MAPMODE_ZMC_REGION_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_population')|D]#!"
  MAPMODE_ZMC_REGION_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_region_population_white_legend_key: "1.000.000.000"
@@ -742,7 +753,7 @@
 
  mapmode_zmc_sub_continent_population_name: "Sub Continent Population"
  MAPMODE_ZMC_SUB_CONTINENT_POPULATION: "#T $mapmode_zmc_sub_continent_population_name$#!\nThis colors [locations|e] by [sub_continent|e] [population|e].\n\n@warning_icon!@warning_icon!#color_red This mapmode is very laggy to click on#!@warning_icon!@warning_icon!"
- MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_population')|D]#!."
+ MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_LAND: "[ROOT.GetLocation.GetSubContinent.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_sub_continent_population')|D]#!"
  MAPMODE_ZMC_SUB_CONTINENT_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]"
 
  zmc_sub_continent_population_white_legend_key: "1.000.000.000"
