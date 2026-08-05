@@ -77,6 +77,22 @@
  zmc_building_cap_percentage_green_legend_key: "0% of cap used"
 
 
+ #building levels mapmode
+
+ mapmode_zmc_building_levels_name: "Building Levels"
+ MAPMODE_ZMC_BUILDING_LEVELS: "#T $mapmode_zmc_building_levels_name$#!\nThis colors [locations|e] by their total number of buildings."
+ MAPMODE_ZMC_BUILDING_LEVELS_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] buildings."
+ MAPMODE_ZMC_BUILDING_LEVELS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have buildings."
+
+ zmc_building_levels_white_legend_key: "500+"
+ zmc_building_levels_pink_legend_key: "400"
+ zmc_building_levels_dark_blue_legend_key: "300"
+ zmc_building_levels_light_blue_legend_key: "200"
+ zmc_building_levels_green_legend_key: "100"
+ zmc_building_levels_yellow_legend_key: "50"
+ zmc_building_levels_red_legend_key: "1"
+ zmc_building_levels_black_legend_key: "0"
+
 
  #development growth mapmode
 

@@ -812,6 +812,220 @@ zmc_building_cap_percentage = {
 	color_and_names_refresh_counters = { Month }
 }
 
+zmc_building_levels = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 } # Water
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels >= 500
+			}
+			value = rgb { 255 255 255 } #white
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 500
+				zmc_total_building_levels >= 400
+			}
+			lerp = {
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
+				factor = {
+					value = zmc_total_building_levels
+					subtract = 400
+					divide = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 400
+				zmc_total_building_levels >= 300
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 128 } #dark blue
+				factor = {
+					value = zmc_total_building_levels
+					subtract = 300
+					divide = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 300
+				zmc_total_building_levels >= 200
+			}
+			lerp = {
+				max_color = rgb { 0 0 128 } #dark blue
+				min_color = rgb { 128 192 255 } #light blue
+				factor = {
+					value = zmc_total_building_levels
+					subtract = 200
+					divide = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 200
+				zmc_total_building_levels >= 100
+			}
+			lerp = {
+				max_color = rgb { 128 192 255 } #light blue
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_total_building_levels
+					subtract = 100
+					divide = 100
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 100
+				zmc_total_building_levels >= 50
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zmc_total_building_levels
+					subtract = 50
+					divide = 50
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 50
+				zmc_total_building_levels >= 1
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_total_building_levels
+					divide = 50
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_total_building_levels < 1
+				zmc_total_building_levels >= 0
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 0 0 0 } #black
+				factor = {
+					value = zmc_total_building_levels
+					divide = 1
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 0 0 } #black fallback
+		}
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_white_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_dark_blue_legend_key"
+		color = rgb { 0 0 128 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_light_blue_legend_key"
+		color = rgb { 128 192 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_building_levels_black_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes 
+			}
+			value = MAPMODE_ZMC_BUILDING_LEVELS_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_BUILDING_LEVELS_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+	
+	flatmap_behaviour = always
+	use_fow = no
+	
+	category = economy
+	index = 0
+
+	map_markers = {
+		all = no
+	}
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =	@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
+}
+
 
 
 #pop cap mapmode
