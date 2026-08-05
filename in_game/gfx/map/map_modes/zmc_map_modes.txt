@@ -343,10 +343,13 @@ zmc_urbanisation_suitability_sorted = {
 		if = {
 			limit = {
 				is_ownable = yes
-				NOR = { 
-					location_rank = location_rank:rural_settlement
-					modifier:cannot_upgrade_location = no
-				}
+				NOT = { location_rank = location_rank:rural_settlement }
+				#modifier:cannot_upgrade_location = yes/no #tried to make it also color it in for upgrading rank, but doesnt work
+				#NOR = { #tried to make it also color it in for upgrading rank, but doesnt work
+				#	location_rank = location_rank:rural_settlement
+				#	modifier:cannot_upgrade_location = no
+				#
+				#}
 				#NOR = { #tried to make it also color it in for upgrading rank, but doesnt work
 				#	location_rank = location_rank:rural_settlement
 				#	can_become_rank = location_rank:town
