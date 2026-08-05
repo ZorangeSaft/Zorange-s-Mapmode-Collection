@@ -6443,10 +6443,31 @@ zmc_possible_location_rank = {
 
 	secondary_map_color = {
 		if = {
-			limit = {
-				is_ownable = no
-			}
+			limit = { is_land = no }
 			#value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				population >= 360
+				location_rank = location_rank:city
+			}
+			value = hsv360 { 259 86 85 } # Megalopolis color
+		}
+		else_if = {
+			limit = {
+				population >= 27
+				population < 30
+				location_rank = location_rank:town
+			}
+			value = hsv360 { 40 78 75 } # City color
+		}
+		else_if = {
+			limit = {
+				population >= 4.5
+				population < 5
+				location_rank = location_rank:rural_settlement
+			}
+			value = hsv360 { 215 35 30 } # Town color
 		}
 		else_if = {
 			limit = {
@@ -6468,6 +6489,13 @@ zmc_possible_location_rank = {
 				population >= 5
 				population < 30
 				location_rank = location_rank:town
+			}
+			value = rgb { 0 0 0 }
+		}
+		else_if = {
+			limit = {
+				population < 5
+				location_rank = location_rank:rural_settlement
 			}
 			value = rgb { 0 0 0 }
 		}
