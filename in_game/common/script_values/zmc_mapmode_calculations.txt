@@ -36,14 +36,9 @@ zmc_free_building_levels = { #free building levels mapmode
 
 
 zmc_buildings_under_construction = { #number of buildings under construction mapmode
-	if = {
-		limit = {
-			any_buildings_in_location = {
-				count = all
-				building_levels_under_construction > 0
-			}
-		}
-		value = 1
+	value = 0
+	every_buildings_in_location = {
+		add = building_levels_under_construction
 	}
 }
 
@@ -481,4 +476,47 @@ zmc_equator_measurer_script_value = {
 zmc_population_density_real_world = {
 	value = zmc_population
 	divide = zmc_real_world_size #zmc_location_size_impact
+}
+
+
+
+
+
+zdv_labor_surplus_location = {
+    value = this.population
+    multiply = {
+        value = 1
+        subtract = modifier:local_clergy_desired_pop_scaled
+        subtract = modifier:local_nobles_desired_pop_scaled
+        if = {
+            limit = {
+                NOT = {
+                    location_rank = location_rank:rural_settlement
+                }
+            }
+            owner = {
+                subtract = modifier:global_nobles_city_desired_pop_scaled
+                subtract = modifier:global_clergy_city_desired_pop_scaled
+            }
+        }
+    }
+    every_buildings_in_location = {
+        subtract = building_employment_size_amount
+        if = {
+            limit = {
+                building_levels_under_construction > 0
+            }
+            subtract = {
+                value = building_levels_under_construction
+                building_type = {
+                    multiply = employment_size
+                }
+            }
+        }
+    }
+    subtract = modifier:local_nobles_desired_pop
+    subtract = modifier:local_clergy_desired_pop
+    subtract = modifier:local_burghers_desired_pop
+    subtract = modifier:local_laborers_desired_pop
+    subtract = modifier:local_soldiers_desired_pop
 }

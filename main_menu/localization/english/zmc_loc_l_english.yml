@@ -115,7 +115,7 @@
 
  mapmode_zmc_buildings_under_construction_name: "Buildings Under Construction"
  MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION: "#T $mapmode_zmc_buildings_under_construction_name$#!\nThis colors [locations|e] by how many [buildings|e] are currently under construction."
- MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_buildings_under_construction')|0] buildings under construction."
+ MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_LAND: "[ROOT.GetLocation.GetName] has #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_buildings_under_construction')|0]#! buildings under construction."
  MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have [buildings|e] under construction."
 
  zmc_buildings_under_construction_white_legend_key: "500+"

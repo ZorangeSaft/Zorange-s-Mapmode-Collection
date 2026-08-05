@@ -915,13 +915,7 @@ zmc_building_levels_free = {
 			}
 		}
 		else = {
-			lerp = {
-				max_color = rgb { 255 0 0 }     # Red
-				min_color = rgb { 0 0 0 }       # Black
-				factor = {
-					value = zmc_free_building_levels
-				}
-			}
+			value = rgb { 0 0 0 }	# Black
 		}
 	}
 
@@ -1120,13 +1114,7 @@ zmc_building_levels = {
 			}
 		}
 		else = {
-			lerp = {
-				max_color = rgb { 255 0 0 }     # Red
-				min_color = rgb { 0 0 0 }       # Black
-				factor = {
-					value = zmc_buildings_under_construction #zmc_total_building_levels
-				}
-			}
+			value = rgb { 0 0 0 }	# Black
 		}
 	}
 
@@ -1325,13 +1313,7 @@ zmc_buildings_under_construction = {
 		}
 	}
 	else = {
-		lerp = {
-			max_color = rgb { 255 0 0 }     # Red
-			min_color = rgb { 0 0 0 }       # Black
-			factor = {
-				value = zmc_buildings_under_construction
-			}
-		}
+		value = rgb { 0 0 0 }	# Black
 	}
 }
 
@@ -6204,4 +6186,181 @@ zmc_population_density_real_world = {
 
 	color_refresh_counters = { }
 	color_and_names_refresh_counters = { }
+}
+
+
+
+
+
+zdv_labor_surplus = { #from zerodv
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0 0 0 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					zdv_labor_surplus_location < -10
+				}
+			}
+			lerp = {
+				max_color = rgb { 255 0 0 }
+				min_color = rgb { 255 0 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location < -5
+			}
+			lerp = {
+				max_color = rgb { 255 102 0 }
+				min_color = rgb { 255 102 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location < 0
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 }
+				min_color = rgb { 255 255 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location <= 5
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 }
+				min_color = rgb { 0 255 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location <= 10
+			}
+			lerp = {
+				max_color = rgb { 0 180 0 }
+				min_color = rgb { 0 180 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location <= 15
+			}
+			lerp = {
+				max_color = rgb { 0 120 0 }
+				min_color = rgb { 0 120 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_labor_surplus_location <= 20
+			}
+			lerp = {
+				max_color = rgb { 0 70 0 }
+				min_color = rgb { 0 70 0 }
+				factor = {
+					value = 1
+				}
+			}
+		}
+		else = {
+			value = rgb { 0 40 0 } #fallback
+		}
+	}
+
+	legend_key = {
+		desc = "zdv_road_missing_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zdv_road_missing_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zdv_road_missing_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes 
+			}
+			value = MAPMODE_ZDV_LABOR_SURPLUS_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_URBANISATION_SUITABILITY_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+	
+	flatmap_behaviour = always
+	use_fow = no
+	
+	category = geography
+	index = 1
+
+	map_markers = {
+		all = no
+	}
+	
+	#enable_water_names = yes
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { TopographyVegetationDatabaseUpdate }
+	color_and_names_refresh_counters = { TopographyVegetationDatabaseUpdate }
+
+
+	#activate these for debugging
+	#color_refresh_counters = { Year }
+	#color_and_names_refresh_counters = { Year }
 }
