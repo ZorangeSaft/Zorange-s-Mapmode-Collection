@@ -6492,13 +6492,6 @@ zmc_possible_location_rank = {
 			}
 			value = rgb { 0 0 0 }
 		}
-		else_if = {
-			limit = {
-				population < 5
-				location_rank = location_rank:rural_settlement
-			}
-			value = rgb { 0 0 0 }
-		}
 		else = {
 			#value = rgb { 255 255 255 }
 		}
