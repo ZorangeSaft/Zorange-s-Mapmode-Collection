@@ -855,10 +855,16 @@
  #labor surplus mapmode
 
  mapmode_zdv_labor_surplus_name: "Labor Surplus"
- MAPMODE_ZDV_LABOR_SURPLUS: "#T $mapmode_zdv_labor_surplus_name$#!\nThis colors [locations|e] by their labor surplus."
- MAPMODE_ZDV_LABOR_SURPLUS_TT_LAND: "[ROOT.GetLocation.GetName] has a labor surplus of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zdv_labor_surplus_location_tooltip')|D]#!"
+ MAPMODE_ZDV_LABOR_SURPLUS: "#T $mapmode_zdv_labor_surplus_name$#!\nThis colors [locations|e] by their labor surplus, or rather, how many unemployed [pops|e] they have.\n\n[ShowLocationRankName('rural_settlement')] [locations|e] especially in high pop regions will have a lot of labor surplus of [ShowPopTypeName('peasants')] who could be turned into [ShowPopTypeName('burghers')] and [ShowPopTypeName('laborers')].\n\n@adm! #color_yellow Strategy#! @adm!\nIn #color_white vanilla#! it is hardly possible to employ more than a few tens of thousands of [pops|e] in [buildings|e], so consider trying to move some of them to lower pop areas."
+ MAPMODE_ZDV_LABOR_SURPLUS_TT_LAND_SURPLUS: "[ROOT.GetLocation.GetName] has a labor #zmc_color_green surplus#! of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zdv_labor_surplus_location_tooltip')|D]#!"
+ MAPMODE_ZDV_LABOR_SURPLUS_TT_LAND_MALUS: "[ROOT.GetLocation.GetName] has a labor #zmc_color_red malus#! of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zdv_labor_surplus_location_tooltip')|D]#!\n\nConsider moving in some [pops|e] using [ShowCabinetActionName('encourage_migration')] or other methods if available.\n\nLabor #zmc_color_red malus#! will however grant [ShowModifier('surplus_jobs')] which will over time naturally draw in more [pops|e] on its own already."
  MAPMODE_ZDV_LABOR_SURPLUS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a labor surplus."
 
- zdv_total_labor_surplus_green_legend_key: "High surplus"
- zdv_total_labor_surplus_yellow_legend_key: "Medium surplus"
- zdv_total_labor_surplus_red_legend_key: "Low surplus"
+ zdv_total_labor_surplus_white_legend_key: "1.000.000+"
+ zdv_total_labor_surplus_pink_legend_key: "500.000"
+ zdv_total_labor_surplus_dark_blue_legend_key: "200.000"
+ zdv_total_labor_surplus_light_blue_legend_key: "100.000"
+ zdv_total_labor_surplus_green_legend_key: "50.000"
+ zdv_total_labor_surplus_yellow_legend_key: "10.000"
+ zdv_total_labor_surplus_red_legend_key: "0"
+ zdv_total_labor_surplus_black_legend_key: "///-10.000"
