@@ -64,6 +64,11 @@ textformatting = {
 		format = "color:{0.2,0.39,1};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
 	}
 
+	format = {
+		name = zmc_color_light_blue
+		format = "color:{0.529,0.808,0.980};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
 
 
 	#a little bit of glow on these so you could see them better in game

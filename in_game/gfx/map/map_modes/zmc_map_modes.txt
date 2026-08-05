@@ -6451,7 +6451,7 @@ zmc_possible_location_rank = {
 				population >= 400
 				location_rank = location_rank:city
 			}
-			value = rgb { 255 0 0 } # Upgrade to megalopolis is available
+			value = rgb { 135 206 250 } # Upgrade to megalopolis is available
 		}
 		else_if = {
 			limit = {
@@ -6572,6 +6572,11 @@ zmc_possible_location_rank = {
 	legend_key = {
 		desc = "zmc_possible_location_rank_red_upgrade_legend_key"
 		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_possible_location_rank_light_blue_upgrade_legend_key"
+		color = rgb { 135 206 250 }
 	}
 
 	tooltip_key = {
