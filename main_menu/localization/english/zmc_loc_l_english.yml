@@ -895,5 +895,6 @@
  zmc_possible_location_rank_city_legend_key: "City (30.000)"
  zmc_possible_location_rank_town_legend_key: "Town (5.000)"
  zmc_possible_location_rank_rural_legend_key: "Rural"
- zmc_possible_location_rank_red_upgrade_legend_key: "Red ///: town can upgrade to city"
- zmc_possible_location_rank_light_blue_upgrade_legend_key: "Light blue ///: city can upgrade to megalopolis"
+ zmc_possible_location_rank_black_legend_key: "///Maxed out"
+ zmc_possible_location_rank_red_upgrade_legend_key: "///Town to City"
+ zmc_possible_location_rank_light_blue_upgrade_legend_key: "///City to Megalopolis"
