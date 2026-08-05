@@ -1018,24 +1018,18 @@ zmc_building_levels_free = {
 zmc_building_levels = {
 	map_color = {
 		if = {
-			limit = {
-				is_land = no
-			}
+			limit = { is_land = no }
 			value = hsv { 0.58 0.50 0.52 } # Water
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 500
-			}
+			limit = { zmc_total_building_levels >= 500 }
 			value = rgb { 255 255 255 } # White
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 400
-			}
+			limit = { zmc_total_building_levels >= 400 }
 			lerp = {
-				max_color = rgb { 255 255 255 } # White
 				min_color = rgb { 255 0 255 }   # Pink
+				max_color = rgb { 255 255 255 } # White
 				factor = {
 					value = zmc_total_building_levels
 					subtract = 400
@@ -1044,12 +1038,10 @@ zmc_building_levels = {
 			}
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 300
-			}
+			limit = { zmc_total_building_levels >= 300 }
 			lerp = {
-				max_color = rgb { 255 0 255 }   # Pink
 				min_color = rgb { 0 0 128 }     # Dark Blue
+				max_color = rgb { 255 0 255 }   # Pink
 				factor = {
 					value = zmc_total_building_levels
 					subtract = 300
@@ -1058,12 +1050,10 @@ zmc_building_levels = {
 			}
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 200
-			}
+			limit = { zmc_total_building_levels >= 200 }
 			lerp = {
-				max_color = rgb { 0 0 128 }     # Dark Blue
 				min_color = rgb { 128 192 255 } # Light Blue
+				max_color = rgb { 0 0 128 }     # Dark Blue
 				factor = {
 					value = zmc_total_building_levels
 					subtract = 200
@@ -1072,12 +1062,10 @@ zmc_building_levels = {
 			}
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 100
-			}
+			limit = { zmc_total_building_levels >= 100 }
 			lerp = {
-				max_color = rgb { 128 192 255 } # Light Blue
 				min_color = rgb { 0 255 0 }     # Green
+				max_color = rgb { 128 192 255 } # Light Blue
 				factor = {
 					value = zmc_total_building_levels
 					subtract = 100
@@ -1086,12 +1074,10 @@ zmc_building_levels = {
 			}
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 50
-			}
+			limit = { zmc_total_building_levels >= 50 }
 			lerp = {
-				max_color = rgb { 0 255 0 }     # Green
 				min_color = rgb { 255 255 0 }   # Yellow
+				max_color = rgb { 0 255 0 }     # Green
 				factor = {
 					value = zmc_total_building_levels
 					subtract = 50
@@ -1100,21 +1086,19 @@ zmc_building_levels = {
 			}
 		}
 		else_if = {
-			limit = {
-				zmc_total_building_levels >= 1
-			}
+			limit = { zmc_total_building_levels >= 1 }
 			lerp = {
-				max_color = rgb { 255 255 0 }   # Yellow
 				min_color = rgb { 255 0 0 }     # Red
+				max_color = rgb { 255 255 0 }   # Yellow
 				factor = {
-					value = zmc_buildings_under_construction #zmc_total_building_levels
+					value = zmc_total_building_levels
 					subtract = 1
 					divide = 49
 				}
 			}
 		}
 		else = {
-			value = rgb { 0 0 0 }	# Black
+			value = rgb { 0 0 0 } # Black
 		}
 	}
 
