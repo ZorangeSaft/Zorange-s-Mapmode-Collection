@@ -6569,6 +6569,11 @@ zmc_possible_location_rank = {
 		color = hsv360 { 9 78 63 }
 	}
 
+	legend_key = {
+		desc = "zmc_possible_location_rank_red_upgrade_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
 	tooltip_key = {
 		if = {
 			limit = {
@@ -6589,6 +6594,13 @@ zmc_possible_location_rank = {
 				location_rank = location_rank:city
 			}
 			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY_CAN_UPGRADE
+		}
+		else_if = {
+			limit = {
+				population >= 400
+				location_rank = location_rank:town
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_CAN_UPGRADE_CITY_ONLY
 		}
 		else_if = {
 			limit = {

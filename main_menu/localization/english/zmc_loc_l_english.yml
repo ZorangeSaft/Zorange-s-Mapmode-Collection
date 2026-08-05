@@ -887,6 +887,7 @@
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_MAX: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#! and has reached its maximum [location_rank|e] of [ShowLocationRankName('town')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_NEAR_CITY: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!\n\nIt is within #zmc_color_green 90%#! of the [population|e] needed to support a [ShowLocationRankName('city')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_CAN_UPGRADE: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\nIt can be upgraded from [ShowLocationRankName('town')] to [ShowLocationRankName('city')] #zmc_color_red right now ///#!."
+ MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_CAN_UPGRADE_CITY_ONLY: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\n#zmc_color_red Red stripes ///#! in this case mean the location can be upgraded to [ShowLocationRankName('city')] #zmc_color_red right now#!, not [ShowLocationRankName('megalopolis')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\nIt can only support a [ShowLocationRankName('rural_settlement')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL_NEAR_TOWN: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\nIt can only support a [ShowLocationRankName('rural_settlement')].\n\nIt is within #zmc_color_green 90%#! of the [population|e] needed to support a [ShowLocationRankName('town')]."
 
@@ -894,3 +895,4 @@
  zmc_possible_location_rank_city_legend_key: "City (30.000)"
  zmc_possible_location_rank_town_legend_key: "Town (5.000)"
  zmc_possible_location_rank_rural_legend_key: "Rural"
+ zmc_possible_location_rank_red_upgrade_legend_key: "Red ///: can upgrade to city"
