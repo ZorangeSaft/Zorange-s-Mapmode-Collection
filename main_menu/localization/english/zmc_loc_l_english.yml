@@ -849,3 +849,16 @@
  zmc_world_population_yellow_legend_key: "10 million"
  zmc_world_population_red_legend_key: "1 million"
  zmc_world_population_black_legend_key: "0"
+
+
+
+ #labor surplus mapmode
+
+ mapmode_zdv_labor_surplus_name: "Labor Surplus"
+ MAPMODE_ZDV_LABOR_SURPLUS: "#T $mapmode_zdv_labor_surplus_name$#!\nThis colors [locations|e] by their labor surplus."
+ MAPMODE_ZDV_LABOR_SURPLUS_TT_LAND: "[ROOT.GetLocation.GetName] has a labor surplus of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zdv_labor_surplus_location_tooltip')|D]#!"
+ MAPMODE_ZDV_LABOR_SURPLUS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a labor surplus."
+
+ zdv_total_labor_surplus_green_legend_key: "High surplus"
+ zdv_total_labor_surplus_yellow_legend_key: "Medium surplus"
+ zdv_total_labor_surplus_red_legend_key: "Low surplus"

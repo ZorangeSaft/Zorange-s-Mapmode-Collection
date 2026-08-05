@@ -520,3 +520,8 @@ zdv_labor_surplus_location = {
     subtract = modifier:local_laborers_desired_pop
     subtract = modifier:local_soldiers_desired_pop
 }
+
+zdv_labor_surplus_location_tooltip = {
+	value = zdv_labor_surplus_location
+	multiply = 1000
+}

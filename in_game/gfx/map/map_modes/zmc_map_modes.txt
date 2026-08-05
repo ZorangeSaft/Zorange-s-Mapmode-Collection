@@ -6292,17 +6292,17 @@ zdv_labor_surplus = { #from zerodv
 	}
 
 	legend_key = {
-		desc = "zdv_road_missing_green_legend_key"
+		desc = "zdv_total_labor_surplus_green_legend_key"
 		color = rgb { 0 255 0 }
 	}
 
 	legend_key = {
-		desc = "zdv_road_missing_yellow_legend_key"
+		desc = "zdv_total_labor_surplus_yellow_legend_key"
 		color = rgb { 255 255 0 }
 	}
 
 	legend_key = {
-		desc = "zdv_road_missing_red_legend_key"
+		desc = "zdv_total_labor_surplus_red_legend_key"
 		color = rgb { 255 0 0 }
 	}
 
