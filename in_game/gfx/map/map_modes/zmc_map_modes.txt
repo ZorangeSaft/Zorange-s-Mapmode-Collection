@@ -814,125 +814,112 @@ zmc_building_cap_percentage = {
 
 zmc_building_levels = {
 	map_color = {
-		if = {
-			limit = {
-				is_land = no
-			}
-			value = hsv { 0.58 0.50 0.52 } # Water
+	if = {
+		limit = {
+			is_land = no
 		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels >= 500
-			}
-			value = rgb { 255 255 255 } #white
+		value = hsv { 0.58 0.50 0.52 } # Water
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 500
 		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 500
-				zmc_total_building_levels >= 400
-			}
-			lerp = {
-				max_color = rgb { 255 255 255 } #white
-				min_color = rgb { 255 0 255 } #pink
-				factor = {
-					value = zmc_total_building_levels
-					subtract = 400
-					divide = 100
-				}
-			}
+		value = rgb { 255 255 255 } # White
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 400
 		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 400
-				zmc_total_building_levels >= 300
+		lerp = {
+			max_color = rgb { 255 255 255 } # White
+			min_color = rgb { 255 0 255 }   # Pink
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 400
+				divide = 100
 			}
-			lerp = {
-				max_color = rgb { 255 0 255 } #pink
-				min_color = rgb { 0 0 128 } #dark blue
-				factor = {
-					value = zmc_total_building_levels
-					subtract = 300
-					divide = 100
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 300
-				zmc_total_building_levels >= 200
-			}
-			lerp = {
-				max_color = rgb { 0 0 128 } #dark blue
-				min_color = rgb { 128 192 255 } #light blue
-				factor = {
-					value = zmc_total_building_levels
-					subtract = 200
-					divide = 100
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 200
-				zmc_total_building_levels >= 100
-			}
-			lerp = {
-				max_color = rgb { 128 192 255 } #light blue
-				min_color = rgb { 0 255 0 } #green
-				factor = {
-					value = zmc_total_building_levels
-					subtract = 100
-					divide = 100
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 100
-				zmc_total_building_levels >= 50
-			}
-			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
-				factor = {
-					value = zmc_total_building_levels
-					subtract = 50
-					divide = 50
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 50
-				zmc_total_building_levels >= 1
-			}
-			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
-				factor = {
-					value = zmc_total_building_levels
-					divide = 50
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_total_building_levels < 1
-				zmc_total_building_levels >= 0
-			}
-			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 0 0 0 } #black
-				factor = {
-					value = zmc_total_building_levels
-					divide = 1
-				}
-			}
-		}
-		else = {
-			value = rgb { 0 0 0 } #black fallback
 		}
 	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 300
+		}
+		lerp = {
+			max_color = rgb { 255 0 255 }   # Pink
+			min_color = rgb { 0 0 128 }     # Dark Blue
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 300
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 200
+		}
+		lerp = {
+			max_color = rgb { 0 0 128 }     # Dark Blue
+			min_color = rgb { 128 192 255 } # Light Blue
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 200
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 100
+		}
+		lerp = {
+			max_color = rgb { 128 192 255 } # Light Blue
+			min_color = rgb { 0 255 0 }     # Green
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 100
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 50
+		}
+		lerp = {
+			max_color = rgb { 0 255 0 }     # Green
+			min_color = rgb { 255 255 0 }   # Yellow
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 50
+				divide = 50
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_total_building_levels >= 1
+		}
+		lerp = {
+			max_color = rgb { 255 255 0 }   # Yellow
+			min_color = rgb { 255 0 0 }     # Red
+			factor = {
+				value = zmc_total_building_levels
+				subtract = 1
+				divide = 49
+			}
+		}
+	}
+	else = {
+		lerp = {
+			max_color = rgb { 255 0 0 }     # Red
+			min_color = rgb { 0 0 0 }       # Black
+			factor = {
+				value = zmc_total_building_levels
+			}
+		}
+	}
+}
 
 	legend_key = {
 		desc = "zmc_building_levels_white_legend_key"

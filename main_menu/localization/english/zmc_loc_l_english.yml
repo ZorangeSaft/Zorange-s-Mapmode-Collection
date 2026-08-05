@@ -80,9 +80,9 @@
  #building levels mapmode
 
  mapmode_zmc_building_levels_name: "Building Levels"
- MAPMODE_ZMC_BUILDING_LEVELS: "#T $mapmode_zmc_building_levels_name$#!\nThis colors [locations|e] by their total number of buildings."
- MAPMODE_ZMC_BUILDING_LEVELS_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] buildings."
- MAPMODE_ZMC_BUILDING_LEVELS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have buildings."
+ MAPMODE_ZMC_BUILDING_LEVELS: "#T $mapmode_zmc_building_levels_name$#!\nThis colors [locations|e] by their total number of [buildings|e]."
+ MAPMODE_ZMC_BUILDING_LEVELS_TT_LAND: "[ROOT.GetLocation.GetName] has #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')]#! buildings."
+ MAPMODE_ZMC_BUILDING_LEVELS_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have [buildings|e]."
 
  zmc_building_levels_white_legend_key: "500+"
  zmc_building_levels_pink_legend_key: "400"
