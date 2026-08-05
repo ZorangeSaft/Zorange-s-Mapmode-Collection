@@ -343,7 +343,10 @@ zmc_urbanisation_suitability_sorted = {
 		if = {
 			limit = {
 				is_ownable = yes
-				NOT = { location_rank = location_rank:rural_settlement}
+				NOR = { 
+					location_rank = location_rank:rural_settlement
+					modifier:cannot_upgrade_location = no
+				}
 				#NOR = { #tried to make it also color it in for upgrading rank, but doesnt work
 				#	location_rank = location_rank:rural_settlement
 				#	can_become_rank = location_rank:town
@@ -6400,4 +6403,173 @@ zdv_labor_surplus = { #from zerodv
 	#activate these for debugging
 	#color_refresh_counters = { Year }
 	#color_and_names_refresh_counters = { Year }
+}
+
+
+
+zmc_possible_location_rank = {
+	map_color = {
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				population >= 400
+			}
+			value = hsv360 { 259 86 85 }
+		}
+		else_if = {
+			limit = {
+				population >= 30
+			}
+			value = hsv360 { 40 78 75 }
+		}
+		else_if = {
+			limit = {
+				population >= 5
+			}
+			value = hsv360 { 215 35 30 }
+		}
+		else = {
+			value = hsv360 { 9 78 63 }
+		}
+	}
+
+	secondary_map_color = {
+		if = {
+			limit = {
+				is_ownable = no
+			}
+			#value = hsv { 0.58 0.50 0.52 }
+		}
+		else_if = {
+			limit = {
+				population >= 400
+				location_rank = location_rank:megalopolis
+			}
+			value = rgb { 0 0 0 }
+		}
+		else_if = {
+			limit = {
+				population >= 30
+				population < 400
+				location_rank = location_rank:city
+			}
+			value = rgb { 0 0 0 }
+		}
+		else_if = {
+			limit = {
+				population >= 5
+				population < 30
+				location_rank = location_rank:town
+			}
+			value = rgb { 0 0 0 }
+		}
+		else = {
+			#value = rgb { 255 255 255 }
+		}
+	}
+
+	#secondary_map_color = { #made the map too messy
+	#	if = {
+	#		limit = {
+	#			is_land = no
+	#		}
+	#		value = hsv { 0.58 0.50 0.52 }
+	#	}
+	#	else_if = {
+	#		limit = {
+	#			population >= 400
+	#		}
+	#		value = rgb { 0 0 0 }
+	#	}
+	#	else_if = {
+	#		limit = {
+	#			population >= 30
+	#		}
+	#		value = rgb { 0 0 0 }
+	#	}
+	#	else_if = {
+	#		limit = {
+	#			population >= 5
+	#		}
+	#		value = rgb { 0 0 0 }
+	#	}
+	#	else = {
+	#		lerp = {
+	#			max_color = rgb { 255 0 0 }
+	#			min_color = rgb { 0 255 0 }
+	#			factor = {
+	#				value = population
+	#				divide = 5
+	#			}
+	#		}
+	#	}
+	#}
+
+	legend_key = {
+		desc = "zmc_possible_location_rank_megalopolis_legend_key"
+		color = hsv360 { 259 86 85 }
+	}
+
+	legend_key = {
+		desc = "zmc_possible_location_rank_city_legend_key"
+		color = hsv360 { 40 78 75 }
+	}
+
+	legend_key = {
+		desc = "zmc_possible_location_rank_town_legend_key"
+		color = hsv360 { 215 35 30 }
+	}
+
+	legend_key = {
+		desc = "zmc_possible_location_rank_rural_legend_key"
+		color = hsv360 { 9 78 63 }
+	}
+
+	tooltip_key = {
+		value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+
+	flatmap_behaviour = always
+	use_fow = no
+
+	category = population
+	index = 0
+
+	map_markers = {
+		all = no
+	}
+
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =		@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { }
+	color_and_names_refresh_counters = { }
 }

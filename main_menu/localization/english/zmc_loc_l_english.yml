@@ -128,6 +128,7 @@
  zmc_buildings_under_construction_black_legend_key: "0"
 
 
+
  #development growth mapmode
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
@@ -868,3 +869,16 @@
  zdv_total_labor_surplus_yellow_legend_key: "10.000"
  zdv_total_labor_surplus_red_legend_key: "0"
  zdv_total_labor_surplus_black_legend_key: "///-10.000"
+
+
+
+ #possible location rank mapmode
+
+ mapmode_zmc_possible_location_rank_name: "Possible Location Rank"
+ MAPMODE_ZMC_POSSIBLE_LOCATION_RANK: "#T $mapmode_zmc_possible_location_rank_name$#!\nThis colors [locations|e] by the highest [location_rank|e] they could reasonably support based on their current [population|e].\n\nMegalopolises need at least #color_white 400#! [population|e], cities need at least #color_white 30#!, towns need at least #color_white 5#!, and anything below that is rural."
+ MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT: "[ROOT.GetLocation.GetName] has a [population|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|Y].\n\nThe secondary color shows how close it is to the next [location_rank|e] threshold."
+
+ zmc_possible_location_rank_megalopolis_legend_key: "Megalopolis (400+)"
+ zmc_possible_location_rank_city_legend_key: "City (30+)"
+ zmc_possible_location_rank_town_legend_key: "Town (5+)"
+ zmc_possible_location_rank_rural_legend_key: "Rural (<5)"
