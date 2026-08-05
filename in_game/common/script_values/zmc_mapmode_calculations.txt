@@ -23,10 +23,15 @@ zmc_used_building_slots_percentage_big = { #building cap mapmode
 	multiply = 100
 }
 
-zmc_total_building_levels = { #building cap mapmode
+zmc_total_building_levels = { #building cap mapmode #building levels mapmode
 	value = total_building_levels
 }
 
+
+
+zmc_free_building_levels = { #free building levels mapmode
+	value = modifier:free_building_levels
+}
 
 
 

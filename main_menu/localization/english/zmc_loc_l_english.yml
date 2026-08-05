@@ -65,7 +65,7 @@
 
  #building cap mapmode
 
- mapmode_zmc_building_cap_percentage_name: "Used Building Slots"
+ mapmode_zmc_building_cap_percentage_name: "Used Building Slots Percentage"
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE: "#T $mapmode_zmc_building_cap_percentage_name$#!\nThis colors [locations|e] by how many [supported_building_levels|e] are used up.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode.\n\n@adm! #color_yellow Strategy#! @adm!\nBuilding over the cap massively increases the cost, so it would be wise to build more in locations with plenty of free building slots, and to not build as much in ones with most of their slots used up.\n\nYou should also keep some slots free for more expensive buildings you unlock later on, like the [ShowBuildingTypeName('university')] or [ShowBuildingTypeName('counting_house')]"
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_slots')|Y] [supported_building_levels|e] left, meaning [ROOT.GetLocation.MakeScope.ScriptValue('zmc_total_building_levels')|Y] are used up out of the cap of [ROOT.GetLocation.GetModifierValue('free_building_levels')|Y].\n\nLocation uses [ROOT.GetLocation.MakeScope.ScriptValue('zmc_used_building_slots_percentage')|Y%] of its supported building levels.\n\nKeep in mind that closed buildings or buildings with no employees do not count towards the used cap, which is not taken into consideration on the mapmode."
  MAPMODE_ZMC_BUILDING_CAP_PERCENTAGE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [supported_building_levels|e]."
@@ -92,6 +92,23 @@
  zmc_building_levels_yellow_legend_key: "50"
  zmc_building_levels_red_legend_key: "1"
  zmc_building_levels_black_legend_key: "0"
+
+
+ #free building levels mapmode
+
+ mapmode_zmc_building_levels_free_name: "Free Building Levels"
+ MAPMODE_ZMC_BUILDING_LEVELS_FREE: "#T $mapmode_zmc_building_levels_free_name$#!\nThis colors [locations|e] by their number of free [building|e] levels."
+ MAPMODE_ZMC_BUILDING_LEVELS_FREE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_levels')|0] free building levels."
+ MAPMODE_ZMC_BUILDING_LEVELS_FREE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have [buildings|e]."
+
+ zmc_building_levels_free_white_legend_key: "500+"
+ zmc_building_levels_free_pink_legend_key: "400"
+ zmc_building_levels_free_dark_blue_legend_key: "300"
+ zmc_building_levels_free_light_blue_legend_key: "200"
+ zmc_building_levels_free_green_legend_key: "100"
+ zmc_building_levels_free_yellow_legend_key: "50"
+ zmc_building_levels_free_red_legend_key: "1"
+ zmc_building_levels_free_black_legend_key: "0"
 
 
  #development growth mapmode
