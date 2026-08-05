@@ -35,6 +35,20 @@ zmc_free_building_levels = { #free building levels mapmode
 
 
 
+zmc_buildings_under_construction = { #number of buildings under construction mapmode
+	if = {
+		limit = {
+			any_buildings_in_location = {
+				count = all
+				building_levels_under_construction > 0
+			}
+		}
+		value = 1
+	}
+}
+
+
+
 
 zmc_pop_growth_percentage = { #pop growth mapmode
   value = modifier:local_population_growth

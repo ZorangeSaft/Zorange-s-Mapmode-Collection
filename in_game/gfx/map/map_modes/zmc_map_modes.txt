@@ -1113,7 +1113,7 @@ zmc_building_levels = {
 				max_color = rgb { 255 255 0 }   # Yellow
 				min_color = rgb { 255 0 0 }     # Red
 				factor = {
-					value = zmc_total_building_levels
+					value = zmc_buildings_under_construction #zmc_total_building_levels
 					subtract = 1
 					divide = 49
 				}
@@ -1124,7 +1124,7 @@ zmc_building_levels = {
 				max_color = rgb { 255 0 0 }     # Red
 				min_color = rgb { 0 0 0 }       # Black
 				factor = {
-					value = zmc_total_building_levels
+					value = zmc_buildings_under_construction #zmc_total_building_levels
 				}
 			}
 		}
@@ -1179,6 +1179,211 @@ zmc_building_levels = {
 		}
 		else = {
 			value = MAPMODE_ZMC_BUILDING_LEVELS_TT_WATER
+		}
+	}
+
+	small_map_names = location
+	medium_map_names = location
+	large_map_names = location
+
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+
+	fill_in_impassable = yes
+	enable_snow = no
+	
+	flatmap_behaviour = always
+	use_fow = no
+	
+	category = economy
+	index = 0
+
+	map_markers = {
+		all = no
+	}
+	
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+
+		gradient_alpha_inside = 	1
+		gradient_alpha_outside = 	1
+		gradient_width = 			@flatmap_far_gradient_width
+		gradient_color_mult =		@flatmap_far_gradient_color_mult
+		edge_width = 				0
+		edge_sharpness = 			@flatmap_far_edge_sharpness
+		edge_alpha = 				0
+		edge_color_mult = 			0
+		before_lighting_blend =	@flatmap_far_before_lighting_blend
+		after_lighting_blend =		@flatmap_far_after_lighting_blend
+	}
+
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
+}
+
+
+
+#number of buildings under construction mapmode
+
+zmc_buildings_under_construction = {
+	map_color = {
+	if = {
+		limit = {
+			is_land = no
+		}
+		value = hsv { 0.58 0.50 0.52 } # Water
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 500
+		}
+		value = rgb { 255 255 255 } # White
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 400
+		}
+		lerp = {
+			max_color = rgb { 255 255 255 } # White
+			min_color = rgb { 255 0 255 }   # Pink
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 400
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 300
+		}
+		lerp = {
+			max_color = rgb { 255 0 255 }   # Pink
+			min_color = rgb { 0 0 128 }     # Dark Blue
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 300
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 200
+		}
+		lerp = {
+			max_color = rgb { 0 0 128 }     # Dark Blue
+			min_color = rgb { 128 192 255 } # Light Blue
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 200
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 100
+		}
+		lerp = {
+			max_color = rgb { 128 192 255 } # Light Blue
+			min_color = rgb { 0 255 0 }     # Green
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 100
+				divide = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 50
+		}
+		lerp = {
+			max_color = rgb { 0 255 0 }     # Green
+			min_color = rgb { 255 255 0 }   # Yellow
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 50
+				divide = 50
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			zmc_buildings_under_construction >= 1
+		}
+		lerp = {
+			max_color = rgb { 255 255 0 }   # Yellow
+			min_color = rgb { 255 0 0 }     # Red
+			factor = {
+				value = zmc_buildings_under_construction
+				subtract = 1
+				divide = 49
+			}
+		}
+	}
+	else = {
+		lerp = {
+			max_color = rgb { 255 0 0 }     # Red
+			min_color = rgb { 0 0 0 }       # Black
+			factor = {
+				value = zmc_buildings_under_construction
+			}
+		}
+	}
+}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_white_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_dark_blue_legend_key"
+		color = rgb { 0 0 128 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_light_blue_legend_key"
+		color = rgb { 128 192 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_red_legend_key"
+		color = rgb { 255 0 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_buildings_under_construction_black_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	tooltip_key = {
+		if = {
+			limit = {
+				is_land = yes 
+			}
+			value = MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_LAND
+		}
+		else = {
+			value = MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_WATER
 		}
 	}
 

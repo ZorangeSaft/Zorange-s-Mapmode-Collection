@@ -111,6 +111,23 @@
  zmc_building_levels_free_black_legend_key: "0"
 
 
+ #buildings under construction mapmode
+
+ mapmode_zmc_buildings_under_construction_name: "Buildings Under Construction"
+ MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION: "#T $mapmode_zmc_buildings_under_construction_name$#!\nThis colors [locations|e] by how many [buildings|e] are currently under construction."
+ MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_buildings_under_construction')|0] buildings under construction."
+ MAPMODE_ZMC_BUILDINGS_UNDER_CONSTRUCTION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have [buildings|e] under construction."
+
+ zmc_buildings_under_construction_white_legend_key: "500+"
+ zmc_buildings_under_construction_pink_legend_key: "400"
+ zmc_buildings_under_construction_dark_blue_legend_key: "300"
+ zmc_buildings_under_construction_light_blue_legend_key: "200"
+ zmc_buildings_under_construction_green_legend_key: "100"
+ zmc_buildings_under_construction_yellow_legend_key: "50"
+ zmc_buildings_under_construction_red_legend_key: "1"
+ zmc_buildings_under_construction_black_legend_key: "0"
+
+
  #development growth mapmode
 
  mapmode_zmc_local_monthly_development_name: "Development Growth"
