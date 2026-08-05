@@ -6448,6 +6448,20 @@ zmc_possible_location_rank = {
 		}
 		else_if = {
 			limit = {
+				population >= 400
+				location_rank = location_rank:city
+			}
+			value = rgb { 255 0 0 } # Upgrade to megalopolis is available
+		}
+		else_if = {
+			limit = {
+				population >= 30
+				location_rank = location_rank:town
+			}
+			value = rgb { 255 0 0 } # Upgrade to city is available
+		}
+		else_if = {
+			limit = {
 				population >= 360
 				population < 400
 				location_rank = location_rank:city
@@ -6572,12 +6586,20 @@ zmc_possible_location_rank = {
 		else_if = {
 			limit = {
 				population >= 400
+				location_rank = location_rank:city
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY_CAN_UPGRADE
+		}
+		else_if = {
+			limit = {
+				population >= 400
 			}
 			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_MEGALOPOLIS
 		}
 		else_if = {
 			limit = {
 				population >= 360
+				population < 400
 				location_rank = location_rank:city
 			}
 			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY_NEAR_MEGALOPOLIS
@@ -6592,12 +6614,20 @@ zmc_possible_location_rank = {
 		else_if = {
 			limit = {
 				population >= 30
+				location_rank = location_rank:town
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_CAN_UPGRADE
+		}
+		else_if = {
+			limit = {
+				population >= 30
 			}
 			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY
 		}
 		else_if = {
 			limit = {
 				population >= 27
+				population < 30
 				location_rank = location_rank:town
 			}
 			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_NEAR_CITY
