@@ -6449,6 +6449,7 @@ zmc_possible_location_rank = {
 		else_if = {
 			limit = {
 				population >= 360
+				population < 400
 				location_rank = location_rank:city
 			}
 			value = hsv360 { 259 86 85 } # Megalopolis color

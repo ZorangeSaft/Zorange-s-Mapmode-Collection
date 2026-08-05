@@ -875,7 +875,7 @@
  #possible location rank mapmode
 
  mapmode_zmc_possible_location_rank_name: "Possible Location Rank"
- MAPMODE_ZMC_POSSIBLE_LOCATION_RANK: "#T $mapmode_zmc_possible_location_rank_name$#!\nThis colors [locations|e] by the highest [location_rank|e] they could reasonably support based on their current [population|e].\n\nMegalopolises need at least #color_white 400#! [population|e], cities need at least #color_white 30#!, towns need at least #color_white 5#!, and anything below that is rural.\n\nThe secondary color shows the next tier's color when the location is within 90% of that threshold; once it already has the maximum rank for its tier, it gains black stripes."
+ MAPMODE_ZMC_POSSIBLE_LOCATION_RANK: "#T $mapmode_zmc_possible_location_rank_name$#!\nThis colors [locations|e] by the highest [location_rank|e] they could support based on their current [population|e].\n\nThe treshholds are based off of #color_white vanilla#! requirements, which are as follows:\n\n[ShowLocationRankName('megalopolis')]: #color_white 400.000#! [population|e]\n[ShowLocationRankName('city')]: #color_white 30.000#! [population|e]\n[ShowLocationRankName('town')]: #color_white 5.000#! [population|e]\n\n#zmc_color_black Black stripes ///#! indicate that a [location|e] has reached its maximum [location_rank|e] based on its current population.\n\n#zmc_color_town St#!#zmc_color_city rip#!#zmc_color_megalopolis es#! #zmc_color_town //#!#zmc_color_city //#!#zmc_color_megalopolis //#! with the colors of a [location_rank|e] indicate that a [location|e] is within #zmc_color_green 90%#! of the [population|e] needed to support the next [location_rank|e]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [location_rank|e]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_MEGALOPOLIS: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!\n\nIt can support a [ShowLocationRankName('megalopolis')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_MEGALOPOLIS_MAX: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#! and has reached its maximum [location_rank|e] of [ShowLocationRankName('megalopolis')]."
@@ -888,7 +888,7 @@
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\nIt can only support a [ShowLocationRankName('rural_settlement')]."
  MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL_NEAR_TOWN: "[ROOT.GetLocation.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population')|D]#!.\n\nIt can only support a [ShowLocationRankName('rural_settlement')].\n\nIt is within #zmc_color_green 90%#! of the [population|e] needed to support a [ShowLocationRankName('town')]."
 
- zmc_possible_location_rank_megalopolis_legend_key: "Megalopolis (400+)"
- zmc_possible_location_rank_city_legend_key: "City (30+)"
- zmc_possible_location_rank_town_legend_key: "Town (5+)"
- zmc_possible_location_rank_rural_legend_key: "Rural (<5)"
+ zmc_possible_location_rank_megalopolis_legend_key: "Megalopolis (400.000)"
+ zmc_possible_location_rank_city_legend_key: "City (30.000)"
+ zmc_possible_location_rank_town_legend_key: "Town (5.000)"
+ zmc_possible_location_rank_rural_legend_key: "Rural"

@@ -46,7 +46,7 @@ textformatting = {
 
 	format = {
 		name = zmc_color_black
-		format = "color:{0,0,0};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+		format = "color:{0,0,0};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
 	}
 
 	format = {
@@ -62,5 +62,28 @@ textformatting = {
 	format = {
 		name = zmc_color_blue
 		format = "color:{0.2,0.39,1};glow_color:{0,0,0,0};glow_offset:{0.0,0.0}"
+	}
+
+
+
+	#a little bit of glow on these so you could see them better in game
+	format = {
+	name = zmc_color_megalopolis
+	format = "color:{0.35,0.119,0.85};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_city
+		format = "color:{0.75,0.555,0.165};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_town
+		format = "color:{0.195,0.239,0.3};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
+	}
+
+	format = {
+		name = zmc_color_rural
+		format = "color:{0.63,0.212,0.139};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
 	}
 }
