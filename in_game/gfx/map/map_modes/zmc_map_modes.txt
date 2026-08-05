@@ -6555,7 +6555,75 @@ zmc_possible_location_rank = {
 	}
 
 	tooltip_key = {
-		value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT
+		if = {
+			limit = {
+				is_land = no
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_WATER
+		}
+		else_if = {
+			limit = {
+				population >= 400
+				location_rank = location_rank:megalopolis
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_MEGALOPOLIS_MAX
+		}
+		else_if = {
+			limit = {
+				population >= 400
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_MEGALOPOLIS
+		}
+		else_if = {
+			limit = {
+				population >= 360
+				location_rank = location_rank:city
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY_NEAR_MEGALOPOLIS
+		}
+		else_if = {
+			limit = {
+				population >= 30
+				location_rank = location_rank:city
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY_MAX
+		}
+		else_if = {
+			limit = {
+				population >= 30
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_CITY
+		}
+		else_if = {
+			limit = {
+				population >= 27
+				location_rank = location_rank:town
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_NEAR_CITY
+		}
+		else_if = {
+			limit = {
+				population >= 5
+				location_rank = location_rank:town
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN_MAX
+		}
+		else_if = {
+			limit = {
+				population >= 5
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_TOWN
+		}
+		else_if = {
+			limit = {
+				population >= 4.5
+				location_rank = location_rank:rural_settlement
+			}
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL_NEAR_TOWN
+		}
+		else = {
+			value = MAPMODE_ZMC_POSSIBLE_LOCATION_RANK_TT_LAND_RURAL
+		}
 	}
 
 	small_map_names = location
