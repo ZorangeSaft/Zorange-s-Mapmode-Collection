@@ -6,6 +6,12 @@ zmc_urbanisation_suitability = {
 
 
 
+zmc_important_rgo = {
+	texture = "gfx/interface/icons/modifiers/_default.dds"
+}
+
+
+
 zmc_gdp = {
 	texture = "gfx/interface/icons/modifiers/_default.dds"
 }
