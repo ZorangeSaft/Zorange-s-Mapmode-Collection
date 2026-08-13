@@ -501,17 +501,17 @@
  #world tax base mapmode
 
  mapmode_zmc_world_tax_base_name: "World Tax Base"
- MAPMODE_ZMC_WORLD_TAX_BASE: "#T $mapmode_zmc_world_tax_base_name$#!\nThis colors [locations|e] by world [tax_base|e].\n\nTo save on performance, this mapmode updates #color_white every year#!."
+ MAPMODE_ZMC_WORLD_TAX_BASE: "#T $mapmode_zmc_world_tax_base_name$#!\nThis colors [locations|e] by world [tax_base|e].\n\nThe scale of this mapmode is #color_white 100#! times larger than the normal [tax_base|e] ones, as the entire worlds [tax_base|e] can be quite high.\n\nTo save on performance, this mapmode updates #color_white every year#!."
  MAPMODE_ZMC_WORLD_TAX_BASE_TT_LAND: "The world has a [tax_base|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_world_tax_base')|Y]#!\n\nTo save on performance, this mapmode updates #color_white every year#!."
  MAPMODE_ZMC_WORLD_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have world [tax_base|e]."
  MAPMODE_ZMC_WORLD_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
- zmc_world_tax_base_pink_legend_key: "10000"
- zmc_world_tax_base_dark_blue_legend_key: "2000"
- zmc_world_tax_base_light_blue_legend_key: "1000"
- zmc_world_tax_base_green_legend_key: "500"
- zmc_world_tax_base_yellow_legend_key: "100"
- zmc_world_tax_base_red_legend_key: "10"
+ zmc_world_tax_base_pink_legend_key: "1000000"
+ zmc_world_tax_base_dark_blue_legend_key: "200000"
+ zmc_world_tax_base_light_blue_legend_key: "100000"
+ zmc_world_tax_base_green_legend_key: "50000"
+ zmc_world_tax_base_yellow_legend_key: "10000"
+ zmc_world_tax_base_red_legend_key: "1000"
  zmc_world_tax_base_black_legend_key: "0"
  zmc_world_tax_base_gray_legend_key: "Uncolonised"
 
