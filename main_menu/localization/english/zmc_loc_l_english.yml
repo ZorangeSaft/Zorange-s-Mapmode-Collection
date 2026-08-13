@@ -720,7 +720,7 @@
 
  mapmode_zmc_population_density_real_world_name: "Real World Population Density"
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density."
- MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y] people per square kilometer."
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y] people per #color_white square kilometer#!."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
 
  zmc_population_density_real_world_white_legend_key: "0"
