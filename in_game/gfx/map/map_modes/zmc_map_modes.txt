@@ -3554,8 +3554,8 @@ zmc_province_tax_base = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = province
+	large_map_names = province
 
 	small_tooltip_context = location
 	medium_tooltip_context = location
@@ -3627,8 +3627,8 @@ zmc_area_tax_base = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = area
+	large_map_names = area
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -3690,8 +3690,8 @@ zmc_region_tax_base = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = region
+	large_map_names = region
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -3753,8 +3753,8 @@ zmc_sub_continent_tax_base = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = sub_continent
+	large_map_names = sub_continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -3763,7 +3763,7 @@ zmc_sub_continent_tax_base = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = debug #too laggy and likely to crash the game to be allowed to be used by normal players
-	index = 3
+	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -3816,8 +3816,8 @@ zmc_continent_tax_base = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = continent
+	large_map_names = continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -4266,8 +4266,8 @@ zmc_province_tax_base_per_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = province
+	large_map_names = province
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -4329,8 +4329,8 @@ zmc_area_tax_base_per_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = area
+	large_map_names = area
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -4392,8 +4392,8 @@ zmc_region_tax_base_per_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = region
+	large_map_names = region
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -4455,8 +4455,8 @@ zmc_sub_continent_tax_base_per_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = sub_continent
+	large_map_names = sub_continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -4521,8 +4521,8 @@ zmc_continent_tax_base_per_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = continent
+	large_map_names = continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -5444,8 +5444,8 @@ zmc_province_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = province
+	large_map_names = province
 
 	small_tooltip_context = location
 	medium_tooltip_context = location
@@ -5537,8 +5537,8 @@ zmc_area_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = area
+	large_map_names = area
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -5599,8 +5599,8 @@ zmc_region_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = region
+	large_map_names = region
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -5661,8 +5661,8 @@ zmc_sub_continent_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = sub_continent
+	large_map_names = sub_continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -5723,8 +5723,8 @@ zmc_continent_population = {
 	}
 
 	small_map_names = location
-	medium_map_names = location
-	large_map_names = location
+	medium_map_names = continent
+	large_map_names = continent
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
