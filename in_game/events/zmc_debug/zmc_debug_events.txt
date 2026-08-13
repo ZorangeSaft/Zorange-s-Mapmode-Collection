@@ -86,19 +86,19 @@ zmc_debug_refresh_mapmodes.1 = {
 	}
 }
 
-zmc_debug_refresh_mapmodes.2 = { #this is for getting location_size to be exported for getting the formula for converting location_size to real world size
-	type = country_event 				 # type of event 
-	title = zmc_debug_refresh_mapmodes.title 			 # title key to be localized
-	desc = zmc_debug_refresh_mapmodes.desc 			 # description key to be localized 
-	historical_info = zmc_debug_refresh_mapmodes.historical_info  # optional description text to provide historical context
+#zmc_debug_refresh_mapmodes.2 = { #this is for getting location_size to be exported for getting the formula for converting location_size to real world size
+	#type = country_event 				 # type of event 
+	#title = zmc_debug_refresh_mapmodes.title 			 # title key to be localized
+	#desc = zmc_debug_refresh_mapmodes.desc 			 # description key to be localized 
+	#historical_info = zmc_debug_refresh_mapmodes.historical_info  # optional description text to provide historical context
 	
-	trigger = { 	# List of requirements that need to be fulfilled for event to file
+	#trigger = { 	# List of requirements that need to be fulfilled for event to file
 		#a
-	}
+	#}
 
-	immediate = {
-		every_location_in_the_world = {
-			limit = { is_land = yes }
+	#immediate = {
+		#every_location_in_the_world = {
+			#limit = { is_land = yes }
 			#set_local_variable = { #for exporting location_size
 			#	name = size_i_just_measured
 			#	value = location_size
@@ -109,10 +109,10 @@ zmc_debug_refresh_mapmodes.2 = { #this is for getting location_size to be export
 			#	value = zmc_equator_measurer_script_value
 			#}
 			#error_log = "[THIS.GetLocation.GetNameWithNoTooltip],[SCOPE.GetLocalVariable('equator_i_just_measured').GetValue]"
-		}
-	}
+		#}
+	#}
 
-	option = {
-	name = zmc_debug_refresh_mapmodes.b
-	}
-}
+	#option = {
+	#name = zmc_debug_refresh_mapmodes.b
+	#}
+#}

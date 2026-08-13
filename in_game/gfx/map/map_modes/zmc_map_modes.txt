@@ -263,8 +263,8 @@ zmc_urbanisation_suitability = {
 
 
 	#activate these for debugging
-	#color_refresh_counters = { Year }
-	#color_and_names_refresh_counters = { Year }
+	#color_refresh_counters = { Month }
+	#color_and_names_refresh_counters = { Month }
 }
 
 zmc_urbanisation_suitability_sorted = {
@@ -4546,8 +4546,8 @@ zmc_continent_tax_base_per_population = {
 		before_lighting_blend = @flatmap_far_before_lighting_blend
 		after_lighting_blend = @flatmap_far_after_lighting_blend
 	}
-	color_refresh_counters = { Year }
-	color_and_names_refresh_counters = { Year }
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
 }
 
 
@@ -4605,8 +4605,8 @@ zmc_world_tax_base_per_population = {
 		before_lighting_blend = @flatmap_far_before_lighting_blend
 		after_lighting_blend = @flatmap_far_after_lighting_blend
 	}
-	color_refresh_counters = { Year }
-	color_and_names_refresh_counters = { Year }
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
 }
 
 
@@ -6102,18 +6102,8 @@ zmc_population_density_real_world = {
 	}
 
 	legend_key = {
-		desc = "zmc_population_density_real_world_white_legend_key"
-		color = rgb { 255 255 255 }
-	}
-
-	legend_key = {
-		desc = "zmc_population_density_real_world_green_legend_key"
-		color = rgb { 0 255 0 }
-	}
-
-	legend_key = {
-		desc = "zmc_population_density_real_world_yellow_legend_key"
-		color = rgb { 255 255 0 }
+		desc = "zmc_population_density_real_world_black_legend_key"
+		color = rgb { 0 0 0 }
 	}
 
 	legend_key = {
@@ -6122,8 +6112,18 @@ zmc_population_density_real_world = {
 	}
 
 	legend_key = {
-		desc = "zmc_population_density_real_world_black_legend_key"
-		color = rgb { 0 0 0 }
+		desc = "zmc_population_density_real_world_yellow_legend_key"
+		color = rgb { 255 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_population_density_real_world_green_legend_key"
+		color = rgb { 0 255 0 }
+	}
+
+	legend_key = {
+		desc = "zmc_population_density_real_world_white_legend_key"
+		color = rgb { 255 255 255 }
 	}
 
 	tooltip_key = {
@@ -6404,8 +6404,8 @@ zdv_labor_surplus = { #from zerodv
 
 
 	#activate these for debugging
-	#color_refresh_counters = { Year }
-	#color_and_names_refresh_counters = { Year }
+	#color_refresh_counters = { Month }
+	#color_and_names_refresh_counters = { Month }
 }
 
 

@@ -71,34 +71,34 @@ zmc_local_urbanisation_suitability_level = {
 	#climate checks
 	if = {
 		limit = { climate = cold_arid }
-		add = 1
+		add = 0 #1
 	}
 	else_if = {
 		limit = { climate = continental }
-		add = 4
+		add = 3 #4
 	}
 	else_if = {
 		limit = { climate = mediterranean }
-		add = 7
+		add = 6 #7
 	}
 	else_if = {
 		limit = { climate = tropical }
-		add = 3
+		add = 2 #3
 	}
 	else_if = {
 		limit = { climate = oceanic }
-		add = 5
+		add = 4 #5
 	}
 	else_if = {
 		limit = { climate = subtropical }
-		add = 6
+		add = 5 #6
 	}
 	else_if = {
-		limit = { climate = hot_arid }
-		add = 2
+		limit = { climate = arid }
+		add = 1 #2
 	}
 	else = {
-		#if arctic then 0
+		add = -1 #if arctic then 0
 	}
 
 
