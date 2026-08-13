@@ -369,8 +369,8 @@
  zmc_world_tax_base_per_population_light_blue_legend_key: "2"
  zmc_world_tax_base_per_population_green_legend_key: "1"
  zmc_world_tax_base_per_population_yellow_legend_key: "0.5"
- zmc_world_tax_base_per_population_red_legend_key: "0.5"
- zmc_world_tax_base_per_population_black_legend_key: "0.1"
+ zmc_world_tax_base_per_population_red_legend_key: "0.1"
+ zmc_world_tax_base_per_population_black_legend_key: "0"
  zmc_world_tax_base_per_population_gray_legend_key: "Uncolonised"
 
  game_concept_zmc_gdp: "GDP"
