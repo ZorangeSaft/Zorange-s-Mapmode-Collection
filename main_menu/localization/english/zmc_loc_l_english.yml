@@ -98,7 +98,7 @@
 
  mapmode_zmc_building_levels_free_name: "Free Building Levels"
  MAPMODE_ZMC_BUILDING_LEVELS_FREE: "#T $mapmode_zmc_building_levels_free_name$#!\nThis colors [locations|e] by their number of free [building|e] levels."
- MAPMODE_ZMC_BUILDING_LEVELS_FREE_TT_LAND: "[ROOT.GetLocation.GetName] has [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_levels')|0] free building levels."
+ MAPMODE_ZMC_BUILDING_LEVELS_FREE_TT_LAND: "[ROOT.GetLocation.GetName] has #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_free_building_levels')|0]#! free building levels."
  MAPMODE_ZMC_BUILDING_LEVELS_FREE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it cannot have [buildings|e]."
 
  zmc_building_levels_free_white_legend_key: "500+"

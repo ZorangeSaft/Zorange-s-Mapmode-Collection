@@ -359,14 +359,14 @@ zmc_sub_continent_tax_base = {
 	}
 }
 
-#zmc_continent_tax_base = { #too laggy, crashes the game every time you try and use it
-#	continent = {
-#		every_location_in_continent = {
-#			limit = { is_ownable = yes }
-#			add = location_tax_base
-#		}
-#	}
-#}
+zmc_continent_tax_base = { #too laggy, crashes the game every time you try and use it
+	continent = {
+		every_location_in_continent = {
+			limit = { is_ownable = yes }
+			add = location_tax_base
+		}
+	}
+}
 
 zmc_world_tax_base = {
 	value = global_var:zmc_world_tax_base
