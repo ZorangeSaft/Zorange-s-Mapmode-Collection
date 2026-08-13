@@ -3930,37 +3930,22 @@ zmc_location_tax_base_per_population = {
 		}
 		else_if = {
 			limit = {
-				zmc_location_tax_base_per_population >= 50
+				zmc_location_tax_base_per_population >= 10
 			}
 			value = rgb { 255 0 255 } #pink
 		}
 		else_if = {
 			limit = {
-				zmc_location_tax_base_per_population < 50
-				zmc_location_tax_base_per_population >= 20
+				zmc_location_tax_base_per_population < 10
+				zmc_location_tax_base_per_population >= 5
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 200 } #dark blue
 				factor = {
 					value = zmc_location_tax_base_per_population
-					subtract = 20
-					divide = 30
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_location_tax_base_per_population < 20
-				zmc_location_tax_base_per_population >= 5
-			}
-			lerp = {
-				max_color = rgb { 0 0 200 } #dark blue
-				min_color = rgb { 135 206 250 } #light blue
-				factor = {
-					value = zmc_location_tax_base_per_population
 					subtract = 5
-					divide = 15
+					divide = 5
 				}
 			}
 		}
@@ -3970,8 +3955,8 @@ zmc_location_tax_base_per_population = {
 				zmc_location_tax_base_per_population >= 2
 			}
 			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 0 0 200 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_location_tax_base_per_population
 					subtract = 2
@@ -3985,8 +3970,8 @@ zmc_location_tax_base_per_population = {
 				zmc_location_tax_base_per_population >= 1
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_location_tax_base_per_population
 					subtract = 1
@@ -4000,8 +3985,8 @@ zmc_location_tax_base_per_population = {
 				zmc_location_tax_base_per_population >= 0.5
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_location_tax_base_per_population
 					subtract = 0.5
@@ -4012,6 +3997,21 @@ zmc_location_tax_base_per_population = {
 		else_if = {
 			limit = {
 				zmc_location_tax_base_per_population < 0.5
+				zmc_location_tax_base_per_population >= 0.1
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_location_tax_base_per_population
+					subtract = 0.1
+					divide = 0.4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_location_tax_base_per_population < 0.1
 				zmc_location_tax_base_per_population >= 0
 			}
 			lerp = {
@@ -4019,7 +4019,7 @@ zmc_location_tax_base_per_population = {
 				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_location_tax_base_per_population
-					divide = 0.5
+					divide = 0.1
 				}
 			}
 		}
@@ -4152,37 +4152,22 @@ zmc_province_tax_base_per_population = {
 		}
 		else_if = {
 			limit = {
-				zmc_province_tax_base_per_population >= 50
+				zmc_province_tax_base_per_population >= 10
 			}
 			value = rgb { 255 0 255 } #pink
 		}
 		else_if = {
 			limit = {
-				zmc_province_tax_base_per_population < 50
-				zmc_province_tax_base_per_population >= 20
+				zmc_province_tax_base_per_population < 10
+				zmc_province_tax_base_per_population >= 5
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 200 } #dark blue
 				factor = {
 					value = zmc_province_tax_base_per_population
-					subtract = 20
-					divide = 30
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zmc_province_tax_base_per_population < 20
-				zmc_province_tax_base_per_population >= 5
-			}
-			lerp = {
-				max_color = rgb { 0 0 200 } #dark blue
-				min_color = rgb { 135 206 250 } #light blue
-				factor = {
-					value = zmc_province_tax_base_per_population
 					subtract = 5
-					divide = 15
+					divide = 5
 				}
 			}
 		}
@@ -4192,8 +4177,8 @@ zmc_province_tax_base_per_population = {
 				zmc_province_tax_base_per_population >= 2
 			}
 			lerp = {
-				max_color = rgb { 135 206 250 } #light blue
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 0 0 200 } #dark blue
+				min_color = rgb { 135 206 250 } #light blue
 				factor = {
 					value = zmc_province_tax_base_per_population
 					subtract = 2
@@ -4207,8 +4192,8 @@ zmc_province_tax_base_per_population = {
 				zmc_province_tax_base_per_population >= 1
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 135 206 250 } #light blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zmc_province_tax_base_per_population
 					subtract = 1
@@ -4222,8 +4207,8 @@ zmc_province_tax_base_per_population = {
 				zmc_province_tax_base_per_population >= 0.5
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_province_tax_base_per_population
 					subtract = 0.5
@@ -4234,6 +4219,21 @@ zmc_province_tax_base_per_population = {
 		else_if = {
 			limit = {
 				zmc_province_tax_base_per_population < 0.5
+				zmc_province_tax_base_per_population >= 0.1
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
+				factor = {
+					value = zmc_province_tax_base_per_population
+					subtract = 0.1
+					divide = 0.4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_province_tax_base_per_population < 0.1
 				zmc_province_tax_base_per_population >= 0
 			}
 			lerp = {
@@ -4241,7 +4241,7 @@ zmc_province_tax_base_per_population = {
 				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zmc_province_tax_base_per_population
-					divide = 0.5
+					divide = 0.1
 				}
 			}
 		}
@@ -4303,13 +4303,13 @@ zmc_area_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
 		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_area_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 50 zmc_area_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_area_tax_base_per_population subtract = 20 divide = 30 } } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 20 zmc_area_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_area_tax_base_per_population subtract = 5 divide = 15 } } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 5 zmc_area_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_area_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 2 zmc_area_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_area_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 1 zmc_area_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_area_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_area_tax_base_per_population < 0.5 zmc_area_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_area_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 10 zmc_area_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_area_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 5 zmc_area_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_area_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 2 zmc_area_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_area_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 1 zmc_area_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_area_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 0.5 zmc_area_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_area_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_area_tax_base_per_population < 0.1 zmc_area_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_area_tax_base_per_population divide = 0.1 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
@@ -4366,13 +4366,13 @@ zmc_region_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
 		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_region_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 50 zmc_region_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_region_tax_base_per_population subtract = 20 divide = 30 } } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 20 zmc_region_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_region_tax_base_per_population subtract = 5 divide = 15 } } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 5 zmc_region_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_region_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 2 zmc_region_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_region_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 1 zmc_region_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_region_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_region_tax_base_per_population < 0.5 zmc_region_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_region_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 10 zmc_region_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_region_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 5 zmc_region_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_region_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 2 zmc_region_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_region_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 1 zmc_region_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_region_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 0.5 zmc_region_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_region_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_region_tax_base_per_population < 0.1 zmc_region_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_region_tax_base_per_population divide = 0.1 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
@@ -4429,13 +4429,13 @@ zmc_sub_continent_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
 		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 50 zmc_sub_continent_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 20 divide = 30 } } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 20 zmc_sub_continent_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 5 divide = 15 } } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 5 zmc_sub_continent_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 2 zmc_sub_continent_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 1 zmc_sub_continent_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 0.5 zmc_sub_continent_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_sub_continent_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 10 zmc_sub_continent_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 5 zmc_sub_continent_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 2 zmc_sub_continent_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 1 zmc_sub_continent_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 0.5 zmc_sub_continent_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_sub_continent_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_sub_continent_tax_base_per_population < 0.1 zmc_sub_continent_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_sub_continent_tax_base_per_population divide = 0.1 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
@@ -4495,13 +4495,13 @@ zmc_continent_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
 		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_continent_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 50 zmc_continent_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_continent_tax_base_per_population subtract = 20 divide = 30 } } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 20 zmc_continent_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_continent_tax_base_per_population subtract = 5 divide = 15 } } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 5 zmc_continent_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 2 zmc_continent_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 1 zmc_continent_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_continent_tax_base_per_population < 0.5 zmc_continent_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_continent_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 10 zmc_continent_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_continent_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 5 zmc_continent_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_continent_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 2 zmc_continent_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 1 zmc_continent_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 0.5 zmc_continent_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_continent_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_continent_tax_base_per_population < 0.1 zmc_continent_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_continent_tax_base_per_population divide = 0.1 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
@@ -4557,13 +4557,13 @@ zmc_continent_tax_base_per_population = {
 zmc_world_tax_base_per_population = {
 	map_color = {
 		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
-		else_if = { limit = { zmc_world_tax_base_per_population >= 50 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 50 zmc_world_tax_base_per_population >= 20 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_world_tax_base_per_population subtract = 20 divide = 30 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 20 zmc_world_tax_base_per_population >= 5 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_tax_base_per_population subtract = 5 divide = 15 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 5 zmc_world_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 2 zmc_world_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 1 zmc_world_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 0.5 zmc_world_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 10 zmc_world_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_world_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 5 zmc_world_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_world_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 2 zmc_world_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 1 zmc_world_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 0.5 zmc_world_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 0.1 zmc_world_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_tax_base_per_population divide = 0.1 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
@@ -6375,8 +6375,8 @@ zdv_labor_surplus = { #from zerodv
 	flatmap_behaviour = always
 	use_fow = no
 	
-	category = geography
-	index = 1
+	category = population
+	index = 0
 
 	map_markers = {
 		all = no
