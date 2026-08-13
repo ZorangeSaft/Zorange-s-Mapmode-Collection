@@ -5241,7 +5241,7 @@ zmc_population = {
 	use_fow = no
 
 	category = population
-	index = 2
+	index = 1
 
 	map_markers = { all = no }
 
@@ -5458,7 +5458,7 @@ zmc_province_population = {
 	use_fow = no
 
 	category = population
-	index = 2
+	index = 1
 
 	map_markers = {
 		all = no
@@ -5547,7 +5547,7 @@ zmc_area_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = population
-	index = 2
+	index = 1
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -5609,7 +5609,7 @@ zmc_region_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = population
-	index = 2
+	index = 1
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -5671,7 +5671,7 @@ zmc_sub_continent_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = population
-	index = 2
+	index = 1
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -5733,7 +5733,7 @@ zmc_continent_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = population
-	index = 2
+	index = 1
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -5794,7 +5794,7 @@ zmc_world_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = population
-	index = 2
+	index = 1
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
