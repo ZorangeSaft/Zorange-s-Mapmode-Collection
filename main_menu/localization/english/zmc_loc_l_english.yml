@@ -716,10 +716,11 @@
 
 
 
+
  #real world population density mapmode
 
  mapmode_zmc_population_density_real_world_name: "Real World Population Density"
- MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density."
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density.\n\nThe [population|e] comes from the game, and the real world size used to calculate the density comes via the same equation as the #color_white Real World Size#! mapmode, which is as follows:\n\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance"
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y] people per #color_white square kilometer#!."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
 
