@@ -724,10 +724,10 @@
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
 
  zmc_population_density_real_world_white_legend_key: "0"
- zmc_population_density_real_world_green_legend_key: "10"
- zmc_population_density_real_world_yellow_legend_key: "100"
- zmc_population_density_real_world_red_legend_key: "1000"
- zmc_population_density_real_world_black_legend_key: "2000"
+ zmc_population_density_real_world_green_legend_key: "1"
+ zmc_population_density_real_world_yellow_legend_key: "10"
+ zmc_population_density_real_world_red_legend_key: "100"
+ zmc_population_density_real_world_black_legend_key: "1000"
 
 
 

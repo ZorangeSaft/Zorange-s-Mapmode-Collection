@@ -6033,24 +6033,9 @@ zmc_population_density_real_world = {
 		}
 		else_if = {
 			limit = {
-				zmc_population_density_real_world >= 2000
-			}
-			value = rgb { 0 0 0 } #black
-		}
-		else_if = {
-			limit = {
-				zmc_population_density_real_world < 2000
 				zmc_population_density_real_world >= 1000
 			}
-			lerp = {
-				max_color = rgb { 0 0 0 } #black
-				min_color = rgb { 255 0 0 } #red
-				factor = {
-					value = zmc_population_density_real_world
-					subtract = 1000
-					divide = 1000
-				}
-			}
+			value = rgb { 0 0 0 } #black
 		}
 		else_if = {
 			limit = {
@@ -6058,11 +6043,11 @@ zmc_population_density_real_world = {
 				zmc_population_density_real_world >= 100
 			}
 			lerp = {
-				max_color = rgb { 255 0 0 } #red
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 0 0 } #black
+				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zmc_population_density_real_world
-					subtract = 1000
+					subtract = 100
 					divide = 900
 				}
 			}
@@ -6073,8 +6058,8 @@ zmc_population_density_real_world = {
 				zmc_population_density_real_world >= 10
 			}
 			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 255 0 0 } #red
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zmc_population_density_real_world
 					subtract = 10
@@ -6085,6 +6070,21 @@ zmc_population_density_real_world = {
 		else_if = {
 			limit = {
 				zmc_population_density_real_world < 10
+				zmc_population_density_real_world >= 1
+			}
+			lerp = {
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 0 255 0 } #green
+				factor = {
+					value = zmc_population_density_real_world
+					subtract = 1
+					divide = 9
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zmc_population_density_real_world < 1
 				zmc_population_density_real_world >= 0
 			}
 			lerp = {
@@ -6092,7 +6092,7 @@ zmc_population_density_real_world = {
 				min_color = rgb { 255 255 255 } #white
 				factor = {
 					value = zmc_population_density_real_world
-					divide = 10
+					divide = 1
 				}
 			}
 		}
