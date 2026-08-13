@@ -46,7 +46,7 @@ textformatting = {
 
 	format = {
 		name = zmc_color_black
-		format = "color:{0,0,0};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}" #glow of 0.3,0.3,0.3,0.3
+		format = "color:{0,0,0};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}" #"color:{0,0,0};glow_color:{0.3,0.3,0.3,0.3};glow_offset:{0.0,0.0}"
 	}
 
 	format = {
