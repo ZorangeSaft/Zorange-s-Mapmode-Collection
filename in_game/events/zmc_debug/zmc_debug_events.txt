@@ -74,7 +74,9 @@ zmc_debug_refresh_mapmodes.1 = {
 			name = zmc_world_tax_base_per_population_var
 			value = {
 				value = global_var:zmc_world_tax_base
+				multiply = 1000
 				divide = global_var:zmc_world_population
+				
 			}
 		}
 	}

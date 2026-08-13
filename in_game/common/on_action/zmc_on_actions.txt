@@ -120,6 +120,7 @@ zmc_yearly = {
       value = {
         value = global_var:zmc_world_tax_base
         divide = global_var:zmc_world_population
+        multiply = 1000
       }
     }
   }

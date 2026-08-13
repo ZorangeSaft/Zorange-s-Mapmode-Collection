@@ -4563,7 +4563,7 @@ zmc_world_tax_base_per_population = {
 		else_if = { limit = { zmc_world_tax_base_per_population < 5 zmc_world_tax_base_per_population >= 2 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 2 divide = 3 } } }
 		else_if = { limit = { zmc_world_tax_base_per_population < 2 zmc_world_tax_base_per_population >= 1 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_world_tax_base_per_population subtract = 1 divide = 1 } } }
 		else_if = { limit = { zmc_world_tax_base_per_population < 1 zmc_world_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_world_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_world_tax_base_per_population < 0.5 zmc_world_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_tax_base_per_population divide = 0.5 } } }
+		else_if = { limit = { zmc_world_tax_base_per_population < 0.5 zmc_world_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_world_tax_base_per_population divide = 0.5 } } }
 		else = { value = rgb { 0 0 0 } }
 	}
 
