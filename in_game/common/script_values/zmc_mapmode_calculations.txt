@@ -319,14 +319,6 @@ zmc_location_size_impact = {
 
 
 
-zmc_closeness_to_equator_impact = {
-	value = modifier:location_closeness_to_equator_impact
-}
-
-
-
-
-
 zmc_location_tax_base = {
 	value = location_tax_base
 }
@@ -428,7 +420,7 @@ zmc_real_world_size_location_component = {
 }
 
 zmc_real_world_size_equator_component = {
-	value = 2.7183 #2.7182818285 #eulers number
+	value = 2.7182818285 #2.7183 #2.7182818285 #eulers number
 	pow = zmc_real_world_size_equator_exponent
 }
 
