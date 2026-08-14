@@ -320,7 +320,7 @@ zmc_location_size_impact = {
 
 
 zmc_closeness_to_equator_impact = {
-	value = modifier:closeness_to_equator_impact
+	value = modifier:location_closeness_to_equator_impact
 }
 
 

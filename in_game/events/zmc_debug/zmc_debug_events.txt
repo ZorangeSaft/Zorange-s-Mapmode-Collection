@@ -7,6 +7,7 @@ zmc_debug_refresh_mapmodes.1 = {
 	title = zmc_debug_refresh_mapmodes.title 			 # title key to be localized
 	desc = zmc_debug_refresh_mapmodes.desc 			 # description key to be localized 
 	historical_info = zmc_debug_refresh_mapmodes.historical_info  # optional description text to provide historical context
+	orphan = yes #so the game doesnt complain, you are only supposed to call this event from the console
 	
 	trigger = { 	# List of requirements that need to be fulfilled for event to file
 		#a
