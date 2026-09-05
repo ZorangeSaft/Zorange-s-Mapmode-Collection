@@ -23,3 +23,7 @@ zmc_per_capita = {
 zmc_gdp_per_capita = {
 	texture = "gfx/interface/icons/modifiers/_default.dds"
 }
+
+approximate_real_world_size = {
+	texture = "gfx/interface/icons/modifiers/_default.dds"
+}

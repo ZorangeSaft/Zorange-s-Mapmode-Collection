@@ -452,7 +452,7 @@
 
  mapmode_zmc_region_tax_base_name: "#zmc_color_dark_red Region Tax Base#!"
  MAPMODE_ZMC_REGION_TAX_BASE: "#T $mapmode_zmc_region_tax_base_name$#!\nThis colors [locations|e] by [region|e] [tax_base|e].\n\n@warning_icon!@warning_icon!@warning_icon!#color_red This mapmode is extremely laggy to click on#!@warning_icon!@warning_icon!@warning_icon!\n\n@warning_icon!#color_red It may take several seconds to load#!@warning_icon!\n\n#color_red Tax base mapmodes of higher geographic categories than region are not included as they were too likely to crash your game.\n\nUse debug mode to access them anyway at your own risk.#!"
- MAPMODE_ZMC_REGION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base')|Y]"
+ MAPMODE_ZMC_REGION_TAX_BASE_TT_LAND: "[ROOT.GetLocation.GetRegion.GetName] has a [tax_base|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_tax_base')|Y]"
  MAPMODE_ZMC_REGION_TAX_BASE_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have [region|e] [tax_base|e]."
  MAPMODE_ZMC_REGION_TAX_BASE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised so it does not have [tax_base|e]."
 
@@ -640,8 +640,8 @@
  #real world size mapmode
 
  mapmode_zmc_real_world_size_name: "Real World Size"
- MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their approximate real world size.\n\nIt uses the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance."
- MAPMODE_ZMC_REAL_WORLD_SIZE_TT: "[ROOT.GetLocation.GetName] has an approximate real world size of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y] km²"
+ MAPMODE_ZMC_REAL_WORLD_SIZE: "#T $mapmode_zmc_real_world_size_name$#!\nThis colors [locations|e] by their [approximate_real_world_size|e]."
+ MAPMODE_ZMC_REAL_WORLD_SIZE_TT: "[ROOT.GetLocation.GetName] has an [approximate_real_world_size|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_real_world_size')|Y] km²"
 
  zmc_real_world_size_white_legend_key: "50000 km²"
  zmc_real_world_size_pink_legend_key: "30000 km²"
@@ -651,6 +651,19 @@
  zmc_real_world_size_yellow_legend_key: "2500 km²"
  zmc_real_world_size_red_legend_key: "1000 km²"
  zmc_real_world_size_black_legend_key: "0 km²"
+
+ game_concept_approximate_real_world_size: "Approximate Real World Size"
+ game_concept_approximate_real_world_size_desc: "Approximate Real World Size is determined by the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance.\n\nPlease note that this equation specifically works for the gall stereographic projection that vanilla uses, and would be off for other projections that other mods might use."
+
+
+
+ #real country size mapmode
+
+ mapmode_zdc_country_real_world_size_name: "Real Country Size"
+ MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE: "#T $mapmode_zdc_country_real_world_size_name$#!\nThis colors [countries|e] by the [approximate_real_world_size|e] of their [locations|e] added up."
+ MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetOwner.GetName] has an [approximate_real_world_size|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zdc_country_real_world_size')|Y] km²"
+ MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised."
+ MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land."
 
 
 
@@ -727,7 +740,7 @@
  #real world population density mapmode
 
  mapmode_zmc_population_density_real_world_name: "Real World Population Density"
- MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density in #color_white people#! per #color_white square kilometer#!.\n\nThe [population|e] comes from the game, and the real world size used to calculate the density comes via the same equation as the #color_white Real World Size#! mapmode, which is as follows:\n\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance"
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density in #color_white people#! per #color_white square kilometer#!.\n\n[approximate_real_world_size|e] is used to make this possible, while the [population|e] is just the total ingame [population|e] in the [location|e]."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y] people per #color_white square kilometer#!."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
 
@@ -797,7 +810,7 @@
 
  mapmode_zmc_region_population_name: "#color_orange Region Population#!"
  MAPMODE_ZMC_REGION_POPULATION: "#T $mapmode_zmc_region_population_name$#!\nThis colors [locations|e] by [region|e] [population|e].\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!"
- MAPMODE_ZMC_REGION_POPULATION_TT_LAND: "[ROOT.GetLocation.GetArea.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_population')|D]#!"
+ MAPMODE_ZMC_REGION_POPULATION_TT_LAND: "[ROOT.GetLocation.GetRegion.GetName] has a [population|e] of #color_white [ROOT.GetLocation.MakeScope.ScriptValue('zmc_region_population')|D]#!"
  MAPMODE_ZMC_REGION_POPULATION_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e]."
 
  zmc_region_population_white_legend_key: "1.000.000.000"
