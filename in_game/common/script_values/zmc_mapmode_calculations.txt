@@ -520,3 +520,16 @@ zdv_labor_surplus_location_tooltip = {
 	value = zdv_labor_surplus_location
 	multiply = 1000
 }
+
+
+
+
+
+zdc_country_real_world_size = {
+    value = 0
+    owner = {
+        every_owned_location = {
+            add = zmc_real_world_size
+        }
+    }
+}
