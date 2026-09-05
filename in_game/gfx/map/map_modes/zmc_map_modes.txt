@@ -5101,73 +5101,73 @@ zdv_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size >= 10000000
+				zdv_country_real_world_size >= 100000000
 			}
 			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 10000000
-				zdv_country_real_world_size >= 1500000
+				zdv_country_real_world_size < 100000000
+				zdv_country_real_world_size >= 10000000
 			}
 			lerp = {
 				max_color = rgb { 255 255 255 } #white
 				min_color = rgb { 255 0 255 } #pink
 				factor = {
 					value = zdv_country_real_world_size
-					subtract = 1500000
-					divide = 8500000
+					subtract = 10000000
+					divide = 90000000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 1500000
-				zdv_country_real_world_size >= 500000
+				zdv_country_real_world_size < 10000000
+				zdv_country_real_world_size >= 1000000
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
 					value = zdv_country_real_world_size
-					subtract = 500000
-					divide = 1000000
+					subtract = 1000000
+					divide = 9000000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 500000
-				zdv_country_real_world_size >= 100000
+				zdv_country_real_world_size < 1000000
+				zdv_country_real_world_size >= 200000
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zdv_country_real_world_size
-					subtract = 100000
-					divide = 400000
+					subtract = 200000
+					divide = 800000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 100000
-				zdv_country_real_world_size >= 30000
+				zdv_country_real_world_size < 200000
+				zdv_country_real_world_size >= 50000
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zdv_country_real_world_size
-					subtract = 30000
-					divide = 70000
+					subtract = 50000
+					divide = 150000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 30000
+				zdv_country_real_world_size < 50000
 				zdv_country_real_world_size >= 10000
 			}
 			lerp = {
@@ -5176,7 +5176,7 @@ zdv_country_real_world_size = {
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 10000
-					divide = 20000
+					divide = 40000
 				}
 			}
 		}
