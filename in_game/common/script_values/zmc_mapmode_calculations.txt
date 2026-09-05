@@ -525,11 +525,21 @@ zdv_labor_surplus_location_tooltip = {
 
 
 
-zdc_country_real_world_size = {
+zdv_country_real_world_size = {
     value = 0
     owner = {
         every_owned_location = {
             add = zmc_real_world_size
         }
     }
+}
+
+zmc_country_real_world_size_fraction = {
+	value = zdv_country_real_world_size
+	divide = global_var:zmc_entire_world_real_size
+}
+
+zmc_country_real_earth_size_fraction = {
+	value = zdv_country_real_world_size
+	divide = 148940000 #land on earth is 148,940,000 km² big according to https://theworldfactbook.org/country/world.html
 }

@@ -654,17 +654,17 @@
  zmc_real_world_size_black_legend_key: "0 km²"
 
  game_concept_approximate_real_world_size: "Approximate Real World Size"
- game_concept_approximate_real_world_size_desc: "Approximate Real World Size is determined by the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance.\n\nPlease note that this equation specifically works for the #color_white Gall Stereographic#! projection that vanilla uses, and would be off for other projections that other mods might use."
+ game_concept_approximate_real_world_size_desc: "Approximate Real World Size is determined by the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance.\n\nPlease note that this equation specifically works for the #color_white Gall Stereographic#! projection that #color_white vanilla#! uses, and would be off for other projections that other mods might use."
 
 
 
  #real country size mapmode
 
- mapmode_zdc_country_real_world_size_name: "Real Country Size"
- MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE: "#T $mapmode_zdc_country_real_world_size_name$#!\nThis colors [countries|e] by the [approximate_real_world_size|e] of their [locations|e] added up.\n\nTo save on performance, this mapmode updates #color_white every year#!."
- MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetOwner.GetName] has an [approximate_real_world_size|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zdc_country_real_world_size')|Y] km²"
- MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised."
- MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land."
+ mapmode_zdv_country_real_world_size_name: "Real Country Size"
+ MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE: "#T $mapmode_zdv_country_real_world_size_name$#!\nThis colors [countries|e] by the [approximate_real_world_size|e] of their [locations|e] added up.\n\nTo save on performance, this mapmode updates #color_white every year#!."
+ MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetLocation.GetOwner.GetName] has an [approximate_real_world_size|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zdv_country_real_world_size')|Y] km²\n\nThis is [ROOT.GetLocation.MakeScope.ScriptValue('zmc_country_real_world_size_fraction')|Y%] of the #color_white [GetGlobalVariable('zmc_entire_world_real_size').GetValue|D] km²#! of ownable land area in the world.\n\nWhich is [ROOT.GetLocation.MakeScope.ScriptValue('zmc_country_real_earth_size_fraction')|Y%] of real earth's #color_white 148.9M km²#! of total land area.\n\nTo save on performance, this mapmode updates #color_white every year#!"
+ MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised."
+ MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land."
 
 
 

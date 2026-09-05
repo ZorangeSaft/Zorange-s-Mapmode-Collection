@@ -5084,7 +5084,7 @@ zmc_real_world_size = {
 
 #real country size mapmode
 
-zdc_country_real_world_size = {
+zdv_country_real_world_size = {
 	map_color = {
 		if = {
 			limit = {
@@ -5100,20 +5100,20 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size >= 50000
+				zdv_country_real_world_size >= 50000
 			}
 			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 50000
-				zdc_country_real_world_size >= 30000
+				zdv_country_real_world_size < 50000
+				zdv_country_real_world_size >= 30000
 			}
 			lerp = {
 				max_color = rgb { 255 255 255 } #white
 				min_color = rgb { 255 0 255 } #pink
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 30000
 					divide = 20000
 				}
@@ -5121,14 +5121,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 30000
-				zdc_country_real_world_size >= 20000
+				zdv_country_real_world_size < 30000
+				zdv_country_real_world_size >= 20000
 			}
 			lerp = {
 				max_color = rgb { 255 0 255 } #pink
 				min_color = rgb { 0 0 139 } #dark blue
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 20000
 					divide = 10000
 				}
@@ -5136,14 +5136,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 20000
-				zdc_country_real_world_size >= 10000
+				zdv_country_real_world_size < 20000
+				zdv_country_real_world_size >= 10000
 			}
 			lerp = {
 				max_color = rgb { 0 0 139 } #dark blue
 				min_color = rgb { 135 206 250 } #light blue
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 10000
 					divide = 10000
 				}
@@ -5151,14 +5151,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 10000
-				zdc_country_real_world_size >= 5000
+				zdv_country_real_world_size < 10000
+				zdv_country_real_world_size >= 5000
 			}
 			lerp = {
 				max_color = rgb { 135 206 250 } #light blue
 				min_color = rgb { 0 255 0 } #green
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 5000
 					divide = 5000
 				}
@@ -5166,14 +5166,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 5000
-				zdc_country_real_world_size >= 2500
+				zdv_country_real_world_size < 5000
+				zdv_country_real_world_size >= 2500
 			}
 			lerp = {
 				max_color = rgb { 0 255 0 } #green
 				min_color = rgb { 255 255 0 } #yellow
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 2500
 					divide = 2500
 				}
@@ -5181,14 +5181,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 2500
-				zdc_country_real_world_size >= 1000
+				zdv_country_real_world_size < 2500
+				zdv_country_real_world_size >= 1000
 			}
 			lerp = {
 				max_color = rgb { 255 255 0 } #yellow
 				min_color = rgb { 255 0 0 } #red
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					subtract = 1000
 					divide = 1500
 				}
@@ -5196,14 +5196,14 @@ zdc_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdc_country_real_world_size < 1000
-				zdc_country_real_world_size >= 0
+				zdv_country_real_world_size < 1000
+				zdv_country_real_world_size >= 0
 			}
 			lerp = {
 				max_color = rgb { 255 0 0 } #red
 				min_color = rgb { 0 0 0 } #black
 				factor = {
-					value = zdc_country_real_world_size
+					value = zdv_country_real_world_size
 					divide = 1000
 				}
 			}
@@ -5264,17 +5264,17 @@ zdc_country_real_world_size = {
 				is_land = yes
 				exists = owner
 			}
-			value = MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_LAND
+			value = MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_LAND
 		}
 		else_if = {
 			limit = {
 				is_land = yes
 				NOT = { exists = owner }
 			}
-			value = MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED
+			value = MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED
 		}
 		else = {
-			value = MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_WATER
+			value = MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_WATER
 		}
 	}
 
