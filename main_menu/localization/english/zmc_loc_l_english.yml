@@ -666,12 +666,10 @@
  MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised."
  MAPMODE_ZDV_COUNTRY_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land."
 
- zdv_country_real_world_size_white_legend_key: "100.000.000 km²"
- zdv_country_real_world_size_pink_legend_key: "10.000.000 km²"
- zdv_country_real_world_size_dark_blue_legend_key: "1.000.000 km²"
- zdv_country_real_world_size_green_legend_key: "200.000 km²"
- zdv_country_real_world_size_yellow_legend_key: "50.000 km²"
- zdv_country_real_world_size_red_legend_key: "10.000 km²"
+ zdv_country_real_world_size_dark_blue_legend_key: "100.000.000 km²"
+ zdv_country_real_world_size_green_legend_key: "10.000.000 km²"
+ zdv_country_real_world_size_yellow_legend_key: "1.000.000 km²"
+ zdv_country_real_world_size_red_legend_key: "100.000 km²"
  zdv_country_real_world_size_black_legend_key: "0 km²"
  zdv_country_real_world_size_gray_legend_key: "Uncolonised"
 
@@ -750,7 +748,7 @@
  #real world population density mapmode
 
  mapmode_zmc_population_density_real_world_name: "Real World Population Density"
- MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density in #color_white people#! per #color_white square kilometer#!.\n\n[approximate_real_world_size|e] is used to make this possible, while the [population|e] is just the total ingame [population|e] in the [location|e]."
+ MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD: "#T $mapmode_zmc_population_density_real_world_name$#!\nThis colors [locations|e] by their approximate real world [population|e] density in #color_white people#! per #color_white square kilometer#!.\n\n[approximate_real_world_size|e] is used to make this possible, while the [population|e] is just the total ingame [population|e] of the [location|e]."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_LAND: "[ROOT.GetLocation.GetName] has an approximate real world [population|e] density of [ROOT.GetLocation.MakeScope.ScriptValue('zmc_population_density_real_world')|Y] people per #color_white square kilometer#!."
  MAPMODE_ZMC_POPULATION_DENSITY_REAL_WORLD_TT_WATER: "[ROOT.GetLocation.GetName] is not land so it does not have a [population|e] density."
 
