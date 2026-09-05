@@ -5101,24 +5101,9 @@ zdv_country_real_world_size = {
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size >= 100000000
-			}
-			value = rgb { 255 255 255 } #white
-		}
-		else_if = {
-			limit = {
-				zdv_country_real_world_size < 100000000
 				zdv_country_real_world_size >= 10000000
 			}
-			lerp = {
-				max_color = rgb { 255 255 255 } #white
-				min_color = rgb { 255 0 255 } #pink
-				factor = {
-					value = zdv_country_real_world_size
-					subtract = 10000000
-					divide = 90000000
-				}
-			}
+			value = rgb { 0 0 139 } #light blue
 		}
 		else_if = {
 			limit = {
@@ -5126,8 +5111,8 @@ zdv_country_real_world_size = {
 				zdv_country_real_world_size >= 1000000
 			}
 			lerp = {
-				max_color = rgb { 255 0 255 } #pink
-				min_color = rgb { 0 0 139 } #dark blue
+				max_color = rgb { 0 0 139 } #light blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 1000000
@@ -5141,8 +5126,8 @@ zdv_country_real_world_size = {
 				zdv_country_real_world_size >= 100000
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #dark blue
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 100000
@@ -5156,8 +5141,8 @@ zdv_country_real_world_size = {
 				zdv_country_real_world_size >= 10000
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 255 255 0 } #yellow
+				min_color = rgb { 255 0 0 } #red
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 10000
@@ -5168,21 +5153,6 @@ zdv_country_real_world_size = {
 		else_if = {
 			limit = {
 				zdv_country_real_world_size < 10000
-				zdv_country_real_world_size >= 1000
-			}
-			lerp = {
-				max_color = rgb { 255 255 0 } #yellow
-				min_color = rgb { 255 0 0 } #red
-				factor = {
-					value = zdv_country_real_world_size
-					subtract = 1000
-					divide = 9000
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				zdv_country_real_world_size < 1000
 				zdv_country_real_world_size >= 0
 			}
 			lerp = {
@@ -5190,7 +5160,7 @@ zdv_country_real_world_size = {
 				min_color = rgb { 0 0 0 } #black
 				factor = {
 					value = zdv_country_real_world_size
-					divide = 1000
+					divide = 10000
 				}
 			}
 		}
@@ -5200,18 +5170,8 @@ zdv_country_real_world_size = {
 	}
 
 	legend_key = {
-		desc = "zdv_country_real_world_size_white_legend_key"
-		color = rgb { 255 255 255 }
-	}
-
-	legend_key = {
-		desc = "zdv_country_real_world_size_pink_legend_key"
-		color = rgb { 255 0 255 }
-	}
-
-	legend_key = {
-		desc = "zdv_country_real_world_size_dark_blue_legend_key"
-		color = rgb { 0 0 139 }
+		desc = "zdv_country_real_world_size_light_blue_legend_key"
+		color = rgb { 135 206 250 }
 	}
 
 	legend_key = {
