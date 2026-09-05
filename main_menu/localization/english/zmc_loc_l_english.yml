@@ -4,6 +4,7 @@
  #\n\n@warning_icon! #color_red This mapmode is laggy to click on#! @warning_icon!
  #\n\n@adm! #color_yellow Strategy#! @adm!\n
  #\n\n@warning_icon! This is a previously hidden #color_white vanilla#! mapmode, so might break with any update, in which case you should report it on the mods steam page @warning_icon!"
+ #\n\nTo save on performance, this mapmode updates #color_white every year#!
 
  #urbanisation suitability mapmode/urbanisation mapmode
 
@@ -653,14 +654,14 @@
  zmc_real_world_size_black_legend_key: "0 km²"
 
  game_concept_approximate_real_world_size: "Approximate Real World Size"
- game_concept_approximate_real_world_size_desc: "Approximate Real World Size is determined by the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance.\n\nPlease note that this equation specifically works for the gall stereographic projection that vanilla uses, and would be off for other projections that other mods might use."
+ game_concept_approximate_real_world_size_desc: "Approximate Real World Size is determined by the following equation:\n#color_white real_world_size = 2.6565 x location_size^1.9533 x e^(1.6330 x equator_distance - 0.8312 x equator_distance^2)#!\n\nThis equation has a 2.8784% mean percentage error, 3.9979% in the 90th and 14.8097% in the 99th percentile, meaning it is not perfect, but a pretty close approximation.\n\nThis was figured out using a table of real world sizes generated in qgis based on the actual location pixel image, and in game data of location_size and equator_distance.\n\nPlease note that this equation specifically works for the #color_white Gall Stereographic#! projection that vanilla uses, and would be off for other projections that other mods might use."
 
 
 
  #real country size mapmode
 
  mapmode_zdc_country_real_world_size_name: "Real Country Size"
- MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE: "#T $mapmode_zdc_country_real_world_size_name$#!\nThis colors [countries|e] by the [approximate_real_world_size|e] of their [locations|e] added up."
+ MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE: "#T $mapmode_zdc_country_real_world_size_name$#!\nThis colors [countries|e] by the [approximate_real_world_size|e] of their [locations|e] added up.\n\nTo save on performance, this mapmode updates #color_white every year#!."
  MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_LAND: "[ROOT.GetOwner.GetName] has an [approximate_real_world_size|e] of [ROOT.GetLocation.MakeScope.ScriptValue('zdc_country_real_world_size')|Y] km²"
  MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_UNCOLONISED: "[ROOT.GetLocation.GetName] is uncolonised."
  MAPMODE_ZDC_COUNTRY_REAL_WORLD_SIZE_TT_WATER: "[ROOT.GetLocation.GetName] is not land."

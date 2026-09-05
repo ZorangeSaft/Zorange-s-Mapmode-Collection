@@ -5282,9 +5282,9 @@ zdc_country_real_world_size = {
 	medium_map_names = country
 	large_map_names = country
 
-	small_tooltip_context = country
-	medium_tooltip_context = country
-	large_tooltip_context = country
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
 
 	fill_in_impassable = yes
 	enable_snow = no
