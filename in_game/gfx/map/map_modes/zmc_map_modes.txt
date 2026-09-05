@@ -5103,41 +5103,71 @@ zdv_country_real_world_size = {
 			limit = {
 				zdv_country_real_world_size >= 10000000
 			}
-			value = rgb { 0 0 139 } #light blue
+			value = rgb { 255 255 255 } #white
 		}
 		else_if = {
 			limit = {
 				zdv_country_real_world_size < 10000000
-				zdv_country_real_world_size >= 1000000
+				zdv_country_real_world_size >= 1500000
 			}
 			lerp = {
-				max_color = rgb { 0 0 139 } #light blue
-				min_color = rgb { 0 255 0 } #green
+				max_color = rgb { 255 255 255 } #white
+				min_color = rgb { 255 0 255 } #pink
 				factor = {
 					value = zdv_country_real_world_size
-					subtract = 1000000
-					divide = 9000000
+					subtract = 1500000
+					divide = 8500000
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				zdv_country_real_world_size < 1000000
+				zdv_country_real_world_size < 1500000
+				zdv_country_real_world_size >= 500000
+			}
+			lerp = {
+				max_color = rgb { 255 0 255 } #pink
+				min_color = rgb { 0 0 139 } #dark blue
+				factor = {
+					value = zdv_country_real_world_size
+					subtract = 500000
+					divide = 1000000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_country_real_world_size < 500000
 				zdv_country_real_world_size >= 100000
 			}
 			lerp = {
-				max_color = rgb { 0 255 0 } #green
-				min_color = rgb { 255 255 0 } #yellow
+				max_color = rgb { 0 0 139 } #dark blue
+				min_color = rgb { 0 255 0 } #green
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 100000
-					divide = 900000
+					divide = 400000
 				}
 			}
 		}
 		else_if = {
 			limit = {
 				zdv_country_real_world_size < 100000
+				zdv_country_real_world_size >= 30000
+			}
+			lerp = {
+				max_color = rgb { 0 255 0 } #green
+				min_color = rgb { 255 255 0 } #yellow
+				factor = {
+					value = zdv_country_real_world_size
+					subtract = 30000
+					divide = 70000
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				zdv_country_real_world_size < 30000
 				zdv_country_real_world_size >= 10000
 			}
 			lerp = {
@@ -5146,7 +5176,7 @@ zdv_country_real_world_size = {
 				factor = {
 					value = zdv_country_real_world_size
 					subtract = 10000
-					divide = 90000
+					divide = 20000
 				}
 			}
 		}
@@ -5170,8 +5200,18 @@ zdv_country_real_world_size = {
 	}
 
 	legend_key = {
-		desc = "zdv_country_real_world_size_light_blue_legend_key"
-		color = rgb { 135 206 250 }
+		desc = "zdv_country_real_world_size_white_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zdv_country_real_world_size_pink_legend_key"
+		color = rgb { 255 0 255 }
+	}
+
+	legend_key = {
+		desc = "zdv_country_real_world_size_dark_blue_legend_key"
+		color = rgb { 0 0 139 }
 	}
 
 	legend_key = {
