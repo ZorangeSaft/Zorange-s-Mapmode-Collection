@@ -45,8 +45,6 @@
 			}
 		}
 	}
-
-	zmc_setup_yearly = yes
 }
 
 
