@@ -6,28 +6,16 @@ on_game_start = { #for new saves
 	}
 }
 
-#monthly_country_pulse = { #for adding to existing saves
-#	on_actions = {
-#		zmc_on_game_start
-#	}
-#}
-#
-#yearly_country_pulse = {
-#	on_actions = {
-#		zmc_yearly
-#	}
-#}
-
-zmc_on_game_start = {
-	trigger = { NOT = { has_global_variable = zmc_setup_done } }
-	effect = { zmc_setup_once = yes } #includes zmc_yearly setup
-}
-
 weather_monthly_pulse = {
 	on_actions = {
 		zmc_yearly
 		zmc_on_game_start #for adding to existing saves
 	}
+}
+
+zmc_on_game_start = {
+	trigger = { NOT = { has_global_variable = zmc_setup_done } }
+	effect = { zmc_setup_once = yes } #includes zmc_yearly setup
 }
 
 zmc_yearly = {

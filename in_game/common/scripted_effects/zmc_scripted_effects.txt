@@ -45,46 +45,40 @@
 		}
 	}
 
-	zmc_yearly = yes
+	zmc_setup_yearly = yes
 }
 
 
 
 zmc_setup_yearly = {
 	set_global_variable = {
-		name = zmc_world_population
+		name = zmc_world_population_var
 		value = 0
 	}
 	set_global_variable = {
-		name = zmc_world_tax_base
+		name = zmc_world_tax_base_var
 		value = 0
 	}
 	every_ownable_location = {
 		change_global_variable = {
-			name = zmc_world_population
+			name = zmc_world_population_var
 			value = {
-				value = zmc_world_population
-				#every_ownable_location = {
 				add = population
-				#}
 				multiply = 1000
 			}
 		}
 		change_global_variable = {
-			name = zmc_world_tax_base
+			name = zmc_world_tax_base_var
 			value = {
-				value = zmc_world_tax_base
-				#every_ownable_location = {
-					add = location_tax_base
-				#}
+				add = location_tax_base
 			}
 		}
 	}
 	set_global_variable = { #calculating world tax base per population every year to save on performance
 		name = zmc_world_tax_base_per_population_var
 		value = {
-			value = global_var:zmc_world_tax_base
-			divide = global_var:zmc_world_population
+			value = global_var:zmc_world_tax_base_var
+			divide = global_var:zmc_world_population_var
 			multiply = 1000
 		}
 	}

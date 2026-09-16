@@ -146,7 +146,7 @@ zmc_continent_population = {
 }
 
 zmc_world_population = {
-	value = global_var:zmc_world_population
+	value = global_var:zmc_world_population_var
 }
 
 
@@ -364,7 +364,7 @@ zmc_continent_tax_base = { #too laggy, crashes the game every time you try and u
 }
 
 zmc_world_tax_base = {
-	value = global_var:zmc_world_tax_base
+	value = global_var:zmc_world_tax_base_var
 }
 
 
