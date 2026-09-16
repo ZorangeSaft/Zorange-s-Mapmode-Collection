@@ -82,6 +82,7 @@ zmc_setup_yearly = {
 	}
 
 	zmc_calculate_higher_tier_stats = yes
+	zmc_calculate_country_real_world_size = yes
 }
 
 
@@ -189,6 +190,27 @@ zmc_calculate_higher_tier_stats = { #caches area/region/sub_continent/continent 
 			name = zmc_continent_tax_base_map
 			key = this
 			value = local_var:zmc_continent_tax_base_accumulator
+		}
+	}
+}
+
+
+
+zmc_calculate_country_real_world_size = { #caches each country's real world size once per year, was recalculated on every map paint before
+	clear_global_variable_map = zmc_country_real_world_size_map
+
+	every_country = {
+		set_local_variable = { name = zmc_country_real_world_size_accumulator value = 0 }
+		every_owned_location = {
+			change_local_variable = {
+				name = zmc_country_real_world_size_accumulator
+				add = zmc_real_world_size
+			}
+		}
+		add_to_global_variable_map = {
+			name = zmc_country_real_world_size_map
+			key = this
+			value = local_var:zmc_country_real_world_size_accumulator
 		}
 	}
 }

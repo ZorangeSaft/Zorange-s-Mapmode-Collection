@@ -485,12 +485,9 @@ zdv_labor_surplus_location_tooltip = {
 
 
 
-zdv_country_real_world_size = {
-    value = 0
+zdv_country_real_world_size = { #cached once per year via zmc_calculate_country_real_world_size, see zmc_scripted_effects.txt
     owner = {
-        every_owned_location = {
-            add = zmc_real_world_size
-        }
+        value = "global_variable_map(zmc_country_real_world_size_map|this)"
     }
 }
 

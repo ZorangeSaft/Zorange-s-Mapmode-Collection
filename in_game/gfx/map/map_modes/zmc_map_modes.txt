@@ -3763,7 +3763,7 @@ zmc_sub_continent_tax_base = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = economy #cached once per year now, no longer laggy
-	index = 2
+	index = 3
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -3826,7 +3826,7 @@ zmc_continent_tax_base = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = economy #cached once per year now, no longer laggy
-	index = 2
+	index = 3
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -4465,7 +4465,7 @@ zmc_sub_continent_tax_base_per_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = economy #cached once per year now, no longer laggy
-	index = 2
+	index = 3
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
@@ -4531,7 +4531,7 @@ zmc_continent_tax_base_per_population = {
 	flatmap_behaviour = always
 	use_fow = no
 	category = economy #cached once per year now, no longer laggy
-	index = 2
+	index = 3
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
