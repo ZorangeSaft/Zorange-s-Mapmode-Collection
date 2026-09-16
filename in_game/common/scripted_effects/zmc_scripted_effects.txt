@@ -80,23 +80,115 @@ zmc_setup_yearly = {
 			multiply = 1000
 		}
 	}
-	#set_global_variable = { #calculating world population every year to save on performance
-	#	name = zmc_world_population
-	#	value = {
-	#		every_location_in_the_world = {
-	#			limit = { is_ownable = yes }
-	#			add = population
-	#		}
-	#		multiply = 1000
-	#	}
-	#}
-	#set_global_variable = { #calculating world tax base every year to save on performance
-	#	name = zmc_world_tax_base
-	#	value = {
-	#		every_location_in_the_world = {
-	#			limit = { is_ownable = yes }
-	#			add = location_tax_base
-	#		}
-	#	}
-	#}
+
+	zmc_calculate_higher_tier_stats = yes
+}
+
+
+
+
+#the following codes base was provided by caeservincens, but actual implementation for the mod was entirely made by github copilot, so have caution
+zmc_calculate_higher_tier_stats = { #caches area/region/sub_continent/continent population & tax_base once per year instead of recalculating on every map paint
+	clear_global_variable_map = zmc_area_population_map
+	clear_global_variable_map = zmc_area_tax_base_map
+	clear_global_variable_map = zmc_region_population_map
+	clear_global_variable_map = zmc_region_tax_base_map
+	clear_global_variable_map = zmc_sub_continent_population_map
+	clear_global_variable_map = zmc_sub_continent_tax_base_map
+	clear_global_variable_map = zmc_continent_population_map
+	clear_global_variable_map = zmc_continent_tax_base_map
+
+	every_continent = {
+		set_local_variable = { name = zmc_continent_population_accumulator value = 0 }
+		set_local_variable = { name = zmc_continent_tax_base_accumulator value = 0 }
+		every_sub_continent_in_continent = {
+			set_local_variable = { name = zmc_sub_continent_population_accumulator value = 0 }
+			set_local_variable = { name = zmc_sub_continent_tax_base_accumulator value = 0 }
+			every_region_in_continent = { #despite the name, this is scoped from sub_continent and iterates its regions
+				set_local_variable = { name = zmc_region_population_accumulator value = 0 }
+				set_local_variable = { name = zmc_region_tax_base_accumulator value = 0 }
+				every_area_in_region = {
+					set_local_variable = { name = zmc_area_population_accumulator value = 0 }
+					set_local_variable = { name = zmc_area_tax_base_accumulator value = 0 }
+					every_province_in_area = {
+						every_location_in_province = {
+							limit = { is_ownable = yes }
+							change_local_variable = {
+								name = zmc_area_population_accumulator
+								add = population
+							}
+							change_local_variable = {
+								name = zmc_area_tax_base_accumulator
+								add = location_tax_base
+							}
+							change_local_variable = {
+								name = zmc_region_population_accumulator
+								add = population
+							}
+							change_local_variable = {
+								name = zmc_region_tax_base_accumulator
+								add = location_tax_base
+							}
+							change_local_variable = {
+								name = zmc_sub_continent_population_accumulator
+								add = population
+							}
+							change_local_variable = {
+								name = zmc_sub_continent_tax_base_accumulator
+								add = location_tax_base
+							}
+							change_local_variable = {
+								name = zmc_continent_population_accumulator
+								add = population
+							}
+							change_local_variable = {
+								name = zmc_continent_tax_base_accumulator
+								add = location_tax_base
+							}
+						}
+					}
+					add_to_global_variable_map = {
+						name = zmc_area_population_map
+						key = this
+						value = local_var:zmc_area_population_accumulator
+					}
+					add_to_global_variable_map = {
+						name = zmc_area_tax_base_map
+						key = this
+						value = local_var:zmc_area_tax_base_accumulator
+					}
+				}
+				add_to_global_variable_map = {
+					name = zmc_region_population_map
+					key = this
+					value = local_var:zmc_region_population_accumulator
+				}
+				add_to_global_variable_map = {
+					name = zmc_region_tax_base_map
+					key = this
+					value = local_var:zmc_region_tax_base_accumulator
+				}
+			}
+			add_to_global_variable_map = {
+				name = zmc_sub_continent_population_map
+				key = this
+				value = local_var:zmc_sub_continent_population_accumulator
+			}
+			add_to_global_variable_map = {
+				name = zmc_sub_continent_tax_base_map
+				key = this
+				value = local_var:zmc_sub_continent_tax_base_accumulator
+			}
+		}
+		add_to_global_variable_map = {
+			name = zmc_continent_population_map
+			key = this
+			value = local_var:zmc_continent_population_accumulator
+		}
+		add_to_global_variable_map = {
+			name = zmc_continent_tax_base_map
+			key = this
+			value = local_var:zmc_continent_tax_base_accumulator
+		}
+	}
 }

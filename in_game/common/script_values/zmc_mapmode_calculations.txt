@@ -125,23 +125,23 @@ zmc_province_population = {
   multiply = 1000 #for 1 pop being 1000 people
 }
 
-zmc_area_population = {
-	value = area.population
+zmc_area_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_area_population_map|area)"
 	multiply = 1000 #for 1 pop being 1000 people
 }
 
-zmc_region_population = {
-	value = region.population
+zmc_region_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_region_population_map|region)"
 	multiply = 1000 #for 1 pop being 1000 people
 }
 
-zmc_sub_continent_population = {
-	value = sub_continent.population
+zmc_sub_continent_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_sub_continent_population_map|sub_continent)"
 	multiply = 1000 #for 1 pop being 1000 people
 }
 
-zmc_continent_population = {
-	value = continent.population
+zmc_continent_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_continent_population_map|continent)"
 	multiply = 1000 #for 1 pop being 1000 people
 }
 
@@ -178,44 +178,24 @@ zmc_province_tax_base_per_population = {
     divide = province.population
 }
 
-zmc_area_tax_base_per_population = {
-	area = {
-        every_location_in_area = {
-            limit = { is_ownable = yes }
-            add = location_tax_base
-        }
-    }
-    divide = area.population
+zmc_area_tax_base_per_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_area_tax_base_map|area)"
+	divide = "global_variable_map(zmc_area_population_map|area)"
 }
 
-zmc_region_tax_base_per_population = {
-	region = {
-        every_location_in_region = {
-            limit = { is_ownable = yes }
-            add = location_tax_base
-        }
-    }
-    divide = region.population
+zmc_region_tax_base_per_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_region_tax_base_map|region)"
+	divide = "global_variable_map(zmc_region_population_map|region)"
 }
 
-zmc_sub_continent_tax_base_per_population = {
-	sub_continent = {
-        every_location_in_sub_continent = {
-            limit = { is_ownable = yes }
-            add = location_tax_base
-        }
-    }
-    divide = sub_continent.population
+zmc_sub_continent_tax_base_per_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_sub_continent_tax_base_map|sub_continent)"
+	divide = "global_variable_map(zmc_sub_continent_population_map|sub_continent)"
 }
 
-zmc_continent_tax_base_per_population = {
-	continent = {
-		every_location_in_continent = {
-			limit = { is_ownable = yes }
-			add = location_tax_base
-		}
-	}
-	divide = continent.population
+zmc_continent_tax_base_per_population = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_continent_tax_base_map|continent)"
+	divide = "global_variable_map(zmc_continent_population_map|continent)"
 }
 
 zmc_world_tax_base_per_population = {
@@ -327,40 +307,20 @@ zmc_province_tax_base = {
 	value = province.province_tax_base #province_tax_base #location_tax_base
 }
 
-zmc_area_tax_base = {
-	area = {
-		every_location_in_area = {
-			limit = { is_ownable = yes }
-			add = location_tax_base
-		}
-	}
+zmc_area_tax_base = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_area_tax_base_map|area)"
 }
 
-zmc_region_tax_base = {
-	region = {
-		every_location_in_region = {
-			limit = { is_ownable = yes }
-			add = location_tax_base
-		}
-	}
+zmc_region_tax_base = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_region_tax_base_map|region)"
 }
 
-zmc_sub_continent_tax_base = {
-	sub_continent = {
-		every_location_in_sub_continent = {
-			limit = { is_ownable = yes }
-			add = location_tax_base
-		}
-	}
+zmc_sub_continent_tax_base = { #cached once per year via zmc_calculate_higher_tier_stats, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_sub_continent_tax_base_map|sub_continent)"
 }
 
-zmc_continent_tax_base = { #too laggy, crashes the game every time you try and use it
-	continent = {
-		every_location_in_continent = {
-			limit = { is_ownable = yes }
-			add = location_tax_base
-		}
-	}
+zmc_continent_tax_base = { #cached once per year via zmc_calculate_higher_tier_stats, no longer laggy, see zmc_scripted_effects.txt
+	value = "global_variable_map(zmc_continent_tax_base_map|continent)"
 }
 
 zmc_world_tax_base = {

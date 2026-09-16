@@ -3762,7 +3762,7 @@ zmc_sub_continent_tax_base = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = debug #too laggy and likely to crash the game to be allowed to be used by normal players
+	category = economy #cached once per year now, no longer laggy
 	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
@@ -3825,7 +3825,7 @@ zmc_continent_tax_base = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = debug #too laggy and likely to crash the game to be allowed to be used by normal players
+	category = economy #cached once per year now, no longer laggy
 	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
@@ -4464,7 +4464,7 @@ zmc_sub_continent_tax_base_per_population = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = debug
+	category = economy #cached once per year now, no longer laggy
 	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
@@ -4530,7 +4530,7 @@ zmc_continent_tax_base_per_population = {
 	enable_snow = no
 	flatmap_behaviour = always
 	use_fow = no
-	category = debug
+	category = economy #cached once per year now, no longer laggy
 	index = 2
 	map_markers = { all = no }
 	gradient_parameters = {
