@@ -111,8 +111,8 @@ zmc_calculate_higher_tier_stats = { #caches area/region/sub_continent/continent 
 				every_area_in_region = {
 					set_local_variable = { name = zmc_area_population_accumulator value = 0 }
 					set_local_variable = { name = zmc_area_tax_base_accumulator value = 0 }
-					every_province_in_area = {
-						every_location_in_province = {
+					every_province_definition_in_area = {
+						every_location_in_province_definition = {
 							limit = { is_ownable = yes }
 							change_local_variable = {
 								name = zmc_area_population_accumulator
