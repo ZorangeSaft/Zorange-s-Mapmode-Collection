@@ -63,18 +63,20 @@ zmc_setup_yearly = {
 		change_global_variable = {
 			name = zmc_world_population
 			value = {
-				every_ownable_location = {
-					add = population
-				}
+				value = zmc_world_population
+				#every_ownable_location = {
+				add = population
+				#}
 				multiply = 1000
 			}
 		}
 		change_global_variable = {
 			name = zmc_world_tax_base
 			value = {
-				every_ownable_location = {
+				value = zmc_world_tax_base
+				#every_ownable_location = {
 					add = location_tax_base
-				}
+				#}
 			}
 		}
 	}

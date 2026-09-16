@@ -17,10 +17,13 @@ zmc_debug_refresh_mapmodes.1 = {
 		error_log = "test message"
 
 		zmc_setup_once = yes
+		zmc_yearly = yes
 	}
 
 	option = {
-	name = zmc_debug_refresh_mapmodes.b
+		name = zmc_debug_refresh_mapmodes.b
+		zmc_setup_once = yes
+		zmc_yearly = yes
 	}
 }
 

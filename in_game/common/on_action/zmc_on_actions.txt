@@ -2,7 +2,6 @@
 
 on_game_start = { #for new saves
 	on_actions = {
-		zmc_yearly
 		zmc_on_game_start
 	}
 }
