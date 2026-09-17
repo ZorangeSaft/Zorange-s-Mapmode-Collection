@@ -500,3 +500,293 @@ zmc_country_real_earth_size_fraction = {
 	value = zdv_country_real_world_size
 	divide = 148940000 #land on earth is 148,940,000 km² big according to https://theworldfactbook.org/country/world.html
 }
+
+
+
+
+
+#country population/tax base mapmodes, built-in country scope aggregates so no yearly caching needed
+
+zmc_country_population = {
+	owner = {
+		value = total_population
+		multiply = 1000 #for 1 pop being 1000 people
+	}
+}
+
+zmc_country_tax_base = {
+	owner = {
+		value = country_tax_base
+	}
+}
+
+zmc_country_tax_base_per_population = {
+	owner = {
+		value = country_tax_base
+		divide = total_population
+	}
+}
+
+
+
+
+
+#percentage of higher geographic tier's tax base, for tooltips on the tax base mapmodes
+
+zmc_location_tax_base_pct_of_province = {
+	value = zmc_location_tax_base
+	divide = zmc_province_tax_base
+	multiply = 100
+}
+
+zmc_location_tax_base_pct_of_area = {
+	value = zmc_location_tax_base
+	divide = zmc_area_tax_base
+	multiply = 100
+}
+
+zmc_location_tax_base_pct_of_region = {
+	value = zmc_location_tax_base
+	divide = zmc_region_tax_base
+	multiply = 100
+}
+
+zmc_location_tax_base_pct_of_sub_continent = {
+	value = zmc_location_tax_base
+	divide = zmc_sub_continent_tax_base
+	multiply = 100
+}
+
+zmc_location_tax_base_pct_of_continent = {
+	value = zmc_location_tax_base
+	divide = zmc_continent_tax_base
+	multiply = 100
+}
+
+zmc_location_tax_base_pct_of_country = {
+	value = zmc_location_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+zmc_province_tax_base_pct_of_area = {
+	value = zmc_province_tax_base
+	divide = zmc_area_tax_base
+	multiply = 100
+}
+
+zmc_province_tax_base_pct_of_region = {
+	value = zmc_province_tax_base
+	divide = zmc_region_tax_base
+	multiply = 100
+}
+
+zmc_province_tax_base_pct_of_sub_continent = {
+	value = zmc_province_tax_base
+	divide = zmc_sub_continent_tax_base
+	multiply = 100
+}
+
+zmc_province_tax_base_pct_of_continent = {
+	value = zmc_province_tax_base
+	divide = zmc_continent_tax_base
+	multiply = 100
+}
+
+zmc_province_tax_base_pct_of_country = {
+	value = zmc_province_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+zmc_area_tax_base_pct_of_region = {
+	value = zmc_area_tax_base
+	divide = zmc_region_tax_base
+	multiply = 100
+}
+
+zmc_area_tax_base_pct_of_sub_continent = {
+	value = zmc_area_tax_base
+	divide = zmc_sub_continent_tax_base
+	multiply = 100
+}
+
+zmc_area_tax_base_pct_of_continent = {
+	value = zmc_area_tax_base
+	divide = zmc_continent_tax_base
+	multiply = 100
+}
+
+zmc_area_tax_base_pct_of_country = {
+	value = zmc_area_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+zmc_region_tax_base_pct_of_sub_continent = {
+	value = zmc_region_tax_base
+	divide = zmc_sub_continent_tax_base
+	multiply = 100
+}
+
+zmc_region_tax_base_pct_of_continent = {
+	value = zmc_region_tax_base
+	divide = zmc_continent_tax_base
+	multiply = 100
+}
+
+zmc_region_tax_base_pct_of_country = {
+	value = zmc_region_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+zmc_sub_continent_tax_base_pct_of_continent = {
+	value = zmc_sub_continent_tax_base
+	divide = zmc_continent_tax_base
+	multiply = 100
+}
+
+zmc_sub_continent_tax_base_pct_of_country = {
+	value = zmc_sub_continent_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+zmc_continent_tax_base_pct_of_country = {
+	value = zmc_continent_tax_base
+	divide = zmc_country_tax_base
+	multiply = 100
+}
+
+
+
+
+
+#percentage of higher geographic tier's population, for tooltips on the population mapmodes
+
+zmc_location_population_pct_of_province = {
+	value = zmc_population
+	divide = zmc_province_population
+	multiply = 100
+}
+
+zmc_location_population_pct_of_area = {
+	value = zmc_population
+	divide = zmc_area_population
+	multiply = 100
+}
+
+zmc_location_population_pct_of_region = {
+	value = zmc_population
+	divide = zmc_region_population
+	multiply = 100
+}
+
+zmc_location_population_pct_of_sub_continent = {
+	value = zmc_population
+	divide = zmc_sub_continent_population
+	multiply = 100
+}
+
+zmc_location_population_pct_of_continent = {
+	value = zmc_population
+	divide = zmc_continent_population
+	multiply = 100
+}
+
+zmc_location_population_pct_of_country = {
+	value = zmc_population
+	divide = zmc_country_population
+	multiply = 100
+}
+
+zmc_province_population_pct_of_area = {
+	value = zmc_province_population
+	divide = zmc_area_population
+	multiply = 100
+}
+
+zmc_province_population_pct_of_region = {
+	value = zmc_province_population
+	divide = zmc_region_population
+	multiply = 100
+}
+
+zmc_province_population_pct_of_sub_continent = {
+	value = zmc_province_population
+	divide = zmc_sub_continent_population
+	multiply = 100
+}
+
+zmc_province_population_pct_of_continent = {
+	value = zmc_province_population
+	divide = zmc_continent_population
+	multiply = 100
+}
+
+zmc_province_population_pct_of_country = {
+	value = zmc_province_population
+	divide = zmc_country_population
+	multiply = 100
+}
+
+zmc_area_population_pct_of_region = {
+	value = zmc_area_population
+	divide = zmc_region_population
+	multiply = 100
+}
+
+zmc_area_population_pct_of_sub_continent = {
+	value = zmc_area_population
+	divide = zmc_sub_continent_population
+	multiply = 100
+}
+
+zmc_area_population_pct_of_continent = {
+	value = zmc_area_population
+	divide = zmc_continent_population
+	multiply = 100
+}
+
+zmc_area_population_pct_of_country = {
+	value = zmc_area_population
+	divide = zmc_country_population
+	multiply = 100
+}
+
+zmc_region_population_pct_of_sub_continent = {
+	value = zmc_region_population
+	divide = zmc_sub_continent_population
+	multiply = 100
+}
+
+zmc_region_population_pct_of_continent = {
+	value = zmc_region_population
+	divide = zmc_continent_population
+	multiply = 100
+}
+
+zmc_region_population_pct_of_country = {
+	value = zmc_region_population
+	divide = zmc_country_population
+	multiply = 100
+}
+
+zmc_sub_continent_population_pct_of_continent = {
+	value = zmc_sub_continent_population
+	divide = zmc_continent_population
+	multiply = 100
+}
+
+zmc_sub_continent_population_pct_of_country = {
+	value = zmc_sub_continent_population
+	divide = zmc_country_population
+	multiply = 100
+}
+
+zmc_continent_population_pct_of_country = {
+	value = zmc_continent_population
+	divide = zmc_country_population
+	multiply = 100
+}
