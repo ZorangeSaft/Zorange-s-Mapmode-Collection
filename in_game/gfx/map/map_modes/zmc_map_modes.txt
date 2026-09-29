@@ -3984,6 +3984,69 @@ zmc_world_tax_base = {
 
 
 
+#country tax base mapmode
+
+zmc_country_tax_base = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
+		else_if = { limit = { zmc_country_tax_base >= 10000 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_country_tax_base < 10000 zmc_country_tax_base >= 2000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_country_tax_base subtract = 2000 divide = 8000 } } }
+		else_if = { limit = { zmc_country_tax_base < 2000 zmc_country_tax_base >= 1000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_country_tax_base subtract = 1000 divide = 1000 } } }
+		else_if = { limit = { zmc_country_tax_base < 1000 zmc_country_tax_base >= 500 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_country_tax_base subtract = 500 divide = 500 } } }
+		else_if = { limit = { zmc_country_tax_base < 500 zmc_country_tax_base >= 100 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_country_tax_base subtract = 100 divide = 400 } } }
+		else_if = { limit = { zmc_country_tax_base < 100 zmc_country_tax_base >= 10 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_country_tax_base subtract = 10 divide = 90 } } }
+		else_if = { limit = { zmc_country_tax_base < 10 zmc_country_tax_base >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_country_tax_base divide = 10 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_country_tax_base_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_country_tax_base_dark_blue_legend_key" color = rgb { 0 0 139 } }
+	legend_key = { desc = "zmc_country_tax_base_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_country_tax_base_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_country_tax_base_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_country_tax_base_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_country_tax_base_black_legend_key" color = rgb { 0 0 0 } }
+	legend_key = { desc = "zmc_country_tax_base_gray_legend_key" color = rgb { 50 50 50 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes exists = owner } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_LAND }
+		else_if = { limit = { is_land = yes NOT = { exists = owner } } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_UNCOLONISED }
+		else = { value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_WATER }
+	}
+
+	small_map_names = country
+	medium_map_names = country
+	large_map_names = country
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = economy
+	index = 3
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
+}
+
+
+
 #wealth per population mapmode
 
 zmc_location_tax_base_per_population = {
@@ -4656,6 +4719,69 @@ zmc_world_tax_base_per_population = {
 	small_map_names = location
 	medium_map_names = location
 	large_map_names = location
+	small_tooltip_context = location
+	medium_tooltip_context = location
+	large_tooltip_context = location
+	fill_in_impassable = yes
+	enable_snow = no
+	flatmap_behaviour = always
+	use_fow = no
+	category = economy
+	index = 3
+	map_markers = { all = no }
+	gradient_parameters = {
+		zoom_step = @zoom_step_near
+		gradient_alpha_inside = 1
+		gradient_alpha_outside = 1
+		gradient_width = @flatmap_far_gradient_width
+		gradient_color_mult = @flatmap_far_gradient_color_mult
+		edge_width = 0
+		edge_sharpness = @flatmap_far_edge_sharpness
+		edge_alpha = 0
+		edge_color_mult = 0
+		before_lighting_blend = @flatmap_far_before_lighting_blend
+		after_lighting_blend = @flatmap_far_after_lighting_blend
+	}
+	color_refresh_counters = { Month }
+	color_and_names_refresh_counters = { Month }
+}
+
+
+
+#country wealth per population mapmode
+
+zmc_country_tax_base_per_population = {
+	map_color = {
+		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
+		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
+		else_if = { limit = { zmc_country_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 10 zmc_country_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_country_tax_base_per_population subtract = 5 divide = 5 } } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 5 zmc_country_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_country_tax_base_per_population subtract = 2 divide = 3 } } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 2 zmc_country_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_country_tax_base_per_population subtract = 1 divide = 1 } } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 1 zmc_country_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_country_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 0.5 zmc_country_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_country_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
+		else_if = { limit = { zmc_country_tax_base_per_population < 0.1 zmc_country_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_country_tax_base_per_population divide = 0.1 } } }
+		else = { value = rgb { 0 0 0 } }
+	}
+
+	legend_key = { desc = "zmc_country_tax_base_per_population_pink_legend_key" color = rgb { 255 0 255 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_dark_blue_legend_key" color = rgb { 0 0 200 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_light_blue_legend_key" color = rgb { 135 206 250 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_green_legend_key" color = rgb { 0 255 0 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_yellow_legend_key" color = rgb { 255 255 0 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_red_legend_key" color = rgb { 255 0 0 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_black_legend_key" color = rgb { 0 0 0 } }
+	legend_key = { desc = "zmc_country_tax_base_per_population_gray_legend_key" color = rgb { 50 50 50 } }
+
+	tooltip_key = {
+		if = { limit = { is_land = yes exists = owner } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_LAND }
+		else_if = { limit = { is_land = yes NOT = { exists = owner } } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_UNCOLONISED }
+		else = { value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_WATER }
+	}
+
+	small_map_names = country
+	medium_map_names = country
+	large_map_names = country
 	small_tooltip_context = location
 	medium_tooltip_context = location
 	large_tooltip_context = location
@@ -7018,132 +7144,6 @@ zmc_country_population = {
 	use_fow = no
 	category = population
 	index = 1
-	map_markers = { all = no }
-	gradient_parameters = {
-		zoom_step = @zoom_step_near
-		gradient_alpha_inside = 1
-		gradient_alpha_outside = 1
-		gradient_width = @flatmap_far_gradient_width
-		gradient_color_mult = @flatmap_far_gradient_color_mult
-		edge_width = 0
-		edge_sharpness = @flatmap_far_edge_sharpness
-		edge_alpha = 0
-		edge_color_mult = 0
-		before_lighting_blend = @flatmap_far_before_lighting_blend
-		after_lighting_blend = @flatmap_far_after_lighting_blend
-	}
-	color_refresh_counters = { Month }
-	color_and_names_refresh_counters = { Month }
-}
-
-
-
-#country tax base mapmode
-
-zmc_country_tax_base = {
-	map_color = {
-		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
-		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_country_tax_base >= 10000 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_country_tax_base < 10000 zmc_country_tax_base >= 2000 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 139 } factor = { value = zmc_country_tax_base subtract = 2000 divide = 8000 } } }
-		else_if = { limit = { zmc_country_tax_base < 2000 zmc_country_tax_base >= 1000 } lerp = { max_color = rgb { 0 0 139 } min_color = rgb { 135 206 250 } factor = { value = zmc_country_tax_base subtract = 1000 divide = 1000 } } }
-		else_if = { limit = { zmc_country_tax_base < 1000 zmc_country_tax_base >= 500 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_country_tax_base subtract = 500 divide = 500 } } }
-		else_if = { limit = { zmc_country_tax_base < 500 zmc_country_tax_base >= 100 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_country_tax_base subtract = 100 divide = 400 } } }
-		else_if = { limit = { zmc_country_tax_base < 100 zmc_country_tax_base >= 10 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_country_tax_base subtract = 10 divide = 90 } } }
-		else_if = { limit = { zmc_country_tax_base < 10 zmc_country_tax_base >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_country_tax_base divide = 10 } } }
-		else = { value = rgb { 0 0 0 } }
-	}
-
-	legend_key = { desc = "zmc_country_tax_base_pink_legend_key" color = rgb { 255 0 255 } }
-	legend_key = { desc = "zmc_country_tax_base_dark_blue_legend_key" color = rgb { 0 0 139 } }
-	legend_key = { desc = "zmc_country_tax_base_light_blue_legend_key" color = rgb { 135 206 250 } }
-	legend_key = { desc = "zmc_country_tax_base_green_legend_key" color = rgb { 0 255 0 } }
-	legend_key = { desc = "zmc_country_tax_base_yellow_legend_key" color = rgb { 255 255 0 } }
-	legend_key = { desc = "zmc_country_tax_base_red_legend_key" color = rgb { 255 0 0 } }
-	legend_key = { desc = "zmc_country_tax_base_black_legend_key" color = rgb { 0 0 0 } }
-	legend_key = { desc = "zmc_country_tax_base_gray_legend_key" color = rgb { 50 50 50 } }
-
-	tooltip_key = {
-		if = { limit = { is_land = yes exists = owner } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_LAND }
-		else_if = { limit = { is_land = yes NOT = { exists = owner } } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_UNCOLONISED }
-		else = { value = MAPMODE_ZMC_COUNTRY_TAX_BASE_TT_WATER }
-	}
-
-	small_map_names = country
-	medium_map_names = country
-	large_map_names = country
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
-	fill_in_impassable = yes
-	enable_snow = no
-	flatmap_behaviour = always
-	use_fow = no
-	category = economy
-	index = 3
-	map_markers = { all = no }
-	gradient_parameters = {
-		zoom_step = @zoom_step_near
-		gradient_alpha_inside = 1
-		gradient_alpha_outside = 1
-		gradient_width = @flatmap_far_gradient_width
-		gradient_color_mult = @flatmap_far_gradient_color_mult
-		edge_width = 0
-		edge_sharpness = @flatmap_far_edge_sharpness
-		edge_alpha = 0
-		edge_color_mult = 0
-		before_lighting_blend = @flatmap_far_before_lighting_blend
-		after_lighting_blend = @flatmap_far_after_lighting_blend
-	}
-	color_refresh_counters = { Month }
-	color_and_names_refresh_counters = { Month }
-}
-
-
-
-#country wealth per population mapmode
-
-zmc_country_tax_base_per_population = {
-	map_color = {
-		if = { limit = { is_land = no } value = hsv { 0.58 0.50 0.52 } }
-		else_if = { limit = { NOT = { exists = owner } } value = rgb { 50 50 50 } }
-		else_if = { limit = { zmc_country_tax_base_per_population >= 10 } value = rgb { 255 0 255 } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 10 zmc_country_tax_base_per_population >= 5 } lerp = { max_color = rgb { 255 0 255 } min_color = rgb { 0 0 200 } factor = { value = zmc_country_tax_base_per_population subtract = 5 divide = 5 } } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 5 zmc_country_tax_base_per_population >= 2 } lerp = { max_color = rgb { 0 0 200 } min_color = rgb { 135 206 250 } factor = { value = zmc_country_tax_base_per_population subtract = 2 divide = 3 } } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 2 zmc_country_tax_base_per_population >= 1 } lerp = { max_color = rgb { 135 206 250 } min_color = rgb { 0 255 0 } factor = { value = zmc_country_tax_base_per_population subtract = 1 divide = 1 } } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 1 zmc_country_tax_base_per_population >= 0.5 } lerp = { max_color = rgb { 0 255 0 } min_color = rgb { 255 255 0 } factor = { value = zmc_country_tax_base_per_population subtract = 0.5 divide = 0.5 } } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 0.5 zmc_country_tax_base_per_population >= 0.1 } lerp = { max_color = rgb { 255 255 0 } min_color = rgb { 255 0 0 } factor = { value = zmc_country_tax_base_per_population subtract = 0.1 divide = 0.4 } } }
-		else_if = { limit = { zmc_country_tax_base_per_population < 0.1 zmc_country_tax_base_per_population >= 0 } lerp = { max_color = rgb { 255 0 0 } min_color = rgb { 0 0 0 } factor = { value = zmc_country_tax_base_per_population divide = 0.1 } } }
-		else = { value = rgb { 0 0 0 } }
-	}
-
-	legend_key = { desc = "zmc_country_tax_base_per_population_pink_legend_key" color = rgb { 255 0 255 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_dark_blue_legend_key" color = rgb { 0 0 200 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_light_blue_legend_key" color = rgb { 135 206 250 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_green_legend_key" color = rgb { 0 255 0 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_yellow_legend_key" color = rgb { 255 255 0 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_red_legend_key" color = rgb { 255 0 0 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_black_legend_key" color = rgb { 0 0 0 } }
-	legend_key = { desc = "zmc_country_tax_base_per_population_gray_legend_key" color = rgb { 50 50 50 } }
-
-	tooltip_key = {
-		if = { limit = { is_land = yes exists = owner } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_LAND }
-		else_if = { limit = { is_land = yes NOT = { exists = owner } } value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_UNCOLONISED }
-		else = { value = MAPMODE_ZMC_COUNTRY_TAX_BASE_PER_POPULATION_TT_WATER }
-	}
-
-	small_map_names = country
-	medium_map_names = country
-	large_map_names = country
-	small_tooltip_context = location
-	medium_tooltip_context = location
-	large_tooltip_context = location
-	fill_in_impassable = yes
-	enable_snow = no
-	flatmap_behaviour = always
-	use_fow = no
-	category = economy
-	index = 3
 	map_markers = { all = no }
 	gradient_parameters = {
 		zoom_step = @zoom_step_near
