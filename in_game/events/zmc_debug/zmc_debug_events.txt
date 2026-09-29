@@ -10,20 +10,19 @@ zmc_debug_refresh_mapmodes.1 = {
 	orphan = yes #so the game doesnt complain, you are only supposed to call this event from the console
 	
 	trigger = { 	# List of requirements that need to be fulfilled for event to file
-		#a
+		#no trigger, it's a debug event
 	}
 
 	immediate = {
-		error_log = "test message"
+		error_log = "debug event fired"
 
-		zmc_setup_once = yes
-		zmc_yearly = yes
+		zmc_setup_once = yes #includes yearly
 	}
 
 	option = {
 		name = zmc_debug_refresh_mapmodes.b
-		zmc_setup_once = yes
-		zmc_yearly = yes
+
+		gold = 0 #to clear error log
 	}
 }
 
