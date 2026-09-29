@@ -156,6 +156,9 @@
 
  #[ROOT.GetLocation.MakeScope.ScriptValue('zmc_local_monthly_development')|Y]
 
+ zmc_local_monthly_development_maxed_stripes_legend_key: "\\\\\\At 100 Dev"
+ zmc_local_monthly_development_declining_stripes_legend_key: "\\\\\\Declining"
+
  zmc_local_monthly_development_purple_legend_key: "+0.05 growth"
  zmc_local_monthly_development_dark_blue_legend_key: "+0.03 growth"
  zmc_local_monthly_development_light_blue_legend_key: "+0.02 growth"

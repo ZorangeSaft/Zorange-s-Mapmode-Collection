@@ -1670,6 +1670,11 @@ zmc_pop_cap_percentage = {
 	}
 
 	legend_key = {
+		desc = "zmc_pop_cap_percentage_stripes_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	legend_key = {
 		desc = "zmc_pop_cap_percentage_black_legend_key"
 		color = rgb { 0 0 0 }
 	}
@@ -1687,11 +1692,6 @@ zmc_pop_cap_percentage = {
 	legend_key = {
 		desc = "zmc_pop_cap_percentage_green_legend_key"
 		color = rgb { 0 255 0 }
-	}
-
-	legend_key = {
-		desc = "zmc_pop_cap_percentage_stripes_legend_key"
-		color = rgb { 0 0 0 }
 	}
 
 	tooltip_key = {
@@ -1887,6 +1887,16 @@ zmc_pop_growth_percentage = {
 	}
 
 	legend_key = {
+		desc = "zmc_pop_growth_percentage_capped_stripes_legend_key"
+		color = rgb { 150 150 150 }
+	}
+
+	legend_key = {
+		desc = "zmc_pop_growth_percentage_stagnant_stripes_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	legend_key = {
 		desc = "zmc_pop_growth_percentage_purple_legend_key"
 		color = rgb { 255 0 255 }
 	}
@@ -1929,16 +1939,6 @@ zmc_pop_growth_percentage = {
 	legend_key = {
 		desc = "zmc_pop_growth_percentage_gray_legend_key"
 		color = rgb { 50 50 50 }
-	}
-
-	legend_key = {
-		desc = "zmc_pop_growth_percentage_capped_stripes_legend_key"
-		color = rgb { 150 150 150 }
-	}
-
-	legend_key = {
-		desc = "zmc_pop_growth_percentage_stagnant_stripes_legend_key"
-		color = rgb { 0 0 0 }
 	}
 
 	tooltip_key = {
@@ -2144,6 +2144,16 @@ zmc_local_monthly_development = {
 	}
 
 	legend_key = {
+		desc = "zmc_local_monthly_development_maxed_stripes_legend_key"
+		color = rgb { 255 255 255 }
+	}
+
+	legend_key = {
+		desc = "zmc_local_monthly_development_declining_stripes_legend_key"
+		color = rgb { 0 0 0 }
+	}
+
+	legend_key = {
 		desc = "zmc_local_monthly_development_purple_legend_key"
 		color = rgb { 255 0 255 }
 	}
@@ -2186,16 +2196,6 @@ zmc_local_monthly_development = {
 	legend_key = {
 		desc = "zmc_local_monthly_development_gray_legend_key"
 		color = rgb { 50 50 50 }
-	}
-
-	legend_key = {
-		desc = "zmc_local_monthly_development_maxed_stripes_legend_key"
-		color = rgb { 255 255 255 }
-	}
-
-	legend_key = {
-		desc = "zmc_local_monthly_development_declining_stripes_legend_key"
-		color = rgb { 0 0 0 }
 	}
 
 	tooltip_key = {
